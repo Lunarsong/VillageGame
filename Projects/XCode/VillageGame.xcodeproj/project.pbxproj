@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9317C69EC0006F1456 /* UIKit.framework */; };
+		E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9517C69EC0006F1456 /* Foundation.framework */; };
+		E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */; };
+		E63EAE9E17C69EC0006F1456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E63EAE9C17C69EC0006F1456 /* InfoPlist.strings */; };
+		E63EAEA617C69EC0006F1456 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E63EAEA517C69EC0006F1456 /* Default.png */; };
+		E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E63EAEA717C69EC0006F1456 /* Default@2x.png */; };
+		E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E63EAEA917C69EC0006F1456 /* Default-568h@2x.png */; };
+		E63EAEB817C69FBD006F1456 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E63EAEB717C69FBD006F1456 /* Test.cpp */; };
+		E63EAEC217C6A0AA006F1456 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEBF17C6A02B006F1456 /* libEngine.a */; };
+		E63EAEC417C6A0EC006F1456 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */; };
+		E63EAEC617C6A0F9006F1456 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E63EAEBE17C6A02B006F1456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E63EA91417C69948006F1456;
+			remoteInfo = Engine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E63EAE9017C69EC0006F1456 /* VillageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63EAE9317C69EC0006F1456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E63EAE9517C69EC0006F1456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E63EAE9B17C69EC0006F1456 /* VillageGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VillageGame-Info.plist"; sourceTree = "<group>"; };
+		E63EAE9D17C69EC0006F1456 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E63EAEA117C69EC0006F1456 /* VillageGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VillageGame-Prefix.pch"; sourceTree = "<group>"; };
+		E63EAEA517C69EC0006F1456 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E63EAEA717C69EC0006F1456 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E63EAEA917C69EC0006F1456 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E63EAEB717C69FBD006F1456 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
+		E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E63EAE8D17C69EC0006F1456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63EAEC617C6A0F9006F1456 /* QuartzCore.framework in Frameworks */,
+				E63EAEC417C6A0EC006F1456 /* OpenGLES.framework in Frameworks */,
+				E63EAEC217C6A0AA006F1456 /* libEngine.a in Frameworks */,
+				E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */,
+				E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */,
+				E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E63EAE8717C69EC0006F1456 = {
+			isa = PBXGroup;
+			children = (
+				E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */,
+				E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */,
+				E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */,
+				E63EAE9917C69EC0006F1456 /* VillageGame */,
+				E63EAE9217C69EC0006F1456 /* Frameworks */,
+				E63EAE9117C69EC0006F1456 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E63EAE9117C69EC0006F1456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E63EAE9017C69EC0006F1456 /* VillageGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E63EAE9217C69EC0006F1456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E63EAE9317C69EC0006F1456 /* UIKit.framework */,
+				E63EAE9517C69EC0006F1456 /* Foundation.framework */,
+				E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E63EAE9917C69EC0006F1456 /* VillageGame */ = {
+			isa = PBXGroup;
+			children = (
+				E63EAE9A17C69EC0006F1456 /* Supporting Files */,
+				E63EAEB717C69FBD006F1456 /* Test.cpp */,
+			);
+			path = VillageGame;
+			sourceTree = "<group>";
+		};
+		E63EAE9A17C69EC0006F1456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E63EAE9B17C69EC0006F1456 /* VillageGame-Info.plist */,
+				E63EAE9C17C69EC0006F1456 /* InfoPlist.strings */,
+				E63EAEA117C69EC0006F1456 /* VillageGame-Prefix.pch */,
+				E63EAEA517C69EC0006F1456 /* Default.png */,
+				E63EAEA717C69EC0006F1456 /* Default@2x.png */,
+				E63EAEA917C69EC0006F1456 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E63EAEBB17C6A02B006F1456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E63EAEBF17C6A02B006F1456 /* libEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E63EAE8F17C69EC0006F1456 /* VillageGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E63EAEAD17C69EC0006F1456 /* Build configuration list for PBXNativeTarget "VillageGame" */;
+			buildPhases = (
+				E63EAE8C17C69EC0006F1456 /* Sources */,
+				E63EAE8D17C69EC0006F1456 /* Frameworks */,
+				E63EAE8E17C69EC0006F1456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VillageGame;
+			productName = VillageGame;
+			productReference = E63EAE9017C69EC0006F1456 /* VillageGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E63EAE8817C69EC0006F1456 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = LunaEngine;
+			};
+			buildConfigurationList = E63EAE8B17C69EC0006F1456 /* Build configuration list for PBXProject "VillageGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E63EAE8717C69EC0006F1456;
+			productRefGroup = E63EAE9117C69EC0006F1456 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E63EAEBB17C6A02B006F1456 /* Products */;
+					ProjectRef = E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E63EAE8F17C69EC0006F1456 /* VillageGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E63EAEBF17C6A02B006F1456 /* libEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEngine.a;
+			remoteRef = E63EAEBE17C6A02B006F1456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E63EAE8E17C69EC0006F1456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63EAE9E17C69EC0006F1456 /* InfoPlist.strings in Resources */,
+				E63EAEA617C69EC0006F1456 /* Default.png in Resources */,
+				E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */,
+				E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E63EAE8C17C69EC0006F1456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63EAEB817C69FBD006F1456 /* Test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E63EAE9C17C69EC0006F1456 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E63EAE9D17C69EC0006F1456 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E63EAEAB17C69EC0006F1456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E63EAEAC17C69EC0006F1456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E63EAEAE17C69EC0006F1456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VillageGame/VillageGame-Prefix.pch";
+				INFOPLIST_FILE = "VillageGame/VillageGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E63EAEAF17C69EC0006F1456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VillageGame/VillageGame-Prefix.pch";
+				INFOPLIST_FILE = "VillageGame/VillageGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E63EAE8B17C69EC0006F1456 /* Build configuration list for PBXProject "VillageGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63EAEAB17C69EC0006F1456 /* Debug */,
+				E63EAEAC17C69EC0006F1456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E63EAEAD17C69EC0006F1456 /* Build configuration list for PBXNativeTarget "VillageGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63EAEAE17C69EC0006F1456 /* Debug */,
+				E63EAEAF17C69EC0006F1456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E63EAE8817C69EC0006F1456 /* Project object */;
+}
