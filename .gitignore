@@ -13,3 +13,5 @@
 *.a
 
 *.xcuserstate
+
+*.xcbkptlist
