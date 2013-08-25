@@ -1,33 +1,39 @@
-#include <Engine.h>
+#include "Engine.h"
 #include <Rendering/Types/ColorF.h>
 
 using namespace Engine;
 
 const char vShaderStr[] = 
-	"attribute vec4 POSITION; \n"
-	"void main() \n"
-	"{ \n"
-	" gl_Position = POSITION; \n"
-	"} \n";
+	"\n\
+	uniform mat4 mWorldViewProjection;										\n\
+																			\n\
+	attribute vec4 vPosition;												\n\
+	void main()																\n\
+	{																		\n\
+		gl_Position = mWorldViewProjection * vPosition;						\n\
+	}																		\n\
+	";
 
 const char fShaderStr[] = 
 	"precision mediump float; \n"
+    "uniform vec4 u_Color;"
 	"void main() \n"
 	"{ \n"
-	" gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0); \n"
+	" gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0) * u_Color; \n"
 	"} \n";
 
 IShaderProgram* pShaderProgram = NULL;
 IVertexBuffer* pVertexBuffer = NULL;
+IBuffer*		pBuffer = NULL;
+IBuffer*		pPixelConstantBuffer = NULL;
 void Start()
 {
 	IVertexShader* pVertexShader = IRenderer::CreateVertexShader();
 	IPixelShader* pPixelShader = IRenderer::CreatePixelShader();
 	pShaderProgram = IRenderer::CreateShaderProgram();
 
-	VertexLayout layout;
-	VertexPosition::CreateLayout( layout );
-	pVertexShader->VCreateFromMemory( vShaderStr, sizeof( vShaderStr ), &layout );
+	pVertexShader->VAddAttribute( "vPosition", Position_VertexData );
+	pVertexShader->VCreateFromMemory( vShaderStr, sizeof( vShaderStr ) );
 	pPixelShader->VCreateFromMemory( fShaderStr, sizeof( fShaderStr ) );
 
 	pShaderProgram->VSetVertexShader( pVertexShader );
@@ -46,6 +52,14 @@ void Start()
 
 	pVertexBuffer = IRenderer::CreateVertexBuffer();
 	pVertexBuffer->VCreate( vertices, sizeof( Vector3 ), 3 );
+
+	pBuffer = IRenderer::CreateBuffer();
+	pBuffer->VCreate( 1, sizeof( Matrix ), ConstantBuffer, true );
+	pBuffer->VAddProperty( "mWorldViewProjection", BP_MATRIX4 );
+    
+    pPixelConstantBuffer = IRenderer::CreateBuffer();
+	pPixelConstantBuffer->VCreate( 1, sizeof( Vector4 ), ConstantBuffer, true );
+	pPixelConstantBuffer->VAddProperty( "u_Color", BP_VECTOR4 );
 }
 
 void Update( float fDeltaSeconds )
@@ -68,14 +82,21 @@ void Update( float fDeltaSeconds )
 void Render()
 {
 	IRenderContext* pRenderContext = IRenderer::Get()->VGetMainContext();
+	Matrix mat;
+    mat.SetPosition( Vector4( 0.5f, 0.5f, 0.0f, 1.0f ) );
+	pBuffer->VSetData( pRenderContext, &mat );
+    pPixelConstantBuffer->VSetData( pRenderContext, &ColorF::BLUE );
 	pRenderContext->VSetShaderProgram( pShaderProgram );
-
+    pRenderContext->VSetPixelShaderBuffer( pPixelConstantBuffer );
+	pRenderContext->VSetVertexShaderBuffer( pBuffer );
 	pRenderContext->VSetVertexBuffer( pVertexBuffer );
 	pRenderContext->VDraw( 3 );
 }
 
 void End()
 {
+    SAFE_RELEASE( pPixelConstantBuffer );
+	SAFE_RELEASE( pBuffer );
 	SAFE_RELEASE( pShaderProgram );
 	SAFE_RELEASE( pVertexBuffer );
 }
