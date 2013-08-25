@@ -43,7 +43,6 @@
 		E63EAEA517C69EC0006F1456 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E63EAEA717C69EC0006F1456 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E63EAEA917C69EC0006F1456 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E63EAEB717C69FBD006F1456 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
 		E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -108,7 +107,6 @@
 			children = (
 				E6FD5FAE17CABAFA00F59339 /* Source */,
 				E63EAE9A17C69EC0006F1456 /* Supporting Files */,
-				E63EAEB717C69FBD006F1456 /* Test.cpp */,
 			);
 			path = VillageGame;
 			sourceTree = "<group>";

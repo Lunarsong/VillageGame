@@ -50,3 +50,5 @@ Ankh.NoLoad
 *.pidb
 *.userprefs
 *.xcuserstate
+
+*.xcbkptlist
