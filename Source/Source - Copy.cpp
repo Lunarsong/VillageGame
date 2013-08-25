@@ -42,7 +42,7 @@ ITexture*		pTexture = NULL;
 
 void Start()
 {
-	ResourceCache::Get()->AddResourceFile( "Assets", new DevelopmentResourceZipFile( "Assets" ) );
+	ResourceCache::Get()->AddResourceFile( "Assets", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder() + "Assets" ) );
 	shared_ptr<BinaryResource> pResource = ResourceCache::Get()->GetResource<BinaryResource>( "test.jpg");
 
 	pTexture = IRenderer::CreateTexture();
