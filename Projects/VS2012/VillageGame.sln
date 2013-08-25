@@ -2,17 +2,36 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VillageGame", "VillageGame.vcxproj", "{7F379118-F473-4C42-96AB-178E33E0962B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{903DA5A8-685F-430B-90BE-9C57A5E80613} = {903DA5A8-685F-430B-90BE-9C57A5E80613}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "..\..\..\LunaEngine\Engine\Engine.vcxproj", "{903DA5A8-685F-430B-90BE-9C57A5E80613}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Android = Debug|Android
 		Debug|Win32 = Debug|Win32
+		Release|Android = Release|Android
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F379118-F473-4C42-96AB-178E33E0962B}.Debug|Android.ActiveCfg = Debug|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Debug|Win32.ActiveCfg = Debug|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Debug|Win32.Build.0 = Debug|Win32
+		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Android.ActiveCfg = Release|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Win32.ActiveCfg = Release|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Win32.Build.0 = Release|Win32
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Android.ActiveCfg = Debug|Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Android.Build.0 = Debug|Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Android.Deploy.0 = Debug|Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Win32.ActiveCfg = Debug|Win32
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Win32.Build.0 = Debug|Win32
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Android.ActiveCfg = Release|Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Android.Build.0 = Release|Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Android.Deploy.0 = Release|Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Win32.ActiveCfg = Release|Win32
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
