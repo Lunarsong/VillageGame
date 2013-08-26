@@ -20,6 +20,7 @@
 		E63EAED917C6BFF1006F1456 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAED817C6BFF1006F1456 /* libz.dylib */; };
 		E63EAF1617C7E559006F1456 /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAF1517C7E559006F1456 /* libangelscript.a */; };
 		E6FD5FB017CABAFA00F59339 /* Source - Copy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */; };
+		E6FD5FB817CAD37900F59339 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6FD5FB717CAD37900F59339 /* test.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E63EAED817C6BFF1006F1456 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E63EAF1517C7E559006F1456 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/LunaEngine/Engine/Externals/AngelScript/iOS/libangelscript.a; sourceTree = "<group>"; };
 		E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Source - Copy.cpp"; sourceTree = "<group>"; };
+		E6FD5FB717CAD37900F59339 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				E63EAE9917C69EC0006F1456 /* VillageGame */,
 				E63EAE9217C69EC0006F1456 /* Frameworks */,
 				E63EAE9117C69EC0006F1456 /* Products */,
+				E6FD5FB617CAD37900F59339 /* Assets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +142,15 @@
 			);
 			name = Source;
 			path = ../../../Source;
+			sourceTree = "<group>";
+		};
+		E6FD5FB617CAD37900F59339 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E6FD5FB717CAD37900F59339 /* test.jpg */,
+			);
+			name = Assets;
+			path = ../../Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +224,7 @@
 				E63EAEA617C69EC0006F1456 /* Default.png in Resources */,
 				E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */,
 				E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */,
+				E6FD5FB817CAD37900F59339 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
