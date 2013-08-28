@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>VillageGame.xcscheme</key>
+		<key>VillageGame - Mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>VillageGame - iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>E63EAE8F17C69EC0006F1456</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6D0BDC117CE1FD500CAC564</key>
 		<dict>
 			<key>primary</key>
 			<true/>

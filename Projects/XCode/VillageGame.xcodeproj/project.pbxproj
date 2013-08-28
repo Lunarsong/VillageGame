@@ -20,6 +20,10 @@
 		E656049417CDF60C00E456A8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E656049317CDF60C00E456A8 /* test.jpg */; };
 		E6D0BDB417CE1EB400CAC564 /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDB317CE1EB400CAC564 /* libangelscript.a */; };
 		E6D0BDB517CE1EBE00CAC564 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDA617CE1A8400CAC564 /* libEngine.a */; };
+		E6D0BDD217CE29CE00CAC564 /* Source - Copy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */; };
+		E6D0BE4B17CE2D1000CAC564 /* libEngine Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDCA17CE1FD500CAC564 /* libEngine Mac.a */; };
+		E6D0BE4E17CE2DA800CAC564 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BE4D17CE2DA800CAC564 /* libz.dylib */; };
+		E6D0BE5217CE2E7100CAC564 /* libangelscriptd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BE5117CE2E7100CAC564 /* libangelscriptd.a */; };
 		E6FD5FB017CABAFA00F59339 /* Source - Copy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +35,26 @@
 			remoteGlobalIDString = E63EA91417C69948006F1456;
 			remoteInfo = Engine;
 		};
+		E6D0BDC917CE1FD500CAC564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6D0BDBA17CE1F6500CAC564;
+			remoteInfo = "Engine Mac";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6D0BDC017CE1FD500CAC564 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E63EAE9017C69EC0006F1456 /* VillageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +73,10 @@
 		E656049317CDF60C00E456A8 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
 		E6D0BDB317CE1EB400CAC564 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/libangelscript.a; sourceTree = "<group>"; };
+		E6D0BDC217CE1FD500CAC564 /* VillageGame Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "VillageGame Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6D0BE4D17CE2DA800CAC564 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		E6D0BE4F17CE2DC100CAC564 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/Release/libangelscript.a; sourceTree = "<group>"; };
+		E6D0BE5117CE2E7100CAC564 /* libangelscriptd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscriptd.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX/libangelscriptd.a; sourceTree = "<group>"; };
 		E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Source - Copy.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,15 +96,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E6D0BDBF17CE1FD500CAC564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6D0BE5217CE2E7100CAC564 /* libangelscriptd.a in Frameworks */,
+				E6D0BE4E17CE2DA800CAC564 /* libz.dylib in Frameworks */,
+				E6D0BE4B17CE2D1000CAC564 /* libEngine Mac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		E63EAE8717C69EC0006F1456 = {
 			isa = PBXGroup;
 			children = (
+				E6D0BE5117CE2E7100CAC564 /* libangelscriptd.a */,
+				E6D0BE4F17CE2DC100CAC564 /* libangelscript.a */,
+				E6D0BE4D17CE2DA800CAC564 /* libz.dylib */,
 				E6D0BDB317CE1EB400CAC564 /* libangelscript.a */,
 				E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */,
 				E63EAE9917C69EC0006F1456 /* VillageGame */,
+				E6D0BDC317CE1FD500CAC564 /* VillageGame Mac */,
 				E63EAE9217C69EC0006F1456 /* Frameworks */,
 				E63EAE9117C69EC0006F1456 /* Products */,
 				E656049217CDF60C00E456A8 /* Assets */,
@@ -88,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				E63EAE9017C69EC0006F1456 /* VillageGame.app */,
+				E6D0BDC217CE1FD500CAC564 /* VillageGame Mac */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,8 +182,16 @@
 			isa = PBXGroup;
 			children = (
 				E6D0BDA617CE1A8400CAC564 /* libEngine.a */,
+				E6D0BDCA17CE1FD500CAC564 /* libEngine Mac.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E6D0BDC317CE1FD500CAC564 /* VillageGame Mac */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "VillageGame Mac";
 			sourceTree = "<group>";
 		};
 		E6FD5FAE17CABAFA00F59339 /* Source */ = {
@@ -173,6 +223,23 @@
 			productReference = E63EAE9017C69EC0006F1456 /* VillageGame.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E6D0BDC117CE1FD500CAC564 /* VillageGame Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6D0BDCB17CE1FD500CAC564 /* Build configuration list for PBXNativeTarget "VillageGame Mac" */;
+			buildPhases = (
+				E6D0BDBE17CE1FD500CAC564 /* Sources */,
+				E6D0BDBF17CE1FD500CAC564 /* Frameworks */,
+				E6D0BDC017CE1FD500CAC564 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VillageGame Mac";
+			productName = "VillageGame Mac";
+			productReference = E6D0BDC217CE1FD500CAC564 /* VillageGame Mac */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +268,7 @@
 			projectRoot = "";
 			targets = (
 				E63EAE8F17C69EC0006F1456 /* VillageGame */,
+				E6D0BDC117CE1FD500CAC564 /* VillageGame Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +279,13 @@
 			fileType = archive.ar;
 			path = libEngine.a;
 			remoteRef = E6D0BDA517CE1A8400CAC564 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6D0BDCA17CE1FD500CAC564 /* libEngine Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libEngine Mac.a";
+			remoteRef = E6D0BDC917CE1FD500CAC564 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -236,6 +311,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6FD5FB017CABAFA00F59339 /* Source - Copy.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6D0BDBE17CE1FD500CAC564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6D0BDD217CE29CE00CAC564 /* Source - Copy.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +436,49 @@
 			};
 			name = Release;
 		};
+		E6D0BDCC17CE1FD500CAC564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_OSX,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/Release\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E6D0BDCD17CE1FD500CAC564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = _OSX;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/Release\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -373,6 +499,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E6D0BDCB17CE1FD500CAC564 /* Build configuration list for PBXNativeTarget "VillageGame Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6D0BDCC17CE1FD500CAC564 /* Debug */,
+				E6D0BDCD17CE1FD500CAC564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
