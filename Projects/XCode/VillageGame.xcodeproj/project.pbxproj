@@ -14,19 +14,19 @@
 		E63EAEA617C69EC0006F1456 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E63EAEA517C69EC0006F1456 /* Default.png */; };
 		E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E63EAEA717C69EC0006F1456 /* Default@2x.png */; };
 		E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E63EAEA917C69EC0006F1456 /* Default-568h@2x.png */; };
-		E63EAEC217C6A0AA006F1456 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEBF17C6A02B006F1456 /* libEngine.a */; };
 		E63EAEC417C6A0EC006F1456 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */; };
 		E63EAEC617C6A0F9006F1456 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */; };
 		E63EAED917C6BFF1006F1456 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAED817C6BFF1006F1456 /* libz.dylib */; };
-		E63EAF1617C7E559006F1456 /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAF1517C7E559006F1456 /* libangelscript.a */; };
+		E656049417CDF60C00E456A8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E656049317CDF60C00E456A8 /* test.jpg */; };
+		E6D0BDB417CE1EB400CAC564 /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDB317CE1EB400CAC564 /* libangelscript.a */; };
+		E6D0BDB517CE1EBE00CAC564 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDA617CE1A8400CAC564 /* libEngine.a */; };
 		E6FD5FB017CABAFA00F59339 /* Source - Copy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */; };
-		E6FD5FB817CAD37900F59339 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6FD5FB717CAD37900F59339 /* test.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E63EAEBE17C6A02B006F1456 /* PBXContainerItemProxy */ = {
+		E6D0BDA517CE1A8400CAC564 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */;
+			containerPortal = E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E63EA91417C69948006F1456;
 			remoteInfo = Engine;
@@ -44,13 +44,13 @@
 		E63EAEA517C69EC0006F1456 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E63EAEA717C69EC0006F1456 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E63EAEA917C69EC0006F1456 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
 		E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E63EAED817C6BFF1006F1456 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		E63EAF1517C7E559006F1456 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/LunaEngine/Engine/Externals/AngelScript/iOS/libangelscript.a; sourceTree = "<group>"; };
+		E656049317CDF60C00E456A8 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
+		E6D0BDB317CE1EB400CAC564 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/libangelscript.a; sourceTree = "<group>"; };
 		E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Source - Copy.cpp"; sourceTree = "<group>"; };
-		E6FD5FB717CAD37900F59339 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63EAF1617C7E559006F1456 /* libangelscript.a in Frameworks */,
+				E6D0BDB517CE1EBE00CAC564 /* libEngine.a in Frameworks */,
 				E63EAED917C6BFF1006F1456 /* libz.dylib in Frameworks */,
+				E6D0BDB417CE1EB400CAC564 /* libangelscript.a in Frameworks */,
 				E63EAEC617C6A0F9006F1456 /* QuartzCore.framework in Frameworks */,
 				E63EAEC417C6A0EC006F1456 /* OpenGLES.framework in Frameworks */,
-				E63EAEC217C6A0AA006F1456 /* libEngine.a in Frameworks */,
 				E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */,
 				E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */,
 				E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */,
@@ -75,12 +75,12 @@
 		E63EAE8717C69EC0006F1456 = {
 			isa = PBXGroup;
 			children = (
-				E63EAF1517C7E559006F1456 /* libangelscript.a */,
-				E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */,
+				E6D0BDB317CE1EB400CAC564 /* libangelscript.a */,
+				E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */,
 				E63EAE9917C69EC0006F1456 /* VillageGame */,
 				E63EAE9217C69EC0006F1456 /* Frameworks */,
 				E63EAE9117C69EC0006F1456 /* Products */,
-				E6FD5FB617CAD37900F59339 /* Assets */,
+				E656049217CDF60C00E456A8 /* Assets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,10 +127,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E63EAEBB17C6A02B006F1456 /* Products */ = {
+		E656049217CDF60C00E456A8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E63EAEBF17C6A02B006F1456 /* libEngine.a */,
+				E656049317CDF60C00E456A8 /* test.jpg */,
+			);
+			name = Assets;
+			path = ../../Assets;
+			sourceTree = "<group>";
+		};
+		E6D0BDA217CE1A8400CAC564 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6D0BDA617CE1A8400CAC564 /* libEngine.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,15 +151,6 @@
 			);
 			name = Source;
 			path = ../../../Source;
-			sourceTree = "<group>";
-		};
-		E6FD5FB617CAD37900F59339 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				E6FD5FB717CAD37900F59339 /* test.jpg */,
-			);
-			name = Assets;
-			path = ../../Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,8 +194,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E63EAEBB17C6A02B006F1456 /* Products */;
-					ProjectRef = E63EAEBA17C6A02B006F1456 /* Engine.xcodeproj */;
+					ProductGroup = E6D0BDA217CE1A8400CAC564 /* Products */;
+					ProjectRef = E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -206,11 +206,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E63EAEBF17C6A02B006F1456 /* libEngine.a */ = {
+		E6D0BDA617CE1A8400CAC564 /* libEngine.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libEngine.a;
-			remoteRef = E63EAEBE17C6A02B006F1456 /* PBXContainerItemProxy */;
+			remoteRef = E6D0BDA517CE1A8400CAC564 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -224,7 +224,7 @@
 				E63EAEA617C69EC0006F1456 /* Default.png in Resources */,
 				E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */,
 				E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */,
-				E6FD5FB817CAD37900F59339 /* test.jpg in Resources */,
+				E656049417CDF60C00E456A8 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,12 +277,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../../../LunaEngine/LunaEngine/Engine;
+				HEADER_SEARCH_PATHS = ../../../LunaEngine/Engine;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = ../../../LunaEngine/LunaEngine/Engine;
+				USER_HEADER_SEARCH_PATHS = ../../../LunaEngine/Engine;
 			};
 			name = Debug;
 		};
@@ -304,12 +304,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../../../LunaEngine/LunaEngine/Engine;
+				HEADER_SEARCH_PATHS = ../../../LunaEngine/Engine;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = ../../../LunaEngine/LunaEngine/Engine;
+				USER_HEADER_SEARCH_PATHS = ../../../LunaEngine/Engine;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -323,11 +323,12 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = ../../../LunaEngine/LunaEngine/Engine;
+				HEADER_SEARCH_PATHS = ../../../LunaEngine/Engine;
 				INFOPLIST_FILE = "VillageGame/VillageGame-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../LunaEngine/LunaEngine/Engine/Externals/AngelScript/iOS\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -340,11 +341,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VillageGame/VillageGame-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
-				HEADER_SEARCH_PATHS = ../../../LunaEngine/LunaEngine/Engine;
+				HEADER_SEARCH_PATHS = ../../../LunaEngine/Engine;
 				INFOPLIST_FILE = "VillageGame/VillageGame-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../LunaEngine/LunaEngine/Engine/Externals/AngelScript/iOS\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
