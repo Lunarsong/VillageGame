@@ -1,90 +1,136 @@
 #include "Engine.h"
 #include <Rendering/Types/ColorF.h>
+#include "Game/Entities/Components/Rendering/QuadComponent.h"
+#include "Game/Entities/Components/Rendering/SpriteComponent.h"
+#include "UI/UIImage.h"
+#include "UI/UILabel.h"
 
 using namespace Engine;
 
-const char vShaderStr[] = 
-	"\n\
-	uniform mat4 mWorldViewProjection;										\n\
-																			\n\
-	attribute vec4 u_vPosition;												\n\
-	attribute vec2 u_vTexCoords;											\n\
-																			\n\
-	varying vec2 v_vTexCoord;												\n\
-	void main()																\n\
-	{																		\n\
-		v_vTexCoord = u_vTexCoords;											\n\
-		gl_Position = mWorldViewProjection * u_vPosition;					\n\
-	}																		\n\
-	";
-
-const char fShaderStr[] = 
-	"																		\n\
-	precision mediump float;												\n\
-    uniform vec4 u_Color;													\n\
-																			\n\
-	uniform sampler2D s_Texture01;											\n\
-																			\n\
-	varying vec2 v_vTexCoord;												\n\
-																			\n\
-	void main()																\n\
-	{																		\n\
-		vec4 vTextureColor = texture2D( s_Texture01, v_vTexCoord );			\n\
-		gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0) * u_Color * vTextureColor;	\n\
-	}																		\n\
-	";
-
-IShaderProgram* pShaderProgram = NULL;
-IVertexBuffer*	pVertexBuffer = NULL;
-IBuffer*		pBuffer = NULL;
-IBuffer*		pPixelConstantBuffer = NULL;
 ITexture*		pTexture = NULL;
+shared_ptr<Entity> pEntity;
+UIElement* pUI;
+
+class myTouchHandler : public ITouchHandler
+{
+public:
+    int iNumTouchs = 0;
+    
+    myTouchHandler()
+    {
+        
+    }
+    
+    ~myTouchHandler()
+    {
+        
+    }
+    
+    bool VOnTouchStart( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
+    {
+        ++iNumTouchs;
+    }
+    
+    bool VOnTouchEnd( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
+    {
+        --iNumTouchs;
+    }
+    
+    bool VOnTouchCancel( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
+    {
+        --iNumTouchs;
+    }
+    
+    bool VOnTouchMove( const int iTouchIndex, const Vector2& vPosition, const Vector2& vDeltaPosition, const int iPressure )
+    {
+        if ( iTouchIndex == 0 && iNumTouchs == 1 )
+        {
+            Matrix matTransform = pEntity->GetTransform();
+            matTransform.SetPosition( Vector4( vPosition.x, vPosition.y ) );
+            //pEntity->SetTransform( matTransform );
+            
+            Vector3 vPosition = IRenderer::Get()->VGetSpriteManager()->VGetCameraPosition();
+            vPosition.x -= vDeltaPosition.x;
+            vPosition.y -= vDeltaPosition.y;
+            
+            //IRenderer::Get()->VGetSpriteManager()->VSetCameraPosition( vPosition );
+            Point pos = pUI->GetPosition();
+            pUI->SetPosition( pos.x + vDeltaPosition.x, pos.y + vDeltaPosition.y );
+        }
+        
+        else if ( iNumTouchs == 2 )
+        {
+            
+        }
+    }
+};
+
+IFont* pFont = NULL;
+UIImage* pUIImage;
+UILabel* pLabel;
 
 void Start()
 {
 	ResourceCache::Get()->AddResourceFile( "Working Folder", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder(), DevelopmentResourceZipFile::Editor ) );
-	shared_ptr<BinaryResource> pResource = ResourceCache::Get()->GetResource<BinaryResource>( "test.jpg");
+    
+    
+    
+	shared_ptr<BinaryResource> pResource = ResourceCache::Get()->GetResource<BinaryResource>( "tiles.png");
 
 	pTexture = IRenderer::CreateTexture();
 	pTexture->VCreate( pResource->Buffer(), pResource->Size() );
 
-	IVertexShader* pVertexShader = IRenderer::CreateVertexShader();
-	IPixelShader* pPixelShader = IRenderer::CreatePixelShader();
-	pShaderProgram = IRenderer::CreateShaderProgram();
-
-	pVertexShader->VAddAttribute( "u_vPosition", Position_VertexData );
-	pVertexShader->VAddAttribute( "u_vTexCoords", UV_VertexData );
-	pVertexShader->VCreateFromMemory( vShaderStr, sizeof( vShaderStr ) );
-	pPixelShader->VCreateFromMemory( fShaderStr, sizeof( fShaderStr ) );
-
-	pShaderProgram->VSetVertexShader( pVertexShader );
-	pShaderProgram->VSetPixelShader( pPixelShader );
-	pShaderProgram->VLink();
-
-	pVertexShader->Release();
-	pPixelShader->Release();	
-
-	VertexPositionTexture vertices[3] =
-	{
-		VertexPositionTexture( Vector3( 0.0f, 0.5f, 0.0f ), Vector2( 1.0f, 1.0f ) ),
-		VertexPositionTexture( Vector3( -0.5f, -0.5f, 0.0f ), Vector2( 0.0f, 0.0f ) ),
-		VertexPositionTexture( Vector3( 0.5f, -0.5f, 0.0f ), Vector2( 1.0f, 0.0f ) )
-	};
-
-	pVertexBuffer = IRenderer::CreateVertexBuffer();
-	pVertexBuffer->VCreate( vertices, sizeof( VertexPositionTexture ), 3 );
-
-	pBuffer = IRenderer::CreateBuffer();
-	pBuffer->VCreate( 1, sizeof( Matrix ), ConstantBuffer, true );
-	pBuffer->VAddProperty( "mWorldViewProjection", BP_MATRIX4 );
     
-    pPixelConstantBuffer = IRenderer::CreateBuffer();
-	pPixelConstantBuffer->VCreate( 1, sizeof( Vector4 ), ConstantBuffer, true );
-	pPixelConstantBuffer->VAddProperty( "u_Color", BP_VECTOR4 );
+    Matrix matTransform;
+    matTransform.BuildScale( Vector4( 50.0f, 50.0f, 1.0f ) );
+    matTransform.SetPosition( 100.0f, 100.0f, 0.0f );
+    pEntity = Game::CreateEntity( matTransform );
+    shared_ptr< QuadComponent > pComponent( new QuadComponent() );
+    pComponent->SetTexture( pTexture );
+    pEntity->AddComponent( pComponent );
+    pEntity->Start();
+    
+    
+    matTransform.Identify();
+    matTransform.SetPosition( Vector4( 00.0f, 0.0f ) );
+    pEntity = Game::CreateEntity( matTransform );
+    shared_ptr<SpriteComponent> pSprite( new SpriteComponent() );
+    pSprite->SetTexture( pTexture );
+    //pEntity->AddComponent( pSprite );
+    //pEntity->Start();
+    
+    matTransform.Identify();
+    matTransform.SetPosition( Vector4( 100.0f, 100.0f ) );
+    pEntity = Game::CreateEntity( matTransform );
+    pSprite.reset( new SpriteComponent() );
+    pSprite->SetTexture( pTexture );
+    pEntity->AddComponent( pSprite );
+    pEntity->Start();
+    
+    InputManager::Get()->AddTouchHandler( new myTouchHandler() );
+    
+    pFont = IRenderer::CreateFont();
+    pFont->VCreate( "Vera" );
+    
+    Vector3 vSize;
+    pFont->VGetTextSize( "Hello, my name is Mimi.", vSize );
+    pUIImage = new UIImage( "Sheep0007.png" );
+    pLabel = new UILabel( "UI Label here" );
+    
+    pUI = new UIElement();
+    pUI->AddChild( pLabel );
+    pUI->AddChild( pUIImage );
+    
+    pUIImage->Release();
+    pLabel->Release();
+    
 }
 
 void Update( float fDeltaSeconds )
 {
+    Matrix mat = pEntity->GetTransform();
+    mat.SetPosition( mat.GetPosition() + Vector4( 1.0f, 1.0f, 0.0f, 0.0f ) * fDeltaSeconds * 5 );
+    pEntity->SetTransform( mat );
 	static ColorF color = ColorF::BLACK;
 
 	static float fColorSpeed = 1.0f;
@@ -104,28 +150,16 @@ void Render()
 {
 	IRenderContext* pRenderContext = IRenderer::Get()->VGetMainContext();
 
-	// Set the data buffers
-	Matrix mat;
-    mat.SetPosition( Vector4( 0.5f, 0.5f, 0.0f, 1.0f ) );
-	pBuffer->VSetData( pRenderContext, &mat );
-    pPixelConstantBuffer->VSetData( pRenderContext, &ColorF::BLUE );
-
-	// Set the shader and its buffers
-	pRenderContext->VSetShaderProgram( pShaderProgram );
-    pRenderContext->VSetPixelShaderBuffer( pPixelConstantBuffer );
-	pRenderContext->VSetPixelShaderResource( pTexture, 0 );
-	pRenderContext->VSetVertexShaderBuffer( pBuffer );
-
-	// Set the vertex buffer and draw
-	pRenderContext->VSetVertexBuffer( pVertexBuffer );	
-	pRenderContext->VDraw( 3 );
+    //pFont->VPrint( pRenderContext, "Hi!?h|}{IMOPJ?...", Vector3::ZERO, Vector3::ONE );
+    pUI->Draw( pRenderContext );
+//    pUIImage->Draw( pRenderContext );
+//    pLabel->Draw( pRenderContext );
 }
 
 void End()
 {
 	SAFE_RELEASE( pTexture );
-    SAFE_RELEASE( pPixelConstantBuffer );
-	SAFE_RELEASE( pBuffer );
-	SAFE_RELEASE( pShaderProgram );
-	SAFE_RELEASE( pVertexBuffer );
+    
+    pFont->Release();
+    pUI->Release();
 }
