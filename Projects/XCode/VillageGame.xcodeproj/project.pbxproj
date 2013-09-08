@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E616492617D8A57200690E2B /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = E616492517D8A57200690E2B /* tiles.png */; };
-		E616492817D8A6D800690E2B /* Sheep0007.png in Resources */ = {isa = PBXBuildFile; fileRef = E616492717D8A6D800690E2B /* Sheep0007.png */; };
+		E6059D5517DC9F0E00C6681B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5417DC9F0E00C6681B /* Cocoa.framework */; };
+		E6059D5917DC9F2A00C6681B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5817DC9F2A00C6681B /* IOKit.framework */; };
+		E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5A17DCA07800C6681B /* OpenGL.framework */; };
+		E6059E1317DCC3B000C6681B /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6059E0D17DCC3B000C6681B /* Arial.ttf */; };
+		E6059E1417DCC3B000C6681B /* Sheep0007.png in Resources */ = {isa = PBXBuildFile; fileRef = E6059E0E17DCC3B000C6681B /* Sheep0007.png */; };
+		E6059E1517DCC3B000C6681B /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6059E0F17DCC3B000C6681B /* test.jpg */; };
+		E6059E1617DCC3B000C6681B /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = E6059E1017DCC3B000C6681B /* tiles.png */; };
+		E6059E1717DCC3B000C6681B /* Vera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6059E1117DCC3B000C6681B /* Vera.ttf */; };
+		E6059E1817DCC3B000C6681B /* VeraMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6059E1217DCC3B000C6681B /* VeraMono.ttf */; };
+		E6059E1B17DCC4A100C6681B /* Arial.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6059E0D17DCC3B000C6681B /* Arial.ttf */; };
+		E6059E1C17DCC4A100C6681B /* Sheep0007.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6059E0E17DCC3B000C6681B /* Sheep0007.png */; };
+		E6059E1D17DCC4A100C6681B /* test.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6059E0F17DCC3B000C6681B /* test.jpg */; };
+		E6059E1E17DCC4A100C6681B /* tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6059E1017DCC3B000C6681B /* tiles.png */; };
+		E6059E1F17DCC4A100C6681B /* Vera.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6059E1117DCC3B000C6681B /* Vera.ttf */; };
+		E6059E2017DCC4A100C6681B /* VeraMono.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6059E1217DCC3B000C6681B /* VeraMono.ttf */; };
 		E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9317C69EC0006F1456 /* UIKit.framework */; };
 		E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9517C69EC0006F1456 /* Foundation.framework */; };
 		E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */; };
@@ -19,10 +32,6 @@
 		E63EAEC417C6A0EC006F1456 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */; };
 		E63EAEC617C6A0F9006F1456 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */; };
 		E63EAED917C6BFF1006F1456 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAED817C6BFF1006F1456 /* libz.dylib */; };
-		E656049417CDF60C00E456A8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E656049317CDF60C00E456A8 /* test.jpg */; };
-		E69C3C4E17D8D7AA004407CD /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E69C3C4D17D8D7AA004407CD /* Arial.ttf */; };
-		E69C3C5217D941AB004407CD /* Vera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E69C3C5017D941AB004407CD /* Vera.ttf */; };
-		E69C3C5317D941AB004407CD /* VeraMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E69C3C5117D941AB004407CD /* VeraMono.ttf */; };
 		E6D0BDB417CE1EB400CAC564 /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDB317CE1EB400CAC564 /* libangelscript.a */; };
 		E6D0BDB517CE1EBE00CAC564 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDA617CE1A8400CAC564 /* libEngine.a */; };
 		E6D0BDD217CE29CE00CAC564 /* Source - Copy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */; };
@@ -52,18 +61,32 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		E6D0BDC017CE1FD500CAC564 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				E6059E1B17DCC4A100C6681B /* Arial.ttf in CopyFiles */,
+				E6059E1C17DCC4A100C6681B /* Sheep0007.png in CopyFiles */,
+				E6059E1D17DCC4A100C6681B /* test.jpg in CopyFiles */,
+				E6059E1E17DCC4A100C6681B /* tiles.png in CopyFiles */,
+				E6059E1F17DCC4A100C6681B /* Vera.ttf in CopyFiles */,
+				E6059E2017DCC4A100C6681B /* VeraMono.ttf in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E616492517D8A57200690E2B /* tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles.png; sourceTree = "<group>"; };
-		E616492717D8A6D800690E2B /* Sheep0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sheep0007.png; sourceTree = "<group>"; };
+		E6059D5417DC9F0E00C6681B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E6059D5817DC9F2A00C6681B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		E6059D5A17DCA07800C6681B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		E6059DD417DCB46000C6681B /* libvorbis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbis.a; path = ../../../LunaEngine/Engine/Externals/libvorbis/lib/OSX/libvorbis.a; sourceTree = "<group>"; };
+		E6059E0D17DCC3B000C6681B /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
+		E6059E0E17DCC3B000C6681B /* Sheep0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sheep0007.png; sourceTree = "<group>"; };
+		E6059E0F17DCC3B000C6681B /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		E6059E1017DCC3B000C6681B /* tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles.png; sourceTree = "<group>"; };
+		E6059E1117DCC3B000C6681B /* Vera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vera.ttf; sourceTree = "<group>"; };
+		E6059E1217DCC3B000C6681B /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeraMono.ttf; sourceTree = "<group>"; };
 		E63EAE9017C69EC0006F1456 /* VillageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63EAE9317C69EC0006F1456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E63EAE9517C69EC0006F1456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,10 +100,6 @@
 		E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E63EAED817C6BFF1006F1456 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		E656049317CDF60C00E456A8 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		E69C3C4D17D8D7AA004407CD /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
-		E69C3C5017D941AB004407CD /* Vera.ttf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vera.ttf; sourceTree = "<group>"; };
-		E69C3C5117D941AB004407CD /* VeraMono.ttf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VeraMono.ttf; sourceTree = "<group>"; };
 		E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
 		E6D0BDB317CE1EB400CAC564 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/libangelscript.a; sourceTree = "<group>"; };
 		E6D0BDC217CE1FD500CAC564 /* VillageGame Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "VillageGame Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +129,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */,
+				E6059D5917DC9F2A00C6681B /* IOKit.framework in Frameworks */,
+				E6059D5517DC9F0E00C6681B /* Cocoa.framework in Frameworks */,
 				E6D0BE5217CE2E7100CAC564 /* libangelscriptd.a in Frameworks */,
 				E6D0BE4E17CE2DA800CAC564 /* libz.dylib in Frameworks */,
 				E6D0BE4B17CE2D1000CAC564 /* libEngine Mac.a in Frameworks */,
@@ -122,13 +144,16 @@
 		E63EAE8717C69EC0006F1456 = {
 			isa = PBXGroup;
 			children = (
+				E6059DD417DCB46000C6681B /* libvorbis.a */,
+				E6059D5A17DCA07800C6681B /* OpenGL.framework */,
+				E6059D5817DC9F2A00C6681B /* IOKit.framework */,
+				E6059D5417DC9F0E00C6681B /* Cocoa.framework */,
 				E6D0BE5117CE2E7100CAC564 /* libangelscriptd.a */,
 				E6D0BE4F17CE2DC100CAC564 /* libangelscript.a */,
 				E6D0BE4D17CE2DA800CAC564 /* libz.dylib */,
 				E6D0BDB317CE1EB400CAC564 /* libangelscript.a */,
 				E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */,
 				E63EAE9917C69EC0006F1456 /* VillageGame */,
-				E6D0BDC317CE1FD500CAC564 /* VillageGame Mac */,
 				E63EAE9217C69EC0006F1456 /* Frameworks */,
 				E63EAE9117C69EC0006F1456 /* Products */,
 				E656049217CDF60C00E456A8 /* Assets */,
@@ -182,12 +207,12 @@
 		E656049217CDF60C00E456A8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E69C3C5017D941AB004407CD /* Vera.ttf */,
-				E69C3C5117D941AB004407CD /* VeraMono.ttf */,
-				E69C3C4D17D8D7AA004407CD /* Arial.ttf */,
-				E616492517D8A57200690E2B /* tiles.png */,
-				E616492717D8A6D800690E2B /* Sheep0007.png */,
-				E656049317CDF60C00E456A8 /* test.jpg */,
+				E6059E0D17DCC3B000C6681B /* Arial.ttf */,
+				E6059E0E17DCC3B000C6681B /* Sheep0007.png */,
+				E6059E0F17DCC3B000C6681B /* test.jpg */,
+				E6059E1017DCC3B000C6681B /* tiles.png */,
+				E6059E1117DCC3B000C6681B /* Vera.ttf */,
+				E6059E1217DCC3B000C6681B /* VeraMono.ttf */,
 			);
 			name = Assets;
 			path = ../../Assets;
@@ -200,13 +225,6 @@
 				E6D0BDCA17CE1FD500CAC564 /* libEngine Mac.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E6D0BDC317CE1FD500CAC564 /* VillageGame Mac */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "VillageGame Mac";
 			sourceTree = "<group>";
 		};
 		E6FD5FAE17CABAFA00F59339 /* Source */ = {
@@ -314,12 +332,12 @@
 				E63EAEA617C69EC0006F1456 /* Default.png in Resources */,
 				E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */,
 				E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */,
-				E656049417CDF60C00E456A8 /* test.jpg in Resources */,
-				E616492617D8A57200690E2B /* tiles.png in Resources */,
-				E616492817D8A6D800690E2B /* Sheep0007.png in Resources */,
-				E69C3C4E17D8D7AA004407CD /* Arial.ttf in Resources */,
-				E69C3C5217D941AB004407CD /* Vera.ttf in Resources */,
-				E69C3C5317D941AB004407CD /* VeraMono.ttf in Resources */,
+				E6059E1317DCC3B000C6681B /* Arial.ttf in Resources */,
+				E6059E1417DCC3B000C6681B /* Sheep0007.png in Resources */,
+				E6059E1517DCC3B000C6681B /* test.jpg in Resources */,
+				E6059E1617DCC3B000C6681B /* tiles.png in Resources */,
+				E6059E1717DCC3B000C6681B /* Vera.ttf in Resources */,
+				E6059E1817DCC3B000C6681B /* VeraMono.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,11 +478,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/libvorbis/lib/OSX\"",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 					_OSX,
+					GLEW_STATIC,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				LIBRARY_SEARCH_PATHS = (
@@ -472,10 +495,12 @@
 					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\"",
 					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/Release\"",
 					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Platform/OSX/glfw\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/libvorbis/lib/OSX\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -484,18 +509,27 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/libvorbis/lib/OSX\"",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = _OSX;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_OSX,
+					GLEW_STATIC,
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\"",
 					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/Release\"",
 					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Platform/OSX/glfw\"",
+					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/libvorbis/lib/OSX\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = "";
 			};
 			name = Release;
 		};
