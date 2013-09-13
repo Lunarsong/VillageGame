@@ -49,12 +49,12 @@ public:
             matTransform.SetPosition( Vector4( vPosition.x, vPosition.y ) );
             //pEntity->SetTransform( matTransform );
             
-            Vector3 vPosition = IRenderer::Get()->VGetSpriteManager()->VGetCameraPosition();
+            Vector3 vPosition = IRenderer::Get()->VGetSpriteManager()->GetCameraPosition();
             vPosition.x -= vDeltaPosition.x;
             vPosition.y -= vDeltaPosition.y;
             
             //IRenderer::Get()->VGetSpriteManager()->VSetCameraPosition( vPosition );
-            Point pos = pUI->GetPosition();
+            Vector3 pos = pUI->GetPosition();
             pUI->SetPosition( pos.x + vDeltaPosition.x, pos.y + vDeltaPosition.y );
         }
         
@@ -69,8 +69,15 @@ IFont* pFont = NULL;
 UIImage* pUIImage;
 UILabel* pLabel;
 
+#include "IslandData.h"
+using namespace VillageGame;
 void Start()
 {
+    BaseApplication::Get()->VSetResolution( 1280, 1024 );
+    IslandData island;
+    island.Generate( 100, 100 );
+    
+    
 	ResourceCache::Get()->AddResourceFile( "Working Folder", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder(), DevelopmentResourceZipFile::Editor ) );
     
     
@@ -78,7 +85,28 @@ void Start()
 	shared_ptr<BinaryResource> pResource = ResourceCache::Get()->GetResource<BinaryResource>( "tiles.png");
 
 	pTexture = IRenderer::CreateTexture();
-	pTexture->VCreate( pResource->Buffer(), pResource->Size() );
+//	pTexture->VCreate( pResource->Buffer(), pResource->Size() );
+    unsigned int pMap[100][100];
+    for ( int j = 0; j < 100; ++j )
+    {
+        for ( int i = 0; i < 100; ++i )
+        {
+            float fColor = island.GetHeight( j, i );
+            if ( fColor < 0.0f )
+            {
+                fColor = 0.0f;
+            }
+            ColorF color( fColor, fColor, fColor, 1.0f );
+            
+            if ( fColor <= 0.0f )
+            {
+                color = ColorF::BLUE;
+            }
+            Color colorRGB = color;
+            pMap[ j ][ i ] =  colorRGB.RGBA;
+        }
+    }
+    pTexture->VCreate( 100, 100, 4, (char*)pMap[0] );
 
     
     Matrix matTransform;
@@ -114,7 +142,8 @@ void Start()
     
     Vector3 vSize;
     pFont->VGetTextSize( "Hello, my name is Mimi.", vSize );
-    pUIImage = new UIImage( "Sheep0007.png" );
+    pUIImage = new UIImage( pTexture );
+    pUIImage->SetSize( 500, 500 );
     pLabel = new UILabel( "UI Label here" );
     
     pUI = new UIElement();
