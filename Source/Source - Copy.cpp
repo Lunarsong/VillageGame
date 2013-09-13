@@ -29,16 +29,22 @@ public:
     bool VOnTouchStart( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
     {
         ++iNumTouchs;
+
+		return false;
     }
     
     bool VOnTouchEnd( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
     {
         --iNumTouchs;
+
+		return false;
     }
     
     bool VOnTouchCancel( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
     {
         --iNumTouchs;
+
+		return false;
     }
     
     bool VOnTouchMove( const int iTouchIndex, const Vector2& vPosition, const Vector2& vDeltaPosition, const int iPressure )
@@ -62,6 +68,8 @@ public:
         {
             
         }
+
+		return false;
     }
 };
 

@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "Core/Math/RandomNumGen.h"
 #include <vector>
+#include <ctime>
 
 namespace VillageGame
 {

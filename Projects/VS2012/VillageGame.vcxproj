@@ -11,7 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\IslandData.cpp" />
     <ClCompile Include="..\..\Source\Source - Copy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\IslandData.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7F379118-F473-4C42-96AB-178E33E0962B}</ProjectGuid>
