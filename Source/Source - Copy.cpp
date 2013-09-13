@@ -14,11 +14,11 @@ UIElement* pUI;
 class myTouchHandler : public ITouchHandler
 {
 public:
-    int iNumTouchs = 0;
+    int iNumTouchs;
     
     myTouchHandler()
     {
-        
+        iNumTouchs = 0;
     }
     
     ~myTouchHandler()
