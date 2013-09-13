@@ -66,7 +66,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>EngineDebug.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../LunaEngine/Engine/Externals/OpenGL/lib/Release/Win32;../../../LunaEngine/Bin;C:\Program Files\Autodesk\FBX\FBX SDK\2014.1\lib\vs2012\x86\debug;../../../LunaEngine/Engine/Externals/LibOVR/Lib/Win32;../../../LunaEngine/Engine/Externals/libvorbis/lib/Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../LunaEngine/Engine/Externals/OpenGL/lib/Release/Win32;$(SolutionDir)Bin\;C:\Program Files\Autodesk\FBX\FBX SDK\2014.1\lib\vs2012\x86\debug;../../../LunaEngine/Engine/Externals/LibOVR/Lib/Win32;../../../LunaEngine/Engine/Externals/libvorbis/lib/Debug</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
