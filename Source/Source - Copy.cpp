@@ -81,7 +81,7 @@ UILabel* pLabel;
 using namespace VillageGame;
 void Start()
 {
-    BaseApplication::Get()->VSetResolution( 1280, 1024 );
+    //BaseApplication::Get()->VSetResolution( 1280, 1024 );
     IslandData island;
     island.Generate( 100, 100 );
     
@@ -146,7 +146,7 @@ void Start()
     InputManager::Get()->AddTouchHandler( new myTouchHandler() );
     
     pFont = IRenderer::CreateFont();
-    pFont->VCreate( "Vera" );
+    pFont->VCreate( "Arial" );
     
     Vector3 vSize;
     pFont->VGetTextSize( "Hello, my name is Mimi.", vSize );
@@ -188,7 +188,8 @@ void Render()
 	IRenderContext* pRenderContext = IRenderer::Get()->VGetMainContext();
 
     //pFont->VPrint( pRenderContext, "Hi!?h|}{IMOPJ?...", Vector3::ZERO, Vector3::ONE );
-    pUI->Draw( pRenderContext );
+    //pUI->Draw( pRenderContext );
+	
 //    pUIImage->Draw( pRenderContext );
 //    pLabel->Draw( pRenderContext );
 }
