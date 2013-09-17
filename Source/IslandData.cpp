@@ -211,17 +211,17 @@ namespace VillageGame
     
     float IslandData::GetHeight( int iX, int iY )
     {
-        return m_pHeightMap[ iY * m_uiSizeY + iX ] * GetMaskHeight( iX, iY );
+        return m_pHeightMap[ iY * m_uiSizeX + iX ] * GetMaskHeight( iX, iY );
     }
     
     float IslandData::GetMaskHeight( int iX, int iY )
     {
-        return ( m_pHeightMaskMap[ iY * m_uiSizeY + iX ] / 255.0f - 0.5f ) * 2.0f;
+        return ( m_pHeightMaskMap[ iY * m_uiSizeX + iX ] / 255.0f - 0.5f ) * 2.0f;
     }
     
     inline
     float& IslandData::operator() ( unsigned int iX, unsigned int iY )
     {
-        return m_pHeightMap[ iY * m_uiSizeY + iX ];
+        return m_pHeightMap[ iY * m_uiSizeX + iX ];
     }
 }
