@@ -67,7 +67,7 @@ public:
             vPosition.y -= vDeltaPosition.y;
             
             //IRenderer::Get()->VGetSpriteManager()->VSetCameraPosition( vPosition );
-            Vector3 pos = pUI->GetPosition();
+            Vector3 pos = pUI->GetTopLeftPosition();
             pUI->SetPosition( pos.x + vDeltaPosition.x, pos.y + vDeltaPosition.y );
         }
         
@@ -213,9 +213,11 @@ void Start()
     pFont = IRenderer::CreateFont();
     pFont->VCreate( "Arial" );
     
-    /*Vector3 vSize;
+    Vector3 vSize;
     pFont->VGetTextSize( "Hello, my name is Mimi.", vSize );
     pUIImage = new UIImage( pTexture );
+	pUIImage->SetPosition( 50.0f, 50.0f );
+	pUIImage->SetPositionType( UICoordinateType::UIPixels );
     pUIImage->SetSize( 500, 500 );
     pLabel = new UILabel( "UI Label here" );
     
@@ -224,7 +226,7 @@ void Start()
     pUI->AddChild( pUIImage );
     
     pUIImage->Release();
-    pLabel->Release();*/
+    pLabel->Release();
     
 }
 
@@ -254,7 +256,7 @@ void Render()
 {
 	IRenderContext* pRenderContext = IRenderer::Get()->VGetMainContext();
 
-	for ( unsigned int y = 0; y < 30; ++y )
+	/*for ( unsigned int y = 0; y < 30; ++y )
 	{
 		for ( unsigned int x = 0; x < 30; ++x )
 		{
@@ -283,12 +285,14 @@ void Render()
 				pPath->CheckForNextNode( vPosition );
 			}
 		}
-	}
-    //pFont->VPrint( pRenderContext, "Hi!?h|}{IMOPJ?...", Vector3::ZERO, Vector3::ONE );
-    //pUI->Draw( pRenderContext );
-	
-//    pUIImage->Draw( pRenderContext );
-//    pLabel->Draw( pRenderContext );
+	}*/
+
+	IRenderer* pRenderer = IRenderer::Get();
+	Vector3 vScreen( (float)pRenderer->VGetScreenWidth(), (float)pRenderer->VGetScreenHeight(), 1.0f );
+
+	UICoordinates::SetScreen( vScreen, Vector3( 1280.0f, 720.0f, 1.0f ) );
+
+    pUI->Draw( pRenderContext );
 }
 
 void End()
@@ -296,7 +300,7 @@ void End()
 	SAFE_RELEASE( pTexture );
     
     pFont->Release();
-    //pUI->Release();
+    pUI->Release();
 
 	delete pMouseHandler;
 }
