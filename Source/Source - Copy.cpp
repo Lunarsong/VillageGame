@@ -3,6 +3,7 @@
 #include "Game/Entities/Components/Rendering/QuadComponent.h"
 #include "Game/Entities/Components/Rendering/SpriteComponent.h"
 #include "UI/UIImage.h"
+#include "UI/UserInterface.h"
 #include "UI/UILabel.h"
 #include <Rendering/Utils/RenderUtils.h>
 
@@ -15,6 +16,7 @@ UIElement* pUI;
 #include "IslandData.h"
 #include "AI/Pathfinding/Graph/Implementations/SquarePathfindingGraph.h"
 #include "AI/Pathfinding/AStar/AStar.h"
+#include <UI/UIButtonImage.h>
 
 SquarePathfindingGraph* pPathGraph = new SquarePathfindingGraph();
 PathPlan* pPath = NULL;
@@ -353,19 +355,70 @@ void Start()
     
     Vector3 vSize;
     pFont->VGetTextSize( "Hello, my name is Mimi.", vSize );
-    pUIImage = new UIImage( pTexture );
-	pUIImage->SetPosition( 50.0f, 50.0f );
+    pUIImage = new UIImage();
+	pUIImage->SetTexture( "paper background.png" );
 	pUIImage->SetPositionType( UICoordinateType::UIPixels );
-    pUIImage->SetSize( 500, 500 );
+    pUIImage->SetSize( 300, 100 );
+
+	UIButtonImage* pButton = new UIButtonImage();
+	pUIImage->AddChild( pButton );
+	pButton->SetTexture(  "package_development.png" );
+	pButton->SetSize( 64, 64 );
+	pButton->SetPosition( 200, 50 );
+	pButton->SetCallbackFunction( []()
+		{
+			UIElement* pElement = UserInterface::GetScreen( "Construction" );
+			if ( pElement )
+			{
+				pElement->SetVisible( !pElement->IsVisible() );
+			}
+		}
+	);
+	pButton->Release();
+
     pLabel = new UILabel( "UI Label here" );
     
-    pUI = new UIElement();
+    pUI = new UIPanel();
+	pUI->SetSize( 300, 100 );
     pUI->AddChild( pLabel );
     pUI->AddChild( pUIImage );
     
     pUIImage->Release();
     pLabel->Release();
+
     
+	UserInterface::AddScreen( "Game Menu", pUI );
+
+	pUI->Release();
+
+	pUI = new UIPanel();
+	pUI->SetSize( 300, 100 );
+	pUIImage = new UIImage();
+	pUIImage->SetTexture( "paper background.png" );
+	pUIImage->SetPositionType( UICoordinateType::UIPixels );
+	pUIImage->SetSize( 300, 100 );
+	pUI->AddChild( pUIImage );
+
+	pButton = new UIButtonImage();
+	pUIImage->AddChild( pButton );
+	pButton->SetTexture(  "package_development.png" );
+	pButton->SetSize( 64, 64 );
+	pButton->SetPosition( 200, 50 );
+	pButton->SetCallbackFunction( []()
+	{
+		UIElement* pElement = UserInterface::GetScreen( "Construction" );
+		if ( pElement )
+		{
+			pElement->SetVisible( !pElement->IsVisible() );
+		}
+	}
+	);
+	pButton->Release();
+	pUIImage->Release();
+
+	pUI->SetVisible( false );
+	UserInterface::AddScreen( "Construction", pUI );
+	pUI->Release();
 }
 
 void Update( float fDeltaSeconds )
@@ -395,32 +448,12 @@ void Render()
 {
 	IRenderContext* pRenderContext = IRenderer::Get()->VGetMainContext();
 
-	for ( unsigned int y = 0; y < 30; ++y )
-	{
-		for ( unsigned int x = 0; x < 30; ++x )
-		{
-			ColorF color = ColorF::GREEN;
-			if ( ( x + y ) % 2 == 0 )
-			{
-				color = ColorF::BLUE;
-			}
-
-			if ( pPathGraph->GetNode( x, y )->IsTraversable() == false )
-			{
-				color = ColorF::RED;
-			}
-            
-		}
-
-		
-	}
 
 	IRenderer* pRenderer = IRenderer::Get();
 	Vector3 vScreen( (float)pRenderer->VGetScreenWidth(), (float)pRenderer->VGetScreenHeight(), 1.0f );
 
 	UICoordinates::SetScreen( vScreen, Vector3( 1280.0f, 720.0f, 1.0f ) );
 
-    //pUI->Draw( pRenderContext );
 }
 
 void End()
@@ -428,7 +461,6 @@ void End()
 	SAFE_RELEASE( pTexture );
     
     pFont->Release();
-    pUI->Release();
     
     for ( int x = 0; x < 30; ++x )
     {
