@@ -371,9 +371,13 @@ void Start()
 void Update( float fDeltaSeconds )
 {
     Matrix mat = pEntity->GetTransform();
+<<<<<<< HEAD
     mat.SetPosition( mat.GetPosition() + Vector4( 1.0f, 1.0f, 0.0f, 0.0f ) * fDeltaSeconds * 5 );
     pEntity->SetTransform( mat );
 	
+=======
+
+>>>>>>> fd4cf4c5ef9f63fbd20f80c107e2b5b04a2af7fa
     if ( pPath )
     {
         if ( pPath->CheckForEnd() == false )
@@ -389,6 +393,25 @@ void Update( float fDeltaSeconds )
         }
     }
     
+<<<<<<< HEAD
+=======
+    
+	static ColorF color = ColorF::BLACK;
+
+	static float fColorSpeed = 1.0f;
+	color.Red += fDeltaSeconds * fColorSpeed;
+	color.Green += fDeltaSeconds * fColorSpeed;
+	color.Blue += fDeltaSeconds * fColorSpeed;
+
+	if ( color.Red >= 1.0f || color.Red <= 0.0f )
+	{
+		fColorSpeed *= -1.0f;
+	}	
+
+	BaseApplication::Get()->SetClearColor( color );
+
+
+>>>>>>> fd4cf4c5ef9f63fbd20f80c107e2b5b04a2af7fa
 }
 
 void Render()
