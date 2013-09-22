@@ -152,6 +152,7 @@ void Start()
 	pMouseHandler = new myMouseHandler();
     
 	ResourceCache::Get()->AddResourceFile( "Working Folder", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder(), DevelopmentResourceZipFile::Editor ) );
+	ResourceCache::Get()->AddResourceFile( "Assets", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder() + "Assets/", DevelopmentResourceZipFile::Editor ) );
     
     
     
@@ -185,7 +186,8 @@ void Start()
     Matrix matTransform;
     matTransform.BuildScale( Vector4( 50.0f, 50.0f, 1.0f ) );
     matTransform.SetPosition( 100.0f, 100.0f, 0.0f );
-    pEntity = Game::CreateEntity( matTransform );
+    
+	pEntity = Game::CreateEntity( matTransform );
     shared_ptr< QuadComponent > pComponent( new QuadComponent() );
     pComponent->SetTexture( pTexture );
     pEntity->AddComponent( pComponent );
@@ -235,21 +237,7 @@ void Update( float fDeltaSeconds )
     Matrix mat = pEntity->GetTransform();
     mat.SetPosition( mat.GetPosition() + Vector4( 1.0f, 1.0f, 0.0f, 0.0f ) * fDeltaSeconds * 5 );
     pEntity->SetTransform( mat );
-	static ColorF color = ColorF::BLACK;
-
-	static float fColorSpeed = 1.0f;
-	color.Red += fDeltaSeconds * fColorSpeed;
-	color.Green += fDeltaSeconds * fColorSpeed;
-	color.Blue += fDeltaSeconds * fColorSpeed;
-
-	if ( color.Red >= 1.0f || color.Red <= 0.0f )
-	{
-		fColorSpeed *= -1.0f;
-	}	
-
-	BaseApplication::Get()->SetClearColor( color );
-
-
+	
 }
 
 void Render()
