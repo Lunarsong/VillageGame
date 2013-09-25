@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E60383BA17F3A72D00AC11C4 /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E60383AB17F3A72D00AC11C4 /* Arial.ttf */; };
-		E60383BB17F3A72D00AC11C4 /* Dialogue.xml in Resources */ = {isa = PBXBuildFile; fileRef = E60383AC17F3A72D00AC11C4 /* Dialogue.xml */; };
-		E60383BC17F3A72D00AC11C4 /* gradients.png in Resources */ = {isa = PBXBuildFile; fileRef = E60383AD17F3A72D00AC11C4 /* gradients.png */; };
-		E60383BD17F3A72D00AC11C4 /* package_development.png in Resources */ = {isa = PBXBuildFile; fileRef = E60383AE17F3A72D00AC11C4 /* package_development.png */; };
-		E60383BE17F3A72D00AC11C4 /* paper background.png in Resources */ = {isa = PBXBuildFile; fileRef = E60383AF17F3A72D00AC11C4 /* paper background.png */; };
-		E60383BF17F3A72D00AC11C4 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = E60383B017F3A72D00AC11C4 /* ReadMe */; };
-		E60383C017F3A72D00AC11C4 /* RPG_GUI_v1_source.xcf in Resources */ = {isa = PBXBuildFile; fileRef = E60383B117F3A72D00AC11C4 /* RPG_GUI_v1_source.xcf */; };
-		E60383C117F3A72D00AC11C4 /* RPG_GUI_v1.png in Resources */ = {isa = PBXBuildFile; fileRef = E60383B217F3A72D00AC11C4 /* RPG_GUI_v1.png */; };
-		E60383C217F3A72D00AC11C4 /* Sheep0007.png in Resources */ = {isa = PBXBuildFile; fileRef = E60383B317F3A72D00AC11C4 /* Sheep0007.png */; };
-		E60383C317F3A72D00AC11C4 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E60383B417F3A72D00AC11C4 /* test.jpg */; };
-		E60383C417F3A72D00AC11C4 /* TestDialogue.dia in Resources */ = {isa = PBXBuildFile; fileRef = E60383B517F3A72D00AC11C4 /* TestDialogue.dia */; };
-		E60383C517F3A72D00AC11C4 /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = E60383B617F3A72D00AC11C4 /* tiles.png */; };
-		E60383C617F3A72D00AC11C4 /* Vera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E60383B717F3A72D00AC11C4 /* Vera.ttf */; };
-		E60383C717F3A72D00AC11C4 /* VeraMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E60383B817F3A72D00AC11C4 /* VeraMono.ttf */; };
-		E60383C817F3A72D00AC11C4 /* wood background.png in Resources */ = {isa = PBXBuildFile; fileRef = E60383B917F3A72D00AC11C4 /* wood background.png */; };
+		E603843717F3A9DA00AC11C4 /* Arial.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603842817F3A9DA00AC11C4 /* Arial.ttf */; };
+		E603843817F3A9DA00AC11C4 /* Dialogue.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603842917F3A9DA00AC11C4 /* Dialogue.xml */; };
+		E603843917F3A9DA00AC11C4 /* gradients.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603842A17F3A9DA00AC11C4 /* gradients.png */; };
+		E603843A17F3A9DA00AC11C4 /* package_development.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603842B17F3A9DA00AC11C4 /* package_development.png */; };
+		E603843B17F3A9DA00AC11C4 /* paper background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603842C17F3A9DA00AC11C4 /* paper background.png */; };
+		E603843C17F3A9DA00AC11C4 /* ReadMe in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603842D17F3A9DA00AC11C4 /* ReadMe */; };
+		E603843D17F3A9DA00AC11C4 /* RPG_GUI_v1_source.xcf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603842E17F3A9DA00AC11C4 /* RPG_GUI_v1_source.xcf */; };
+		E603843E17F3A9DA00AC11C4 /* RPG_GUI_v1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603842F17F3A9DA00AC11C4 /* RPG_GUI_v1.png */; };
+		E603843F17F3A9DA00AC11C4 /* Sheep0007.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603843017F3A9DA00AC11C4 /* Sheep0007.png */; };
+		E603844017F3A9DA00AC11C4 /* test.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603843117F3A9DA00AC11C4 /* test.jpg */; };
+		E603844117F3A9DA00AC11C4 /* TestDialogue.dia in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603843217F3A9DA00AC11C4 /* TestDialogue.dia */; };
+		E603844217F3A9DA00AC11C4 /* tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603843317F3A9DA00AC11C4 /* tiles.png */; };
+		E603844317F3A9DA00AC11C4 /* Vera.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603843417F3A9DA00AC11C4 /* Vera.ttf */; };
+		E603844417F3A9DA00AC11C4 /* VeraMono.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603843517F3A9DA00AC11C4 /* VeraMono.ttf */; };
+		E603844517F3A9DA00AC11C4 /* wood background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603843617F3A9DA00AC11C4 /* wood background.png */; };
 		E6059D5517DC9F0E00C6681B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5417DC9F0E00C6681B /* Cocoa.framework */; };
 		E6059D5917DC9F2A00C6681B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5817DC9F2A00C6681B /* IOKit.framework */; };
 		E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5A17DCA07800C6681B /* OpenGL.framework */; };
@@ -70,27 +70,42 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				E603843717F3A9DA00AC11C4 /* Arial.ttf in CopyFiles */,
+				E603843817F3A9DA00AC11C4 /* Dialogue.xml in CopyFiles */,
+				E603843917F3A9DA00AC11C4 /* gradients.png in CopyFiles */,
+				E603843A17F3A9DA00AC11C4 /* package_development.png in CopyFiles */,
+				E603843B17F3A9DA00AC11C4 /* paper background.png in CopyFiles */,
+				E603843C17F3A9DA00AC11C4 /* ReadMe in CopyFiles */,
+				E603843D17F3A9DA00AC11C4 /* RPG_GUI_v1_source.xcf in CopyFiles */,
+				E603843E17F3A9DA00AC11C4 /* RPG_GUI_v1.png in CopyFiles */,
+				E603843F17F3A9DA00AC11C4 /* Sheep0007.png in CopyFiles */,
+				E603844017F3A9DA00AC11C4 /* test.jpg in CopyFiles */,
+				E603844117F3A9DA00AC11C4 /* TestDialogue.dia in CopyFiles */,
+				E603844217F3A9DA00AC11C4 /* tiles.png in CopyFiles */,
+				E603844317F3A9DA00AC11C4 /* Vera.ttf in CopyFiles */,
+				E603844417F3A9DA00AC11C4 /* VeraMono.ttf in CopyFiles */,
+				E603844517F3A9DA00AC11C4 /* wood background.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E60383AB17F3A72D00AC11C4 /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
-		E60383AC17F3A72D00AC11C4 /* Dialogue.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dialogue.xml; sourceTree = "<group>"; };
-		E60383AD17F3A72D00AC11C4 /* gradients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradients.png; sourceTree = "<group>"; };
-		E60383AE17F3A72D00AC11C4 /* package_development.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package_development.png; sourceTree = "<group>"; };
-		E60383AF17F3A72D00AC11C4 /* paper background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper background.png"; sourceTree = "<group>"; };
-		E60383B017F3A72D00AC11C4 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
-		E60383B117F3A72D00AC11C4 /* RPG_GUI_v1_source.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RPG_GUI_v1_source.xcf; sourceTree = "<group>"; };
-		E60383B217F3A72D00AC11C4 /* RPG_GUI_v1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RPG_GUI_v1.png; sourceTree = "<group>"; };
-		E60383B317F3A72D00AC11C4 /* Sheep0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sheep0007.png; sourceTree = "<group>"; };
-		E60383B417F3A72D00AC11C4 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		E60383B517F3A72D00AC11C4 /* TestDialogue.dia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestDialogue.dia; sourceTree = "<group>"; };
-		E60383B617F3A72D00AC11C4 /* tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles.png; sourceTree = "<group>"; };
-		E60383B717F3A72D00AC11C4 /* Vera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vera.ttf; sourceTree = "<group>"; };
-		E60383B817F3A72D00AC11C4 /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeraMono.ttf; sourceTree = "<group>"; };
-		E60383B917F3A72D00AC11C4 /* wood background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood background.png"; sourceTree = "<group>"; };
+		E603842817F3A9DA00AC11C4 /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
+		E603842917F3A9DA00AC11C4 /* Dialogue.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dialogue.xml; sourceTree = "<group>"; };
+		E603842A17F3A9DA00AC11C4 /* gradients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradients.png; sourceTree = "<group>"; };
+		E603842B17F3A9DA00AC11C4 /* package_development.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package_development.png; sourceTree = "<group>"; };
+		E603842C17F3A9DA00AC11C4 /* paper background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper background.png"; sourceTree = "<group>"; };
+		E603842D17F3A9DA00AC11C4 /* ReadMe */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
+		E603842E17F3A9DA00AC11C4 /* RPG_GUI_v1_source.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RPG_GUI_v1_source.xcf; sourceTree = "<group>"; };
+		E603842F17F3A9DA00AC11C4 /* RPG_GUI_v1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RPG_GUI_v1.png; sourceTree = "<group>"; };
+		E603843017F3A9DA00AC11C4 /* Sheep0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sheep0007.png; sourceTree = "<group>"; };
+		E603843117F3A9DA00AC11C4 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		E603843217F3A9DA00AC11C4 /* TestDialogue.dia */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestDialogue.dia; sourceTree = "<group>"; };
+		E603843317F3A9DA00AC11C4 /* tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles.png; sourceTree = "<group>"; };
+		E603843417F3A9DA00AC11C4 /* Vera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vera.ttf; sourceTree = "<group>"; };
+		E603843517F3A9DA00AC11C4 /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeraMono.ttf; sourceTree = "<group>"; };
+		E603843617F3A9DA00AC11C4 /* wood background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood background.png"; sourceTree = "<group>"; };
 		E6059D5417DC9F0E00C6681B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		E6059D5817DC9F2A00C6681B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		E6059D5A17DCA07800C6681B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
@@ -219,21 +234,21 @@
 		E656049217CDF60C00E456A8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E60383AB17F3A72D00AC11C4 /* Arial.ttf */,
-				E60383AC17F3A72D00AC11C4 /* Dialogue.xml */,
-				E60383AD17F3A72D00AC11C4 /* gradients.png */,
-				E60383AE17F3A72D00AC11C4 /* package_development.png */,
-				E60383AF17F3A72D00AC11C4 /* paper background.png */,
-				E60383B017F3A72D00AC11C4 /* ReadMe */,
-				E60383B117F3A72D00AC11C4 /* RPG_GUI_v1_source.xcf */,
-				E60383B217F3A72D00AC11C4 /* RPG_GUI_v1.png */,
-				E60383B317F3A72D00AC11C4 /* Sheep0007.png */,
-				E60383B417F3A72D00AC11C4 /* test.jpg */,
-				E60383B517F3A72D00AC11C4 /* TestDialogue.dia */,
-				E60383B617F3A72D00AC11C4 /* tiles.png */,
-				E60383B717F3A72D00AC11C4 /* Vera.ttf */,
-				E60383B817F3A72D00AC11C4 /* VeraMono.ttf */,
-				E60383B917F3A72D00AC11C4 /* wood background.png */,
+				E603842817F3A9DA00AC11C4 /* Arial.ttf */,
+				E603842917F3A9DA00AC11C4 /* Dialogue.xml */,
+				E603842A17F3A9DA00AC11C4 /* gradients.png */,
+				E603842B17F3A9DA00AC11C4 /* package_development.png */,
+				E603842C17F3A9DA00AC11C4 /* paper background.png */,
+				E603842D17F3A9DA00AC11C4 /* ReadMe */,
+				E603842E17F3A9DA00AC11C4 /* RPG_GUI_v1_source.xcf */,
+				E603842F17F3A9DA00AC11C4 /* RPG_GUI_v1.png */,
+				E603843017F3A9DA00AC11C4 /* Sheep0007.png */,
+				E603843117F3A9DA00AC11C4 /* test.jpg */,
+				E603843217F3A9DA00AC11C4 /* TestDialogue.dia */,
+				E603843317F3A9DA00AC11C4 /* tiles.png */,
+				E603843417F3A9DA00AC11C4 /* Vera.ttf */,
+				E603843517F3A9DA00AC11C4 /* VeraMono.ttf */,
+				E603843617F3A9DA00AC11C4 /* wood background.png */,
 			);
 			name = Assets;
 			path = ../../Assets;
@@ -351,25 +366,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E60383BF17F3A72D00AC11C4 /* ReadMe in Resources */,
-				E60383BD17F3A72D00AC11C4 /* package_development.png in Resources */,
 				E63EAE9E17C69EC0006F1456 /* InfoPlist.strings in Resources */,
 				E63EAEA617C69EC0006F1456 /* Default.png in Resources */,
-				E60383C017F3A72D00AC11C4 /* RPG_GUI_v1_source.xcf in Resources */,
 				E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */,
-				E60383C417F3A72D00AC11C4 /* TestDialogue.dia in Resources */,
-				E60383BA17F3A72D00AC11C4 /* Arial.ttf in Resources */,
-				E60383C617F3A72D00AC11C4 /* Vera.ttf in Resources */,
-				E60383BC17F3A72D00AC11C4 /* gradients.png in Resources */,
-				E60383C117F3A72D00AC11C4 /* RPG_GUI_v1.png in Resources */,
-				E60383C717F3A72D00AC11C4 /* VeraMono.ttf in Resources */,
-				E60383C317F3A72D00AC11C4 /* test.jpg in Resources */,
-				E60383C817F3A72D00AC11C4 /* wood background.png in Resources */,
-				E60383C217F3A72D00AC11C4 /* Sheep0007.png in Resources */,
 				E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */,
-				E60383C517F3A72D00AC11C4 /* tiles.png in Resources */,
-				E60383BE17F3A72D00AC11C4 /* paper background.png in Resources */,
-				E60383BB17F3A72D00AC11C4 /* Dialogue.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
