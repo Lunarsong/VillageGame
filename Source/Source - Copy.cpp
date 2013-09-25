@@ -17,6 +17,7 @@ UIElement* pUI;
 #include "AI/Pathfinding/Graph/Implementations/SquarePathfindingGraph.h"
 #include "AI/Pathfinding/AStar/AStar.h"
 #include <UI/UIButtonImage.h>
+#include <Game/Dialogue/DialogueXmlParser.h>
 
 SquarePathfindingGraph* pPathGraph = new SquarePathfindingGraph();
 PathPlan* pPath = NULL;
@@ -260,16 +261,18 @@ using namespace VillageGame;
 
 void Start()
 {
+	ResourceCache::Get()->AddResourceFile( "Working Folder", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder(), DevelopmentResourceZipFile::Editor ) );
+	ResourceCache::Get()->AddResourceFile( "Assets", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder() + "Assets/", DevelopmentResourceZipFile::Editor ) );
+
+	DialogueTree* pDialogueTree = DialogueXmlParser::FromFile( "Dialogue.xml" );
+
+	pDialogueTree->Release();
 	pPathGraph->Create( 30, 30, 32.0f, false );
     //BaseApplication::Get()->VSetResolution( 1280, 1024 );
     IslandData island;
     island.Generate( 100, 100 );
  
-	pMouseHandler = new myMouseHandler();
-    
-	ResourceCache::Get()->AddResourceFile( "Working Folder", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder(), DevelopmentResourceZipFile::Editor ) );
-	ResourceCache::Get()->AddResourceFile( "Assets", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder() + "Assets/", DevelopmentResourceZipFile::Editor ) );
-    
+	pMouseHandler = new myMouseHandler();    
     
     
 	shared_ptr<BinaryResource> pResource = ResourceCache::Get()->GetResource<BinaryResource>( "tiles.png");
@@ -345,6 +348,7 @@ void Start()
     pEntity = Game::CreateEntity( matTransform );
     shared_ptr<SpriteComponent> pSprite( new SpriteComponent() );
     pSprite->SetTexture( "Sheep0007.png" );
+	
     pEntity->AddComponent( pSprite );
     pEntity->Start();
     
