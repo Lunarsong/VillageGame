@@ -18,10 +18,11 @@ UIElement* pUI;
 #include "AI/Pathfinding/AStar/AStar.h"
 #include <UI/UIButtonImage.h>
 #include <Game/Dialogue/DialogueXmlParser.h>
+#include <Game/Dialogue/UI/DialogueInterface.h>
 
 SquarePathfindingGraph* pPathGraph = new SquarePathfindingGraph();
 PathPlan* pPath = NULL;
-shared_ptr<SpriteComponent> pSprites[30][30];
+shared_ptr<SpriteComponent> pSprites[50][50];
 class myTouchHandler : public ITouchHandler
 {
 public:
@@ -64,9 +65,10 @@ public:
                     {
                         color = ColorF::BLUE;
                     }
-                    
-                    
-                    pSprites[ uiY ][ uiX ]->SetColor( color );
+                    if ( pPathGraph->GetNode( uiX, uiY )->IsTraversable() )
+					{
+						pSprites[ uiY ][ uiX ]->SetColor( color );
+					}
                     
                     pPath->CheckForNextNode( vPosition );
                 }
@@ -91,7 +93,7 @@ public:
                     unsigned int uiX = (unsigned int)((vPosition.x) / 32.0f );
                     unsigned int uiY = (unsigned int)((vPosition.y) / 32.0f );
                     
-                    pSprites[ uiY ][ uiX ]->SetColor( ColorF::GREY );
+					pSprites[ uiY ][ uiX ]->SetColor( ColorF::GREY );
                     
                     pPath->CheckForNextNode( vPosition );
                 }
@@ -204,8 +206,10 @@ public:
                         color = ColorF::BLUE;
                     }
 
-                    
-                    pSprites[ uiY ][ uiX ]->SetColor( color );
+                    if ( pPathGraph->GetNode( uiX, uiY )->IsTraversable() )
+					{
+						pSprites[ uiY ][ uiX ]->SetColor( color );
+					}
                     
                     pPath->CheckForNextNode( vPosition );
                 }
@@ -259,15 +263,15 @@ myMouseHandler* pMouseHandler;
 
 using namespace VillageGame;
 
+DialogueTree* pDialogueTree = NULL;
 void Start()
 {
 	ResourceCache::Get()->AddResourceFile( "Working Folder", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder(), DevelopmentResourceZipFile::Editor ) );
 	ResourceCache::Get()->AddResourceFile( "Assets", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder() + "Assets/", DevelopmentResourceZipFile::Editor ) );
 
-	DialogueTree* pDialogueTree = DialogueXmlParser::FromFile( "Dialogue.xml" );
+	pDialogueTree = DialogueXmlParser::FromFile( "Dialogue.xml" );
 
-	pDialogueTree->Release();
-	pPathGraph->Create( 30, 30, 32.0f, false );
+	pPathGraph->Create( 100, 100, 32.0f, false );
     //BaseApplication::Get()->VSetResolution( 1280, 1024 );
     IslandData island;
     island.Generate( 100, 100 );
@@ -316,9 +320,9 @@ void Start()
     matTransform.Identify();
     matTransform.BuildScale( Vector4( 32.0f, 32.0f, 1.0f ) );
     
-    for ( unsigned int y = 0; y < 30; ++y )
+    for ( unsigned int y = 0; y < 50; ++y )
 	{
-		for ( unsigned int x = 0; x < 30; ++x )
+		for ( unsigned int x = 0; x < 50; ++x )
 		{
 			ColorF color = ColorF::GREEN;
 			if ( ( x + y ) % 2 == 0 )
@@ -357,7 +361,7 @@ void Start()
     pFont = IRenderer::CreateFont();
     pFont->VCreate( "Arial" );
     
-    Vector3 vSize;
+    /*Vector3 vSize;
     pFont->VGetTextSize( "Hello, my name is Mimi.", vSize );
     pUIImage = new UIImage();
 	pUIImage->SetTexture( "paper background.png" );
@@ -369,7 +373,7 @@ void Start()
 	pButton->SetTexture(  "package_development.png" );
 	pButton->SetSize( 64, 64 );
 	pButton->SetPosition( 200, 50 );
-	pButton->SetCallbackFunction( []()
+	pButton->SetCallbackFunction( [](UIElement* pCallingElement, void* pArgs )
 		{
 			UIElement* pElement = UserInterface::GetScreen( "Construction" );
 			if ( pElement )
@@ -384,8 +388,9 @@ void Start()
     
     pUI = new UIPanel();
 	pUI->SetSize( 300, 100 );
-    pUI->AddChild( pLabel );
+	pUI->AddChild( pLabel );
     pUI->AddChild( pUIImage );
+	
     
     pUIImage->Release();
     pLabel->Release();
@@ -408,7 +413,7 @@ void Start()
 	pButton->SetTexture(  "package_development.png" );
 	pButton->SetSize( 64, 64 );
 	pButton->SetPosition( 200, 50 );
-	pButton->SetCallbackFunction( []()
+	pButton->SetCallbackFunction( []( UIElement* pCallingElement, void* pArgs )
 	{
 		UIElement* pElement = UserInterface::GetScreen( "Construction" );
 		if ( pElement )
@@ -422,14 +427,16 @@ void Start()
 
 	pUI->SetVisible( false );
 	UserInterface::AddScreen( "Construction", pUI );
-	pUI->Release();
+	pUI->Release();*/
+
+	Process* pProcess = new DialogueInterface( "DialogueInterface.xml", "Dialogue.xml" );
+	BaseApplication::Get()->AttachProcess( pProcess );
+	pProcess->Release();
 }
 
 void Update( float fDeltaSeconds )
 {
     Matrix mat = pEntity->GetTransform();
-    mat.SetPosition( mat.GetPosition() + Vector4( 1.0f, 1.0f, 0.0f, 0.0f ) * fDeltaSeconds * 5 );
-    pEntity->SetTransform( mat );
 	
     if ( pPath )
     {
@@ -462,13 +469,14 @@ void Render()
 
 void End()
 {
+	SAFE_RELEASE( pDialogueTree );
 	SAFE_RELEASE( pTexture );
     
     pFont->Release();
-    
-    for ( int x = 0; x < 30; ++x )
+    pEntity = nullptr;
+    for ( int x = 0; x < 50; ++x )
     {
-        for ( int y = 0; y < 30; ++y )
+        for ( int y = 0; y < 50; ++y )
         {
             pSprites[y][x] = nullptr;
         }
