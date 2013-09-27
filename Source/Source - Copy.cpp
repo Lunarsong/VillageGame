@@ -19,10 +19,12 @@ UIElement* pUI;
 #include <UI/UIButtonImage.h>
 #include <Game/Dialogue/DialogueXmlParser.h>
 #include <Game/Dialogue/UI/DialogueInterface.h>
+#include <Game/Entities/Components/Rendering/TileMapComponent.h>
+#include <Game/Entities/Components/Rendering/CameraComponent.h>
+#include <TextureAtlas.h>
 
 SquarePathfindingGraph* pPathGraph = new SquarePathfindingGraph();
 PathPlan* pPath = NULL;
-shared_ptr<SpriteComponent> pSprites[50][50];
 class myTouchHandler : public ITouchHandler
 {
 public:
@@ -67,7 +69,7 @@ public:
                     }
                     if ( pPathGraph->GetNode( uiX, uiY )->IsTraversable() )
 					{
-						pSprites[ uiY ][ uiX ]->SetColor( color );
+						//pSprites[ uiY ][ uiX ]->SetColor( color );
 					}
                     
                     pPath->CheckForNextNode( vPosition );
@@ -81,10 +83,8 @@ public:
 			auto pStartNode = pPathGraph->VFindClosestNode( pEntity->GetTransform().GetPosition() );
 			auto pEndNode = pPathGraph->VFindClosestNode( vPosition );
 			pPath = AStar::FindPath( pPathGraph, pStartNode, pEndNode );
-            
-            
-            
-            if ( pPath )
+        
+			if ( pPath )
             {
                 pPath->ResetPath();
                 while ( pPath->CheckForEnd() == false )
@@ -93,7 +93,7 @@ public:
                     unsigned int uiX = (unsigned int)((vPosition.x) / 32.0f );
                     unsigned int uiY = (unsigned int)((vPosition.y) / 32.0f );
                     
-					pSprites[ uiY ][ uiX ]->SetColor( ColorF::GREY );
+					//pSprites[ uiY ][ uiX ]->SetColor( ColorF::GREY );
                     
                     pPath->CheckForNextNode( vPosition );
                 }
@@ -140,11 +140,14 @@ public:
     }
 };
 
+CameraComponent* g_pCamera = NULL;
 class myMouseHandler : public IMouseHandler
 {
+	bool m_bScroll;
 public:
 	myMouseHandler()
 	{
+		m_bScroll = false;
 		InputManager::Get()->AddMouseHandler( this );
 	}
 
@@ -155,72 +158,62 @@ public:
 
 	virtual bool VOnMouseMove( const Vector3& vPosition, const Vector3& vDeltaPosition )
 	{
+		if ( m_bScroll )
+		{
+			float fSpeed = InputManager::Get()->GetMouseWheel().y;
+			if ( fSpeed < 0.0f )
+			{
+				fSpeed = -fSpeed;
+			}
+
+			else
+			{
+				fSpeed = 1.0f;
+			}
+			g_pCamera->SetPosition( g_pCamera->GetPosition() + Vector3( -vDeltaPosition.x, vDeltaPosition.y ) * fSpeed );
+		}
 		return false;
 	}
 
 	virtual bool VOnMouseButtonDown( const int iButtonIndex, const Vector3& vPosition )
 	{
+		if ( iButtonIndex == 2 )
+		{
+			m_bScroll = true;
+		}
 
 		return false;
 	}
 
 	virtual bool VOnMouseButtonUp( const int iButtonIndex, const Vector3& vPosition )
 	{
+		Vector3 vWorldPosition, vRayDirection;
+		//RenderUtils::Project( Vector2( vPosition.x, vPosition.y ), g_pCamera->GetProjection(), g_pCamera->GetView(), vWorldPosition, vRayDirection );
+		//vWorldPosition = vWorldPosition + vRayDirection * Vector4( IRenderer::Get()->VGetScreenWidth() * 0.5f, IRenderer::Get()->VGetScreenHeight() * 0.5f );
+		vWorldPosition = g_pCamera->GetPosition() -Vector4( IRenderer::Get()->VGetScreenWidth() * 0.5f, IRenderer::Get()->VGetScreenHeight() * 0.5f );
+		vWorldPosition.x += vPosition.x;
+		vWorldPosition.y += IRenderer::Get()->VGetScreenHeight() - vPosition.y;
 		if ( iButtonIndex == 1 )
 		{
-			auto pNode = pPathGraph->VFindClosestNode( vPosition );
-            pNode->SetBlocked( pNode->IsTraversable() );
-            
-            unsigned int uiX = (unsigned int)((vPosition.x) / 32.0f );
-            unsigned int uiY = (unsigned int)((vPosition.y) / 32.0f );
-            
-            ColorF color = ColorF::GREEN;
-            if ( ( uiX + uiY ) % 2 == 0 )
-            {
-                color = ColorF::BLUE;
-            }
-            
-            if ( pNode->IsTraversable() == false )
-            {
-                color = ColorF::RED;
-            }
-            
-            pSprites[ uiY ][ uiX ]->SetColor( color );
+			
 
+		}
+
+		else if ( iButtonIndex == 2 )
+		{
+			m_bScroll = false;
 		}
 
 		else if ( iButtonIndex == 0 )
 		{
 			if ( pPath )
 			{
-                pPath->ResetPath();
-                while ( pPath->CheckForEnd() == false )
-                {
-                    const Vector3& vPosition = pPath->GetCurrentNodePosition();
-                    unsigned int uiX = (unsigned int)((vPosition.x) / 32.0f );
-                    unsigned int uiY = (unsigned int)((vPosition.y) / 32.0f );
-                    
-                    ColorF color = ColorF::GREEN;
-                    if ( ( uiX + uiY ) % 2 == 0 )
-                    {
-                        color = ColorF::BLUE;
-                    }
-
-                    if ( pPathGraph->GetNode( uiX, uiY )->IsTraversable() )
-					{
-						pSprites[ uiY ][ uiX ]->SetColor( color );
-					}
-                    
-                    pPath->CheckForNextNode( vPosition );
-                }
-
                 
 				delete pPath;
 			}
 
-
 			auto pStartNode = pPathGraph->VFindClosestNode( pEntity->GetTransform().GetPosition() );
-			auto pEndNode = pPathGraph->VFindClosestNode( vPosition );
+			auto pEndNode = pPathGraph->VFindClosestNode( vWorldPosition );
 			pPath = AStar::FindPath( pPathGraph, pStartNode, pEndNode );
             
             
@@ -234,7 +227,7 @@ public:
                     unsigned int uiX = (unsigned int)((vPosition.x) / 32.0f );
                     unsigned int uiY = (unsigned int)((vPosition.y) / 32.0f );
 
-                    pSprites[ uiY ][ uiX ]->SetColor( ColorF::GREY );
+                    //pSprites[ uiY ][ uiX ]->SetColor( ColorF::GREY );
                     
                     pPath->CheckForNextNode( vPosition );
                 }
@@ -250,6 +243,23 @@ public:
 
 	virtual bool VOnMouseButtonDClick( const int iButtonIndex, const Vector3& vPosition )
 	{
+
+		return false;
+	}
+
+	virtual bool VOnMouseWheel( const Vector3& vPosition, const Vector3& vDelta )
+	{
+		Matrix matScale;
+		if ( vDelta.y > 0.0f )
+		{
+			matScale.BuildScale( 2.0f, 2.0f, 2.0f );
+		}
+		else
+		{
+			matScale.BuildScale( 0.5f, 0.5f, 0.5f );
+		}
+		
+		g_pCamera->SetProjection( g_pCamera->GetProjection() * matScale );
 
 		return false;
 	}
@@ -271,10 +281,9 @@ void Start()
 
 	pDialogueTree = DialogueXmlParser::FromFile( "Dialogue.xml" );
 
-	pPathGraph->Create( 100, 100, 32.0f, false );
     //BaseApplication::Get()->VSetResolution( 1280, 1024 );
     IslandData island;
-    island.Generate( 100, 100 );
+    island.Generate( 128, 128 );
  
 	pMouseHandler = new myMouseHandler();    
     
@@ -282,17 +291,17 @@ void Start()
 	shared_ptr<BinaryResource> pResource = ResourceCache::Get()->GetResource<BinaryResource>( "tiles.png");
 
 	pTexture = IRenderer::CreateTexture();
-//	pTexture->VCreate( pResource->Buffer(), pResource->Size() );
-    unsigned int pMap[100][100];
-    for ( int j = 0; j < 100; ++j )
+    unsigned int pMap[128][128];
+    for ( int j = 0; j < 128; ++j )
     {
-        for ( int i = 0; i < 100; ++i )
+        for ( int i = 0; i < 128; ++i )
         {
-            float fColor = island.GetHeight( j, i );
+            float fColor = island.GetHeight( i, j );
             if ( fColor < 0.0f )
             {
                 fColor = 0.0f;
             }
+
             ColorF color( fColor, fColor, fColor, 1.0f );
             
             if ( fColor <= 0.0f )
@@ -303,12 +312,27 @@ void Start()
             pMap[ j ][ i ] =  colorRGB.RGBA;
         }
     }
-    pTexture->VCreate( 100, 100, 4, (char*)pMap[0] );
-
+    pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
+	UIImage* pImage = new UIImage( pTexture );
+	pImage->SetSize( pImage->GetSizeInPixels() * 2.0f );
+	pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
+	pImage->SetAlignment( BottomLeft );
+	UserInterface::AddScreen( "Map", pImage );
+	pImage->Release();
     
     Matrix matTransform;
     matTransform.BuildScale( Vector4( 50.0f, 50.0f, 1.0f ) );
     matTransform.SetPosition( 100.0f, 100.0f, 0.0f );
+
+	Matrix matProjection;
+	matProjection.BuildOrthoLH( (float)IRenderer::Get()->VGetScreenWidth(), (float)IRenderer::Get()->VGetScreenHeight(), -1.0f, 1.0f );
+	pEntity = Game::CreateEntity( matTransform );
+	shared_ptr< CameraComponent > pCameraComponent( new CameraComponent() );
+	pEntity->AddComponent( pCameraComponent );
+	pCameraComponent->SetProjection( matProjection );
+	pCameraComponent->SetPosition( Vector4( 000.1f, 00.0f, 0.0f, 1.0f ) );
+	pEntity->Start();
+	g_pCamera = pCameraComponent.get();
     
 	pEntity = Game::CreateEntity( matTransform );
     shared_ptr< QuadComponent > pComponent( new QuadComponent() );
@@ -316,44 +340,58 @@ void Start()
     pEntity->AddComponent( pComponent );
     pEntity->Start();
     
-    
-    matTransform.Identify();
-    matTransform.BuildScale( Vector4( 32.0f, 32.0f, 1.0f ) );
-    
-    for ( unsigned int y = 0; y < 50; ++y )
-	{
-		for ( unsigned int x = 0; x < 50; ++x )
+   
+	TextureAtlas* pAtlas = new TextureAtlas( "terrain_atlas.png" );
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 704, 352, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 735, 352, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 672, 160, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 704, 160, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 735, 160, 32, 32 ) );
+
+	// Water
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 96, 448, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 128, 448, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 160, 448, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 192, 448, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 224, 448, 32, 32 ) );
+
+	matTransform.Identify();
+	pEntity = Game::CreateEntity( matTransform );
+	RandomNumGen rand;
+	float fWorldScale = 1.0f;
+	pPathGraph->Create( 128 * fWorldScale, 128 * fWorldScale, 32.0f, false );
+	shared_ptr< TileMapComponent > pTileMapComponent( new TileMapComponent( 128 * fWorldScale, 128 * fWorldScale, 32.0f, pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
 		{
-			ColorF color = ColorF::GREEN;
-			if ( ( x + y ) % 2 == 0 )
+			float fHeight = island.GetHeight( (float)x / fWorldScale, 127.0f - (float)y / fWorldScale );
+
+			if ( fHeight <= 0.0f )
 			{
-				color = ColorF::BLUE;
+				//rect = pAtlas->GetTextureRect( 6 + rand.RandomInt( 6 ) );
+				rect = pAtlas->GetTextureRect( 6 );
 			}
-            
-			if ( pPathGraph->GetNode( x, y )->IsTraversable() == false )
+
+			else
 			{
-				color = ColorF::RED;
+				rect = pAtlas->GetTextureRect( rand.RandomInt( 6 ) );
 			}
-            
-            matTransform.SetPosition( Vector4( x * 32.0f, y * 32.0f ) );
-            pEntity = Game::CreateEntity( matTransform );
-            shared_ptr<SpriteComponent> pSprite( new SpriteComponent() );
-            pSprites[y][x] = pSprite;
-            //pSprite->SetTexture( pTexture );
-            pSprite->SetColor( color );
-            pEntity->AddComponent( pSprite );
-            pEntity->Start();
+			
 		}
-    }
+	) );	
+	pEntity->AddComponent( pTileMapComponent );
+	pEntity->Start();
+
+	delete pAtlas;
     
     matTransform.Identify();
-    matTransform.BuildScale( 0.25f, 0.25f, 1.0f );
+    matTransform.BuildScale( 22.5f, 22.5f, 1.0f );
     matTransform.SetPosition( Vector4( 100.0f, 100.0f ) );
     pEntity = Game::CreateEntity( matTransform );
-    shared_ptr<SpriteComponent> pSprite( new SpriteComponent() );
-    pSprite->SetTexture( "Sheep0007.png" );
+    shared_ptr<QuadComponent> pQuad( new QuadComponent() );
+    pQuad->SetTexture( "Sheep0007.png" );
 	
-    pEntity->AddComponent( pSprite );
+    pEntity->AddComponent( pQuad );
     pEntity->Start();
     
     InputManager::Get()->AddTouchHandler( new myTouchHandler() );
@@ -429,7 +467,7 @@ void Start()
 	UserInterface::AddScreen( "Construction", pUI );
 	pUI->Release();*/
 
-	Process* pProcess = new DialogueInterface( "DialogueInterface.xml", "Dialogue.xml" );
+	Process* pProcess = new DialogueInterface( NULL, "DialogueInterface.xml", "Dialogue.xml" );
 	BaseApplication::Get()->AttachProcess( pProcess );
 	pProcess->Release();
 }
@@ -443,13 +481,12 @@ void Update( float fDeltaSeconds )
         if ( pPath->CheckForEnd() == false )
         {
             const Vector3& vPosition = pPath->GetCurrentNodePosition();
-            Vector3 vDirection = (vPosition + Vector3( 16.0f, 16.0f ) ) - mat.GetPosition();
+            Vector3 vDirection = (vPosition ) - mat.GetPosition();
             vDirection.Normalize();
             mat.SetPosition( mat.GetPosition() + vDirection * fDeltaSeconds * 10 );
             pEntity->SetTransform( mat );
-            RenderUtils::DrawRectangle( vPosition, Vector2( 32.0f, 32.0f ), ColorF::GREY );
             
-            pPath->CheckForNextNode( mat.GetPosition() - Vector3( 16.0f, 16.0f ) );
+            pPath->CheckForNextNode( mat.GetPosition()  );
         }
     }
     
@@ -474,13 +511,6 @@ void End()
     
     pFont->Release();
     pEntity = nullptr;
-    for ( int x = 0; x < 50; ++x )
-    {
-        for ( int y = 0; y < 50; ++y )
-        {
-            pSprites[y][x] = nullptr;
-        }
-    }
 
 	delete pMouseHandler;
 }

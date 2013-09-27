@@ -53,7 +53,7 @@ namespace VillageGame
         noise.SetOctaves( 16.0f );
         noise.SetPersistence( 0.5f );
         noise.SetScale( 0.025f );
-        noise.SetBounds( -0.45f, 1.0f );
+        noise.SetBounds( -0.65f, 1.0f );
         
         for ( unsigned int y = 0; y < iHeight; ++y )
         {
@@ -104,6 +104,11 @@ namespace VillageGame
         {
             int x = rand.RandomInt( 15, m_uiSizeX - 16 );
             int y = rand.RandomInt( 15, m_uiSizeY - 16 );
+
+			if ( x < 15 || y < 15 || x > 120 || y > 120 )
+			{
+				int huh = 0;
+			}
             
             for ( int j = 0; j < iNumIterations1; ++j )
             {
@@ -216,7 +221,12 @@ namespace VillageGame
     
     float IslandData::GetMaskHeight( int iX, int iY )
     {
-        return ( m_pHeightMaskMap[ iY * m_uiSizeX + iX ] / 255.0f - 0.5f ) * 2.0f;
+		float fMask = m_pHeightMaskMap[ iY * m_uiSizeX + iX ];
+
+		if ( fMask <= 0.0f )
+			return 0.0f;
+
+        return ( fMask / 255.0f - 0.5f ) * 2.0f;
     }
     
     inline
