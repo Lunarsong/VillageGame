@@ -36,6 +36,30 @@
 		E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5A17DCA07800C6681B /* OpenGL.framework */; };
 		E60B6B6817E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
 		E60B6B6917E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
+		E639DF1417F70B7D009EA0E8 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844917F70A0F00AC11C4 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */; };
+		E639DF1517F70B7D009EA0E8 /* Arial.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844A17F70A0F00AC11C4 /* Arial.ttf */; };
+		E639DF1617F70B7D009EA0E8 /* Avatar0.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844B17F70A0F00AC11C4 /* Avatar0.png */; };
+		E639DF1717F70B7D009EA0E8 /* Avatar1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844C17F70A0F00AC11C4 /* Avatar1.png */; };
+		E639DF1817F70B7D009EA0E8 /* Choicelarge.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844D17F70A0F00AC11C4 /* Choicelarge.png */; };
+		E639DF1917F70B7D009EA0E8 /* Dialogue.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844E17F70A0F00AC11C4 /* Dialogue.xml */; };
+		E639DF1A17F70B7D009EA0E8 /* DialogueCircle.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844F17F70A0F00AC11C4 /* DialogueCircle.png */; };
+		E639DF1B17F70B7D009EA0E8 /* DialogueInterface.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845017F70A0F00AC11C4 /* DialogueInterface.xml */; };
+		E639DF1C17F70B7D009EA0E8 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845117F70A0F00AC11C4 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */; };
+		E639DF1D17F70B7D009EA0E8 /* gradients.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845217F70A0F00AC11C4 /* gradients.png */; };
+		E639DF1E17F70B7D009EA0E8 /* package_development.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845317F70A0F00AC11C4 /* package_development.png */; };
+		E639DF1F17F70B7D009EA0E8 /* paper background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845417F70A0F00AC11C4 /* paper background.png */; };
+		E639DF2017F70B7D009EA0E8 /* ReadMe in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845517F70A0F00AC11C4 /* ReadMe */; };
+		E639DF2117F70B7D009EA0E8 /* RPG_GUI_v1_source.xcf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845617F70A0F00AC11C4 /* RPG_GUI_v1_source.xcf */; };
+		E639DF2217F70B7D009EA0E8 /* RPG_GUI_v1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845717F70A0F00AC11C4 /* RPG_GUI_v1.png */; };
+		E639DF2317F70B7D009EA0E8 /* samaze_017.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845817F70A0F00AC11C4 /* samaze_017.jpg */; };
+		E639DF2417F70B7D009EA0E8 /* Sheep0007.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845917F70A0F00AC11C4 /* Sheep0007.png */; };
+		E639DF2517F70B7D009EA0E8 /* terrain_atlas.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845A17F70A0F00AC11C4 /* terrain_atlas.png */; };
+		E639DF2617F70B7D009EA0E8 /* test.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845B17F70A0F00AC11C4 /* test.jpg */; };
+		E639DF2717F70B7D009EA0E8 /* TestDialogue.dia in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845C17F70A0F00AC11C4 /* TestDialogue.dia */; };
+		E639DF2817F70B7D009EA0E8 /* tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845D17F70A0F00AC11C4 /* tiles.png */; };
+		E639DF2917F70B7D009EA0E8 /* Vera.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845E17F70A0F00AC11C4 /* Vera.ttf */; };
+		E639DF2A17F70B7D009EA0E8 /* VeraMono.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845F17F70A0F00AC11C4 /* VeraMono.ttf */; };
+		E639DF2B17F70B7D009EA0E8 /* wood background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603846017F70A0F00AC11C4 /* wood background.png */; };
 		E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9317C69EC0006F1456 /* UIKit.framework */; };
 		E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9517C69EC0006F1456 /* Foundation.framework */; };
 		E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */; };
@@ -79,6 +103,30 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				E639DF1417F70B7D009EA0E8 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */,
+				E639DF1517F70B7D009EA0E8 /* Arial.ttf in CopyFiles */,
+				E639DF1617F70B7D009EA0E8 /* Avatar0.png in CopyFiles */,
+				E639DF1717F70B7D009EA0E8 /* Avatar1.png in CopyFiles */,
+				E639DF1817F70B7D009EA0E8 /* Choicelarge.png in CopyFiles */,
+				E639DF1917F70B7D009EA0E8 /* Dialogue.xml in CopyFiles */,
+				E639DF1A17F70B7D009EA0E8 /* DialogueCircle.png in CopyFiles */,
+				E639DF1B17F70B7D009EA0E8 /* DialogueInterface.xml in CopyFiles */,
+				E639DF1C17F70B7D009EA0E8 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in CopyFiles */,
+				E639DF1D17F70B7D009EA0E8 /* gradients.png in CopyFiles */,
+				E639DF1E17F70B7D009EA0E8 /* package_development.png in CopyFiles */,
+				E639DF1F17F70B7D009EA0E8 /* paper background.png in CopyFiles */,
+				E639DF2017F70B7D009EA0E8 /* ReadMe in CopyFiles */,
+				E639DF2117F70B7D009EA0E8 /* RPG_GUI_v1_source.xcf in CopyFiles */,
+				E639DF2217F70B7D009EA0E8 /* RPG_GUI_v1.png in CopyFiles */,
+				E639DF2317F70B7D009EA0E8 /* samaze_017.jpg in CopyFiles */,
+				E639DF2417F70B7D009EA0E8 /* Sheep0007.png in CopyFiles */,
+				E639DF2517F70B7D009EA0E8 /* terrain_atlas.png in CopyFiles */,
+				E639DF2617F70B7D009EA0E8 /* test.jpg in CopyFiles */,
+				E639DF2717F70B7D009EA0E8 /* TestDialogue.dia in CopyFiles */,
+				E639DF2817F70B7D009EA0E8 /* tiles.png in CopyFiles */,
+				E639DF2917F70B7D009EA0E8 /* Vera.ttf in CopyFiles */,
+				E639DF2A17F70B7D009EA0E8 /* VeraMono.ttf in CopyFiles */,
+				E639DF2B17F70B7D009EA0E8 /* wood background.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
