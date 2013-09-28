@@ -400,24 +400,24 @@ void Start()
 	pAtlas->AddTexture( Rect( 704, 160, 32, 32 ) ); // 40
 	pAtlas->AddTexture( Rect( 735, 160, 32, 32 ) ); // 41
 	
-	float fWorldScale = 1.0f;
+	float fWorldScale = 2.0f;
 	for ( int i = 0; i < 5; ++i )
 	{
 		for ( unsigned int y = 0; y < 128; ++y )
 		{
 			for ( unsigned int x = 0; x < 128; ++x )
 			{
-				float fHeight = island.GetHeight( (float)x / fWorldScale, (float)y / fWorldScale );
+				float fHeight = island.GetHeight( (float)x, (float)y );
 
-				float fRight = island.GetHeight( (float)(x+1) / fWorldScale, (float)(y) / fWorldScale );
-				float fLeft = island.GetHeight( (float)(x-1) / fWorldScale, (float)(y) / fWorldScale );
-				float fTop = island.GetHeight( (float)(x) / fWorldScale, (float)(y+1) / fWorldScale );
-				float fBottom = island.GetHeight( (float)(x) / fWorldScale, (float)(y-1) / fWorldScale );
+				float fRight = island.GetHeight( (float)(x+1), (float)(y)  );
+				float fLeft = island.GetHeight( (float)(x-1), (float)(y)  );
+				float fTop = island.GetHeight( (float)(x), (float)(y+1)  );
+				float fBottom = island.GetHeight( (float)(x), (float)(y-1)  );
 
-				float fBottomLeft = island.GetHeight( (float)(x-1) / fWorldScale, (float)(y-1) / fWorldScale );
-				float fBottomRight = island.GetHeight( (float)(x+1) / fWorldScale, (float)(y-1) / fWorldScale );
-				float fTopLeft = island.GetHeight( (float)(x-1) / fWorldScale, (float)(y+1) / fWorldScale );
-				float fTopRight = island.GetHeight( (float)(x+1) / fWorldScale, (float)(y+1) / fWorldScale );
+				float fBottomLeft = island.GetHeight( (float)(x-1), (float)(y-1)  );
+				float fBottomRight = island.GetHeight( (float)(x+1), (float)(y-1)  );
+				float fTopLeft = island.GetHeight( (float)(x-1), (float)(y+1)  );
+				float fTopRight = island.GetHeight( (float)(x+1), (float)(y+1)  );
 
 				int iIndex = 0;
 				if ( fHeight <= 0.0f )
