@@ -190,9 +190,24 @@ public:
 		Vector3 vWorldPosition, vRayDirection;
 		//RenderUtils::Project( Vector2( vPosition.x, vPosition.y ), g_pCamera->GetProjection(), g_pCamera->GetView(), vWorldPosition, vRayDirection );
 		//vWorldPosition = vWorldPosition + vRayDirection * Vector4( IRenderer::Get()->VGetScreenWidth() * 0.5f, IRenderer::Get()->VGetScreenHeight() * 0.5f );
-		vWorldPosition = g_pCamera->GetPosition() -Vector4( IRenderer::Get()->VGetScreenWidth() * 0.5f, IRenderer::Get()->VGetScreenHeight() * 0.5f );
-		vWorldPosition.x += vPosition.x;
-		vWorldPosition.y += IRenderer::Get()->VGetScreenHeight() - vPosition.y;
+		float fScale = InputManager::Get()->GetMouseWheel().y;
+		if ( fScale == 0.0f )
+		{
+			fScale = 1.0f;
+		}
+		else if ( fScale < 0.0f )
+		{
+			fScale = -fScale * 2.0f;
+		}
+
+		else
+		{
+			fScale = 1.0f / ( fScale * 2.0f );
+		}
+
+		vWorldPosition = g_pCamera->GetPosition() -Vector4( IRenderer::Get()->VGetScreenWidth() * 0.5f * fScale, IRenderer::Get()->VGetScreenHeight() * 0.5f * fScale );
+		vWorldPosition.x += vPosition.x * fScale;
+		vWorldPosition.y += IRenderer::Get()->VGetScreenHeight() * fScale - vPosition.y * fScale;
 		if ( iButtonIndex == 1 )
 		{
 			auto pStartNode = pPathGraph->VFindClosestTraversableNode( vWorldPosition );
@@ -226,8 +241,6 @@ public:
 			if ( pStartNode->IsTraversable() && pEndNode->IsTraversable() )
 			{
 				pPath = AStar::FindPath( pPathGraph, pStartNode, pEndNode );
-				if ( pPath )
-				pPath->ResetPath();
 			}          
             
 		}
@@ -574,6 +587,10 @@ void Start()
 
 	delete pAtlas;
 
+	/*
+	//
+	// Show which elements are blocked
+	//
 	ITexture* pBlocked = IRenderer::CreateTexture();
 	pBlocked->VCreate( "DialogueCircle.png" );
 	matTransform.Identify();
@@ -592,10 +609,14 @@ void Start()
 				pEntity->AddComponent( pComponent );
 				pEntity->Start();				
 			}
-			
+
 		}
 	}
 	pBlocked->Release();
+	//
+	//
+	//
+	*/
     
     matTransform.Identify();
     matTransform.BuildScale( 22.5f, 22.5f, 1.0f );
