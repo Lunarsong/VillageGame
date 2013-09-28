@@ -226,6 +226,8 @@ public:
 			if ( pStartNode->IsTraversable() && pEndNode->IsTraversable() )
 			{
 				pPath = AStar::FindPath( pPathGraph, pStartNode, pEndNode );
+				if ( pPath )
+				pPath->ResetPath();
 			}          
             
 		}
@@ -294,11 +296,7 @@ void Start()
 	pEntity->Start();
 	g_pCamera = pCameraComponent.get();
     
-	pEntity = Game::CreateEntity( matTransform );
-    shared_ptr< QuadComponent > pComponent( new QuadComponent() );
-    //pComponent->SetTexture( pTexture );
-    pEntity->AddComponent( pComponent );
-    pEntity->Start();
+
     
    
 	TextureAtlas* pAtlas = new TextureAtlas( "terrain_atlas.png" );
@@ -560,10 +558,13 @@ void Start()
 					rect = pAtlas->GetTextureRect( 36 + rand.RandomInt( 6 ) );
 				}
 
+				pPathGraph->GetNode( x, y )->SetBlocked( false );
+
 				return;
 				
 			}
-
+			
+			pPathGraph->GetNode( x, y )->SetBlocked( true );
 			rect = pAtlas->GetTextureRect( iIndex );			
 			
 		}
@@ -572,6 +573,29 @@ void Start()
 	pEntity->Start();
 
 	delete pAtlas;
+
+	ITexture* pBlocked = IRenderer::CreateTexture();
+	pBlocked->VCreate( "DialogueCircle.png" );
+	matTransform.Identify();
+	matTransform.BuildScale( 32.0f, 32.0f, 1.0f );
+	Vector3 vMinPosition( -128.0f * 32.0f * 0.5f + 16.0f, -128.0f * 32.0f * 0.5f + 16.0f, 0.0f );
+	for ( int x = 0; x < 128; ++x )
+	{
+		for ( int y = 0; y < 128; ++y )
+		{
+			if ( pPathGraph->GetNode( x, y )->IsTraversable() == false )
+			{
+				matTransform.SetPosition( vMinPosition + Vector4( x * 32.0f, y * 32.0f ) );
+				pEntity = Game::CreateEntity( matTransform );
+				shared_ptr< QuadComponent > pComponent( new QuadComponent() );
+				pComponent->SetTexture( pBlocked );
+				pEntity->AddComponent( pComponent );
+				pEntity->Start();				
+			}
+			
+		}
+	}
+	pBlocked->Release();
     
     matTransform.Identify();
     matTransform.BuildScale( 22.5f, 22.5f, 1.0f );
