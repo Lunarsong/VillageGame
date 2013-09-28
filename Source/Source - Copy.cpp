@@ -25,14 +25,17 @@ UIElement* pUI;
 
 SquarePathfindingGraph* pPathGraph = new SquarePathfindingGraph();
 PathPlan* pPath = NULL;
+CameraComponent* g_pCamera = NULL;
 class myTouchHandler : public ITouchHandler
 {
 public:
     int iNumTouchs;
+    bool bScrolling;
     
     myTouchHandler()
     {
         iNumTouchs = 0;
+        bScrolling = false;
     }
     
     ~myTouchHandler()
@@ -51,58 +54,44 @@ public:
     {
         --iNumTouchs;
         
+		Vector3 vWorldPosition, vRayDirection;
+		//RenderUtils::Project( Vector2( vPosition.x, vPosition.y ), g_pCamera->GetProjection(), g_pCamera->GetView(), vWorldPosition, vRayDirection );
+		//vWorldPosition = vWorldPosition + vRayDirection * Vector4( IRenderer::Get()->VGetScreenWidth() * 0.5f, IRenderer::Get()->VGetScreenHeight() * 0.5f );
+		float fScale = InputManager::Get()->GetMouseWheel().y;
+		if ( fScale == 0.0f )
+		{
+			fScale = 1.0f;
+		}
+		else if ( fScale < 0.0f )
+		{
+			fScale = -fScale * 2.0f;
+		}
+        
+		else
+		{
+			fScale = 1.0f / ( fScale * 2.0f );
+		}
+        
+		vWorldPosition = g_pCamera->GetPosition() -Vector4( IRenderer::Get()->VGetScreenWidth() * 0.5f * fScale, IRenderer::Get()->VGetScreenHeight() * 0.5f * fScale );
+		vWorldPosition.x += vPosition.x * fScale;
+		vWorldPosition.y += IRenderer::Get()->VGetScreenHeight() * fScale - vPosition.y * fScale;
 		if ( iTouchIndex == 0 )
 		{
 			if ( pPath )
 			{
-                pPath->ResetPath();
-                while ( pPath->CheckForEnd() == false )
-                {
-                    const Vector3& vPosition = pPath->GetCurrentNodePosition();
-                    unsigned int uiX = (unsigned int)((vPosition.x) / 32.0f );
-                    unsigned int uiY = (unsigned int)((vPosition.y) / 32.0f );
-                    
-                    ColorF color = ColorF::GREEN;
-                    if ( ( uiX + uiY ) % 2 == 0 )
-                    {
-                        color = ColorF::BLUE;
-                    }
-                    if ( pPathGraph->GetNode( uiX, uiY )->IsTraversable() )
-					{
-						//pSprites[ uiY ][ uiX ]->SetColor( color );
-					}
-                    
-                    pPath->CheckForNextNode( vPosition );
-                }
-                
-                
 				delete pPath;
+				pPath = NULL;
 			}
             
-            
 			auto pStartNode = pPathGraph->VFindClosestNode( pEntity->GetTransform().GetPosition() );
-			auto pEndNode = pPathGraph->VFindClosestNode( vPosition );
-			pPath = AStar::FindPath( pPathGraph, pStartNode, pEndNode );
-        
-			if ( pPath )
-            {
-                pPath->ResetPath();
-                while ( pPath->CheckForEnd() == false )
-                {
-                    const Vector3& vPosition = pPath->GetCurrentNodePosition();
-                    unsigned int uiX = (unsigned int)((vPosition.x) / 32.0f );
-                    unsigned int uiY = (unsigned int)((vPosition.y) / 32.0f );
-                    
-					//pSprites[ uiY ][ uiX ]->SetColor( ColorF::GREY );
-                    
-                    pPath->CheckForNextNode( vPosition );
-                }
-                pPath->ResetPath();
-            }
+			auto pEndNode = pPathGraph->VFindClosestTraversableNode( vWorldPosition );
             
+			if ( pStartNode->IsTraversable() && pEndNode->IsTraversable() )
+			{
+				pPath = AStar::FindPath( pPathGraph, pStartNode, pEndNode );
+			}          
             
 		}
-		
 
 		return false;
     }
@@ -118,17 +107,18 @@ public:
     {
         if ( iTouchIndex == 0 && iNumTouchs == 1 )
         {
-            Matrix matTransform = pEntity->GetTransform();
-            matTransform.SetPosition( Vector4( vPosition.x, vPosition.y ) );
-            //pEntity->SetTransform( matTransform );
+            float fSpeed = InputManager::Get()->GetMouseWheel().y;
+			if ( fSpeed < 0.0f )
+			{
+				fSpeed = -fSpeed;
+			}
             
-            Vector3 vPosition = IRenderer::Get()->VGetSpriteManager()->GetCameraPosition();
-            vPosition.x -= vDeltaPosition.x;
-            vPosition.y -= vDeltaPosition.y;
+			else
+			{
+				fSpeed = 1.0f;
+			}
+			g_pCamera->SetPosition( g_pCamera->GetPosition() + Vector3( -vDeltaPosition.x, vDeltaPosition.y ) * fSpeed );
             
-            //IRenderer::Get()->VGetSpriteManager()->VSetCameraPosition( vPosition );
-            Vector3 pos = pUI->GetTopLeftPosition();
-            pUI->SetPosition( pos.x + vDeltaPosition.x, pos.y + vDeltaPosition.y );
         }
         
         else if ( iNumTouchs == 2 )
@@ -140,7 +130,6 @@ public:
     }
 };
 
-CameraComponent* g_pCamera = NULL;
 class myMouseHandler : public IMouseHandler
 {
 	bool m_bScroll;
@@ -488,6 +477,7 @@ void Start()
 	pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
 	UIImage* pImage = new UIImage( pTexture );
 	pImage->SetSize( pImage->GetSizeInPixels() * 2.0f );
+    pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
 	pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
 	pImage->SetAlignment( BottomLeft );
 	UserInterface::AddScreen( "Map", pImage );
