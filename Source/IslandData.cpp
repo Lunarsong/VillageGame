@@ -234,4 +234,10 @@ namespace VillageGame
     {
         return m_pHeightMap[ iY * m_uiSizeX + iX ];
     }
+
+	void IslandData::SetHeight( int iX, int iY, float fHeight )
+	{
+		m_pHeightMap[ iY * m_uiSizeX + iX ] = fHeight;
+	}
+
 }

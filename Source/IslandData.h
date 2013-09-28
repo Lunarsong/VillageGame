@@ -24,6 +24,7 @@ namespace VillageGame
         void Generate( int iWidth, int iHeight, unsigned long ulSeed );
 
         float GetHeight( int iX, int iY );
+		void SetHeight( int iX, int iY, float fHeight );
         float GetMaskHeight( int iX, int iY );
 
     private:

@@ -195,8 +195,16 @@ public:
 		vWorldPosition.y += IRenderer::Get()->VGetScreenHeight() - vPosition.y;
 		if ( iButtonIndex == 1 )
 		{
-			
+			auto pStartNode = pPathGraph->VFindClosestTraversableNode( vWorldPosition );
+			Matrix matTransform = pEntity->GetTransform();
+			matTransform.SetPosition( pStartNode->GetPosition() );
+			pEntity->SetTransform( matTransform );
 
+			if ( pPath )
+			{
+				delete pPath;
+				pPath = NULL;
+			}
 		}
 
 		else if ( iButtonIndex == 2 )
@@ -207,33 +215,18 @@ public:
 		else if ( iButtonIndex == 0 )
 		{
 			if ( pPath )
-			{
-                
+			{   
 				delete pPath;
+				pPath = NULL;
 			}
 
 			auto pStartNode = pPathGraph->VFindClosestNode( pEntity->GetTransform().GetPosition() );
-			auto pEndNode = pPathGraph->VFindClosestNode( vWorldPosition );
-			pPath = AStar::FindPath( pPathGraph, pStartNode, pEndNode );
-            
-            
-            
-            if ( pPath )
-            {
-                pPath->ResetPath();
-                while ( pPath->CheckForEnd() == false )
-                {
-                    const Vector3& vPosition = pPath->GetCurrentNodePosition();
-                    unsigned int uiX = (unsigned int)((vPosition.x) / 32.0f );
-                    unsigned int uiY = (unsigned int)((vPosition.y) / 32.0f );
+			auto pEndNode = pPathGraph->VFindClosestTraversableNode( vWorldPosition );
 
-                    //pSprites[ uiY ][ uiX ]->SetColor( ColorF::GREY );
-                    
-                    pPath->CheckForNextNode( vPosition );
-                }
-                pPath->ResetPath();
-            }
-            
+			if ( pStartNode->IsTraversable() && pEndNode->IsTraversable() )
+			{
+				pPath = AStar::FindPath( pPathGraph, pStartNode, pEndNode );
+			}          
             
 		}
 		
@@ -287,39 +280,6 @@ void Start()
  
 	pMouseHandler = new myMouseHandler();    
     
-    
-	shared_ptr<BinaryResource> pResource = ResourceCache::Get()->GetResource<BinaryResource>( "tiles.png");
-
-	pTexture = IRenderer::CreateTexture();
-    unsigned int pMap[128][128];
-    for ( int j = 0; j < 128; ++j )
-    {
-        for ( int i = 0; i < 128; ++i )
-        {
-            float fColor = island.GetHeight( i, j );
-            if ( fColor < 0.0f )
-            {
-                fColor = 0.0f;
-            }
-
-            ColorF color( fColor, fColor, fColor, 1.0f );
-            
-            if ( fColor <= 0.0f )
-            {
-                color = ColorF::BLUE;
-            }
-            Color colorRGB = color;
-            pMap[ j ][ i ] =  colorRGB.RGBA;
-        }
-    }
-    pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
-	UIImage* pImage = new UIImage( pTexture );
-	pImage->SetSize( pImage->GetSizeInPixels() * 2.0f );
-	pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
-	pImage->SetAlignment( BottomLeft );
-	UserInterface::AddScreen( "Map", pImage );
-	pImage->Release();
-    
     Matrix matTransform;
     matTransform.BuildScale( Vector4( 50.0f, 50.0f, 1.0f ) );
     matTransform.SetPosition( 100.0f, 100.0f, 0.0f );
@@ -342,7 +302,7 @@ void Start()
     
    
 	TextureAtlas* pAtlas = new TextureAtlas( "terrain_atlas.png" );
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) );
+	/*pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) );
 	pAtlas->AddTexture( Rect( 704, 352, 32, 32 ) );
 	pAtlas->AddTexture( Rect( 735, 352, 32, 32 ) );
 	pAtlas->AddTexture( Rect( 672, 160, 32, 32 ) );
@@ -357,25 +317,254 @@ void Start()
 	pAtlas->AddTexture( Rect( 192, 448, 32, 32 ) );
 	pAtlas->AddTexture( Rect( 224, 448, 32, 32 ) );
 
+	// Single tile water puddles
+	pAtlas->AddTexture( Rect( 192, 288, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 192, 320, 32, 32 ) );
+
+	// Transitions
+	pAtlas->AddTexture( Rect( 192, 352, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 224, 352, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 256, 352, 32, 32 ) );
+
+	pAtlas->AddTexture( Rect( 192, 384, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 256, 384, 32, 32 ) );
+
+	pAtlas->AddTexture( Rect( 192, 416, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 224, 416, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 256, 416, 32, 32 ) );
+
+	//
+
+	pAtlas->AddTexture( Rect( 224, 288, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 256, 288, 32, 32 ) );
+
+	pAtlas->AddTexture( Rect( 224, 320, 32, 32 ) );
+	pAtlas->AddTexture( Rect( 256, 320, 32, 32 ) );*/
+	//
+
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 0	- Pure Grass
+	pAtlas->AddTexture( Rect( 224, 416, 32, 32 ) ); // 1	- Grass with Top water only
+	pAtlas->AddTexture( Rect( 192, 384, 32, 32 ) ); // 2	- Grass with Water right only
+	pAtlas->AddTexture( Rect( 256, 288, 32, 32 ) ); // 3	- Grass with Top and right both water
+	pAtlas->AddTexture( Rect( 224, 352, 32, 32 ) ); // 4	- Grass with Water bottom only
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 5	- Grass with Water top and bottom only - UNASSIGNED
+	pAtlas->AddTexture( Rect( 256, 320, 32, 32 ) ); // 6	- Grass with Water bottom and right only
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 7	- Grass with water on bottom, top and right - UNASSIGNED
+	pAtlas->AddTexture( Rect( 256, 384, 32, 32 ) ); // 8	- Water left only
+	pAtlas->AddTexture( Rect( 224, 288, 32, 32 ) ); // 9	- Grass with water on top and left only
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 10	- Grass with water on both left and right - UNASSIGNED
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 11	- Grass with water on top, left and right - UNASSIGNED
+	pAtlas->AddTexture( Rect( 224, 320, 32, 32 ) ); // 12	- Grass with water on left and bottom
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 13	- Grass with water on bottom, left and top - UNASSIGNED
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) );	// 14	- Grass with water on left, bottom and right - UNASSIGNED
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 15	- Grass with water on left, bottom, top and right (all sides) - UNASSIGNED
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 16	- Here starts water, surrounded by grass
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 17	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 18	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 19	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 20	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 21	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 22	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 23	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 24	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 25	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 26	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 27	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 28	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 29	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 30	- 
+	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 31	- Pure water
+
+	// Diagonal Corner transitions 32-35
+	pAtlas->AddTexture( Rect( 192, 352, 32, 32 ) ); // 32 - Top left
+	pAtlas->AddTexture( Rect( 256, 352, 32, 32 ) ); // 33 - Top Right
+	pAtlas->AddTexture( Rect( 192, 416, 32, 32 ) ); // 34 - Bottom Left
+	pAtlas->AddTexture( Rect( 256, 416, 32, 32 ) ); // 35 - Bottom Right
+
+	// Grass Variations 36-41
+	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 36
+	pAtlas->AddTexture( Rect( 704, 352, 32, 32 ) ); // 37
+	pAtlas->AddTexture( Rect( 735, 352, 32, 32 ) ); // 38
+	pAtlas->AddTexture( Rect( 672, 160, 32, 32 ) ); // 39
+	pAtlas->AddTexture( Rect( 704, 160, 32, 32 ) ); // 40
+	pAtlas->AddTexture( Rect( 735, 160, 32, 32 ) ); // 41
+	
+	float fWorldScale = 1.0f;
+	for ( int i = 0; i < 5; ++i )
+	{
+		for ( unsigned int y = 0; y < 128; ++y )
+		{
+			for ( unsigned int x = 0; x < 128; ++x )
+			{
+				float fHeight = island.GetHeight( (float)x / fWorldScale, (float)y / fWorldScale );
+
+				float fRight = island.GetHeight( (float)(x+1) / fWorldScale, (float)(y) / fWorldScale );
+				float fLeft = island.GetHeight( (float)(x-1) / fWorldScale, (float)(y) / fWorldScale );
+				float fTop = island.GetHeight( (float)(x) / fWorldScale, (float)(y+1) / fWorldScale );
+				float fBottom = island.GetHeight( (float)(x) / fWorldScale, (float)(y-1) / fWorldScale );
+
+				float fBottomLeft = island.GetHeight( (float)(x-1) / fWorldScale, (float)(y-1) / fWorldScale );
+				float fBottomRight = island.GetHeight( (float)(x+1) / fWorldScale, (float)(y-1) / fWorldScale );
+				float fTopLeft = island.GetHeight( (float)(x-1) / fWorldScale, (float)(y+1) / fWorldScale );
+				float fTopRight = island.GetHeight( (float)(x+1) / fWorldScale, (float)(y+1) / fWorldScale );
+
+				int iIndex = 0;
+				if ( fHeight <= 0.0f )
+				{
+					iIndex += 16;
+				}
+
+				if ( fLeft <= 0.0f )
+				{
+					iIndex += 8;
+				}
+
+				if ( fRight <= 0.0f )
+				{
+					iIndex += 2;
+				}
+
+				if ( fTop <= 0.0f )
+				{
+					iIndex += 1;
+				}
+
+				if ( fBottom <= 0.0f )
+				{
+					iIndex += 4;
+				}
+
+				// 15, 14, 13, 11, 10, 7, 5
+				if ( 
+					iIndex == 15 || 
+					iIndex == 14 || 
+					iIndex == 13 || 
+					iIndex == 11 || 
+					iIndex == 10 || 
+					iIndex == 7 || 
+					iIndex == 5 ||
+					false
+					)
+				{
+					island.SetHeight( x, y, 0.0f );
+				}
+			}
+		}
+	}
+
+	pTexture = IRenderer::CreateTexture();
+	unsigned int pMap[128][128];
+	for ( int j = 0; j < 128; ++j )
+	{
+		for ( int i = 0; i < 128; ++i )
+		{
+			float fColor = island.GetHeight( i, j );
+			if ( fColor < 0.0f )
+			{
+				fColor = 0.0f;
+			}
+
+			ColorF color( fColor, fColor, fColor, 1.0f );
+
+			if ( fColor <= 0.0f )
+			{
+				color = ColorF::BLUE;
+			}
+			Color colorRGB = color;
+			pMap[ j ][ i ] =  colorRGB.RGBA;
+		}
+	}
+	pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
+	UIImage* pImage = new UIImage( pTexture );
+	pImage->SetSize( pImage->GetSizeInPixels() * 2.0f );
+	pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
+	pImage->SetAlignment( BottomLeft );
+	UserInterface::AddScreen( "Map", pImage );
+	pImage->Release();
+
 	matTransform.Identify();
 	pEntity = Game::CreateEntity( matTransform );
 	RandomNumGen rand;
-	float fWorldScale = 1.0f;
 	pPathGraph->Create( 128 * fWorldScale, 128 * fWorldScale, 32.0f, false );
 	shared_ptr< TileMapComponent > pTileMapComponent( new TileMapComponent( 128 * fWorldScale, 128 * fWorldScale, 32.0f, pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
 		{
 			float fHeight = island.GetHeight( (float)x / fWorldScale, 127.0f - (float)y / fWorldScale );
+			
+			float fRight = island.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y) / fWorldScale );
+			float fLeft = island.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y) / fWorldScale );
+			float fTop = island.GetHeight( (float)(x) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
+			float fBottom = island.GetHeight( (float)(x) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
 
+			float fBottomLeft = island.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
+			float fBottomRight = island.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
+			float fTopLeft = island.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
+			float fTopRight = island.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
+
+			int iIndex = 0;
 			if ( fHeight <= 0.0f )
 			{
-				//rect = pAtlas->GetTextureRect( 6 + rand.RandomInt( 6 ) );
-				rect = pAtlas->GetTextureRect( 6 );
+				iIndex += 16;
 			}
 
-			else
+			if ( fLeft <= 0.0f )
 			{
-				rect = pAtlas->GetTextureRect( rand.RandomInt( 6 ) );
+				iIndex += 8;
 			}
+
+			if ( fRight <= 0.0f )
+			{
+				iIndex += 2;
+			}
+
+			if ( fTop <= 0.0f )
+			{
+				iIndex += 1;
+			}
+
+			if ( fBottom <= 0.0f )
+			{
+				iIndex += 4;
+			}
+			
+			if ( iIndex == 0 )
+			{
+				/*
+				// 32 - Top left Grass
+				// 33 - Top Right Grass
+				// 34 - Bottom Left Grass
+				// 35 - Bottom Right Grass
+				*/
+				if ( fBottomLeft <= 0.0f )
+				{
+					rect = pAtlas->GetTextureRect( 33 );
+				}
+
+				else if ( fTopLeft <= 0.0f )
+				{
+					rect = pAtlas->GetTextureRect( 35 );
+				}
+
+				else if ( fTopRight <= 0.0f )
+				{
+					rect = pAtlas->GetTextureRect( 34 );
+				}
+
+				else if ( fBottomRight <= 0.0f )
+				{
+					rect = pAtlas->GetTextureRect( 32 );
+				}
+
+				else
+				{
+					// All grass
+					rect = pAtlas->GetTextureRect( 36 + rand.RandomInt( 6 ) );
+				}
+
+				return;
+				
+			}
+
+			rect = pAtlas->GetTextureRect( iIndex );			
 			
 		}
 	) );	
@@ -483,7 +672,7 @@ void Update( float fDeltaSeconds )
             const Vector3& vPosition = pPath->GetCurrentNodePosition();
             Vector3 vDirection = (vPosition ) - mat.GetPosition();
             vDirection.Normalize();
-            mat.SetPosition( mat.GetPosition() + vDirection * fDeltaSeconds * 10 );
+            mat.SetPosition( mat.GetPosition() + vDirection * fDeltaSeconds * 35.0f );
             pEntity->SetTransform( mat );
             
             pPath->CheckForNextNode( mat.GetPosition()  );
