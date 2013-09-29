@@ -7,59 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E603846117F70A0F00AC11C4 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E603844917F70A0F00AC11C4 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */; };
-		E603846217F70A0F00AC11C4 /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E603844A17F70A0F00AC11C4 /* Arial.ttf */; };
-		E603846317F70A0F00AC11C4 /* Avatar0.png in Resources */ = {isa = PBXBuildFile; fileRef = E603844B17F70A0F00AC11C4 /* Avatar0.png */; };
-		E603846417F70A0F00AC11C4 /* Avatar1.png in Resources */ = {isa = PBXBuildFile; fileRef = E603844C17F70A0F00AC11C4 /* Avatar1.png */; };
-		E603846517F70A0F00AC11C4 /* Choicelarge.png in Resources */ = {isa = PBXBuildFile; fileRef = E603844D17F70A0F00AC11C4 /* Choicelarge.png */; };
-		E603846617F70A0F00AC11C4 /* Dialogue.xml in Resources */ = {isa = PBXBuildFile; fileRef = E603844E17F70A0F00AC11C4 /* Dialogue.xml */; };
-		E603846717F70A0F00AC11C4 /* DialogueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E603844F17F70A0F00AC11C4 /* DialogueCircle.png */; };
-		E603846817F70A0F00AC11C4 /* DialogueInterface.xml in Resources */ = {isa = PBXBuildFile; fileRef = E603845017F70A0F00AC11C4 /* DialogueInterface.xml */; };
-		E603846917F70A0F00AC11C4 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E603845117F70A0F00AC11C4 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */; };
-		E603846A17F70A0F00AC11C4 /* gradients.png in Resources */ = {isa = PBXBuildFile; fileRef = E603845217F70A0F00AC11C4 /* gradients.png */; };
-		E603846B17F70A0F00AC11C4 /* package_development.png in Resources */ = {isa = PBXBuildFile; fileRef = E603845317F70A0F00AC11C4 /* package_development.png */; };
-		E603846C17F70A0F00AC11C4 /* paper background.png in Resources */ = {isa = PBXBuildFile; fileRef = E603845417F70A0F00AC11C4 /* paper background.png */; };
-		E603846D17F70A0F00AC11C4 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = E603845517F70A0F00AC11C4 /* ReadMe */; };
-		E603846E17F70A0F00AC11C4 /* RPG_GUI_v1_source.xcf in Resources */ = {isa = PBXBuildFile; fileRef = E603845617F70A0F00AC11C4 /* RPG_GUI_v1_source.xcf */; };
-		E603846F17F70A0F00AC11C4 /* RPG_GUI_v1.png in Resources */ = {isa = PBXBuildFile; fileRef = E603845717F70A0F00AC11C4 /* RPG_GUI_v1.png */; };
-		E603847017F70A0F00AC11C4 /* samaze_017.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E603845817F70A0F00AC11C4 /* samaze_017.jpg */; };
-		E603847117F70A0F00AC11C4 /* Sheep0007.png in Resources */ = {isa = PBXBuildFile; fileRef = E603845917F70A0F00AC11C4 /* Sheep0007.png */; };
-		E603847217F70A0F00AC11C4 /* terrain_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E603845A17F70A0F00AC11C4 /* terrain_atlas.png */; };
-		E603847317F70A0F00AC11C4 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E603845B17F70A0F00AC11C4 /* test.jpg */; };
-		E603847417F70A0F00AC11C4 /* TestDialogue.dia in Resources */ = {isa = PBXBuildFile; fileRef = E603845C17F70A0F00AC11C4 /* TestDialogue.dia */; };
-		E603847517F70A0F00AC11C4 /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = E603845D17F70A0F00AC11C4 /* tiles.png */; };
-		E603847617F70A0F00AC11C4 /* Vera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E603845E17F70A0F00AC11C4 /* Vera.ttf */; };
-		E603847717F70A0F00AC11C4 /* VeraMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E603845F17F70A0F00AC11C4 /* VeraMono.ttf */; };
-		E603847817F70A0F00AC11C4 /* wood background.png in Resources */ = {isa = PBXBuildFile; fileRef = E603846017F70A0F00AC11C4 /* wood background.png */; };
 		E6059D5517DC9F0E00C6681B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5417DC9F0E00C6681B /* Cocoa.framework */; };
 		E6059D5917DC9F2A00C6681B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5817DC9F2A00C6681B /* IOKit.framework */; };
 		E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5A17DCA07800C6681B /* OpenGL.framework */; };
 		E60B6B6817E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
 		E60B6B6917E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
-		E639DF1417F70B7D009EA0E8 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844917F70A0F00AC11C4 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */; };
-		E639DF1517F70B7D009EA0E8 /* Arial.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844A17F70A0F00AC11C4 /* Arial.ttf */; };
-		E639DF1617F70B7D009EA0E8 /* Avatar0.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844B17F70A0F00AC11C4 /* Avatar0.png */; };
-		E639DF1717F70B7D009EA0E8 /* Avatar1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844C17F70A0F00AC11C4 /* Avatar1.png */; };
-		E639DF1817F70B7D009EA0E8 /* Choicelarge.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844D17F70A0F00AC11C4 /* Choicelarge.png */; };
-		E639DF1917F70B7D009EA0E8 /* Dialogue.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844E17F70A0F00AC11C4 /* Dialogue.xml */; };
-		E639DF1A17F70B7D009EA0E8 /* DialogueCircle.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603844F17F70A0F00AC11C4 /* DialogueCircle.png */; };
-		E639DF1B17F70B7D009EA0E8 /* DialogueInterface.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845017F70A0F00AC11C4 /* DialogueInterface.xml */; };
-		E639DF1C17F70B7D009EA0E8 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845117F70A0F00AC11C4 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */; };
-		E639DF1D17F70B7D009EA0E8 /* gradients.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845217F70A0F00AC11C4 /* gradients.png */; };
-		E639DF1E17F70B7D009EA0E8 /* package_development.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845317F70A0F00AC11C4 /* package_development.png */; };
-		E639DF1F17F70B7D009EA0E8 /* paper background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845417F70A0F00AC11C4 /* paper background.png */; };
-		E639DF2017F70B7D009EA0E8 /* ReadMe in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845517F70A0F00AC11C4 /* ReadMe */; };
-		E639DF2117F70B7D009EA0E8 /* RPG_GUI_v1_source.xcf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845617F70A0F00AC11C4 /* RPG_GUI_v1_source.xcf */; };
-		E639DF2217F70B7D009EA0E8 /* RPG_GUI_v1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845717F70A0F00AC11C4 /* RPG_GUI_v1.png */; };
-		E639DF2317F70B7D009EA0E8 /* samaze_017.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845817F70A0F00AC11C4 /* samaze_017.jpg */; };
-		E639DF2417F70B7D009EA0E8 /* Sheep0007.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845917F70A0F00AC11C4 /* Sheep0007.png */; };
-		E639DF2517F70B7D009EA0E8 /* terrain_atlas.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845A17F70A0F00AC11C4 /* terrain_atlas.png */; };
-		E639DF2617F70B7D009EA0E8 /* test.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845B17F70A0F00AC11C4 /* test.jpg */; };
-		E639DF2717F70B7D009EA0E8 /* TestDialogue.dia in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845C17F70A0F00AC11C4 /* TestDialogue.dia */; };
-		E639DF2817F70B7D009EA0E8 /* tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845D17F70A0F00AC11C4 /* tiles.png */; };
-		E639DF2917F70B7D009EA0E8 /* Vera.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845E17F70A0F00AC11C4 /* Vera.ttf */; };
-		E639DF2A17F70B7D009EA0E8 /* VeraMono.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603845F17F70A0F00AC11C4 /* VeraMono.ttf */; };
-		E639DF2B17F70B7D009EA0E8 /* wood background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E603846017F70A0F00AC11C4 /* wood background.png */; };
+		E6166C4B17F873DB00333D8B /* Avatar0.png in Resources */ = {isa = PBXBuildFile; fileRef = E6166C3F17F873DB00333D8B /* Avatar0.png */; };
+		E6166C4C17F873DB00333D8B /* Avatar1.png in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4017F873DB00333D8B /* Avatar1.png */; };
+		E6166C4D17F873DB00333D8B /* Choicelarge.png in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4117F873DB00333D8B /* Choicelarge.png */; };
+		E6166C4E17F873DB00333D8B /* Dialogue.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4217F873DB00333D8B /* Dialogue.xml */; };
+		E6166C4F17F873DB00333D8B /* DialogueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4317F873DB00333D8B /* DialogueCircle.png */; };
+		E6166C5117F873DB00333D8B /* paper background.png in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4517F873DB00333D8B /* paper background.png */; };
+		E6166C5217F873DB00333D8B /* terrain_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4617F873DB00333D8B /* terrain_atlas.png */; };
+		E6166C5317F873DB00333D8B /* TestDialogue.dia in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4717F873DB00333D8B /* TestDialogue.dia */; };
+		E6166C5417F873DB00333D8B /* Vera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4817F873DB00333D8B /* Vera.ttf */; };
+		E6166C5517F873DB00333D8B /* VeraMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4917F873DB00333D8B /* VeraMono.ttf */; };
+		E6166C5617F873DB00333D8B /* wood background.png in Resources */ = {isa = PBXBuildFile; fileRef = E6166C4A17F873DB00333D8B /* wood background.png */; };
+		E6166C5817F8750200333D8B /* DialogueInterface.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6166C5717F8750200333D8B /* DialogueInterface.xml */; };
+		E6166C5A17F879D700333D8B /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6166C5917F879D700333D8B /* Arial.ttf */; };
+		E6166C5C17F87CCB00333D8B /* Sheep0007.png in Resources */ = {isa = PBXBuildFile; fileRef = E6166C5B17F87CCB00333D8B /* Sheep0007.png */; };
 		E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9317C69EC0006F1456 /* UIKit.framework */; };
 		E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9517C69EC0006F1456 /* Foundation.framework */; };
 		E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */; };
@@ -71,7 +37,8 @@
 		E63EAEC617C6A0F9006F1456 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */; };
 		E63EAED917C6BFF1006F1456 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAED817C6BFF1006F1456 /* libz.dylib */; };
 		E64768D417E123170080BCAF /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E64768D017E122FB0080BCAF /* libangelscript.a */; };
-		E64768D517E1231D0080BCAF /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDB317CE1EB400CAC564 /* libangelscript.a */; };
+		E6C58D5617F851BD0020F28D /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C58D5517F851BD0020F28D /* libfreetype.a */; };
+		E6C58D7A17F854710020F28D /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C58D7917F854710020F28D /* libangelscript.a */; };
 		E6D0BDB517CE1EBE00CAC564 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDA617CE1A8400CAC564 /* libEngine.a */; };
 		E6D0BDD217CE29CE00CAC564 /* Source - Copy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */; };
 		E6D0BE4B17CE2D1000CAC564 /* libEngine Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDCA17CE1FD500CAC564 /* libEngine Mac.a */; };
@@ -103,66 +70,33 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				E639DF1417F70B7D009EA0E8 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */,
-				E639DF1517F70B7D009EA0E8 /* Arial.ttf in CopyFiles */,
-				E639DF1617F70B7D009EA0E8 /* Avatar0.png in CopyFiles */,
-				E639DF1717F70B7D009EA0E8 /* Avatar1.png in CopyFiles */,
-				E639DF1817F70B7D009EA0E8 /* Choicelarge.png in CopyFiles */,
-				E639DF1917F70B7D009EA0E8 /* Dialogue.xml in CopyFiles */,
-				E639DF1A17F70B7D009EA0E8 /* DialogueCircle.png in CopyFiles */,
-				E639DF1B17F70B7D009EA0E8 /* DialogueInterface.xml in CopyFiles */,
-				E639DF1C17F70B7D009EA0E8 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in CopyFiles */,
-				E639DF1D17F70B7D009EA0E8 /* gradients.png in CopyFiles */,
-				E639DF1E17F70B7D009EA0E8 /* package_development.png in CopyFiles */,
-				E639DF1F17F70B7D009EA0E8 /* paper background.png in CopyFiles */,
-				E639DF2017F70B7D009EA0E8 /* ReadMe in CopyFiles */,
-				E639DF2117F70B7D009EA0E8 /* RPG_GUI_v1_source.xcf in CopyFiles */,
-				E639DF2217F70B7D009EA0E8 /* RPG_GUI_v1.png in CopyFiles */,
-				E639DF2317F70B7D009EA0E8 /* samaze_017.jpg in CopyFiles */,
-				E639DF2417F70B7D009EA0E8 /* Sheep0007.png in CopyFiles */,
-				E639DF2517F70B7D009EA0E8 /* terrain_atlas.png in CopyFiles */,
-				E639DF2617F70B7D009EA0E8 /* test.jpg in CopyFiles */,
-				E639DF2717F70B7D009EA0E8 /* TestDialogue.dia in CopyFiles */,
-				E639DF2817F70B7D009EA0E8 /* tiles.png in CopyFiles */,
-				E639DF2917F70B7D009EA0E8 /* Vera.ttf in CopyFiles */,
-				E639DF2A17F70B7D009EA0E8 /* VeraMono.ttf in CopyFiles */,
-				E639DF2B17F70B7D009EA0E8 /* wood background.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E603844917F70A0F00AC11C4 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg; sourceTree = "<group>"; };
-		E603844A17F70A0F00AC11C4 /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
-		E603844B17F70A0F00AC11C4 /* Avatar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar0.png; sourceTree = "<group>"; };
-		E603844C17F70A0F00AC11C4 /* Avatar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar1.png; sourceTree = "<group>"; };
-		E603844D17F70A0F00AC11C4 /* Choicelarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Choicelarge.png; sourceTree = "<group>"; };
-		E603844E17F70A0F00AC11C4 /* Dialogue.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dialogue.xml; sourceTree = "<group>"; };
-		E603844F17F70A0F00AC11C4 /* DialogueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DialogueCircle.png; sourceTree = "<group>"; };
-		E603845017F70A0F00AC11C4 /* DialogueInterface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DialogueInterface.xml; sourceTree = "<group>"; };
-		E603845117F70A0F00AC11C4 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg"; sourceTree = "<group>"; };
-		E603845217F70A0F00AC11C4 /* gradients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradients.png; sourceTree = "<group>"; };
-		E603845317F70A0F00AC11C4 /* package_development.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package_development.png; sourceTree = "<group>"; };
-		E603845417F70A0F00AC11C4 /* paper background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper background.png"; sourceTree = "<group>"; };
-		E603845517F70A0F00AC11C4 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
-		E603845617F70A0F00AC11C4 /* RPG_GUI_v1_source.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RPG_GUI_v1_source.xcf; sourceTree = "<group>"; };
-		E603845717F70A0F00AC11C4 /* RPG_GUI_v1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RPG_GUI_v1.png; sourceTree = "<group>"; };
-		E603845817F70A0F00AC11C4 /* samaze_017.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samaze_017.jpg; sourceTree = "<group>"; };
-		E603845917F70A0F00AC11C4 /* Sheep0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sheep0007.png; sourceTree = "<group>"; };
-		E603845A17F70A0F00AC11C4 /* terrain_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terrain_atlas.png; sourceTree = "<group>"; };
-		E603845B17F70A0F00AC11C4 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		E603845C17F70A0F00AC11C4 /* TestDialogue.dia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestDialogue.dia; sourceTree = "<group>"; };
-		E603845D17F70A0F00AC11C4 /* tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles.png; sourceTree = "<group>"; };
-		E603845E17F70A0F00AC11C4 /* Vera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vera.ttf; sourceTree = "<group>"; };
-		E603845F17F70A0F00AC11C4 /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeraMono.ttf; sourceTree = "<group>"; };
-		E603846017F70A0F00AC11C4 /* wood background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood background.png"; sourceTree = "<group>"; };
 		E6059D5417DC9F0E00C6681B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		E6059D5817DC9F2A00C6681B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		E6059D5A17DCA07800C6681B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		E6059DD417DCB46000C6681B /* libvorbis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbis.a; path = ../../../LunaEngine/Engine/Externals/libvorbis/lib/OSX/libvorbis.a; sourceTree = "<group>"; };
 		E60B6B6617E362A500C8FEBE /* IslandData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IslandData.cpp; sourceTree = "<group>"; };
 		E60B6B6717E362A500C8FEBE /* IslandData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IslandData.h; sourceTree = "<group>"; };
+		E6166C3C17F86C5F00333D8B /* VillageGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VillageGame.entitlements; sourceTree = "<group>"; };
+		E6166C3F17F873DB00333D8B /* Avatar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar0.png; sourceTree = "<group>"; };
+		E6166C4017F873DB00333D8B /* Avatar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar1.png; sourceTree = "<group>"; };
+		E6166C4117F873DB00333D8B /* Choicelarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Choicelarge.png; sourceTree = "<group>"; };
+		E6166C4217F873DB00333D8B /* Dialogue.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dialogue.xml; sourceTree = "<group>"; };
+		E6166C4317F873DB00333D8B /* DialogueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DialogueCircle.png; sourceTree = "<group>"; };
+		E6166C4517F873DB00333D8B /* paper background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper background.png"; sourceTree = "<group>"; };
+		E6166C4617F873DB00333D8B /* terrain_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terrain_atlas.png; sourceTree = "<group>"; };
+		E6166C4717F873DB00333D8B /* TestDialogue.dia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestDialogue.dia; sourceTree = "<group>"; };
+		E6166C4817F873DB00333D8B /* Vera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vera.ttf; sourceTree = "<group>"; };
+		E6166C4917F873DB00333D8B /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeraMono.ttf; sourceTree = "<group>"; };
+		E6166C4A17F873DB00333D8B /* wood background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood background.png"; sourceTree = "<group>"; };
+		E6166C5717F8750200333D8B /* DialogueInterface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DialogueInterface.xml; sourceTree = "<group>"; };
+		E6166C5917F879D700333D8B /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
+		E6166C5B17F87CCB00333D8B /* Sheep0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sheep0007.png; sourceTree = "<group>"; };
 		E63EAE9017C69EC0006F1456 /* VillageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63EAE9317C69EC0006F1456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E63EAE9517C69EC0006F1456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -178,6 +112,9 @@
 		E63EAED817C6BFF1006F1456 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E64768D017E122FB0080BCAF /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX/libangelscript.a; sourceTree = "<group>"; };
 		E64768D217E123000080BCAF /* libangelscriptd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscriptd.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX/libangelscriptd.a; sourceTree = "<group>"; };
+		E6C58D5517F851BD0020F28D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../../../LunaEngine/Engine/Externals/freetype2/libfreetype.a; sourceTree = "<group>"; };
+		E6C58D7917F854710020F28D /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = "../../../../Library/Developer/Xcode/DerivedData/angelscript-esvhdojcldbyopdjdxbevxsvovbi/Build/Products/Release-iphoneos/libangelscript.a"; sourceTree = "<group>"; };
+		E6C58D7D17F85AA20020F28D /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		E6D0BDA117CE1A8400CAC564 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
 		E6D0BDB317CE1EB400CAC564 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/libangelscript.a; sourceTree = "<group>"; };
 		E6D0BDC217CE1FD500CAC564 /* VillageGame Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "VillageGame Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,7 +131,8 @@
 				E6D0BDB517CE1EBE00CAC564 /* libEngine.a in Frameworks */,
 				E63EAED917C6BFF1006F1456 /* libz.dylib in Frameworks */,
 				E63EAEC617C6A0F9006F1456 /* QuartzCore.framework in Frameworks */,
-				E64768D517E1231D0080BCAF /* libangelscript.a in Frameworks */,
+				E6C58D5617F851BD0020F28D /* libfreetype.a in Frameworks */,
+				E6C58D7A17F854710020F28D /* libangelscript.a in Frameworks */,
 				E63EAEC417C6A0EC006F1456 /* OpenGLES.framework in Frameworks */,
 				E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */,
 				E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */,
@@ -250,6 +188,9 @@
 		E63EAE9217C69EC0006F1456 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6C58D7D17F85AA20020F28D /* libz.1.1.3.dylib */,
+				E6C58D7917F854710020F28D /* libangelscript.a */,
+				E6C58D5517F851BD0020F28D /* libfreetype.a */,
 				E63EAED817C6BFF1006F1456 /* libz.dylib */,
 				E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */,
 				E63EAEC317C6A0EC006F1456 /* OpenGLES.framework */,
@@ -263,6 +204,7 @@
 		E63EAE9917C69EC0006F1456 /* VillageGame */ = {
 			isa = PBXGroup;
 			children = (
+				E6166C3C17F86C5F00333D8B /* VillageGame.entitlements */,
 				E6FD5FAE17CABAFA00F59339 /* Source */,
 				E63EAE9A17C69EC0006F1456 /* Supporting Files */,
 			);
@@ -285,30 +227,20 @@
 		E656049217CDF60C00E456A8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E603844917F70A0F00AC11C4 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */,
-				E603844A17F70A0F00AC11C4 /* Arial.ttf */,
-				E603844B17F70A0F00AC11C4 /* Avatar0.png */,
-				E603844C17F70A0F00AC11C4 /* Avatar1.png */,
-				E603844D17F70A0F00AC11C4 /* Choicelarge.png */,
-				E603844E17F70A0F00AC11C4 /* Dialogue.xml */,
-				E603844F17F70A0F00AC11C4 /* DialogueCircle.png */,
-				E603845017F70A0F00AC11C4 /* DialogueInterface.xml */,
-				E603845117F70A0F00AC11C4 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */,
-				E603845217F70A0F00AC11C4 /* gradients.png */,
-				E603845317F70A0F00AC11C4 /* package_development.png */,
-				E603845417F70A0F00AC11C4 /* paper background.png */,
-				E603845517F70A0F00AC11C4 /* ReadMe */,
-				E603845617F70A0F00AC11C4 /* RPG_GUI_v1_source.xcf */,
-				E603845717F70A0F00AC11C4 /* RPG_GUI_v1.png */,
-				E603845817F70A0F00AC11C4 /* samaze_017.jpg */,
-				E603845917F70A0F00AC11C4 /* Sheep0007.png */,
-				E603845A17F70A0F00AC11C4 /* terrain_atlas.png */,
-				E603845B17F70A0F00AC11C4 /* test.jpg */,
-				E603845C17F70A0F00AC11C4 /* TestDialogue.dia */,
-				E603845D17F70A0F00AC11C4 /* tiles.png */,
-				E603845E17F70A0F00AC11C4 /* Vera.ttf */,
-				E603845F17F70A0F00AC11C4 /* VeraMono.ttf */,
-				E603846017F70A0F00AC11C4 /* wood background.png */,
+				E6166C3F17F873DB00333D8B /* Avatar0.png */,
+				E6166C4017F873DB00333D8B /* Avatar1.png */,
+				E6166C4117F873DB00333D8B /* Choicelarge.png */,
+				E6166C4217F873DB00333D8B /* Dialogue.xml */,
+				E6166C4317F873DB00333D8B /* DialogueCircle.png */,
+				E6166C4517F873DB00333D8B /* paper background.png */,
+				E6166C4617F873DB00333D8B /* terrain_atlas.png */,
+				E6166C4717F873DB00333D8B /* TestDialogue.dia */,
+				E6166C4817F873DB00333D8B /* Vera.ttf */,
+				E6166C5917F879D700333D8B /* Arial.ttf */,
+				E6166C4917F873DB00333D8B /* VeraMono.ttf */,
+				E6166C4A17F873DB00333D8B /* wood background.png */,
+				E6166C5B17F87CCB00333D8B /* Sheep0007.png */,
+				E6166C5717F8750200333D8B /* DialogueInterface.xml */,
 			);
 			name = Assets;
 			path = ../../Assets;
@@ -378,7 +310,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = LunaEngine;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					E63EAE8F17C69EC0006F1456 = {
+						DevelopmentTeam = SDHFUXJM5Y;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = E63EAE8B17C69EC0006F1456 /* Build configuration list for PBXProject "VillageGame" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -426,34 +368,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E603846117F70A0F00AC11C4 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in Resources */,
-				E603846E17F70A0F00AC11C4 /* RPG_GUI_v1_source.xcf in Resources */,
-				E603846B17F70A0F00AC11C4 /* package_development.png in Resources */,
-				E603846717F70A0F00AC11C4 /* DialogueCircle.png in Resources */,
-				E603846517F70A0F00AC11C4 /* Choicelarge.png in Resources */,
-				E603847217F70A0F00AC11C4 /* terrain_atlas.png in Resources */,
-				E603847417F70A0F00AC11C4 /* TestDialogue.dia in Resources */,
+				E6166C5A17F879D700333D8B /* Arial.ttf in Resources */,
+				E6166C4F17F873DB00333D8B /* DialogueCircle.png in Resources */,
+				E6166C4B17F873DB00333D8B /* Avatar0.png in Resources */,
+				E6166C5517F873DB00333D8B /* VeraMono.ttf in Resources */,
 				E63EAE9E17C69EC0006F1456 /* InfoPlist.strings in Resources */,
-				E603846317F70A0F00AC11C4 /* Avatar0.png in Resources */,
-				E603846217F70A0F00AC11C4 /* Arial.ttf in Resources */,
-				E603846617F70A0F00AC11C4 /* Dialogue.xml in Resources */,
-				E603847717F70A0F00AC11C4 /* VeraMono.ttf in Resources */,
-				E603846817F70A0F00AC11C4 /* DialogueInterface.xml in Resources */,
 				E63EAEA617C69EC0006F1456 /* Default.png in Resources */,
-				E603846917F70A0F00AC11C4 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in Resources */,
-				E603847817F70A0F00AC11C4 /* wood background.png in Resources */,
-				E603847617F70A0F00AC11C4 /* Vera.ttf in Resources */,
+				E6166C5217F873DB00333D8B /* terrain_atlas.png in Resources */,
 				E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */,
-				E603846D17F70A0F00AC11C4 /* ReadMe in Resources */,
-				E603847517F70A0F00AC11C4 /* tiles.png in Resources */,
-				E603846A17F70A0F00AC11C4 /* gradients.png in Resources */,
-				E603846417F70A0F00AC11C4 /* Avatar1.png in Resources */,
-				E603846F17F70A0F00AC11C4 /* RPG_GUI_v1.png in Resources */,
-				E603847117F70A0F00AC11C4 /* Sheep0007.png in Resources */,
-				E603847317F70A0F00AC11C4 /* test.jpg in Resources */,
-				E603847017F70A0F00AC11C4 /* samaze_017.jpg in Resources */,
+				E6166C5C17F87CCB00333D8B /* Sheep0007.png in Resources */,
+				E6166C4C17F873DB00333D8B /* Avatar1.png in Resources */,
+				E6166C5417F873DB00333D8B /* Vera.ttf in Resources */,
+				E6166C5117F873DB00333D8B /* paper background.png in Resources */,
+				E6166C4E17F873DB00333D8B /* Dialogue.xml in Resources */,
+				E6166C4D17F873DB00333D8B /* Choicelarge.png in Resources */,
+				E6166C5317F873DB00333D8B /* TestDialogue.dia in Resources */,
 				E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */,
-				E603846C17F70A0F00AC11C4 /* paper background.png in Resources */,
+				E6166C5617F873DB00333D8B /* wood background.png in Resources */,
+				E6166C5817F8750200333D8B /* DialogueInterface.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +435,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shanee Nishry (EC5RMVS73Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shanee Nishry (EC5RMVS73Y)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -518,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../../../LunaEngine/Engine;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,7 +470,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shanee Nishry (EC5RMVS73Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shanee Nishry (EC5RMVS73Y)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = "NULL=0";
@@ -545,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../../../LunaEngine/Engine;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -557,6 +491,10 @@
 		E63EAEAE17C69EC0006F1456 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_ENTITLEMENTS = VillageGame/VillageGame.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VillageGame/VillageGame-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -568,11 +506,14 @@
 				INFOPLIST_FILE = "VillageGame/VillageGame-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../LunaEngine/LunaEngine/Engine/Externals/AngelScript/iOS\"",
-					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\"",
-					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX\"",
+					"\\\"$(SRCROOT)/../../../LunaEngine/LunaEngine/Engine/Externals/AngelScript/iOS\\\"",
+					"\\\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\\\"",
+					"\\\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX\\\"",
+					/Users/Nishry/Documents/LunaEngine/Engine/Externals/freetype2,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/angelscript-esvhdojcldbyopdjdxbevxsvovbi/Build/Products/Release-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "778E26AC-7782-4A25-B5E4-E7057711E7CB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -580,6 +521,10 @@
 		E63EAEAF17C69EC0006F1456 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_ENTITLEMENTS = VillageGame/VillageGame.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VillageGame/VillageGame-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -590,11 +535,14 @@
 				INFOPLIST_FILE = "VillageGame/VillageGame-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../LunaEngine/LunaEngine/Engine/Externals/AngelScript/iOS\"",
-					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\"",
-					"\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX\"",
+					"\\\"$(SRCROOT)/../../../LunaEngine/LunaEngine/Engine/Externals/AngelScript/iOS\\\"",
+					"\\\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS\\\"",
+					"\\\"$(SRCROOT)/../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX\\\"",
+					/Users/Nishry/Documents/LunaEngine/Engine/Externals/freetype2,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/angelscript-esvhdojcldbyopdjdxbevxsvovbi/Build/Products/Release-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "778E26AC-7782-4A25-B5E4-E7057711E7CB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

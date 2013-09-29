@@ -297,7 +297,7 @@ void Start()
 	pCameraComponent->SetPosition( Vector4( 000.1f, 00.0f, 0.0f, 1.0f ) );
 	pEntity->Start();
 	g_pCamera = pCameraComponent.get();
-    
+    g_pCamera->SetClearColor( ColorF::GREY );
 
     
    
@@ -392,9 +392,9 @@ void Start()
 	float fWorldScale = 2.0f;
 	for ( int i = 0; i < 5; ++i )
 	{
-		for ( unsigned int y = 0; y < 128; ++y )
+		for ( unsigned int y = 1; y < 127; ++y )
 		{
-			for ( unsigned int x = 0; x < 128; ++x )
+			for ( unsigned int x = 1; x < 127; ++x )
 			{
 				float fHeight = island.GetHeight( (float)x, (float)y );
 
@@ -720,6 +720,7 @@ void Render()
 {
 	IRenderContext* pRenderContext = IRenderer::Get()->VGetMainContext();
 
+    
 
 	IRenderer* pRenderer = IRenderer::Get();
 	Vector3 vScreen( (float)pRenderer->VGetScreenWidth(), (float)pRenderer->VGetScreenHeight(), 1.0f );
