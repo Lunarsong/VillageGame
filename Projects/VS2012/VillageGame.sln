@@ -22,14 +22,10 @@ Global
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Android.ActiveCfg = Release|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Win32.ActiveCfg = Release|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Win32.Build.0 = Release|Win32
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Android.ActiveCfg = Debug|Android
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Android.Build.0 = Debug|Android
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Android.Deploy.0 = Debug|Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Android.ActiveCfg = Debug|Win32
 		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Win32.ActiveCfg = Debug|Win32
 		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Win32.Build.0 = Debug|Win32
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Android.ActiveCfg = Release|Android
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Android.Build.0 = Release|Android
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Android.Deploy.0 = Release|Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Android.ActiveCfg = Release|Win32
 		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Win32.ActiveCfg = Release|Win32
 		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
