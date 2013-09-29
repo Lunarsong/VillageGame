@@ -10,7 +10,7 @@
 using namespace Engine;
 
 ITexture*		pTexture = NULL;
-shared_ptr<Entity> pEntity;
+Entity* pEntity;
 UIElement* pUI;
 
 #include "IslandData.h"
@@ -291,12 +291,14 @@ void Start()
 	Matrix matProjection;
 	matProjection.BuildOrthoLH( (float)IRenderer::Get()->VGetScreenWidth(), (float)IRenderer::Get()->VGetScreenHeight(), -1.0f, 1.0f );
 	pEntity = Game::CreateEntity( matTransform );
-	shared_ptr< CameraComponent > pCameraComponent( new CameraComponent() );
+	CameraComponent* pCameraComponent( new CameraComponent() );
 	pEntity->AddComponent( pCameraComponent );
+	pCameraComponent->Release();
+
 	pCameraComponent->SetProjection( matProjection );
 	pCameraComponent->SetPosition( Vector4( 000.1f, 00.0f, 0.0f, 1.0f ) );
 	pEntity->Start();
-	g_pCamera = pCameraComponent.get();
+	g_pCamera = pCameraComponent;
     g_pCamera->SetClearColor( ColorF::GREY );
 
     
@@ -487,7 +489,7 @@ void Start()
 	pEntity = Game::CreateEntity( matTransform );
 	RandomNumGen rand;
 	pPathGraph->Create( 128 * fWorldScale, 128 * fWorldScale, 32.0f, false );
-	shared_ptr< TileMapComponent > pTileMapComponent( new TileMapComponent( 128 * fWorldScale, 128 * fWorldScale, 32.0f, pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
+	TileMapComponent* pTileMapComponent( new TileMapComponent( 128 * fWorldScale, 128 * fWorldScale, 32.0f, pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
 		{
 			float fHeight = island.GetHeight( (float)x / fWorldScale, 127.0f - (float)y / fWorldScale );
 			
@@ -573,6 +575,7 @@ void Start()
 		}
 	) );	
 	pEntity->AddComponent( pTileMapComponent );
+	pTileMapComponent->Release();
 	pEntity->Start();
 
 	delete pAtlas;
@@ -612,10 +615,11 @@ void Start()
     matTransform.BuildScale( 22.5f, 22.5f, 1.0f );
     matTransform.SetPosition( Vector4( 100.0f, 100.0f ) );
     pEntity = Game::CreateEntity( matTransform );
-    shared_ptr<QuadComponent> pQuad( new QuadComponent() );
+    QuadComponent* pQuad( new QuadComponent() );
     pQuad->SetTexture( "Sheep0007.png" );
 	
     pEntity->AddComponent( pQuad );
+	pQuad->Release();
     pEntity->Start();
     
     InputManager::Get()->AddTouchHandler( new myTouchHandler() );
