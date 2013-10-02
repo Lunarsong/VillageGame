@@ -13,11 +13,21 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\IslandData.cpp" />
     <ClCompile Include="..\..\Source\Source - Copy.cpp" />
+    <ClCompile Include="GameMenu.cpp" />
+    <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="ScrollCamera.cpp" />
+    <ClCompile Include="VillageGame.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="TreeComponent.cpp" />
     <ClCompile Include="TreeComponentData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\IslandData.h" />
+    <ClInclude Include="GameMenu.h" />
+    <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="ScrollCamera.h" />
+    <ClInclude Include="VillageGame.h" />
+    <ClInclude Include="Main.h" />
     <ClInclude Include="TreeComponent.h" />
     <ClInclude Include="TreeComponentData.h" />
   </ItemGroup>

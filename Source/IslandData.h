@@ -10,31 +10,28 @@
 
 #include "Core/Utils/SimplexNoise.h"
 
-namespace VillageGame
+class IslandData
 {
-    class IslandData
-    {
-    public:
-        IslandData();
-        ~IslandData();
+public:
+    IslandData();
+    ~IslandData();
 
-        void Destroy();
+    void Destroy();
 
-        void Generate( int iWidth, int iHeight );
-        void Generate( int iWidth, int iHeight, unsigned long ulSeed );
+    void Generate( int iWidth, int iHeight );
+    void Generate( int iWidth, int iHeight, unsigned long ulSeed );
 
-        float GetHeight( int iX, int iY );
-		void SetHeight( int iX, int iY, float fHeight );
-        float GetMaskHeight( int iX, int iY );
+    float GetHeight( int iX, int iY );
+	void SetHeight( int iX, int iY, float fHeight );
+    float GetMaskHeight( int iX, int iY );
 
-    private:
-        float* m_pHeightMap;
-        float* m_pHeightMaskMap;
+private:
+    float* m_pHeightMap;
+    float* m_pHeightMaskMap;
         
-        int m_uiSizeX, m_uiSizeY;
+    int m_uiSizeX, m_uiSizeY;
 
-        inline float& operator() ( unsigned int iX, unsigned int iY );
+    inline float& operator() ( unsigned int iX, unsigned int iY );
         
-        void GenerateMaskMap();
-    };
-}
+    void GenerateMaskMap();
+};

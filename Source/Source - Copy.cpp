@@ -268,19 +268,13 @@ UIImage* pUIImage;
 UILabel* pLabel;
 myMouseHandler* pMouseHandler;
 
-using namespace VillageGame;
-
 DialogueTree* pDialogueTree = NULL;
-void Start()
+void Start2()
 {
-	ResourceCache::Get()->AddResourceFile( "Working Folder", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder(), DevelopmentResourceZipFile::Editor ) );
-	ResourceCache::Get()->AddResourceFile( "Assets", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder() + "Assets/", DevelopmentResourceZipFile::Editor ) );
 
 	pDialogueTree = DialogueXmlParser::FromFile( "Dialogue.xml" );
 
     //BaseApplication::Get()->VSetResolution( 1280, 1024 );
-    IslandData island;
-    island.Generate( 128, 128 );
  
 	pMouseHandler = new myMouseHandler();    
     
@@ -303,313 +297,8 @@ void Start()
 
     
    
-	TextureAtlas* pAtlas = new TextureAtlas( "terrain_atlas.png" );
-	/*pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 704, 352, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 735, 352, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 672, 160, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 704, 160, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 735, 160, 32, 32 ) );
-
-	// Water
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 96, 448, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 128, 448, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 160, 448, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 192, 448, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 224, 448, 32, 32 ) );
-
-	// Single tile water puddles
-	pAtlas->AddTexture( Rect( 192, 288, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 192, 320, 32, 32 ) );
-
-	// Transitions
-	pAtlas->AddTexture( Rect( 192, 352, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 224, 352, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 256, 352, 32, 32 ) );
-
-	pAtlas->AddTexture( Rect( 192, 384, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 256, 384, 32, 32 ) );
-
-	pAtlas->AddTexture( Rect( 192, 416, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 224, 416, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 256, 416, 32, 32 ) );
-
-	//
-
-	pAtlas->AddTexture( Rect( 224, 288, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 256, 288, 32, 32 ) );
-
-	pAtlas->AddTexture( Rect( 224, 320, 32, 32 ) );
-	pAtlas->AddTexture( Rect( 256, 320, 32, 32 ) );*/
-	//
-
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 0	- Pure Grass
-	pAtlas->AddTexture( Rect( 224, 416, 32, 32 ) ); // 1	- Grass with Top water only
-	pAtlas->AddTexture( Rect( 192, 384, 32, 32 ) ); // 2	- Grass with Water right only
-	pAtlas->AddTexture( Rect( 256, 288, 32, 32 ) ); // 3	- Grass with Top and right both water
-	pAtlas->AddTexture( Rect( 224, 352, 32, 32 ) ); // 4	- Grass with Water bottom only
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 5	- Grass with Water top and bottom only - UNASSIGNED
-	pAtlas->AddTexture( Rect( 256, 320, 32, 32 ) ); // 6	- Grass with Water bottom and right only
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 7	- Grass with water on bottom, top and right - UNASSIGNED
-	pAtlas->AddTexture( Rect( 256, 384, 32, 32 ) ); // 8	- Water left only
-	pAtlas->AddTexture( Rect( 224, 288, 32, 32 ) ); // 9	- Grass with water on top and left only
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 10	- Grass with water on both left and right - UNASSIGNED
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 11	- Grass with water on top, left and right - UNASSIGNED
-	pAtlas->AddTexture( Rect( 224, 320, 32, 32 ) ); // 12	- Grass with water on left and bottom
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 13	- Grass with water on bottom, left and top - UNASSIGNED
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) );	// 14	- Grass with water on left, bottom and right - UNASSIGNED
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 15	- Grass with water on left, bottom, top and right (all sides) - UNASSIGNED
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 16	- Here starts water, surrounded by grass
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 17	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 18	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 19	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 20	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 21	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 22	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 23	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 24	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 25	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 26	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 27	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 28	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 29	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 30	- 
-	pAtlas->AddTexture( Rect( 224, 384, 32, 32 ) ); // 31	- Pure water
-
-	// Diagonal Corner transitions 32-35
-	pAtlas->AddTexture( Rect( 192, 352, 32, 32 ) ); // 32 - Top left
-	pAtlas->AddTexture( Rect( 256, 352, 32, 32 ) ); // 33 - Top Right
-	pAtlas->AddTexture( Rect( 192, 416, 32, 32 ) ); // 34 - Bottom Left
-	pAtlas->AddTexture( Rect( 256, 416, 32, 32 ) ); // 35 - Bottom Right
-
-	// Grass Variations 36-41
-	pAtlas->AddTexture( Rect( 672, 352, 32, 32 ) ); // 36
-	pAtlas->AddTexture( Rect( 704, 352, 32, 32 ) ); // 37
-	pAtlas->AddTexture( Rect( 735, 352, 32, 32 ) ); // 38
-	pAtlas->AddTexture( Rect( 672, 160, 32, 32 ) ); // 39
-	pAtlas->AddTexture( Rect( 704, 160, 32, 32 ) ); // 40
-	pAtlas->AddTexture( Rect( 735, 160, 32, 32 ) ); // 41
 	
-	float fWorldScale = 2.0f;
-	for ( int i = 0; i < 5; ++i )
-	{
-		for ( unsigned int y = 1; y < 127; ++y )
-		{
-			for ( unsigned int x = 1; x < 127; ++x )
-			{
-				float fHeight = island.GetHeight( (float)x, (float)y );
 
-				float fRight = island.GetHeight( (float)(x+1), (float)(y)  );
-				float fLeft = island.GetHeight( (float)(x-1), (float)(y)  );
-				float fTop = island.GetHeight( (float)(x), (float)(y+1)  );
-				float fBottom = island.GetHeight( (float)(x), (float)(y-1)  );
-
-				float fBottomLeft = island.GetHeight( (float)(x-1), (float)(y-1)  );
-				float fBottomRight = island.GetHeight( (float)(x+1), (float)(y-1)  );
-				float fTopLeft = island.GetHeight( (float)(x-1), (float)(y+1)  );
-				float fTopRight = island.GetHeight( (float)(x+1), (float)(y+1)  );
-
-				int iIndex = 0;
-				if ( fHeight <= 0.0f )
-				{
-					iIndex += 16;
-				}
-
-				if ( fLeft <= 0.0f )
-				{
-					iIndex += 8;
-				}
-
-				if ( fRight <= 0.0f )
-				{
-					iIndex += 2;
-				}
-
-				if ( fTop <= 0.0f )
-				{
-					iIndex += 1;
-				}
-
-				if ( fBottom <= 0.0f )
-				{
-					iIndex += 4;
-				}
-
-				// 15, 14, 13, 11, 10, 7, 5
-				if ( 
-					iIndex == 15 || 
-					iIndex == 14 || 
-					iIndex == 13 || 
-					iIndex == 11 || 
-					iIndex == 10 || 
-					iIndex == 7 || 
-					iIndex == 5 ||
-					false
-					)
-				{
-					island.SetHeight( x, y, 0.0f );
-				}
-			}
-		}
-	}
-
-	pTexture = IRenderer::CreateTexture();
-	unsigned int pMap[128][128];
-	for ( int j = 0; j < 128; ++j )
-	{
-		for ( int i = 0; i < 128; ++i )
-		{
-			float fColor = island.GetHeight( i, j );
-			if ( fColor < 0.0f )
-			{
-				fColor = 0.0f;
-			}
-
-			ColorF color( fColor, fColor, fColor, 1.0f );
-
-			if ( fColor <= 0.0f )
-			{
-				color = ColorF::BLUE;
-			}
-			Color colorRGB = color;
-			pMap[ j ][ i ] =  colorRGB.RGBA;
-		}
-	}
-	pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
-	UIImage* pImage = new UIImage( pTexture );
-	pImage->SetSize( pImage->GetSizeInPixels() * 2.0f );
-    pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
-	pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
-	pImage->SetAlignment( BottomLeft );
-	UserInterface::AddScreen( "Map", pImage );
-	pImage->Release();
-
-	matTransform.Identify();
-	pEntity = Game::CreateEntity( matTransform );
-	RandomNumGen rand;
-	pPathGraph->Create( 128 * fWorldScale, 128 * fWorldScale, 32.0f, false );
-	TileMapComponent* pTileMapComponent( new TileMapComponent( 128 * fWorldScale, 128 * fWorldScale, 32.0f, pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
-		{
-			float fHeight = island.GetHeight( (float)x / fWorldScale, 127.0f - (float)y / fWorldScale );
-			
-			float fRight = island.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y) / fWorldScale );
-			float fLeft = island.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y) / fWorldScale );
-			float fTop = island.GetHeight( (float)(x) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
-			float fBottom = island.GetHeight( (float)(x) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
-
-			float fBottomLeft = island.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
-			float fBottomRight = island.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
-			float fTopLeft = island.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
-			float fTopRight = island.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
-
-			int iIndex = 0;
-			if ( fHeight <= 0.0f )
-			{
-				iIndex += 16;
-			}
-
-			if ( fLeft <= 0.0f )
-			{
-				iIndex += 8;
-			}
-
-			if ( fRight <= 0.0f )
-			{
-				iIndex += 2;
-			}
-
-			if ( fTop <= 0.0f )
-			{
-				iIndex += 1;
-			}
-
-			if ( fBottom <= 0.0f )
-			{
-				iIndex += 4;
-			}
-			
-			if ( iIndex == 0 )
-			{
-				/*
-				// 32 - Top left Grass
-				// 33 - Top Right Grass
-				// 34 - Bottom Left Grass
-				// 35 - Bottom Right Grass
-				*/
-				if ( fBottomLeft <= 0.0f )
-				{
-					rect = pAtlas->GetTextureRect( 33 );
-				}
-
-				else if ( fTopLeft <= 0.0f )
-				{
-					rect = pAtlas->GetTextureRect( 35 );
-				}
-
-				else if ( fTopRight <= 0.0f )
-				{
-					rect = pAtlas->GetTextureRect( 34 );
-				}
-
-				else if ( fBottomRight <= 0.0f )
-				{
-					rect = pAtlas->GetTextureRect( 32 );
-				}
-
-				else
-				{
-					// All grass
-					rect = pAtlas->GetTextureRect( 36 + rand.RandomInt( 6 ) );
-				}
-
-				pPathGraph->GetNode( x, y )->SetBlocked( false );
-
-				return;
-				
-			}
-			
-			pPathGraph->GetNode( x, y )->SetBlocked( true );
-			rect = pAtlas->GetTextureRect( iIndex );			
-			
-		}
-	) );	
-	pEntity->AddComponent( pTileMapComponent );
-	pTileMapComponent->Release();
-	pEntity->Start();
-
-	delete pAtlas;
-
-	/*
-	//
-	// Show which elements are blocked
-	//
-	ITexture* pBlocked = IRenderer::CreateTexture();
-	pBlocked->VCreate( "DialogueCircle.png" );
-	matTransform.Identify();
-	matTransform.BuildScale( 32.0f, 32.0f, 1.0f );
-	Vector3 vMinPosition( -128.0f * 32.0f * 0.5f + 16.0f, -128.0f * 32.0f * 0.5f + 16.0f, 0.0f );
-	for ( int x = 0; x < 128; ++x )
-	{
-		for ( int y = 0; y < 128; ++y )
-		{
-			if ( pPathGraph->GetNode( x, y )->IsTraversable() == false )
-			{
-				matTransform.SetPosition( vMinPosition + Vector4( x * 32.0f, y * 32.0f ) );
-				pEntity = Game::CreateEntity( matTransform );
-				shared_ptr< QuadComponent > pComponent( new QuadComponent() );
-				pComponent->SetTexture( pBlocked );
-				pEntity->AddComponent( pComponent );
-				pEntity->Start();				
-			}
-
-		}
-	}
-	pBlocked->Release();
-	//
-	//
-	//
-	*/
     
     matTransform.Identify();
     matTransform.BuildScale( 22.5f, 22.5f, 1.0f );
@@ -623,84 +312,14 @@ void Start()
     pEntity->Start();
     
     InputManager::Get()->AddTouchHandler( new myTouchHandler() );
-    
-    pFont = IRenderer::CreateFont();
-    pFont->VCreate( "Arial" );
-    
-    /*Vector3 vSize;
-    pFont->VGetTextSize( "Hello, my name is Mimi.", vSize );
-    pUIImage = new UIImage();
-	pUIImage->SetTexture( "paper background.png" );
-	pUIImage->SetPositionType( UICoordinateType::UIPixels );
-    pUIImage->SetSize( 300, 100 );
 
-	UIButtonImage* pButton = new UIButtonImage();
-	pUIImage->AddChild( pButton );
-	pButton->SetTexture(  "package_development.png" );
-	pButton->SetSize( 64, 64 );
-	pButton->SetPosition( 200, 50 );
-	pButton->SetCallbackFunction( [](UIElement* pCallingElement, void* pArgs )
-		{
-			UIElement* pElement = UserInterface::GetScreen( "Construction" );
-			if ( pElement )
-			{
-				pElement->SetVisible( !pElement->IsVisible() );
-			}
-		}
-	);
-	pButton->Release();
-
-    pLabel = new UILabel( "UI Label here" );
-    
-    pUI = new UIPanel();
-	pUI->SetSize( 300, 100 );
-	pUI->AddChild( pLabel );
-    pUI->AddChild( pUIImage );
-	
-    
-    pUIImage->Release();
-    pLabel->Release();
-
-    
-	UserInterface::AddScreen( "Game Menu", pUI );
-
-	pUI->Release();
-
-	pUI = new UIPanel();
-	pUI->SetSize( 300, 100 );
-	pUIImage = new UIImage();
-	pUIImage->SetTexture( "paper background.png" );
-	pUIImage->SetPositionType( UICoordinateType::UIPixels );
-	pUIImage->SetSize( 300, 100 );
-	pUI->AddChild( pUIImage );
-
-	pButton = new UIButtonImage();
-	pUIImage->AddChild( pButton );
-	pButton->SetTexture(  "package_development.png" );
-	pButton->SetSize( 64, 64 );
-	pButton->SetPosition( 200, 50 );
-	pButton->SetCallbackFunction( []( UIElement* pCallingElement, void* pArgs )
-	{
-		UIElement* pElement = UserInterface::GetScreen( "Construction" );
-		if ( pElement )
-		{
-			pElement->SetVisible( !pElement->IsVisible() );
-		}
-	}
-	);
-	pButton->Release();
-	pUIImage->Release();
-
-	pUI->SetVisible( false );
-	UserInterface::AddScreen( "Construction", pUI );
-	pUI->Release();*/
 
 	Process* pProcess = new DialogueInterface( NULL, "DialogueInterface.xml", "Dialogue.xml" );
 	BaseApplication::Get()->AttachProcess( pProcess );
 	pProcess->Release();
 }
 
-void Update( float fDeltaSeconds )
+void Update2( float fDeltaSeconds )
 {
     Matrix mat = pEntity->GetTransform();
 	
@@ -716,24 +335,10 @@ void Update( float fDeltaSeconds )
             
             pPath->CheckForNextNode( mat.GetPosition()  );
         }
-    }
-    
+    }    
 }
 
-void Render()
-{
-	IRenderContext* pRenderContext = IRenderer::Get()->VGetMainContext();
-
-    
-
-	IRenderer* pRenderer = IRenderer::Get();
-	Vector3 vScreen( (float)pRenderer->VGetScreenWidth(), (float)pRenderer->VGetScreenHeight(), 1.0f );
-
-	UICoordinates::SetScreen( vScreen, Vector3( 1280.0f, 720.0f, 1.0f ) );
-
-}
-
-void End()
+void End2()
 {
 	SAFE_RELEASE( pDialogueTree );
 	SAFE_RELEASE( pTexture );
