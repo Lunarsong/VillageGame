@@ -27,11 +27,14 @@ public:
 	virtual bool VOnMouseWheel( const Vector3& vPosition, const Vector3& vDelta );
 
 private: 
+	bool m_bActive;
+
 	VillageGame* m_pGame;
 
 	UIImage* m_pPlacementImage;
 
 	void MouseToCameraSpace( const Vector3& vMousePosition, Vector3& vOut );
 	void MouseToWorldSpace( const Vector3& vMousePosition, Vector3& vOut );
+
 };
 

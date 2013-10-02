@@ -43,6 +43,7 @@ public:
 
 private:
 	float	m_fSpeed;
+	float	m_fZoomModifier;
 	Vector4 m_vDirection;
 
 	Vector3 m_vMinBounds;

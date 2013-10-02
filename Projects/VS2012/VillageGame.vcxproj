@@ -13,8 +13,13 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\IslandData.cpp" />
     <ClCompile Include="..\..\Source\Source - Copy.cpp" />
+    <ClCompile Include="BuildingComponent.cpp" />
+    <ClCompile Include="BuildingComponentData.cpp" />
+    <ClCompile Include="Economy.cpp" />
     <ClCompile Include="GameMenu.cpp" />
     <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="ResourceComponent.cpp" />
+    <ClCompile Include="ResourceComponentData.cpp" />
     <ClCompile Include="ScrollCamera.cpp" />
     <ClCompile Include="VillageGame.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -23,8 +28,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\IslandData.h" />
+    <ClInclude Include="BuildingComponent.h" />
+    <ClInclude Include="BuildingComponentData.h" />
+    <ClInclude Include="Economy.h" />
     <ClInclude Include="GameMenu.h" />
     <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="ResourceComponent.h" />
+    <ClInclude Include="ResourceComponentData.h" />
     <ClInclude Include="ScrollCamera.h" />
     <ClInclude Include="VillageGame.h" />
     <ClInclude Include="Main.h" />

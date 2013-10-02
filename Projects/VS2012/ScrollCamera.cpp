@@ -5,6 +5,7 @@
 ScrollCamera::ScrollCamera(void)
 {
 	m_fSpeed = 500.0f;
+	m_fZoomModifier = 1.0f;
 
 	m_vMinBounds = Vector3( -4096.0f, -4096.0f );
 	m_vMaxBounds = Vector3( 4096.0f, 4096.0f );
@@ -106,7 +107,7 @@ bool ScrollCamera::VOnMouseMove( const Vector3& vPosition, const Vector3& vDelta
 {
 	if ( m_bMouseDrag )
 	{
-		Move( Vector4( -vDeltaPosition.x, vDeltaPosition.y, 0.0f, 0.0f ) );
+		Move( Vector4( -vDeltaPosition.x * m_fZoomModifier, vDeltaPosition.y * m_fZoomModifier, 0.0f, 0.0f ) );
 	}
 
 	return false;
@@ -139,6 +140,20 @@ bool ScrollCamera::VOnMouseButtonDClick( const int iButtonIndex, const Vector3& 
 
 bool ScrollCamera::VOnMouseWheel( const Vector3& vPosition, const Vector3& vDelta )
 {
+	Matrix matScale;
+	if ( vDelta.y > 0.0f )
+	{
+		matScale.BuildScale( 2.0f, 2.0f, 2.0f );
+		m_fZoomModifier *= 0.5f;
+	}
+	else
+	{
+		m_fZoomModifier *= 2.0f;
+		matScale.BuildScale( 0.5f, 0.5f, 0.5f );
+	}
+
+	SetProjection( GetProjection() * matScale );
+
 	return false;
 }
 
