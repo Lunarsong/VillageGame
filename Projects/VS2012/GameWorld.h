@@ -1,7 +1,7 @@
 #pragma once
 
 #include "IslandData.h"
-#include <AI\Pathfinding\Graph\Implementations\SquarePathfindingGraph.h>
+#include <AI/Pathfinding/Graph/Implementations/SquarePathfindingGraph.h>
 #include <TextureAtlas.h>
 
 using namespace Engine;
