@@ -110,6 +110,10 @@
 		E635904C17FCCAAC00A0317B /* Vera.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635900217FCCA8D00A0317B /* Vera.ttf */; };
 		E635904D17FCCAAC00A0317B /* VeraMono.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635900317FCCA8D00A0317B /* VeraMono.ttf */; };
 		E635904E17FCCAAC00A0317B /* wood background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635900417FCCA8D00A0317B /* wood background.png */; };
+		E635905517FCCE2200A0317B /* BuildingDefinitions.xml in Resources */ = {isa = PBXBuildFile; fileRef = E635905417FCCE2200A0317B /* BuildingDefinitions.xml */; };
+		E635905617FCCE3A00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FDD17FCCA8D00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */; };
+		E635905717FCCE3A00A0317B /* Arial.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FDE17FCCA8D00A0317B /* Arial.ttf */; };
+		E635905817FCCE3A00A0317B /* BuildingDefinitions.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635905417FCCE2200A0317B /* BuildingDefinitions.xml */; };
 		E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9317C69EC0006F1456 /* UIKit.framework */; };
 		E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9517C69EC0006F1456 /* Foundation.framework */; };
 		E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */; };
@@ -154,6 +158,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				E635905617FCCE3A00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */,
+				E635905717FCCE3A00A0317B /* Arial.ttf in CopyFiles */,
+				E635905817FCCE3A00A0317B /* BuildingDefinitions.xml in CopyFiles */,
 				E635902B17FCCAAC00A0317B /* BuildingsMisc.png in CopyFiles */,
 				E635902C17FCCAAC00A0317B /* CritterSheet.png in CopyFiles */,
 				E635902D17FCCAAC00A0317B /* DragonSheet.png in CopyFiles */,
@@ -265,6 +272,7 @@
 		E635900217FCCA8D00A0317B /* Vera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vera.ttf; sourceTree = "<group>"; };
 		E635900317FCCA8D00A0317B /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeraMono.ttf; sourceTree = "<group>"; };
 		E635900417FCCA8D00A0317B /* wood background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood background.png"; sourceTree = "<group>"; };
+		E635905417FCCE2200A0317B /* BuildingDefinitions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BuildingDefinitions.xml; sourceTree = "<group>"; };
 		E63EAE9017C69EC0006F1456 /* VillageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63EAE9317C69EC0006F1456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E63EAE9517C69EC0006F1456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -426,6 +434,7 @@
 				E6358FEB17FCCA8D00A0317B /* Avatar1.png */,
 				E6358FEC17FCCA8D00A0317B /* build.png */,
 				E6358FED17FCCA8D00A0317B /* BuildMenu.xml */,
+				E635905417FCCE2200A0317B /* BuildingDefinitions.xml */,
 				E6358FEE17FCCA8D00A0317B /* Choicelarge.png */,
 				E6358FEF17FCCA8D00A0317B /* Dialogue.xml */,
 				E6358FF017FCCA8D00A0317B /* DialogueCircle.png */,
@@ -615,6 +624,7 @@
 				E635902017FCCA8D00A0317B /* RPG_GUI_v1_source.xcf in Resources */,
 				E63EAE9E17C69EC0006F1456 /* InfoPlist.strings in Resources */,
 				E635900617FCCA8D00A0317B /* Arial.ttf in Resources */,
+				E635905517FCCE2200A0317B /* BuildingDefinitions.xml in Resources */,
 				E635902A17FCCA8D00A0317B /* wood background.png in Resources */,
 				E635901A17FCCA8D00A0317B /* GameResources.xml in Resources */,
 				E635901917FCCA8D00A0317B /* GameMenu.xml in Resources */,

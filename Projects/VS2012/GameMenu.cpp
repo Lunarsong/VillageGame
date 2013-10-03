@@ -4,6 +4,7 @@
 #include <Game/Entities/Components/Rendering/QuadComponent.h>
 #include <Game/Dialogue/UI/DialogueInterface.h>
 #include <Core/Application/BaseApplication.h>
+#include "BuildingComponentData.h"
 
 GameMenu::GameMenu( VillageGame* pGame )
 {
@@ -28,7 +29,11 @@ GameMenu::GameMenu( VillageGame* pGame )
 			}
 		}
 	);
+    
+    BuildingComponentData* pBuildingData = new BuildingComponentData();
+    pBuildingData->VFromXML( XmlResourceLoader::LoadAndReturnRootXmlElement( "BuildingDefinitions.xml" ) );
 
+    pBuildingData->Release();
 	UIElement* pBuildMenu = UserInterface::AddScreenFromFile( "BuildMenu", "BuildMenu.xml" );
 	pBuildMenu->GetElement<UIButtonImage>( "0" )->SetCallbackFunction( [this] ( UIElement* pElement, void* pArgs )
 	{

@@ -11,11 +11,13 @@ class BuildingComponentData : public ComponentData
 public:
 	BuildingComponentData(void);
 	~BuildingComponentData(void);
+    
+    AUTO_SIZE;
 
 	std::string				Name;				// Building's Name
 	SmartPtr<TextureData>	Icon;				// Building's Icon
 	
-	SmartPtr<TextureData>	CosntructionImage;	// Image when building under construction
+	SmartPtr<TextureData>	ConstructionImage;	// Image when building under construction
 	SmartPtr<TextureData>	BuildMenuIcon;		// Image at build menu
 
 	float ConstructionTime;						// Build time in seconds
