@@ -19,7 +19,6 @@ VillageGame::~VillageGame(void)
 	delete m_pGameWorld;
 
 	delete m_pGameMenu;
-	delete AssetManager::GetPtr();
 }
 
 void VillageGame::VOnInit( void )
