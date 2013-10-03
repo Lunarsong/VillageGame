@@ -36,18 +36,21 @@ bool BuildingComponentData::VFromXML( tinyxml2::XMLElement* pData )
     if ( pIcon )
     {
         Icon = new TextureData( pIcon, 0.0f, 0.0f, 1.0f, 1.0f );
+		Icon->Release();
     }
     
     const char* pConstructionImage = XmlUtils::ReadTextElement( pData, "ConstructionImage" );
     if ( pConstructionImage )
     {
         ConstructionImage = new TextureData( pConstructionImage, 0.0f, 0.0f, 1.0f, 1.0f );
+		ConstructionImage->Release();
     }
     
     const char* pBuildMenuIcon = XmlUtils::ReadTextElement( pData, "BuildMenuIcon" );
     if ( pBuildMenuIcon )
     {
         BuildMenuIcon = new TextureData( pBuildMenuIcon, 0.0f, 0.0f, 1.0f, 1.0f );
+		BuildMenuIcon->Release();
     }
     
 	return true;

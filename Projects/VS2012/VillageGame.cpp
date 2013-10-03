@@ -1,10 +1,15 @@
 #include "VillageGame.h"
 #include <Game/Game.h>
 #include <UI/UserInterface.h>
-
+#include <Core/AssetManager/AssetBundle.h>
+#include <Core/AssetManager/AssetManager.h>
 
 VillageGame::VillageGame(void)
 {
+	
+	//AssetBundle* pBundle = new AssetBundle();
+	//pBundle->LoadFromXML( XmlResourceLoader::LoadAndReturnRootXmlElement( "Sprites.xml" )) ;
+	//pBundle->Release();
 }
 
 
@@ -14,6 +19,7 @@ VillageGame::~VillageGame(void)
 	delete m_pGameWorld;
 
 	delete m_pGameMenu;
+	delete AssetManager::GetPtr();
 }
 
 void VillageGame::VOnInit( void )

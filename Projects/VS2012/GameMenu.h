@@ -3,6 +3,7 @@
 #include <UI/UserInterface.h>
 #include <Core/Input/InputHandlers.h>
 #include <Core/Input/InputManager.h>
+#include "BuildingComponentData.h"
 
 class VillageGame;
 
@@ -31,6 +32,7 @@ private:
 
 	VillageGame* m_pGame;
 
+	BuildingComponentData* m_pBuildingData;
 	UIImage* m_pPlacementImage;
 
 	void MouseToCameraSpace( const Vector3& vMousePosition, Vector3& vOut );
