@@ -12,6 +12,8 @@
 		E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5A17DCA07800C6681B /* OpenGL.framework */; };
 		E60B6B6817E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
 		E60B6B6917E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
+		E6352C7D17FEABF7007AB23E /* Sprites.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6352C7C17FEABF7007AB23E /* Sprites.xml */; };
+		E6352C8017FEAC0E007AB23E /* Sprites.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6352C7C17FEABF7007AB23E /* Sprites.xml */; };
 		E6358FBE17FCC89C00A0317B /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */; };
 		E6358FBF17FCC89C00A0317B /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */; };
 		E6358FC017FCC89C00A0317B /* BuildingComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */; };
@@ -158,6 +160,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				E6352C8017FEAC0E007AB23E /* Sprites.xml in CopyFiles */,
 				E635905617FCCE3A00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */,
 				E635905717FCCE3A00A0317B /* Arial.ttf in CopyFiles */,
 				E635905817FCCE3A00A0317B /* BuildingDefinitions.xml in CopyFiles */,
@@ -210,6 +213,7 @@
 		E60B6B6617E362A500C8FEBE /* IslandData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IslandData.cpp; sourceTree = "<group>"; };
 		E60B6B6717E362A500C8FEBE /* IslandData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IslandData.h; sourceTree = "<group>"; };
 		E6166C3C17F86C5F00333D8B /* VillageGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VillageGame.entitlements; sourceTree = "<group>"; };
+		E6352C7C17FEABF7007AB23E /* Sprites.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Sprites.xml; sourceTree = "<group>"; };
 		E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuildingComponent.cpp; path = ../Projects/VS2012/BuildingComponent.cpp; sourceTree = "<group>"; };
 		E6358FA717FCC89C00A0317B /* BuildingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuildingComponent.h; path = ../Projects/VS2012/BuildingComponent.h; sourceTree = "<group>"; };
 		E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuildingComponentData.cpp; path = ../Projects/VS2012/BuildingComponentData.cpp; sourceTree = "<group>"; };
@@ -448,6 +452,7 @@
 				E6358FF817FCCA8D00A0317B /* package_development.png */,
 				E6358FF917FCCA8D00A0317B /* paper background.png */,
 				E6358FFA17FCCA8D00A0317B /* RPG_GUI_v1_source.xcf */,
+				E6352C7C17FEABF7007AB23E /* Sprites.xml */,
 				E6358FFB17FCCA8D00A0317B /* RPG_GUI_v1.png */,
 				E6358FFC17FCCA8D00A0317B /* samaze_017.jpg */,
 				E6358FFD17FCCA8D00A0317B /* settings.png */,
@@ -613,6 +618,7 @@
 				E635902317FCCA8D00A0317B /* settings.png in Resources */,
 				E635902217FCCA8D00A0317B /* samaze_017.jpg in Resources */,
 				E635901617FCCA8D00A0317B /* DialogueCircle.png in Resources */,
+				E6352C7D17FEABF7007AB23E /* Sprites.xml in Resources */,
 				E635901717FCCA8D00A0317B /* DialogueInterface.xml in Resources */,
 				E635900E17FCCA8D00A0317B /* HumanMageSheet.png in Resources */,
 				E635901217FCCA8D00A0317B /* build.png in Resources */,

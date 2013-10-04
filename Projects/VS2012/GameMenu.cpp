@@ -4,6 +4,7 @@
 #include <Game/Entities/Components/Rendering/QuadComponent.h>
 #include <Game/Dialogue/UI/DialogueInterface.h>
 #include <Core/Application/BaseApplication.h>
+#include "BuildingComponent.h"
 
 GameMenu::GameMenu( VillageGame* pGame )
 {
@@ -29,21 +30,57 @@ GameMenu::GameMenu( VillageGame* pGame )
 		}
 	);
     
-    m_pBuildingData = new BuildingComponentData();
+	UIElement* pBuildMenu = UserInterface::AddScreenFromFile( "BuildMenu", "BuildMenu.xml" );
+    
 	XmlResource* pResource = AssetManager::Get().GetAsset<XmlResource>( "BuildingDefinitions.xml" );
 	if ( pResource )
 	{
-		m_pBuildingData->VFromXML( pResource->GetRoot() );
+        UIElement* pListElement = pBuildMenu->GetElement( "building_list" );
+        
+        tinyxml2::XMLElement* pElement = pResource->GetRoot()->FirstChildElement();
+        int iCount = 0;
+        while ( pElement )
+        {
+            BuildingComponentData* pData = new BuildingComponentData();
+            pData->VFromXML( pElement );
+            m_pBuildingData.push_back( pData );
+            
+            /*
+             <ButtonImage>
+             <ID>0</ID>
+             <Size x="70" y="70" />
+             <Position x="5" y="40"/>
+             <Texture>HumanFarm.png</Texture>
+             <Alignment>Left</Alignment>
+             </ButtonImage>
+             */
+            
+            UIButtonImage* pButton = new UIButtonImage();
+            pButton->SetTexture( pData->BuildMenuIcon );
+            pButton->SetAlignment( Left );
+            pButton->SetPosition( 5 + iCount * 70 , 40 );
+            pButton->SetSize( 64, 64 );
+            pButton->SetCallbackArgs( (void*)iCount );
+            pButton->SetCallbackFunction( [this] ( UIElement* pElement, void* pArgs )
+                                         {
+                                             m_pCurrentBuilding = m_pBuildingData[ (int)pArgs ];
+                                             m_bActive = true;
+                                             m_pPlacementImage->SetVisible( m_bActive );
+                                             m_pPlacementImage->SetTexture( m_pCurrentBuilding->Icon );
+                                         }
+                                         );
+            
+            pListElement->AddChild( pButton );
+            pButton->Release();
+            
+            ++iCount;
+            pElement = pElement->NextSiblingElement();
+        }
 	}
 
     
-	UIElement* pBuildMenu = UserInterface::AddScreenFromFile( "BuildMenu", "BuildMenu.xml" );
-	pBuildMenu->GetElement<UIButtonImage>( "0" )->SetCallbackFunction( [this] ( UIElement* pElement, void* pArgs )
-	{
-		m_bActive = !m_bActive;
-		m_pPlacementImage->SetVisible( m_bActive );
-	}
-	);
+
+    
 	pBuildMenu->SetVisible( false );
 
 	UIElement* pElement = new UIElement();
@@ -71,7 +108,10 @@ GameMenu::~GameMenu()
 	UserInterface::RemoveScreen( "BuildMenu" );
 	UserInterface::RemoveScreen( "GameHUD" );
 
-	m_pBuildingData->Release();
+    for ( auto it : m_pBuildingData )
+    {
+        it->Release();
+    }
 }
 
 bool GameMenu::VOnMouseMove( const Vector3& vMousePosition, const Vector3& vDeltaPosition )
@@ -118,13 +158,15 @@ bool GameMenu::VOnMouseButtonUp( const int iButtonIndex, const Vector3& vMousePo
 		Vector3 vAlignedPosition( vPosition.x - (int) vPosition.x % 32, vPosition.y - (int) vPosition.y % 32 );
 		matTransform.SetPosition( vAlignedPosition );
 
-		QuadComponent* pQuadComponent = new QuadComponent();
-		pQuadComponent->SetTexture( "HumanFarm.png" );	
+		BuildingComponent* pBuildingComponent = new BuildingComponent( m_pCurrentBuilding );
 
 		Entity* pEntity = Game::CreateEntity( matTransform );
-		pEntity->AddComponent( pQuadComponent );
-		pQuadComponent->Start();
-		pQuadComponent->Release();
+		pEntity->AddComponent( pBuildingComponent );
+		pBuildingComponent->Start();
+		pBuildingComponent->Release();
+        
+        m_bActive = false;
+        m_pPlacementImage->SetVisible( m_bActive );
 	}
 
 	return false;

@@ -1,15 +1,16 @@
 #include "VillageGame.h"
 #include <Game/Game.h>
 #include <UI/UserInterface.h>
-#include <Core/AssetManager/AssetBundle.h>
+#include <Core/AssetManager/XmlAssetBundle.h>
 #include <Core/AssetManager/AssetManager.h>
 
 VillageGame::VillageGame(void)
 {
 	
-	//AssetBundle* pBundle = new AssetBundle();
-	//pBundle->LoadFromXML( XmlResourceLoader::LoadAndReturnRootXmlElement( "Sprites.xml" )) ;
-	//pBundle->Release();
+	XmlAssetBundle* pBundle = new XmlAssetBundle();
+    XmlResource* pResource = AssetManager::Get().GetAsset< XmlResource >( "Sprites.xml" );
+    pBundle->LoadFromXML( pResource->GetRoot() );
+	delete pBundle;
 }
 
 

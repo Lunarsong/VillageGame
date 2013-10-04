@@ -32,7 +32,8 @@ private:
 
 	VillageGame* m_pGame;
 
-	BuildingComponentData* m_pBuildingData;
+    BuildingComponentData* m_pCurrentBuilding;
+    std::vector<BuildingComponentData*> m_pBuildingData;
 	UIImage* m_pPlacementImage;
 
 	void MouseToCameraSpace( const Vector3& vMousePosition, Vector3& vOut );

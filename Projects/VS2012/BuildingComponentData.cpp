@@ -1,5 +1,6 @@
 #include "BuildingComponentData.h"
 #include <Core/Utils/XmlUtils.h>
+#include <Core/AssetManager/AssetManager.h>
 
 BuildingComponentData::BuildingComponentData(void)
 {
@@ -35,22 +36,19 @@ bool BuildingComponentData::VFromXML( tinyxml2::XMLElement* pData )
     const char* pIcon = XmlUtils::ReadTextElement( pData, "Icon" );
     if ( pIcon )
     {
-        Icon = new TextureData( pIcon, 0.0f, 0.0f, 1.0f, 1.0f );
-		Icon->Release();
+        Icon = AssetManager::Get().GetAsset<TextureData>( pIcon );
     }
     
     const char* pConstructionImage = XmlUtils::ReadTextElement( pData, "ConstructionImage" );
     if ( pConstructionImage )
     {
-        ConstructionImage = new TextureData( pConstructionImage, 0.0f, 0.0f, 1.0f, 1.0f );
-		ConstructionImage->Release();
+        ConstructionImage = AssetManager::Get().GetAsset<TextureData>( pConstructionImage );
     }
     
     const char* pBuildMenuIcon = XmlUtils::ReadTextElement( pData, "BuildMenuIcon" );
     if ( pBuildMenuIcon )
     {
-        BuildMenuIcon = new TextureData( pBuildMenuIcon, 0.0f, 0.0f, 1.0f, 1.0f );
-		BuildMenuIcon->Release();
+        BuildMenuIcon = AssetManager::Get().GetAsset<TextureData>( pBuildMenuIcon );
     }
     
 	return true;
