@@ -1,0 +1,118 @@
+<Monitor>
+	<Size x="1280" y="720"/>
+	
+	<Image>
+		<Texture>paper background.png</Texture>
+		<Size x="1280" y="120"/>
+		<!--Color Red="0" Green="0" Blue="0"/-->
+		
+		<Image>
+			<ID>dlg_avatar_image</ID>
+			<Size x="125" y="100" />
+			<Position x="5" y="60"/>
+			<Alignment>Left</Alignment>
+		</Image>
+			
+		<Label>
+			<Position x="135" y="60"/>
+			<Alignment>Left</Alignment>
+			<ID>dlg_current_label</ID>
+			<Font Name="Arial" Size="40"/>
+		</Label>
+			
+	</Image>
+	
+	
+	<Panel>
+		<ID>dlg_choices</ID>
+		<Alignment>Center</Alignment>
+		<RelPosition x="0.5" y="0.65" />
+		<Size x="300" y="150"/>		
+		
+		<Image>
+			<Texture>wood background.png</Texture>
+			<Size x="300" y="150"/>
+			
+			<Label>
+				<Position x="10" y="20"/>
+				<ID>dlg_option_label_0</ID>
+				<Font Name="Arial" Size="20"/>
+			</Label>
+			
+			<Label>
+				<Position x="10" y="60"/>
+				<ID>dlg_option_label_1</ID>
+				<Font Name="Arial" Size="20"/>
+			</Label>
+			
+			<Label>
+				<Position x="10" y="100"/>
+				<ID>dlg_option_label_2</ID>
+				<Font Name="Arial" Size="20"/>
+			</Label>
+			
+			<Button>
+				<ID>dlg_option_btn_0</ID>
+				<Position x="5" y="20"/>
+				<Size x="300" y="30"/>
+			</Button>
+			
+			<Button>
+				<ID>dlg_option_btn_1</ID>
+				<Position x="5" y="60"/>
+				<Size x="300" y="30"/>
+			</Button>
+			
+			<Button>
+				<ID>dlg_option_btn_2</ID>
+				<Position x="5" y="100"/>
+				<Size x="300" y="30"/>
+			</Button>
+			
+			
+			<!-- Left Side -->
+			<!--Label>
+				<Alignment>Right</Alignment>
+				<Position x="0" y="0"/>
+				<ID>dlg_option_label_3</ID>
+				<Font Name="Arial" Size="20"/>
+			</Label>
+			
+			<Label>
+				<Alignment>Right</Alignment>
+				<Position x="0" y="37"/>
+				<ID>dlg_option_label_4</ID>
+				<Font Name="Arial" Size="20"/>
+			</Label>
+			
+			<Label>
+				<Alignment>Right</Alignment>
+				<Position x="0" y="75"/>
+				<ID>dlg_option_label_5</ID>
+				<Font Name="Arial" Size="20"/>
+			</Label>
+			
+			<Button>
+				<Alignment>Right</Alignment>
+				<ID>dlg_option_btn_3</ID>
+				<Position x="0" y="0"/>
+				<Size x="300" y="30"/>
+			</Button>
+			
+			<Button>
+				<Alignment>Right</Alignment>
+				<ID>dlg_option_btn_4</ID>
+				<Position x="0" y="37"/>
+				<Size x="300" y="83"/>
+			</Button>
+			
+			<Button>
+				<Alignment>Right</Alignment>
+				<ID>dlg_option_btn_5</ID>
+				<Position x="0" y="75"/>
+				<Size x="300" y="30"/>
+			</Button-->
+		</Image>
+	</Panel>
+	
+</Monitor>

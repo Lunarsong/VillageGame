@@ -1,0 +1,13 @@
+<Monitor>
+	<Size x="1280" y="720"/>
+	
+	<Image>
+		<ID>panel</ID>
+		<Texture>paper background.png</Texture>
+		<RelPosition x="0.5" y="0.5" />
+		<Size x="640" y="360"/>
+		<Alignment>Center</Alignment>
+			
+	</Image>
+	
+</Monitor>

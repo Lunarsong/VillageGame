@@ -1,0 +1,46 @@
+<Resources>
+	<Resource>
+		<Name>People</Name>
+		<Icon>PeopleIcon</Icon>
+	</Resource>
+	
+	<Resource>
+		<Name>Food</Name>
+		<Icon>FoodIcon</Icon>
+	</Resource>
+
+	<Resource>
+		<Name>Wood</Name>
+		<Icon>WoodIcon</Icon>
+	</Resource>
+	
+	<Resource>
+		<Name>Planks</Name>
+		<Icon>PlanksIcon</Icon>
+	</Resource>
+	
+	<Resource>
+		<Name>Wheat</Name>
+		<Icon>WheatIcon</Icon>
+	</Resource>
+	
+	<Resource>
+		<Name>Flour</Name>
+		<Icon>FlourIcon</Icon>
+	</Resource>
+	
+	<Resource>
+		<Name>Wool</Name>
+		<Icon>WoolIcon</Icon>
+	</Resource>
+	
+	<Resource>
+		<Name>Iron</Name>
+		<Icon>IronIcon</Icon>
+	</Resource>
+	
+	<Resource>
+		<Name>Weapons</Name>
+		<Icon>WeaponsIcon</Icon>
+	</Resource>
+</Resources>

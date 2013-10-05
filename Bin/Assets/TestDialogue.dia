@@ -1,0 +1,13 @@
+﻿<Root>
+	<Node Owner="NPC" String="Hello Player!">
+	
+		<Node Owner="Player" String="Hello NPC!"/>
+		<Node Owner="Player" String="Greetings NPC!">
+			<Prerequisite Name="Test" Value="2" Function="Greater" />
+		</Node>
+		
+		<Node Owner="Player" String="How are you NPC?">
+			<Node Owner="NPC" String="Just fine my lady. Have a nice day!"/>
+		</Node>
+	</Node>
+</Root>

@@ -1,0 +1,15 @@
+<Root>
+	<Node Owner="NPC" String="Hello Player!">
+		<Node Owner="Player" String="Greetings!">
+			<Node Owner="NPC" String="Good day to you..."/>
+		</Node>
+		
+		<Node Owner="Player" String="How are you?">
+			<Node Owner="NPC" String="Just fine. Have a nice day!">
+				<Node Owner="Player" String="Thanks..."/>
+			</Node>
+		</Node>
+		
+		<Node Owner="Player" String="Good bye."/>
+	</Node>
+</Root>

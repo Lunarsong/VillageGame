@@ -1,0 +1,52 @@
+<Root>
+    <Building>
+        <Name>Farm</Name>
+        <Icon>HumanFarmSprite</Icon>
+        <ConstructionImage>HumanFarmConstructionSprite</ConstructionImage>
+        <BuildMenuIcon>HumanFarmSprite</BuildMenuIcon>
+        <BuildingImage>HumanFarmSprite</BuildingImage>
+        <FoundationImage>SmallHumanConstructionSprite</FoundationImage>
+        <ConstructionTime>10</ConstructionTime>
+    </Building>
+    
+    <Building>
+        <Name>Castle</Name>
+        <Icon>HumanCastleSprite</Icon>
+        <ConstructionImage>HumanCastleConstructionSprite</ConstructionImage>
+        <BuildMenuIcon>HumanCastleSprite</BuildMenuIcon>
+        <ConstructionTime>10</ConstructionTime>
+        <BuildingImage>HumanCastleSprite</BuildingImage>
+        <FoundationImage>LargeHumanConstructionSprite</FoundationImage>
+    </Building>
+    
+    <Building>
+        <Name>Lumbermill</Name>
+        <Icon>HumanLumbermillSprite</Icon>
+        <ConstructionImage>HumanLumbermillConstructionSprite</ConstructionImage>
+        <BuildMenuIcon>HumanLumbermillSprite</BuildMenuIcon>
+        <ConstructionTime>10</ConstructionTime>
+        <BuildingImage>HumanLumbermillSprite</BuildingImage>
+        <FoundationImage>LargeHumanConstructionSprite</FoundationImage>
+    </Building>
+    
+    <Building>
+        <Name>Church</Name>
+        <Icon>HumanChurchSprite</Icon>
+        <ConstructionImage>HumanChurchConstructionSprite</ConstructionImage>
+        <BuildMenuIcon>HumanChurchSprite</BuildMenuIcon>
+        <ConstructionTime>10</ConstructionTime>
+        <BuildingImage>HumanChurchSprite</BuildingImage>
+        <FoundationImage>LargeHumanConstructionSprite</FoundationImage>
+    </Building>
+    
+    <Building>
+        <Name>Barracks</Name>
+        <Icon>HumanBarracksSprite</Icon>
+        <ConstructionImage>HumanBarracksConstructionSprite</ConstructionImage>
+        <BuildMenuIcon>HumanBarracksSprite</BuildMenuIcon>
+        <ConstructionTime>10</ConstructionTime>
+        <BuildingImage>HumanBarracksSprite</BuildingImage>
+        <FoundationImage>LargeHumanConstructionSprite</FoundationImage>
+    </Building>
+
+</Root>

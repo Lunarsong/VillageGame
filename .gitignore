@@ -6,11 +6,13 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
+*.dll
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
+*.lib
 
 # OS junk files
 [Tt]humbs.db
@@ -35,15 +37,18 @@
 *.log
 *.sbr
 *.sdf
-GameProject.sdf
+*.pdb
+*.exp
+*.ilk
+*.GameProject.sdf
 *.opensdf
 *.unsuccessfulbuild
 ipch/
 obj/
-[Bb]in/
+#[Bb]in/
 [Dd]ebug/
 [Rr]elease*/
-[Aa]ssets/
+#[Aa]ssets/
 Ankh.NoLoad
 
 # MonoDevelop

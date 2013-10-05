@@ -1,0 +1,32 @@
+<Monitor>
+	<Size x="1280" y="720"/>
+	
+	<UI>
+		<RelPosition x="0.5" y="1.0" />
+		<Size x="0.0" y="0.0" />
+		
+		<ButtonImage>
+			<ID>btn_build</ID>
+			<Size x="60" y="60" />
+			<Position x="0" y="-25"/>
+			<Alignment>Bottom</Alignment>
+			<Texture>build.png</Texture>
+		</ButtonImage>
+		
+		<ButtonImage>
+			<ID>btn_settings</ID>
+			<Size x="60" y="60" />
+			<Position x="70" y="-5"/>
+			<Alignment>Bottom</Alignment>
+			<Texture>settings.png</Texture>
+		</ButtonImage>
+		
+		<ButtonImage>
+			<ID>btn_home</ID>
+			<Size x="70" y="70" />
+			<Position x="-70" y="-5"/>
+			<Alignment>Bottom</Alignment>
+			<Texture>home.png</Texture>
+		</ButtonImage>
+	</UI>
+</Monitor>

@@ -1,0 +1,24 @@
+<Monitor>
+	<Size x="1280" y="720"/>
+	
+	<UI>
+		<RelPosition x="0.5" y="1.0" />
+		<Position x="0" y="-95" />
+		<Size x="0.0" y="0.0" />
+		
+		<Color>
+			<Color r="50" b="50" g="50" />
+			<Size x="500" y="80.0" />
+			<Alignment>Bottom</Alignment>
+		</Color>
+		
+		<Scroll>
+            <ID>building_list</ID>
+			<Color r="50" b="50" g="50" />
+			<Size x="500" y="80.0" />
+			<Alignment>Bottom</Alignment>		
+		
+		</Scroll>
+		
+	</UI>
+</Monitor>

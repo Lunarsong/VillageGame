@@ -1,0 +1,36 @@
+<Resources>
+
+    <Texture Name="HumanBuildings.png" File="Art/SpriteSheets/HumanBuildings.png" />
+
+    <Sprite Name="HumanFarmSprite" Texture="HumanBuildings.png" x="398" y="4" x2="462" y2="68"/>
+    <Sprite Name="HumanFarmConstructionSprite" Texture="HumanBuildings.png" x="398" y="70" x2="462" y2="134"/>
+    
+    <Sprite Name="HumanChurchSprite" Texture="HumanBuildings.png" x="307" y="264" x2="403" y2="360"/>
+    <Sprite Name="HumanChurchConstructionSprite" Texture="HumanBuildings.png" x="307" y="362" x2="403" y2="458"/>
+    
+    <Sprite Name="HumanBarracksSprite" Texture="HumanBuildings.png" x="307" y="457" x2="403" y2="553"/>
+    <Sprite Name="HumanBarracksConstructionSprite" Texture="HumanBuildings.png" x="307" y="554" x2="403" y2="650"/>
+    
+    <Sprite Name="HumanLumbermillConstructionSprite" Texture="HumanBuildings.png" x="106" y="369" x2="200" y2="453"/>
+    <Sprite Name="HumanLumbermillSprite" Texture="HumanBuildings.png" x="106" y="270" x2="200" y2="356"/>
+    
+    <Sprite Name="SheepSprite" Texture="Sheep0007.png" x="0" y="0" x2="90" y2="90"/>
+    
+    <Sprite Name="HumanCastleSprite" Texture="HumanBuildings.png" x="135" y="4" x2="263" y2="132" />
+    <Sprite Name="HumanCastleConstructionSprite" Texture="HumanBuildings.png" x="131" y="132" x2="259" y2="260" />
+    
+    <Sprite Name="SmallHumanConstructionSprite" Texture="BuildingsMisc.png" x="586" y="135" x2="650" y2="199" />
+    <Sprite Name="LargeHumanConstructionSprite" Texture="BuildingsMisc.png" x="584" y="200" x2="648" y2="264" />
+	
+	
+	<!-- Resources -->
+	<Sprite Name="PeopleIcon" Texture="People.png" />
+	<Sprite Name="FoodIcon" Texture="Food.png" />
+	<Sprite Name="WoodIcon" Texture="Wood.png" />
+	<Sprite Name="PlanksIcon" Texture="Planks.png" />
+	<Sprite Name="WheatIcon" Texture="Wheat.png" />
+	<Sprite Name="FlourIcon" Texture="Flour.png" />
+	<Sprite Name="WoolIcon" Texture="Wool.png" />
+	<Sprite Name="IronIcon" Texture="Iron.png" />
+	<Sprite Name="WeaponsIcon" Texture="Weapons.png" />
+</Resources>
