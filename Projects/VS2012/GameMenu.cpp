@@ -63,10 +63,21 @@ GameMenu::GameMenu( VillageGame* pGame )
             pButton->SetCallbackArgs( (void*)iCount );
             pButton->SetCallbackFunction( [this] ( UIElement* pElement, void* pArgs )
                                          {
-                                             m_pCurrentBuilding = m_pBuildingData[ (int)pArgs ];
-                                             m_bActive = true;
-                                             m_pPlacementImage->SetVisible( m_bActive );
-                                             m_pPlacementImage->SetTexture( m_pCurrentBuilding->Icon );
+                                             if ( m_bActive && m_pCurrentBuilding == m_pBuildingData[ (int)pArgs ] )
+                                             {
+                                                 m_bActive = false;
+                                                 m_pPlacementImage->SetVisible( m_bActive );
+                                             }
+                                             
+                                             else
+                                             {
+                                                 m_pCurrentBuilding = m_pBuildingData[ (int)pArgs ];
+                                                 m_bActive = true;
+                                                 m_pPlacementImage->SetVisible( m_bActive );
+                                                 m_pPlacementImage->SetTexture( m_pCurrentBuilding->Icon );
+                                                 m_pPlacementImage->SetPosition( InputManager::Get()->GetMousePos() );
+                                             }
+                                             
                                          }
                                          );
             

@@ -51,5 +51,17 @@ bool BuildingComponentData::VFromXML( tinyxml2::XMLElement* pData )
         BuildMenuIcon = AssetManager::Get().GetAsset<TextureData>( pBuildMenuIcon );
     }
     
+    const char* pFoundationImage = XmlUtils::ReadTextElement( pData, "FoundationImage" );
+    if ( pFoundationImage )
+    {
+        FoundationImage = AssetManager::Get().GetAsset<TextureData>( pFoundationImage );
+    }
+    
+    const char* pBuildingImage = XmlUtils::ReadTextElement( pData, "BuildingImage" );
+    if ( pBuildingImage )
+    {
+        BuildingImage = AssetManager::Get().GetAsset<TextureData>( pBuildingImage );
+    }
+    
 	return true;
 }

@@ -15,10 +15,14 @@ public:
     AUTO_SIZE;
 
 	std::string				Name;				// Building's Name
+    
 	SmartPtr<TextureData>	Icon;				// Building's Icon
-	
-	SmartPtr<TextureData>	ConstructionImage;	// Image when building under construction
 	SmartPtr<TextureData>	BuildMenuIcon;		// Image at build menu
+
+    SmartPtr<TextureData>	FoundationImage;	// Image when building foundation is placed (first half of construction)
+    SmartPtr<TextureData>	ConstructionImage;	// Image when building under construction
+    SmartPtr<TextureData>	BuildingImage;      // Image when building is ready
+	
 
 	float ConstructionTime;						// Build time in seconds
 
