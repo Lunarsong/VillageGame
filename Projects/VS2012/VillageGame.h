@@ -4,6 +4,7 @@
 #include "GameWorld.h"
 #include "ScrollCamera.h"
 #include "GameMenu.h"
+#include "Economy.h"
 
 using namespace Engine;
 
@@ -17,9 +18,12 @@ public:
 	virtual void VOnUpdate( const float fDeltaSeconds );
 
 	ScrollCamera*	GetCamera();
+	Economy*		GetEconomy();
 
 private:
 	GameWorld*		m_pGameWorld;
+	Economy*		m_pEconomy;
+
 	ScrollCamera*	m_pCamera;
 
 	GameMenu*		m_pGameMenu;

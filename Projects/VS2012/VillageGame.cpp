@@ -20,12 +20,16 @@ VillageGame::~VillageGame(void)
 	delete m_pGameWorld;
 
 	delete m_pGameMenu;
+
+	delete m_pEconomy;
 }
 
 void VillageGame::VOnInit( void )
 {
-	m_pGameMenu = new GameMenu( this );
+	m_pEconomy = new Economy();
 	m_pGameWorld = new GameWorld();	
+	m_pGameMenu = new GameMenu( this );
+	
 
 	CreateCamera();
 
@@ -48,4 +52,9 @@ void VillageGame::CreateCamera()
 ScrollCamera* VillageGame::GetCamera()
 {
 	return m_pCamera;
+}
+
+Economy* VillageGame::GetEconomy()
+{
+	return m_pEconomy;
 }

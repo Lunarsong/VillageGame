@@ -16,6 +16,7 @@
     <ClCompile Include="BuildingComponent.cpp" />
     <ClCompile Include="BuildingComponentData.cpp" />
     <ClCompile Include="Economy.cpp" />
+    <ClCompile Include="EconomyMenu.cpp" />
     <ClCompile Include="GameMenu.cpp" />
     <ClCompile Include="GameWorld.cpp" />
     <ClCompile Include="ResourceComponent.cpp" />
@@ -31,6 +32,7 @@
     <ClInclude Include="BuildingComponent.h" />
     <ClInclude Include="BuildingComponentData.h" />
     <ClInclude Include="Economy.h" />
+    <ClInclude Include="EconomyMenu.h" />
     <ClInclude Include="GameMenu.h" />
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="ResourceComponent.h" />

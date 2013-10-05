@@ -4,6 +4,7 @@
 #include <Core/Input/InputHandlers.h>
 #include <Core/Input/InputManager.h>
 #include "BuildingComponentData.h"
+#include "EconomyMenu.h"
 
 class VillageGame;
 
@@ -31,6 +32,7 @@ private:
 	bool m_bActive;
 
 	VillageGame* m_pGame;
+	EconomyMenu* m_pEconomyMenu;
 
     BuildingComponentData* m_pCurrentBuilding;
     std::vector<BuildingComponentData*> m_pBuildingData;

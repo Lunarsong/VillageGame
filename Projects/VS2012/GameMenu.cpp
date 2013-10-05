@@ -29,6 +29,14 @@ GameMenu::GameMenu( VillageGame* pGame )
 			}
 		}
 	);
+
+	pGameMenu->GetElement<UIButtonImage>( "btn_settings" )->SetCallbackFunction( [this] ( UIElement* pElement, void* pArgs )
+	{
+		m_pEconomyMenu->ToggleVisibility();
+	}
+	);
+
+	
     
 	UIElement* pBuildMenu = UserInterface::AddScreenFromFile( "BuildMenu", "BuildMenu.xml" );
     
@@ -107,10 +115,14 @@ GameMenu::GameMenu( VillageGame* pGame )
 	pElement->Release();
 
 	InputManager::Get()->AddMouseHandler( this );
+
+	m_pEconomyMenu = new EconomyMenu( m_pGame );
+	m_pEconomyMenu->Hide();
 }
 
 GameMenu::~GameMenu()
 {
+	delete m_pEconomyMenu;
 	InputManager::Get()->RemoveMouseHandler( this );
 
 	m_pPlacementImage->Release();

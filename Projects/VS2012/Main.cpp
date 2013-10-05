@@ -8,9 +8,11 @@ void Start()
 	//ResourceCache::Get()->AddResourceFile( "Working Folder", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder(), DevelopmentResourceZipFile::Editor ) );
 	//ResourceCache::Get()->AddResourceFile( "Assets", new DevelopmentResourceZipFile( FileUtils::GetWorkingFolder() + "Assets/", DevelopmentResourceZipFile::Editor ) );
     
-    //FolderAssetBundle* pBundle = new FolderAssetBundle( FileUtils::GetWorkingFolder() + "Assets" );
-    FolderAssetBundle* pBundle = new FolderAssetBundle( FileUtils::GetWorkingFolder() );
+    FolderAssetBundle* pBundle = new FolderAssetBundle( FileUtils::GetWorkingFolder() + "Assets/" );
     AssetManager::Get().AddAssetBundle( pBundle );
+	pBundle = new FolderAssetBundle( FileUtils::GetWorkingFolder() );
+	AssetManager::Get().AddAssetBundle( pBundle );
+
     AssetManager::Get().RegisterLoader( HashedString( "*.png" ), new ImageAssetLoader() );
     
     AssetManager::Get().GetAsset<ITexture>( "Avatar0.png" );
