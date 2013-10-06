@@ -7,8 +7,8 @@ ScrollCamera::ScrollCamera(void)
 	m_fSpeed = 500.0f;
 	m_fZoomModifier = 1.0f;
 
-	m_vMinBounds = Vector3( -4096.0f, -4096.0f );
-	m_vMaxBounds = Vector3( 4096.0f, 4096.0f );
+	m_vMinBounds = Vector3( -4096.0f, -4096.0f ) * 2.0f;
+	m_vMaxBounds = Vector3( 4096.0f, 4096.0f ) * 2.0f;
 
 	Matrix matProjection;
 	matProjection.BuildOrthoLH( (float)IRenderer::Get()->VGetScreenWidth(), (float)IRenderer::Get()->VGetScreenHeight(), -1.0f, 1.0f );

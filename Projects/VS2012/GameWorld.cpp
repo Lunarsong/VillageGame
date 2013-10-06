@@ -3,6 +3,9 @@
 #include <Core/Math/RandomNumGen.h>
 #include <Game/Entities/Components/Rendering/TileMapComponent.h>
 #include <UI/UserInterface.h>
+#include <TextureData.h>
+#include <Core/AssetManager/AssetManager.h>
+#include <Game/Entities/Components/Rendering/QuadComponent.h>
 
 
 GameWorld::GameWorld(void)
@@ -58,7 +61,7 @@ GameWorld::GameWorld(void)
 	m_pAtlas->AddTexture( Rect( 704, 160, 32, 32 ) ); // 40
 	m_pAtlas->AddTexture( Rect( 735, 160, 32, 32 ) ); // 41
 	
-	float fWorldScale = 2.0f;
+	float fWorldScale = 4.0f;
 	for ( int i = 0; i < 5; ++i )
 	{
 		for ( unsigned int y = 1; y < 127; ++y )
@@ -215,6 +218,8 @@ GameWorld::GameWorld(void)
 	pTileMapComponent->Release();
 	pEntity->Start();
 
+	m_IslandData.GenerateBiomes();
+
 	CreateMinimap();
 }
 
@@ -260,4 +265,174 @@ void GameWorld::CreateMinimap()
 	pImage->Release();
 
 	pTexture->Release();
+
+	TextureData* pTreeSprite = AssetManager::Get().GetAsset<TextureData>( "TreeSprite" );
+	Matrix matTransform;
+	matTransform.BuildScale( 96 / 3, 128 / 3, 1.0f );
+	float fHalfSize = 128 * 32.0f * 2.0f;
+	{
+		ITexture* pTexture = IRenderer::CreateTexture();
+		Color color;
+		unsigned int pMap[128][128];
+		for ( int j = 0; j < 128; ++j )
+		{
+			for ( int i = 0; i < 128; ++i )
+			{
+				matTransform.SetPosition( i * 32.0f * 4.0f - fHalfSize + 64.0f, (127-j) * 32.0f * 4.0f - fHalfSize - 32.0f, 0.0f );
+
+				IslandData::Biome eBiome = m_IslandData.GetBiome( i, j );
+				if ( eBiome == IslandData::SeaWater )
+				{
+					color = Color::BLUE;;
+				}
+
+				else if ( eBiome == IslandData::FreshWater )
+				{
+					color = Color( 0, 191, 255 );
+				}
+				
+				else if ( eBiome == IslandData::Grassland )
+				{
+					color = Color( 195, 211, 170, 255 );
+				}
+
+				else if ( eBiome == IslandData::Snow )
+				{
+					color = Color::WHITE;
+				}
+
+				else if ( eBiome == IslandData::Bare )
+				{
+					color = Color( 200, 200, 200, 255 );
+				}
+
+				else if ( eBiome == IslandData::Scorched )
+				{
+					color = Color::GREY;
+				}
+
+				else if ( eBiome == IslandData::Tundra )
+				{
+					color = Color( 220, 220, 186, 255 );
+				}
+
+				else if ( eBiome == IslandData::Taiga )
+				{
+					color = Color( 203, 211, 186, 255 );
+				}
+
+				else if ( eBiome == IslandData::Shrubland )
+				{
+					color = Color( 195, 203, 186, 255 );
+				}
+
+				else if ( eBiome == IslandData::TemperateDesert )
+				{
+					color = Color( 227, 231, 201, 255 );
+				}
+
+				else if ( eBiome == IslandData::TemperateRainForest )
+				{
+					color = Color( 163, 195, 167, 255 );
+
+					Entity* pEntity = Game::CreateEntity( matTransform );
+					QuadComponent* pQuadComponent = new QuadComponent();
+					pQuadComponent->SetTexture( pTreeSprite );
+					pEntity->AddComponent( pQuadComponent );
+					pQuadComponent->Start();
+				}
+
+				else if ( eBiome == IslandData::TemperateDecidousForest )
+				{
+					color = Color( 180, 200, 168, 255 );
+
+					Entity* pEntity = Game::CreateEntity( matTransform );
+					QuadComponent* pQuadComponent = new QuadComponent();
+					pQuadComponent->SetTexture( pTreeSprite );
+					pEntity->AddComponent( pQuadComponent );
+					pQuadComponent->Start();
+				}
+
+				else if ( eBiome == IslandData::TropicalRainForest )
+				{
+					color = Color( 155, 186, 168, 255 );
+
+					Entity* pEntity = Game::CreateEntity( matTransform );
+					QuadComponent* pQuadComponent = new QuadComponent();
+					pQuadComponent->SetTexture( pTreeSprite );
+					pEntity->AddComponent( pQuadComponent );
+					pQuadComponent->Start();
+				}
+
+				else if ( eBiome == IslandData::TropicalSeasonalForest )
+				{
+					color = Color( 168, 203, 163, 255 );
+
+					/*Entity* pEntity = Game::CreateEntity( matTransform );
+					QuadComponent* pQuadComponent = new QuadComponent();
+					pQuadComponent->SetTexture( pTreeSprite );
+					pEntity->AddComponent( pQuadComponent );
+					pQuadComponent->Start();*/
+				}
+
+				else if ( eBiome == IslandData::SubtropicalDesert )
+				{
+					color = Color( 232, 220, 198, 255 );
+				}
+
+				pMap[ j ][ i ] =  color.RGBA;
+			}
+		}
+
+		pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
+		UIImage* pImage = new UIImage( pTexture );
+		pImage->SetSize( pImage->GetSizeInPixels() * 4.0f );
+		pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
+		pImage->SetRelativePosition( Vector3( 1.0f, 1.0f ) );
+		pImage->SetAlignment( BottomRight );
+		UserInterface::AddScreen( "BiomeMap", pImage );
+		pImage->Release();
+
+		pTexture->Release();
+	}
+
+	{
+		ITexture* pTexture = IRenderer::CreateTexture();
+		Color color;
+		unsigned int pMap[128][128];
+		for ( int j = 0; j < 128; ++j )
+		{
+			for ( int i = 0; i < 128; ++i )
+			{
+				float fMoisture = m_IslandData.GetMoisture( i, j );
+				if ( fMoisture >= 0.95f )
+				{
+					color = Color( 64, 105, 150 );
+				}
+
+				else
+				{
+					color = Color( 255, 248, 220 );
+				}
+
+				static const Color k_MoistureColor = Color( 64, 105, 150 );
+				static const Color k_DesertColor = Color( 255, 248, 220 );
+				color = Color::Lerp( k_DesertColor, k_MoistureColor, fMoisture );
+
+				color = Color( fMoisture * 255, fMoisture * 255, fMoisture * 255, 255 );
+				pMap[ j ][ i ] =  color.RGBA;
+			}
+		}
+
+		pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
+		UIImage* pImage = new UIImage( pTexture );
+		pImage->SetSize( pImage->GetSizeInPixels() * 4.0f );
+		pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
+		pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
+		pImage->SetAlignment( BottomLeft );
+		//UserInterface::AddScreen( "MoistureMap", pImage );
+		pImage->Release();
+
+		pTexture->Release();
+	}
 }

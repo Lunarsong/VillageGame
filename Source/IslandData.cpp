@@ -11,11 +11,14 @@
 #include "Core/Math/RandomNumGen.h"
 #include <vector>
 #include <ctime>
+#include <Core/Utils/Macros.h>
 
 IslandData::IslandData()
 {
-    m_pHeightMap = NULL;
-    m_pHeightMaskMap = NULL;
+    m_pHeightMap		= NULL;
+    m_pHeightMaskMap	= NULL;
+	m_pBiomeMap			= NULL;
+	m_pMoistureMap		= NULL;
         
     m_uiSizeX = 0;
     m_uiSizeY = 0;
@@ -31,12 +34,22 @@ void IslandData::Destroy()
     if ( m_pHeightMap )
     {
         delete []  m_pHeightMap;
+		m_pHeightMap = NULL;
     }
         
     if ( m_pHeightMaskMap )
     {
         delete [] m_pHeightMaskMap;
+		m_pHeightMaskMap = NULL;
     }
+
+	if ( m_pBiomeMap )
+	{
+		delete [] m_pBiomeMap;
+		m_pBiomeMap = NULL;
+	}
+
+	SAFE_DELETE_ARRAY( m_pMoistureMap );
 }
     
 void IslandData::Generate( int iWidth, int iHeight )
@@ -236,4 +249,302 @@ float& IslandData::operator() ( unsigned int iX, unsigned int iY )
 void IslandData::SetHeight( int iX, int iY, float fHeight )
 {
 	m_pHeightMap[ iY * m_uiSizeX + iX ] = fHeight;
+}
+
+void IslandData::GenerateBiomes()
+{
+	SAFE_DELETE_ARRAY( m_pBiomeMap );
+	
+	unsigned int uiNumTiles = m_uiSizeX * m_uiSizeY;
+	m_pBiomeMap = new Biome[ uiNumTiles ];
+	for ( unsigned int i = 0; i < uiNumTiles; ++i )
+	{
+		m_pBiomeMap[ i ] = Unassigned;
+	}
+
+	SeaForm( 0, 0 );
+
+	AssignLandOrFreshwater();
+
+	GenerateMoisture();
+
+}
+
+void IslandData::SeaForm( unsigned int iX, unsigned int iY )
+{
+	if ( GetBiome( iX, iY ) != Unassigned )
+	{
+		return;
+	}
+
+	if ( GetHeight( iX, iY ) > 0.0f )
+	{
+		m_pBiomeMap[ iY * m_uiSizeX + iX ] = Land;
+		return;
+	}
+
+	m_pBiomeMap[ iY * m_uiSizeX + iX ] = SeaWater;
+
+	if ( iX > 1 )
+	{
+		SeaForm( iX - 1, iY );
+
+		if ( iY > 1 )
+		{
+			SeaForm( iX - 1, iY - 1);
+		}
+
+		if ( iY < ( m_uiSizeY - 1 ) )
+		{
+			SeaForm( iX - 1, iY + 1 );
+		}
+	}
+
+	if ( iX < ( m_uiSizeX - 1 ) )
+	{
+		SeaForm( iX + 1, iY );
+
+		if ( iY > 1 )
+		{
+			SeaForm( iX + 1, iY - 1);
+		}
+
+		if ( iY < ( m_uiSizeY - 1 ) )
+		{
+			SeaForm( iX + 1, iY + 1 );
+		}
+	}
+
+	if ( iY > 1 )
+	{
+		SeaForm( iX, iY - 1);
+	}
+
+	if ( iY < ( m_uiSizeY - 1 ) )
+	{
+		SeaForm( iX, iY + 1 );
+	}
+}
+
+inline
+IslandData::Biome IslandData::GetBiome( unsigned int iX, unsigned int iY ) const
+{
+	return m_pBiomeMap[ iY * m_uiSizeX + iX ];
+}
+
+void IslandData::AssignLandOrFreshwater()
+{
+	for ( unsigned int iY = 0; iY < m_uiSizeY; ++iY )
+	{
+		for ( unsigned int iX = 0; iX < m_uiSizeX; ++iX )
+		{
+			if ( GetBiome( iX, iY ) == Unassigned )
+			{
+				if ( GetHeight( iX, iY ) > 0.0f )
+				{
+					m_pBiomeMap[ iY * m_uiSizeX + iX ] = Land;
+				}
+
+				else
+				{
+					m_pBiomeMap[ iY * m_uiSizeX + iX ] = FreshWater;
+				}
+				
+			}
+		}
+	}
+	
+}
+ 
+float IslandData::GetMoisture( unsigned int iX, unsigned int iY ) const
+{
+	return m_pMoistureMap[ iY * m_uiSizeX + iX ];
+}
+
+void IslandData::GenerateMoisture()
+{
+	SAFE_DELETE_ARRAY( m_pMoistureMap );
+	
+	Engine::SimplexNoise noise;
+	noise.SetOctaves( 16.0f );
+	noise.SetPersistence( 0.5f );
+	noise.SetScale( 0.05f );
+	noise.SetBounds( -0.2f, 1.0f );
+
+	m_pMoistureMap = new float[ m_uiSizeX * m_uiSizeY ];
+	for ( unsigned int iY = 0; iY < m_uiSizeY; ++iY )
+	{
+		for ( unsigned int iX = 0; iX < m_uiSizeX; ++iX )
+		{
+			Biome eBiome = GetBiome( iX, iY );
+			if ( eBiome == FreshWater )
+			{
+				m_pMoistureMap[ iY * m_uiSizeX + iX ] = 1.0f;
+			}
+
+			else if ( eBiome == SeaWater )
+			{
+				m_pMoistureMap[ iY * m_uiSizeX + iX ] = 0.15f;
+			}
+
+			else
+			{
+				m_pMoistureMap[ iY * m_uiSizeX + iX ] = std::min( std::max( 0.0f, noise.Noise( iX, iY ) ), 1.0f );
+			}
+		}
+	}
+
+	for ( unsigned int iY = 0; iY < m_uiSizeY; ++iY )
+	{
+		for ( unsigned int iX = 0; iX < m_uiSizeX; ++iX )
+		{
+			Biome eBiome = GetBiome( iX, iY );
+			if ( eBiome == FreshWater || eBiome == SeaWater )
+			{
+				DistributeMoisture( iX, iY );
+			}
+		}
+	}
+
+	for ( unsigned int iY = 0; iY < m_uiSizeY; ++iY )
+	{
+		for ( unsigned int iX = 0; iX < m_uiSizeX; ++iX )
+		{
+			Biome eBiome = GetBiome( iX, iY );
+			if ( eBiome == SeaWater )
+			{
+				m_pMoistureMap[ iY * m_uiSizeX + iX ] = 1.0f;
+			}
+		}
+	}
+
+	Biome eBiomeMap[4][6];
+	eBiomeMap[0][0] = SubtropicalDesert;
+	eBiomeMap[0][1] = Grassland;
+	eBiomeMap[0][2] = TropicalSeasonalForest;
+	eBiomeMap[0][3] = TropicalSeasonalForest;
+	eBiomeMap[0][4] = TropicalRainForest;
+	eBiomeMap[0][5] = TropicalRainForest;
+
+	eBiomeMap[1][0] = TemperateDesert;
+	eBiomeMap[1][1] = Grassland;
+	eBiomeMap[1][2] = Grassland;
+	eBiomeMap[1][3] = TemperateDecidousForest;
+	eBiomeMap[1][4] = TemperateDecidousForest;
+	eBiomeMap[1][5] = TemperateRainForest;
+
+	eBiomeMap[2][0] = TemperateDesert;
+	eBiomeMap[2][1] = TemperateDesert;
+	eBiomeMap[2][2] = Shrubland;
+	eBiomeMap[2][3] = Shrubland;
+	eBiomeMap[2][4] = Taiga;
+	eBiomeMap[2][5] = Taiga;
+
+	eBiomeMap[3][0] = Scorched;
+	eBiomeMap[3][1] = Bare;
+	eBiomeMap[3][2] = Tundra;
+	eBiomeMap[3][3] = Snow;
+	eBiomeMap[3][4] = Snow;
+	eBiomeMap[3][5] = Snow;
+
+	for ( unsigned int iY = 0; iY < m_uiSizeY; ++iY )
+	{
+		for ( unsigned int iX = 0; iX < m_uiSizeX; ++iX )
+		{
+			Biome eBiome = GetBiome( iX, iY );
+			if ( eBiome == Land )
+			{
+				float fMoisture = GetMoisture( iX, iY );
+				float fHeight = GetHeight( iX, iY );
+
+				int iHeightIndex = (int)(fHeight * 4.9f);
+				int iMoistureIndex = (int)(fMoisture * 6.9f);
+
+				if ( GetBiome( iX+1, iY ) == FreshWater )
+				{
+					int i = 0;
+					i = iX * 2.0f;
+
+				}
+				m_pBiomeMap[ iY * m_uiSizeX + iX ] = eBiomeMap[iHeightIndex][iMoistureIndex];
+			}
+		}
+	}
+
+}
+
+void IslandData::DistributeMoisture( unsigned int iX, unsigned int iY )
+{
+	float fAltitude = GetHeight( iX, iY );
+	float fMoisture = GetMoisture( iX, iY );
+
+	static const float k_fDiagonalFalloff = 0.925f;
+	if ( iX > 1 )
+	{
+		RecieveMoisture( fMoisture, fAltitude, iX - 1, iY );
+
+		if ( iY > 1 )
+		{
+			RecieveMoisture( fMoisture * k_fDiagonalFalloff, fAltitude, iX - 1, iY - 1 );
+		}
+
+		if ( iY < ( m_uiSizeY - 1 ) )
+		{
+			RecieveMoisture( fMoisture * k_fDiagonalFalloff, fAltitude, iX - 1, iY + 1 );
+		}
+	}
+
+	if ( iX < ( m_uiSizeX - 1 ) )
+	{
+		RecieveMoisture( fMoisture, fAltitude, iX + 1, iY );
+
+		if ( iY > 1 )
+		{
+			RecieveMoisture( fMoisture * k_fDiagonalFalloff, fAltitude, iX + 1, iY - 1 );
+		}
+
+		if ( iY < ( m_uiSizeY - 1 ) )
+		{
+			RecieveMoisture( fMoisture * k_fDiagonalFalloff, fAltitude, iX + 1, iY + 1 );
+		}
+	}
+
+	if ( iY > 1 )
+	{
+		RecieveMoisture( fMoisture, fAltitude, iX, iY - 1 );
+	}
+
+	if ( iY < ( m_uiSizeY - 1 ) )
+	{
+		RecieveMoisture( fMoisture, fAltitude, iX, iY + 1 );
+	}
+}
+
+void IslandData::RecieveMoisture( float fMoisture, float fAltitude, unsigned int iX, unsigned int iY )
+{
+	float fMyMoisture = GetMoisture( iX, iY );
+	float fMyHeight = GetHeight( iX, iY );
+
+	if ( fMoisture > fMyMoisture )
+	{
+		/*if ( fAltitude > fMyHeight )
+		{
+			static const float k_fMoistureFalloff = 0.85f;
+			fMoisture *= k_fMoistureFalloff;
+		}
+
+		else*/
+		{
+			static const float k_fMoistureFalloffFromLower = 0.85f;
+			fMoisture *= k_fMoistureFalloffFromLower;
+		}
+
+		if ( fMoisture > fMyMoisture )
+		{
+			m_pMoistureMap[ iY * m_uiSizeX + iX ] = fMoisture;
+
+			if ( fMoisture > 0.1f )
+			DistributeMoisture( iX, iY );
+		}
+	}
 }

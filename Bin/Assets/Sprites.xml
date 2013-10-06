@@ -22,6 +22,8 @@
     <Sprite Name="SmallHumanConstructionSprite" Texture="BuildingsMisc.png" x="586" y="135" x2="650" y2="199" />
     <Sprite Name="LargeHumanConstructionSprite" Texture="BuildingsMisc.png" x="584" y="200" x2="648" y2="264" />
 	
+	<Sprite Name="TreeSprite" Texture="terrain_atlas.png" x="928" y="896" x2="1024" y2="1024" />
+	
 	
 	<!-- Resources -->
 	<Sprite Name="PeopleIcon" Texture="People.png" />
