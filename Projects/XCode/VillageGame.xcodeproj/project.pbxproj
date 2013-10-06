@@ -12,8 +12,6 @@
 		E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5A17DCA07800C6681B /* OpenGL.framework */; };
 		E60B6B6817E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
 		E60B6B6917E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
-		E6352C7D17FEABF7007AB23E /* Sprites.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6352C7C17FEABF7007AB23E /* Sprites.xml */; };
-		E6352C8017FEAC0E007AB23E /* Sprites.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6352C7C17FEABF7007AB23E /* Sprites.xml */; };
 		E6358FBE17FCC89C00A0317B /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */; };
 		E6358FBF17FCC89C00A0317B /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */; };
 		E6358FC017FCC89C00A0317B /* BuildingComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */; };
@@ -38,84 +36,6 @@
 		E6358FD317FCC89C00A0317B /* TreeComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FBA17FCC89C00A0317B /* TreeComponentData.cpp */; };
 		E6358FD417FCC89C00A0317B /* VillageGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FBC17FCC89C00A0317B /* VillageGame.cpp */; };
 		E6358FD517FCC89C00A0317B /* VillageGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FBC17FCC89C00A0317B /* VillageGame.cpp */; };
-		E635900517FCCA8D00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6358FDD17FCCA8D00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */; };
-		E635900617FCCA8D00A0317B /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6358FDE17FCCA8D00A0317B /* Arial.ttf */; };
-		E635900717FCCA8D00A0317B /* BuildingsMisc.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE117FCCA8D00A0317B /* BuildingsMisc.png */; };
-		E635900817FCCA8D00A0317B /* CritterSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE217FCCA8D00A0317B /* CritterSheet.png */; };
-		E635900917FCCA8D00A0317B /* DragonSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE317FCCA8D00A0317B /* DragonSheet.png */; };
-		E635900A17FCCA8D00A0317B /* HumanArcherSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE417FCCA8D00A0317B /* HumanArcherSheet.png */; };
-		E635900B17FCCA8D00A0317B /* HumanBuildings.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE517FCCA8D00A0317B /* HumanBuildings.png */; };
-		E635900C17FCCA8D00A0317B /* HumanFootmanSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE617FCCA8D00A0317B /* HumanFootmanSheet.png */; };
-		E635900D17FCCA8D00A0317B /* HumanKnightSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE717FCCA8D00A0317B /* HumanKnightSheet.png */; };
-		E635900E17FCCA8D00A0317B /* HumanMageSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE817FCCA8D00A0317B /* HumanMageSheet.png */; };
-		E635900F17FCCA8D00A0317B /* HumanPeasantSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FE917FCCA8D00A0317B /* HumanPeasantSheet.png */; };
-		E635901017FCCA8D00A0317B /* Avatar0.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FEA17FCCA8D00A0317B /* Avatar0.png */; };
-		E635901117FCCA8D00A0317B /* Avatar1.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FEB17FCCA8D00A0317B /* Avatar1.png */; };
-		E635901217FCCA8D00A0317B /* build.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FEC17FCCA8D00A0317B /* build.png */; };
-		E635901317FCCA8D00A0317B /* BuildMenu.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6358FED17FCCA8D00A0317B /* BuildMenu.xml */; };
-		E635901417FCCA8D00A0317B /* Choicelarge.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FEE17FCCA8D00A0317B /* Choicelarge.png */; };
-		E635901517FCCA8D00A0317B /* Dialogue.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6358FEF17FCCA8D00A0317B /* Dialogue.xml */; };
-		E635901617FCCA8D00A0317B /* DialogueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF017FCCA8D00A0317B /* DialogueCircle.png */; };
-		E635901717FCCA8D00A0317B /* DialogueInterface.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF117FCCA8D00A0317B /* DialogueInterface.xml */; };
-		E635901817FCCA8D00A0317B /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF217FCCA8D00A0317B /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */; };
-		E635901917FCCA8D00A0317B /* GameMenu.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF317FCCA8D00A0317B /* GameMenu.xml */; };
-		E635901A17FCCA8D00A0317B /* GameResources.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF417FCCA8D00A0317B /* GameResources.xml */; };
-		E635901B17FCCA8D00A0317B /* gradients.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF517FCCA8D00A0317B /* gradients.png */; };
-		E635901C17FCCA8D00A0317B /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF617FCCA8D00A0317B /* home.png */; };
-		E635901D17FCCA8D00A0317B /* HumanFarm.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF717FCCA8D00A0317B /* HumanFarm.png */; };
-		E635901E17FCCA8D00A0317B /* package_development.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF817FCCA8D00A0317B /* package_development.png */; };
-		E635901F17FCCA8D00A0317B /* paper background.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FF917FCCA8D00A0317B /* paper background.png */; };
-		E635902017FCCA8D00A0317B /* RPG_GUI_v1_source.xcf in Resources */ = {isa = PBXBuildFile; fileRef = E6358FFA17FCCA8D00A0317B /* RPG_GUI_v1_source.xcf */; };
-		E635902117FCCA8D00A0317B /* RPG_GUI_v1.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FFB17FCCA8D00A0317B /* RPG_GUI_v1.png */; };
-		E635902217FCCA8D00A0317B /* samaze_017.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6358FFC17FCCA8D00A0317B /* samaze_017.jpg */; };
-		E635902317FCCA8D00A0317B /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FFD17FCCA8D00A0317B /* settings.png */; };
-		E635902417FCCA8D00A0317B /* Sheep0007.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FFE17FCCA8D00A0317B /* Sheep0007.png */; };
-		E635902517FCCA8D00A0317B /* terrain_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E6358FFF17FCCA8D00A0317B /* terrain_atlas.png */; };
-		E635902617FCCA8D00A0317B /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E635900017FCCA8D00A0317B /* test.jpg */; };
-		E635902717FCCA8D00A0317B /* TestDialogue.dia in Resources */ = {isa = PBXBuildFile; fileRef = E635900117FCCA8D00A0317B /* TestDialogue.dia */; };
-		E635902817FCCA8D00A0317B /* Vera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E635900217FCCA8D00A0317B /* Vera.ttf */; };
-		E635902917FCCA8D00A0317B /* VeraMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E635900317FCCA8D00A0317B /* VeraMono.ttf */; };
-		E635902A17FCCA8D00A0317B /* wood background.png in Resources */ = {isa = PBXBuildFile; fileRef = E635900417FCCA8D00A0317B /* wood background.png */; };
-		E635902B17FCCAAC00A0317B /* BuildingsMisc.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE117FCCA8D00A0317B /* BuildingsMisc.png */; };
-		E635902C17FCCAAC00A0317B /* CritterSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE217FCCA8D00A0317B /* CritterSheet.png */; };
-		E635902D17FCCAAC00A0317B /* DragonSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE317FCCA8D00A0317B /* DragonSheet.png */; };
-		E635902E17FCCAAC00A0317B /* HumanArcherSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE417FCCA8D00A0317B /* HumanArcherSheet.png */; };
-		E635902F17FCCAAC00A0317B /* HumanBuildings.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE517FCCA8D00A0317B /* HumanBuildings.png */; };
-		E635903017FCCAAC00A0317B /* HumanFootmanSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE617FCCA8D00A0317B /* HumanFootmanSheet.png */; };
-		E635903117FCCAAC00A0317B /* HumanKnightSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE717FCCA8D00A0317B /* HumanKnightSheet.png */; };
-		E635903217FCCAAC00A0317B /* HumanMageSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE817FCCA8D00A0317B /* HumanMageSheet.png */; };
-		E635903317FCCAAC00A0317B /* HumanPeasantSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FE917FCCA8D00A0317B /* HumanPeasantSheet.png */; };
-		E635903417FCCAAC00A0317B /* Avatar0.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FEA17FCCA8D00A0317B /* Avatar0.png */; };
-		E635903517FCCAAC00A0317B /* Avatar1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FEB17FCCA8D00A0317B /* Avatar1.png */; };
-		E635903617FCCAAC00A0317B /* build.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FEC17FCCA8D00A0317B /* build.png */; };
-		E635903717FCCAAC00A0317B /* BuildMenu.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FED17FCCA8D00A0317B /* BuildMenu.xml */; };
-		E635903817FCCAAC00A0317B /* Choicelarge.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FEE17FCCA8D00A0317B /* Choicelarge.png */; };
-		E635903917FCCAAC00A0317B /* Dialogue.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FEF17FCCA8D00A0317B /* Dialogue.xml */; };
-		E635903A17FCCAAC00A0317B /* DialogueCircle.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF017FCCA8D00A0317B /* DialogueCircle.png */; };
-		E635903B17FCCAAC00A0317B /* DialogueInterface.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF117FCCA8D00A0317B /* DialogueInterface.xml */; };
-		E635903C17FCCAAC00A0317B /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF217FCCA8D00A0317B /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */; };
-		E635903D17FCCAAC00A0317B /* GameMenu.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF317FCCA8D00A0317B /* GameMenu.xml */; };
-		E635903E17FCCAAC00A0317B /* GameResources.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF417FCCA8D00A0317B /* GameResources.xml */; };
-		E635903F17FCCAAC00A0317B /* gradients.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF517FCCA8D00A0317B /* gradients.png */; };
-		E635904017FCCAAC00A0317B /* home.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF617FCCA8D00A0317B /* home.png */; };
-		E635904117FCCAAC00A0317B /* HumanFarm.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF717FCCA8D00A0317B /* HumanFarm.png */; };
-		E635904217FCCAAC00A0317B /* package_development.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF817FCCA8D00A0317B /* package_development.png */; };
-		E635904317FCCAAC00A0317B /* paper background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FF917FCCA8D00A0317B /* paper background.png */; };
-		E635904417FCCAAC00A0317B /* RPG_GUI_v1_source.xcf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FFA17FCCA8D00A0317B /* RPG_GUI_v1_source.xcf */; };
-		E635904517FCCAAC00A0317B /* RPG_GUI_v1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FFB17FCCA8D00A0317B /* RPG_GUI_v1.png */; };
-		E635904617FCCAAC00A0317B /* samaze_017.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FFC17FCCA8D00A0317B /* samaze_017.jpg */; };
-		E635904717FCCAAC00A0317B /* settings.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FFD17FCCA8D00A0317B /* settings.png */; };
-		E635904817FCCAAC00A0317B /* Sheep0007.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FFE17FCCA8D00A0317B /* Sheep0007.png */; };
-		E635904917FCCAAC00A0317B /* terrain_atlas.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FFF17FCCA8D00A0317B /* terrain_atlas.png */; };
-		E635904A17FCCAAC00A0317B /* test.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635900017FCCA8D00A0317B /* test.jpg */; };
-		E635904B17FCCAAC00A0317B /* TestDialogue.dia in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635900117FCCA8D00A0317B /* TestDialogue.dia */; };
-		E635904C17FCCAAC00A0317B /* Vera.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635900217FCCA8D00A0317B /* Vera.ttf */; };
-		E635904D17FCCAAC00A0317B /* VeraMono.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635900317FCCA8D00A0317B /* VeraMono.ttf */; };
-		E635904E17FCCAAC00A0317B /* wood background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635900417FCCA8D00A0317B /* wood background.png */; };
-		E635905517FCCE2200A0317B /* BuildingDefinitions.xml in Resources */ = {isa = PBXBuildFile; fileRef = E635905417FCCE2200A0317B /* BuildingDefinitions.xml */; };
-		E635905617FCCE3A00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FDD17FCCA8D00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */; };
-		E635905717FCCE3A00A0317B /* Arial.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6358FDE17FCCA8D00A0317B /* Arial.ttf */; };
-		E635905817FCCE3A00A0317B /* BuildingDefinitions.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E635905417FCCE2200A0317B /* BuildingDefinitions.xml */; };
 		E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9317C69EC0006F1456 /* UIKit.framework */; };
 		E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9517C69EC0006F1456 /* Foundation.framework */; };
 		E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */; };
@@ -127,6 +47,142 @@
 		E63EAEC617C6A0F9006F1456 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAEC517C6A0F9006F1456 /* QuartzCore.framework */; };
 		E63EAED917C6BFF1006F1456 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAED817C6BFF1006F1456 /* libz.dylib */; };
 		E64768D417E123170080BCAF /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E64768D017E122FB0080BCAF /* libangelscript.a */; };
+		E6811CF0180147A100654338 /* 38px-Ashfur_(TC).warrior.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CAB180147A100654338 /* 38px-Ashfur_(TC).warrior.png */; };
+		E6811CF1180147A100654338 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6811CAC180147A100654338 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */; };
+		E6811CF2180147A100654338 /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6811CAD180147A100654338 /* Arial.ttf */; };
+		E6811CF3180147A100654338 /* BuildingsMisc.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB0180147A100654338 /* BuildingsMisc.png */; };
+		E6811CF4180147A100654338 /* CritterSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB1180147A100654338 /* CritterSheet.png */; };
+		E6811CF5180147A100654338 /* DragonSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB2180147A100654338 /* DragonSheet.png */; };
+		E6811CF6180147A100654338 /* HumanArcherSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB3180147A100654338 /* HumanArcherSheet.png */; };
+		E6811CF7180147A100654338 /* HumanBuildings.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB4180147A100654338 /* HumanBuildings.png */; };
+		E6811CF8180147A100654338 /* HumanFootmanSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB5180147A100654338 /* HumanFootmanSheet.png */; };
+		E6811CF9180147A100654338 /* HumanKnightSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB6180147A100654338 /* HumanKnightSheet.png */; };
+		E6811CFA180147A100654338 /* HumanMageSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB7180147A100654338 /* HumanMageSheet.png */; };
+		E6811CFB180147A100654338 /* HumanPeasantSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB8180147A100654338 /* HumanPeasantSheet.png */; };
+		E6811CFC180147A100654338 /* Avatar0.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CB9180147A100654338 /* Avatar0.png */; };
+		E6811CFD180147A100654338 /* Avatar1.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CBA180147A100654338 /* Avatar1.png */; };
+		E6811CFE180147A100654338 /* build.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CBB180147A100654338 /* build.png */; };
+		E6811CFF180147A100654338 /* BuildingDefinitions.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6811CBC180147A100654338 /* BuildingDefinitions.xml */; };
+		E6811D00180147A100654338 /* BuildingsMisc.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CBD180147A100654338 /* BuildingsMisc.png */; };
+		E6811D01180147A100654338 /* BuildMenu.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6811CBE180147A100654338 /* BuildMenu.xml */; };
+		E6811D02180147A100654338 /* Choicelarge.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CBF180147A100654338 /* Choicelarge.png */; };
+		E6811D03180147A100654338 /* Consolas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC0180147A100654338 /* Consolas.ttf */; };
+		E6811D04180147A100654338 /* CritterSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC1180147A100654338 /* CritterSheet.png */; };
+		E6811D05180147A100654338 /* Dialogue.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC2180147A100654338 /* Dialogue.xml */; };
+		E6811D06180147A100654338 /* DialogueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC3180147A100654338 /* DialogueCircle.png */; };
+		E6811D07180147A100654338 /* DialogueInterface.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC4180147A100654338 /* DialogueInterface.xml */; };
+		E6811D08180147A100654338 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC5180147A100654338 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */; };
+		E6811D09180147A100654338 /* DragonSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC6180147A100654338 /* DragonSheet.png */; };
+		E6811D0A180147A100654338 /* EconomyMenu.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC7180147A100654338 /* EconomyMenu.xml */; };
+		E6811D0B180147A100654338 /* Fine_Wool.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC8180147A100654338 /* Fine_Wool.png */; };
+		E6811D0C180147A100654338 /* Flour.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CC9180147A100654338 /* Flour.png */; };
+		E6811D0D180147A100654338 /* Food.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CCA180147A100654338 /* Food.png */; };
+		E6811D0E180147A100654338 /* GameMenu.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6811CCB180147A100654338 /* GameMenu.xml */; };
+		E6811D0F180147A100654338 /* GameResources.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6811CCC180147A100654338 /* GameResources.xml */; };
+		E6811D10180147A100654338 /* gradients.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CCD180147A100654338 /* gradients.png */; };
+		E6811D11180147A100654338 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CCE180147A100654338 /* home.png */; };
+		E6811D12180147A100654338 /* HumanArcherSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CCF180147A100654338 /* HumanArcherSheet.png */; };
+		E6811D13180147A100654338 /* HumanBuildings.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD0180147A100654338 /* HumanBuildings.png */; };
+		E6811D14180147A100654338 /* HumanFarm.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD1180147A100654338 /* HumanFarm.png */; };
+		E6811D15180147A100654338 /* HumanFootmanSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD2180147A100654338 /* HumanFootmanSheet.png */; };
+		E6811D16180147A100654338 /* HumanKnightSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD3180147A100654338 /* HumanKnightSheet.png */; };
+		E6811D17180147A100654338 /* HumanMageSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD4180147A100654338 /* HumanMageSheet.png */; };
+		E6811D18180147A100654338 /* HumanPeasantSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD5180147A100654338 /* HumanPeasantSheet.png */; };
+		E6811D19180147A100654338 /* Iron.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD6180147A100654338 /* Iron.png */; };
+		E6811D1A180147A100654338 /* package_development.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD7180147A100654338 /* package_development.png */; };
+		E6811D1B180147A100654338 /* paper background.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD8180147A100654338 /* paper background.png */; };
+		E6811D1C180147A100654338 /* People.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CD9180147A100654338 /* People.png */; };
+		E6811D1D180147A100654338 /* PineWoodPlanks.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CDA180147A100654338 /* PineWoodPlanks.png */; };
+		E6811D1E180147A100654338 /* Planks.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CDB180147A100654338 /* Planks.png */; };
+		E6811D1F180147A100654338 /* RPG_GUI_v1.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CDC180147A100654338 /* RPG_GUI_v1.png */; };
+		E6811D20180147A100654338 /* RPG_GUI_v1_source.xcf in Resources */ = {isa = PBXBuildFile; fileRef = E6811CDD180147A100654338 /* RPG_GUI_v1_source.xcf */; };
+		E6811D21180147A100654338 /* samaze_017.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6811CDE180147A100654338 /* samaze_017.jpg */; };
+		E6811D22180147A100654338 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CDF180147A100654338 /* settings.png */; };
+		E6811D23180147A100654338 /* Sheep0007.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE0180147A100654338 /* Sheep0007.png */; };
+		E6811D24180147A100654338 /* Sprites.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE1180147A100654338 /* Sprites.xml */; };
+		E6811D25180147A100654338 /* Stone.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE2180147A100654338 /* Stone.PNG */; };
+		E6811D26180147A100654338 /* StoneMaterial_01_Icon-36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE3180147A100654338 /* StoneMaterial_01_Icon-36x36.png */; };
+		E6811D27180147A100654338 /* terrain_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE4180147A100654338 /* terrain_atlas.png */; };
+		E6811D28180147A100654338 /* TestDialogue.dia in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE5180147A100654338 /* TestDialogue.dia */; };
+		E6811D29180147A100654338 /* Vera.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE6180147A100654338 /* Vera.ttf */; };
+		E6811D2A180147A100654338 /* VeraMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE7180147A100654338 /* VeraMono.ttf */; };
+		E6811D2B180147A100654338 /* Weapons.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE8180147A100654338 /* Weapons.png */; };
+		E6811D2C180147A100654338 /* Wheat (1).png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CE9180147A100654338 /* Wheat (1).png */; };
+		E6811D2D180147A100654338 /* Wheat.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CEA180147A100654338 /* Wheat.png */; };
+		E6811D2E180147A100654338 /* Wheat_Flour.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CEB180147A100654338 /* Wheat_Flour.png */; };
+		E6811D2F180147A100654338 /* wood background.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CEC180147A100654338 /* wood background.png */; };
+		E6811D30180147A100654338 /* Wood.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CED180147A100654338 /* Wood.png */; };
+		E6811D31180147A100654338 /* Wool.png in Resources */ = {isa = PBXBuildFile; fileRef = E6811CEE180147A100654338 /* Wool.png */; };
+		E6811D32180147A100654338 /* Yew_Logs.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E6811CEF180147A100654338 /* Yew_Logs.PNG */; };
+		E6811D33180147B400654338 /* 38px-Ashfur_(TC).warrior.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CAB180147A100654338 /* 38px-Ashfur_(TC).warrior.png */; };
+		E6811D34180147B400654338 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CAC180147A100654338 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */; };
+		E6811D35180147B400654338 /* Arial.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CAD180147A100654338 /* Arial.ttf */; };
+		E6811D36180147B400654338 /* BuildingsMisc.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB0180147A100654338 /* BuildingsMisc.png */; };
+		E6811D37180147B400654338 /* CritterSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB1180147A100654338 /* CritterSheet.png */; };
+		E6811D38180147B400654338 /* DragonSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB2180147A100654338 /* DragonSheet.png */; };
+		E6811D39180147B400654338 /* HumanArcherSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB3180147A100654338 /* HumanArcherSheet.png */; };
+		E6811D3A180147B400654338 /* HumanBuildings.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB4180147A100654338 /* HumanBuildings.png */; };
+		E6811D3B180147B400654338 /* HumanFootmanSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB5180147A100654338 /* HumanFootmanSheet.png */; };
+		E6811D3C180147B400654338 /* HumanKnightSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB6180147A100654338 /* HumanKnightSheet.png */; };
+		E6811D3D180147B400654338 /* HumanMageSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB7180147A100654338 /* HumanMageSheet.png */; };
+		E6811D3E180147B400654338 /* HumanPeasantSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB8180147A100654338 /* HumanPeasantSheet.png */; };
+		E6811D3F180147B400654338 /* Avatar0.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CB9180147A100654338 /* Avatar0.png */; };
+		E6811D40180147B400654338 /* Avatar1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CBA180147A100654338 /* Avatar1.png */; };
+		E6811D41180147B400654338 /* build.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CBB180147A100654338 /* build.png */; };
+		E6811D42180147B400654338 /* BuildingDefinitions.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CBC180147A100654338 /* BuildingDefinitions.xml */; };
+		E6811D43180147B400654338 /* BuildingsMisc.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CBD180147A100654338 /* BuildingsMisc.png */; };
+		E6811D44180147B400654338 /* BuildMenu.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CBE180147A100654338 /* BuildMenu.xml */; };
+		E6811D45180147B400654338 /* Choicelarge.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CBF180147A100654338 /* Choicelarge.png */; };
+		E6811D46180147B400654338 /* Consolas.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC0180147A100654338 /* Consolas.ttf */; };
+		E6811D47180147B400654338 /* CritterSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC1180147A100654338 /* CritterSheet.png */; };
+		E6811D48180147B400654338 /* Dialogue.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC2180147A100654338 /* Dialogue.xml */; };
+		E6811D49180147B400654338 /* DialogueCircle.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC3180147A100654338 /* DialogueCircle.png */; };
+		E6811D4A180147B400654338 /* DialogueInterface.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC4180147A100654338 /* DialogueInterface.xml */; };
+		E6811D4B180147B400654338 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC5180147A100654338 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */; };
+		E6811D4C180147B400654338 /* DragonSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC6180147A100654338 /* DragonSheet.png */; };
+		E6811D4D180147B400654338 /* EconomyMenu.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC7180147A100654338 /* EconomyMenu.xml */; };
+		E6811D4E180147B400654338 /* Fine_Wool.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC8180147A100654338 /* Fine_Wool.png */; };
+		E6811D4F180147B400654338 /* Flour.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CC9180147A100654338 /* Flour.png */; };
+		E6811D50180147B400654338 /* Food.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CCA180147A100654338 /* Food.png */; };
+		E6811D51180147B400654338 /* GameMenu.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CCB180147A100654338 /* GameMenu.xml */; };
+		E6811D52180147B400654338 /* GameResources.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CCC180147A100654338 /* GameResources.xml */; };
+		E6811D53180147B400654338 /* gradients.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CCD180147A100654338 /* gradients.png */; };
+		E6811D54180147B400654338 /* home.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CCE180147A100654338 /* home.png */; };
+		E6811D55180147B400654338 /* HumanArcherSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CCF180147A100654338 /* HumanArcherSheet.png */; };
+		E6811D56180147B400654338 /* HumanBuildings.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD0180147A100654338 /* HumanBuildings.png */; };
+		E6811D57180147B400654338 /* HumanFarm.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD1180147A100654338 /* HumanFarm.png */; };
+		E6811D58180147B400654338 /* HumanFootmanSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD2180147A100654338 /* HumanFootmanSheet.png */; };
+		E6811D59180147B400654338 /* HumanKnightSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD3180147A100654338 /* HumanKnightSheet.png */; };
+		E6811D5A180147B400654338 /* HumanMageSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD4180147A100654338 /* HumanMageSheet.png */; };
+		E6811D5B180147B400654338 /* HumanPeasantSheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD5180147A100654338 /* HumanPeasantSheet.png */; };
+		E6811D5C180147B400654338 /* Iron.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD6180147A100654338 /* Iron.png */; };
+		E6811D5D180147B400654338 /* package_development.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD7180147A100654338 /* package_development.png */; };
+		E6811D5E180147B400654338 /* paper background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD8180147A100654338 /* paper background.png */; };
+		E6811D5F180147B400654338 /* People.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CD9180147A100654338 /* People.png */; };
+		E6811D60180147B400654338 /* PineWoodPlanks.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CDA180147A100654338 /* PineWoodPlanks.png */; };
+		E6811D61180147B400654338 /* Planks.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CDB180147A100654338 /* Planks.png */; };
+		E6811D62180147B400654338 /* RPG_GUI_v1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CDC180147A100654338 /* RPG_GUI_v1.png */; };
+		E6811D63180147B400654338 /* RPG_GUI_v1_source.xcf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CDD180147A100654338 /* RPG_GUI_v1_source.xcf */; };
+		E6811D64180147B400654338 /* samaze_017.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CDE180147A100654338 /* samaze_017.jpg */; };
+		E6811D65180147B400654338 /* settings.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CDF180147A100654338 /* settings.png */; };
+		E6811D66180147B400654338 /* Sheep0007.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE0180147A100654338 /* Sheep0007.png */; };
+		E6811D67180147B400654338 /* Sprites.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE1180147A100654338 /* Sprites.xml */; };
+		E6811D68180147B400654338 /* Stone.PNG in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE2180147A100654338 /* Stone.PNG */; };
+		E6811D69180147B400654338 /* StoneMaterial_01_Icon-36x36.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE3180147A100654338 /* StoneMaterial_01_Icon-36x36.png */; };
+		E6811D6A180147B400654338 /* terrain_atlas.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE4180147A100654338 /* terrain_atlas.png */; };
+		E6811D6B180147B400654338 /* TestDialogue.dia in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE5180147A100654338 /* TestDialogue.dia */; };
+		E6811D6C180147B400654338 /* Vera.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE6180147A100654338 /* Vera.ttf */; };
+		E6811D6D180147B400654338 /* VeraMono.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE7180147A100654338 /* VeraMono.ttf */; };
+		E6811D6E180147B400654338 /* Weapons.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE8180147A100654338 /* Weapons.png */; };
+		E6811D6F180147B400654338 /* Wheat (1).png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CE9180147A100654338 /* Wheat (1).png */; };
+		E6811D70180147B400654338 /* Wheat.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CEA180147A100654338 /* Wheat.png */; };
+		E6811D71180147B400654338 /* Wheat_Flour.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CEB180147A100654338 /* Wheat_Flour.png */; };
+		E6811D72180147B400654338 /* wood background.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CEC180147A100654338 /* wood background.png */; };
+		E6811D73180147B400654338 /* Wood.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CED180147A100654338 /* Wood.png */; };
+		E6811D74180147B400654338 /* Wool.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CEE180147A100654338 /* Wool.png */; };
+		E6811D75180147B400654338 /* Yew_Logs.PNG in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CEF180147A100654338 /* Yew_Logs.PNG */; };
+		E6A87509180144AB00D27452 /* EconomyMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6A87507180144AB00D27452 /* EconomyMenu.cpp */; };
+		E6A8750A180144AB00D27452 /* EconomyMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6A87507180144AB00D27452 /* EconomyMenu.cpp */; };
 		E6C58D5617F851BD0020F28D /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C58D5517F851BD0020F28D /* libfreetype.a */; };
 		E6C58D7A17F854710020F28D /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C58D7917F854710020F28D /* libangelscript.a */; };
 		E6D0BDB517CE1EBE00CAC564 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDA617CE1A8400CAC564 /* libEngine.a */; };
@@ -160,46 +216,73 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				E6352C8017FEAC0E007AB23E /* Sprites.xml in CopyFiles */,
-				E635905617FCCE3A00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */,
-				E635905717FCCE3A00A0317B /* Arial.ttf in CopyFiles */,
-				E635905817FCCE3A00A0317B /* BuildingDefinitions.xml in CopyFiles */,
-				E635902B17FCCAAC00A0317B /* BuildingsMisc.png in CopyFiles */,
-				E635902C17FCCAAC00A0317B /* CritterSheet.png in CopyFiles */,
-				E635902D17FCCAAC00A0317B /* DragonSheet.png in CopyFiles */,
-				E635902E17FCCAAC00A0317B /* HumanArcherSheet.png in CopyFiles */,
-				E635902F17FCCAAC00A0317B /* HumanBuildings.png in CopyFiles */,
-				E635903017FCCAAC00A0317B /* HumanFootmanSheet.png in CopyFiles */,
-				E635903117FCCAAC00A0317B /* HumanKnightSheet.png in CopyFiles */,
-				E635903217FCCAAC00A0317B /* HumanMageSheet.png in CopyFiles */,
-				E635903317FCCAAC00A0317B /* HumanPeasantSheet.png in CopyFiles */,
-				E635903417FCCAAC00A0317B /* Avatar0.png in CopyFiles */,
-				E635903517FCCAAC00A0317B /* Avatar1.png in CopyFiles */,
-				E635903617FCCAAC00A0317B /* build.png in CopyFiles */,
-				E635903717FCCAAC00A0317B /* BuildMenu.xml in CopyFiles */,
-				E635903817FCCAAC00A0317B /* Choicelarge.png in CopyFiles */,
-				E635903917FCCAAC00A0317B /* Dialogue.xml in CopyFiles */,
-				E635903A17FCCAAC00A0317B /* DialogueCircle.png in CopyFiles */,
-				E635903B17FCCAAC00A0317B /* DialogueInterface.xml in CopyFiles */,
-				E635903C17FCCAAC00A0317B /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in CopyFiles */,
-				E635903D17FCCAAC00A0317B /* GameMenu.xml in CopyFiles */,
-				E635903E17FCCAAC00A0317B /* GameResources.xml in CopyFiles */,
-				E635903F17FCCAAC00A0317B /* gradients.png in CopyFiles */,
-				E635904017FCCAAC00A0317B /* home.png in CopyFiles */,
-				E635904117FCCAAC00A0317B /* HumanFarm.png in CopyFiles */,
-				E635904217FCCAAC00A0317B /* package_development.png in CopyFiles */,
-				E635904317FCCAAC00A0317B /* paper background.png in CopyFiles */,
-				E635904417FCCAAC00A0317B /* RPG_GUI_v1_source.xcf in CopyFiles */,
-				E635904517FCCAAC00A0317B /* RPG_GUI_v1.png in CopyFiles */,
-				E635904617FCCAAC00A0317B /* samaze_017.jpg in CopyFiles */,
-				E635904717FCCAAC00A0317B /* settings.png in CopyFiles */,
-				E635904817FCCAAC00A0317B /* Sheep0007.png in CopyFiles */,
-				E635904917FCCAAC00A0317B /* terrain_atlas.png in CopyFiles */,
-				E635904A17FCCAAC00A0317B /* test.jpg in CopyFiles */,
-				E635904B17FCCAAC00A0317B /* TestDialogue.dia in CopyFiles */,
-				E635904C17FCCAAC00A0317B /* Vera.ttf in CopyFiles */,
-				E635904D17FCCAAC00A0317B /* VeraMono.ttf in CopyFiles */,
-				E635904E17FCCAAC00A0317B /* wood background.png in CopyFiles */,
+				E6811D33180147B400654338 /* 38px-Ashfur_(TC).warrior.png in CopyFiles */,
+				E6811D34180147B400654338 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in CopyFiles */,
+				E6811D35180147B400654338 /* Arial.ttf in CopyFiles */,
+				E6811D36180147B400654338 /* BuildingsMisc.png in CopyFiles */,
+				E6811D37180147B400654338 /* CritterSheet.png in CopyFiles */,
+				E6811D38180147B400654338 /* DragonSheet.png in CopyFiles */,
+				E6811D39180147B400654338 /* HumanArcherSheet.png in CopyFiles */,
+				E6811D3A180147B400654338 /* HumanBuildings.png in CopyFiles */,
+				E6811D3B180147B400654338 /* HumanFootmanSheet.png in CopyFiles */,
+				E6811D3C180147B400654338 /* HumanKnightSheet.png in CopyFiles */,
+				E6811D3D180147B400654338 /* HumanMageSheet.png in CopyFiles */,
+				E6811D3E180147B400654338 /* HumanPeasantSheet.png in CopyFiles */,
+				E6811D3F180147B400654338 /* Avatar0.png in CopyFiles */,
+				E6811D40180147B400654338 /* Avatar1.png in CopyFiles */,
+				E6811D41180147B400654338 /* build.png in CopyFiles */,
+				E6811D42180147B400654338 /* BuildingDefinitions.xml in CopyFiles */,
+				E6811D43180147B400654338 /* BuildingsMisc.png in CopyFiles */,
+				E6811D44180147B400654338 /* BuildMenu.xml in CopyFiles */,
+				E6811D45180147B400654338 /* Choicelarge.png in CopyFiles */,
+				E6811D46180147B400654338 /* Consolas.ttf in CopyFiles */,
+				E6811D47180147B400654338 /* CritterSheet.png in CopyFiles */,
+				E6811D48180147B400654338 /* Dialogue.xml in CopyFiles */,
+				E6811D49180147B400654338 /* DialogueCircle.png in CopyFiles */,
+				E6811D4A180147B400654338 /* DialogueInterface.xml in CopyFiles */,
+				E6811D4B180147B400654338 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in CopyFiles */,
+				E6811D4C180147B400654338 /* DragonSheet.png in CopyFiles */,
+				E6811D4D180147B400654338 /* EconomyMenu.xml in CopyFiles */,
+				E6811D4E180147B400654338 /* Fine_Wool.png in CopyFiles */,
+				E6811D4F180147B400654338 /* Flour.png in CopyFiles */,
+				E6811D50180147B400654338 /* Food.png in CopyFiles */,
+				E6811D51180147B400654338 /* GameMenu.xml in CopyFiles */,
+				E6811D52180147B400654338 /* GameResources.xml in CopyFiles */,
+				E6811D53180147B400654338 /* gradients.png in CopyFiles */,
+				E6811D54180147B400654338 /* home.png in CopyFiles */,
+				E6811D55180147B400654338 /* HumanArcherSheet.png in CopyFiles */,
+				E6811D56180147B400654338 /* HumanBuildings.png in CopyFiles */,
+				E6811D57180147B400654338 /* HumanFarm.png in CopyFiles */,
+				E6811D58180147B400654338 /* HumanFootmanSheet.png in CopyFiles */,
+				E6811D59180147B400654338 /* HumanKnightSheet.png in CopyFiles */,
+				E6811D5A180147B400654338 /* HumanMageSheet.png in CopyFiles */,
+				E6811D5B180147B400654338 /* HumanPeasantSheet.png in CopyFiles */,
+				E6811D5C180147B400654338 /* Iron.png in CopyFiles */,
+				E6811D5D180147B400654338 /* package_development.png in CopyFiles */,
+				E6811D5E180147B400654338 /* paper background.png in CopyFiles */,
+				E6811D5F180147B400654338 /* People.png in CopyFiles */,
+				E6811D60180147B400654338 /* PineWoodPlanks.png in CopyFiles */,
+				E6811D61180147B400654338 /* Planks.png in CopyFiles */,
+				E6811D62180147B400654338 /* RPG_GUI_v1.png in CopyFiles */,
+				E6811D63180147B400654338 /* RPG_GUI_v1_source.xcf in CopyFiles */,
+				E6811D64180147B400654338 /* samaze_017.jpg in CopyFiles */,
+				E6811D65180147B400654338 /* settings.png in CopyFiles */,
+				E6811D66180147B400654338 /* Sheep0007.png in CopyFiles */,
+				E6811D67180147B400654338 /* Sprites.xml in CopyFiles */,
+				E6811D68180147B400654338 /* Stone.PNG in CopyFiles */,
+				E6811D69180147B400654338 /* StoneMaterial_01_Icon-36x36.png in CopyFiles */,
+				E6811D6A180147B400654338 /* terrain_atlas.png in CopyFiles */,
+				E6811D6B180147B400654338 /* TestDialogue.dia in CopyFiles */,
+				E6811D6C180147B400654338 /* Vera.ttf in CopyFiles */,
+				E6811D6D180147B400654338 /* VeraMono.ttf in CopyFiles */,
+				E6811D6E180147B400654338 /* Weapons.png in CopyFiles */,
+				E6811D6F180147B400654338 /* Wheat (1).png in CopyFiles */,
+				E6811D70180147B400654338 /* Wheat.png in CopyFiles */,
+				E6811D71180147B400654338 /* Wheat_Flour.png in CopyFiles */,
+				E6811D72180147B400654338 /* wood background.png in CopyFiles */,
+				E6811D73180147B400654338 /* Wood.png in CopyFiles */,
+				E6811D74180147B400654338 /* Wool.png in CopyFiles */,
+				E6811D75180147B400654338 /* Yew_Logs.PNG in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +296,6 @@
 		E60B6B6617E362A500C8FEBE /* IslandData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IslandData.cpp; sourceTree = "<group>"; };
 		E60B6B6717E362A500C8FEBE /* IslandData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IslandData.h; sourceTree = "<group>"; };
 		E6166C3C17F86C5F00333D8B /* VillageGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VillageGame.entitlements; sourceTree = "<group>"; };
-		E6352C7C17FEABF7007AB23E /* Sprites.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Sprites.xml; sourceTree = "<group>"; };
 		E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuildingComponent.cpp; path = ../Projects/VS2012/BuildingComponent.cpp; sourceTree = "<group>"; };
 		E6358FA717FCC89C00A0317B /* BuildingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuildingComponent.h; path = ../Projects/VS2012/BuildingComponent.h; sourceTree = "<group>"; };
 		E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuildingComponentData.cpp; path = ../Projects/VS2012/BuildingComponentData.cpp; sourceTree = "<group>"; };
@@ -238,45 +320,6 @@
 		E6358FBB17FCC89C00A0317B /* TreeComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeComponentData.h; path = ../Projects/VS2012/TreeComponentData.h; sourceTree = "<group>"; };
 		E6358FBC17FCC89C00A0317B /* VillageGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VillageGame.cpp; path = ../Projects/VS2012/VillageGame.cpp; sourceTree = "<group>"; };
 		E6358FBD17FCC89C00A0317B /* VillageGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VillageGame.h; path = ../Projects/VS2012/VillageGame.h; sourceTree = "<group>"; };
-		E6358FDD17FCCA8D00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg; sourceTree = "<group>"; };
-		E6358FDE17FCCA8D00A0317B /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
-		E6358FE117FCCA8D00A0317B /* BuildingsMisc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuildingsMisc.png; sourceTree = "<group>"; };
-		E6358FE217FCCA8D00A0317B /* CritterSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CritterSheet.png; sourceTree = "<group>"; };
-		E6358FE317FCCA8D00A0317B /* DragonSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DragonSheet.png; sourceTree = "<group>"; };
-		E6358FE417FCCA8D00A0317B /* HumanArcherSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanArcherSheet.png; sourceTree = "<group>"; };
-		E6358FE517FCCA8D00A0317B /* HumanBuildings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanBuildings.png; sourceTree = "<group>"; };
-		E6358FE617FCCA8D00A0317B /* HumanFootmanSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanFootmanSheet.png; sourceTree = "<group>"; };
-		E6358FE717FCCA8D00A0317B /* HumanKnightSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanKnightSheet.png; sourceTree = "<group>"; };
-		E6358FE817FCCA8D00A0317B /* HumanMageSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanMageSheet.png; sourceTree = "<group>"; };
-		E6358FE917FCCA8D00A0317B /* HumanPeasantSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanPeasantSheet.png; sourceTree = "<group>"; };
-		E6358FEA17FCCA8D00A0317B /* Avatar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar0.png; sourceTree = "<group>"; };
-		E6358FEB17FCCA8D00A0317B /* Avatar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar1.png; sourceTree = "<group>"; };
-		E6358FEC17FCCA8D00A0317B /* build.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = build.png; sourceTree = "<group>"; };
-		E6358FED17FCCA8D00A0317B /* BuildMenu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BuildMenu.xml; sourceTree = "<group>"; };
-		E6358FEE17FCCA8D00A0317B /* Choicelarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Choicelarge.png; sourceTree = "<group>"; };
-		E6358FEF17FCCA8D00A0317B /* Dialogue.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dialogue.xml; sourceTree = "<group>"; };
-		E6358FF017FCCA8D00A0317B /* DialogueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DialogueCircle.png; sourceTree = "<group>"; };
-		E6358FF117FCCA8D00A0317B /* DialogueInterface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DialogueInterface.xml; sourceTree = "<group>"; };
-		E6358FF217FCCA8D00A0317B /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg"; sourceTree = "<group>"; };
-		E6358FF317FCCA8D00A0317B /* GameMenu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GameMenu.xml; sourceTree = "<group>"; };
-		E6358FF417FCCA8D00A0317B /* GameResources.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GameResources.xml; sourceTree = "<group>"; };
-		E6358FF517FCCA8D00A0317B /* gradients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradients.png; sourceTree = "<group>"; };
-		E6358FF617FCCA8D00A0317B /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		E6358FF717FCCA8D00A0317B /* HumanFarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanFarm.png; sourceTree = "<group>"; };
-		E6358FF817FCCA8D00A0317B /* package_development.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package_development.png; sourceTree = "<group>"; };
-		E6358FF917FCCA8D00A0317B /* paper background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper background.png"; sourceTree = "<group>"; };
-		E6358FFA17FCCA8D00A0317B /* RPG_GUI_v1_source.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RPG_GUI_v1_source.xcf; sourceTree = "<group>"; };
-		E6358FFB17FCCA8D00A0317B /* RPG_GUI_v1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RPG_GUI_v1.png; sourceTree = "<group>"; };
-		E6358FFC17FCCA8D00A0317B /* samaze_017.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samaze_017.jpg; sourceTree = "<group>"; };
-		E6358FFD17FCCA8D00A0317B /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		E6358FFE17FCCA8D00A0317B /* Sheep0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sheep0007.png; sourceTree = "<group>"; };
-		E6358FFF17FCCA8D00A0317B /* terrain_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terrain_atlas.png; sourceTree = "<group>"; };
-		E635900017FCCA8D00A0317B /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		E635900117FCCA8D00A0317B /* TestDialogue.dia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestDialogue.dia; sourceTree = "<group>"; };
-		E635900217FCCA8D00A0317B /* Vera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vera.ttf; sourceTree = "<group>"; };
-		E635900317FCCA8D00A0317B /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeraMono.ttf; sourceTree = "<group>"; };
-		E635900417FCCA8D00A0317B /* wood background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood background.png"; sourceTree = "<group>"; };
-		E635905417FCCE2200A0317B /* BuildingDefinitions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BuildingDefinitions.xml; sourceTree = "<group>"; };
 		E63EAE9017C69EC0006F1456 /* VillageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63EAE9317C69EC0006F1456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E63EAE9517C69EC0006F1456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -292,6 +335,75 @@
 		E63EAED817C6BFF1006F1456 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E64768D017E122FB0080BCAF /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX/libangelscript.a; sourceTree = "<group>"; };
 		E64768D217E123000080BCAF /* libangelscriptd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscriptd.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX/libangelscriptd.a; sourceTree = "<group>"; };
+		E6811CAB180147A100654338 /* 38px-Ashfur_(TC).warrior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "38px-Ashfur_(TC).warrior.png"; sourceTree = "<group>"; };
+		E6811CAC180147A100654338 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg; sourceTree = "<group>"; };
+		E6811CAD180147A100654338 /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
+		E6811CB0180147A100654338 /* BuildingsMisc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuildingsMisc.png; sourceTree = "<group>"; };
+		E6811CB1180147A100654338 /* CritterSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CritterSheet.png; sourceTree = "<group>"; };
+		E6811CB2180147A100654338 /* DragonSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DragonSheet.png; sourceTree = "<group>"; };
+		E6811CB3180147A100654338 /* HumanArcherSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanArcherSheet.png; sourceTree = "<group>"; };
+		E6811CB4180147A100654338 /* HumanBuildings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanBuildings.png; sourceTree = "<group>"; };
+		E6811CB5180147A100654338 /* HumanFootmanSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanFootmanSheet.png; sourceTree = "<group>"; };
+		E6811CB6180147A100654338 /* HumanKnightSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanKnightSheet.png; sourceTree = "<group>"; };
+		E6811CB7180147A100654338 /* HumanMageSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanMageSheet.png; sourceTree = "<group>"; };
+		E6811CB8180147A100654338 /* HumanPeasantSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanPeasantSheet.png; sourceTree = "<group>"; };
+		E6811CB9180147A100654338 /* Avatar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar0.png; sourceTree = "<group>"; };
+		E6811CBA180147A100654338 /* Avatar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar1.png; sourceTree = "<group>"; };
+		E6811CBB180147A100654338 /* build.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = build.png; sourceTree = "<group>"; };
+		E6811CBC180147A100654338 /* BuildingDefinitions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BuildingDefinitions.xml; sourceTree = "<group>"; };
+		E6811CBD180147A100654338 /* BuildingsMisc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuildingsMisc.png; sourceTree = "<group>"; };
+		E6811CBE180147A100654338 /* BuildMenu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BuildMenu.xml; sourceTree = "<group>"; };
+		E6811CBF180147A100654338 /* Choicelarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Choicelarge.png; sourceTree = "<group>"; };
+		E6811CC0180147A100654338 /* Consolas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Consolas.ttf; sourceTree = "<group>"; };
+		E6811CC1180147A100654338 /* CritterSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CritterSheet.png; sourceTree = "<group>"; };
+		E6811CC2180147A100654338 /* Dialogue.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dialogue.xml; sourceTree = "<group>"; };
+		E6811CC3180147A100654338 /* DialogueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DialogueCircle.png; sourceTree = "<group>"; };
+		E6811CC4180147A100654338 /* DialogueInterface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DialogueInterface.xml; sourceTree = "<group>"; };
+		E6811CC5180147A100654338 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg"; sourceTree = "<group>"; };
+		E6811CC6180147A100654338 /* DragonSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DragonSheet.png; sourceTree = "<group>"; };
+		E6811CC7180147A100654338 /* EconomyMenu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = EconomyMenu.xml; sourceTree = "<group>"; };
+		E6811CC8180147A100654338 /* Fine_Wool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fine_Wool.png; sourceTree = "<group>"; };
+		E6811CC9180147A100654338 /* Flour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flour.png; sourceTree = "<group>"; };
+		E6811CCA180147A100654338 /* Food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Food.png; sourceTree = "<group>"; };
+		E6811CCB180147A100654338 /* GameMenu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GameMenu.xml; sourceTree = "<group>"; };
+		E6811CCC180147A100654338 /* GameResources.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GameResources.xml; sourceTree = "<group>"; };
+		E6811CCD180147A100654338 /* gradients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradients.png; sourceTree = "<group>"; };
+		E6811CCE180147A100654338 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		E6811CCF180147A100654338 /* HumanArcherSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanArcherSheet.png; sourceTree = "<group>"; };
+		E6811CD0180147A100654338 /* HumanBuildings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanBuildings.png; sourceTree = "<group>"; };
+		E6811CD1180147A100654338 /* HumanFarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanFarm.png; sourceTree = "<group>"; };
+		E6811CD2180147A100654338 /* HumanFootmanSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanFootmanSheet.png; sourceTree = "<group>"; };
+		E6811CD3180147A100654338 /* HumanKnightSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanKnightSheet.png; sourceTree = "<group>"; };
+		E6811CD4180147A100654338 /* HumanMageSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanMageSheet.png; sourceTree = "<group>"; };
+		E6811CD5180147A100654338 /* HumanPeasantSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HumanPeasantSheet.png; sourceTree = "<group>"; };
+		E6811CD6180147A100654338 /* Iron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Iron.png; sourceTree = "<group>"; };
+		E6811CD7180147A100654338 /* package_development.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package_development.png; sourceTree = "<group>"; };
+		E6811CD8180147A100654338 /* paper background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper background.png"; sourceTree = "<group>"; };
+		E6811CD9180147A100654338 /* People.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = People.png; sourceTree = "<group>"; };
+		E6811CDA180147A100654338 /* PineWoodPlanks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PineWoodPlanks.png; sourceTree = "<group>"; };
+		E6811CDB180147A100654338 /* Planks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Planks.png; sourceTree = "<group>"; };
+		E6811CDC180147A100654338 /* RPG_GUI_v1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RPG_GUI_v1.png; sourceTree = "<group>"; };
+		E6811CDD180147A100654338 /* RPG_GUI_v1_source.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RPG_GUI_v1_source.xcf; sourceTree = "<group>"; };
+		E6811CDE180147A100654338 /* samaze_017.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samaze_017.jpg; sourceTree = "<group>"; };
+		E6811CDF180147A100654338 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		E6811CE0180147A100654338 /* Sheep0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sheep0007.png; sourceTree = "<group>"; };
+		E6811CE1180147A100654338 /* Sprites.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Sprites.xml; sourceTree = "<group>"; };
+		E6811CE2180147A100654338 /* Stone.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stone.PNG; sourceTree = "<group>"; };
+		E6811CE3180147A100654338 /* StoneMaterial_01_Icon-36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StoneMaterial_01_Icon-36x36.png"; sourceTree = "<group>"; };
+		E6811CE4180147A100654338 /* terrain_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terrain_atlas.png; sourceTree = "<group>"; };
+		E6811CE5180147A100654338 /* TestDialogue.dia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestDialogue.dia; sourceTree = "<group>"; };
+		E6811CE6180147A100654338 /* Vera.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vera.ttf; sourceTree = "<group>"; };
+		E6811CE7180147A100654338 /* VeraMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeraMono.ttf; sourceTree = "<group>"; };
+		E6811CE8180147A100654338 /* Weapons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Weapons.png; sourceTree = "<group>"; };
+		E6811CE9180147A100654338 /* Wheat (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wheat (1).png"; sourceTree = "<group>"; };
+		E6811CEA180147A100654338 /* Wheat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wheat.png; sourceTree = "<group>"; };
+		E6811CEB180147A100654338 /* Wheat_Flour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wheat_Flour.png; sourceTree = "<group>"; };
+		E6811CEC180147A100654338 /* wood background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood background.png"; sourceTree = "<group>"; };
+		E6811CED180147A100654338 /* Wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wood.png; sourceTree = "<group>"; };
+		E6811CEE180147A100654338 /* Wool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wool.png; sourceTree = "<group>"; };
+		E6811CEF180147A100654338 /* Yew_Logs.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yew_Logs.PNG; sourceTree = "<group>"; };
+		E6A87507180144AB00D27452 /* EconomyMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EconomyMenu.cpp; path = ../Projects/VS2012/EconomyMenu.cpp; sourceTree = "<group>"; };
+		E6A87508180144AB00D27452 /* EconomyMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EconomyMenu.h; path = ../Projects/VS2012/EconomyMenu.h; sourceTree = "<group>"; };
 		E6C58D5517F851BD0020F28D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../../../LunaEngine/Engine/Externals/freetype2/libfreetype.a; sourceTree = "<group>"; };
 		E6C58D7917F854710020F28D /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = "../../../../Library/Developer/Xcode/DerivedData/angelscript-esvhdojcldbyopdjdxbevxsvovbi/Build/Products/Release-iphoneos/libangelscript.a"; sourceTree = "<group>"; };
 		E6C58D7D17F85AA20020F28D /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
@@ -336,30 +448,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E6358FDF17FCCA8D00A0317B /* Art */ = {
-			isa = PBXGroup;
-			children = (
-				E6358FE017FCCA8D00A0317B /* SpriteSheets */,
-			);
-			path = Art;
-			sourceTree = "<group>";
-		};
-		E6358FE017FCCA8D00A0317B /* SpriteSheets */ = {
-			isa = PBXGroup;
-			children = (
-				E6358FE117FCCA8D00A0317B /* BuildingsMisc.png */,
-				E6358FE217FCCA8D00A0317B /* CritterSheet.png */,
-				E6358FE317FCCA8D00A0317B /* DragonSheet.png */,
-				E6358FE417FCCA8D00A0317B /* HumanArcherSheet.png */,
-				E6358FE517FCCA8D00A0317B /* HumanBuildings.png */,
-				E6358FE617FCCA8D00A0317B /* HumanFootmanSheet.png */,
-				E6358FE717FCCA8D00A0317B /* HumanKnightSheet.png */,
-				E6358FE817FCCA8D00A0317B /* HumanMageSheet.png */,
-				E6358FE917FCCA8D00A0317B /* HumanPeasantSheet.png */,
-			);
-			path = SpriteSheets;
-			sourceTree = "<group>";
-		};
 		E63EAE8717C69EC0006F1456 = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +464,7 @@
 				E63EAE9917C69EC0006F1456 /* VillageGame */,
 				E63EAE9217C69EC0006F1456 /* Frameworks */,
 				E63EAE9117C69EC0006F1456 /* Products */,
-				E656049217CDF60C00E456A8 /* Assets */,
+				E6811CAA180147A100654338 /* Assets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -428,44 +516,95 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E656049217CDF60C00E456A8 /* Assets */ = {
+		E6811CAA180147A100654338 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E6358FDD17FCCA8D00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */,
-				E6358FDE17FCCA8D00A0317B /* Arial.ttf */,
-				E6358FDF17FCCA8D00A0317B /* Art */,
-				E6358FEA17FCCA8D00A0317B /* Avatar0.png */,
-				E6358FEB17FCCA8D00A0317B /* Avatar1.png */,
-				E6358FEC17FCCA8D00A0317B /* build.png */,
-				E6358FED17FCCA8D00A0317B /* BuildMenu.xml */,
-				E635905417FCCE2200A0317B /* BuildingDefinitions.xml */,
-				E6358FEE17FCCA8D00A0317B /* Choicelarge.png */,
-				E6358FEF17FCCA8D00A0317B /* Dialogue.xml */,
-				E6358FF017FCCA8D00A0317B /* DialogueCircle.png */,
-				E6358FF117FCCA8D00A0317B /* DialogueInterface.xml */,
-				E6358FF217FCCA8D00A0317B /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */,
-				E6358FF317FCCA8D00A0317B /* GameMenu.xml */,
-				E6358FF417FCCA8D00A0317B /* GameResources.xml */,
-				E6358FF517FCCA8D00A0317B /* gradients.png */,
-				E6358FF617FCCA8D00A0317B /* home.png */,
-				E6358FF717FCCA8D00A0317B /* HumanFarm.png */,
-				E6358FF817FCCA8D00A0317B /* package_development.png */,
-				E6358FF917FCCA8D00A0317B /* paper background.png */,
-				E6358FFA17FCCA8D00A0317B /* RPG_GUI_v1_source.xcf */,
-				E6352C7C17FEABF7007AB23E /* Sprites.xml */,
-				E6358FFB17FCCA8D00A0317B /* RPG_GUI_v1.png */,
-				E6358FFC17FCCA8D00A0317B /* samaze_017.jpg */,
-				E6358FFD17FCCA8D00A0317B /* settings.png */,
-				E6358FFE17FCCA8D00A0317B /* Sheep0007.png */,
-				E6358FFF17FCCA8D00A0317B /* terrain_atlas.png */,
-				E635900017FCCA8D00A0317B /* test.jpg */,
-				E635900117FCCA8D00A0317B /* TestDialogue.dia */,
-				E635900217FCCA8D00A0317B /* Vera.ttf */,
-				E635900317FCCA8D00A0317B /* VeraMono.ttf */,
-				E635900417FCCA8D00A0317B /* wood background.png */,
+				E6811CAB180147A100654338 /* 38px-Ashfur_(TC).warrior.png */,
+				E6811CAC180147A100654338 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg */,
+				E6811CAD180147A100654338 /* Arial.ttf */,
+				E6811CAE180147A100654338 /* Art */,
+				E6811CB9180147A100654338 /* Avatar0.png */,
+				E6811CBA180147A100654338 /* Avatar1.png */,
+				E6811CBB180147A100654338 /* build.png */,
+				E6811CBC180147A100654338 /* BuildingDefinitions.xml */,
+				E6811CBD180147A100654338 /* BuildingsMisc.png */,
+				E6811CBE180147A100654338 /* BuildMenu.xml */,
+				E6811CBF180147A100654338 /* Choicelarge.png */,
+				E6811CC0180147A100654338 /* Consolas.ttf */,
+				E6811CC1180147A100654338 /* CritterSheet.png */,
+				E6811CC2180147A100654338 /* Dialogue.xml */,
+				E6811CC3180147A100654338 /* DialogueCircle.png */,
+				E6811CC4180147A100654338 /* DialogueInterface.xml */,
+				E6811CC5180147A100654338 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg */,
+				E6811CC6180147A100654338 /* DragonSheet.png */,
+				E6811CC7180147A100654338 /* EconomyMenu.xml */,
+				E6811CC8180147A100654338 /* Fine_Wool.png */,
+				E6811CC9180147A100654338 /* Flour.png */,
+				E6811CCA180147A100654338 /* Food.png */,
+				E6811CCB180147A100654338 /* GameMenu.xml */,
+				E6811CCC180147A100654338 /* GameResources.xml */,
+				E6811CCD180147A100654338 /* gradients.png */,
+				E6811CCE180147A100654338 /* home.png */,
+				E6811CCF180147A100654338 /* HumanArcherSheet.png */,
+				E6811CD0180147A100654338 /* HumanBuildings.png */,
+				E6811CD1180147A100654338 /* HumanFarm.png */,
+				E6811CD2180147A100654338 /* HumanFootmanSheet.png */,
+				E6811CD3180147A100654338 /* HumanKnightSheet.png */,
+				E6811CD4180147A100654338 /* HumanMageSheet.png */,
+				E6811CD5180147A100654338 /* HumanPeasantSheet.png */,
+				E6811CD6180147A100654338 /* Iron.png */,
+				E6811CD7180147A100654338 /* package_development.png */,
+				E6811CD8180147A100654338 /* paper background.png */,
+				E6811CD9180147A100654338 /* People.png */,
+				E6811CDA180147A100654338 /* PineWoodPlanks.png */,
+				E6811CDB180147A100654338 /* Planks.png */,
+				E6811CDC180147A100654338 /* RPG_GUI_v1.png */,
+				E6811CDD180147A100654338 /* RPG_GUI_v1_source.xcf */,
+				E6811CDE180147A100654338 /* samaze_017.jpg */,
+				E6811CDF180147A100654338 /* settings.png */,
+				E6811CE0180147A100654338 /* Sheep0007.png */,
+				E6811CE1180147A100654338 /* Sprites.xml */,
+				E6811CE2180147A100654338 /* Stone.PNG */,
+				E6811CE3180147A100654338 /* StoneMaterial_01_Icon-36x36.png */,
+				E6811CE4180147A100654338 /* terrain_atlas.png */,
+				E6811CE5180147A100654338 /* TestDialogue.dia */,
+				E6811CE6180147A100654338 /* Vera.ttf */,
+				E6811CE7180147A100654338 /* VeraMono.ttf */,
+				E6811CE8180147A100654338 /* Weapons.png */,
+				E6811CE9180147A100654338 /* Wheat (1).png */,
+				E6811CEA180147A100654338 /* Wheat.png */,
+				E6811CEB180147A100654338 /* Wheat_Flour.png */,
+				E6811CEC180147A100654338 /* wood background.png */,
+				E6811CED180147A100654338 /* Wood.png */,
+				E6811CEE180147A100654338 /* Wool.png */,
+				E6811CEF180147A100654338 /* Yew_Logs.PNG */,
 			);
 			name = Assets;
-			path = ../../Assets;
+			path = ../../Bin/Assets;
+			sourceTree = "<group>";
+		};
+		E6811CAE180147A100654338 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				E6811CAF180147A100654338 /* SpriteSheets */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		E6811CAF180147A100654338 /* SpriteSheets */ = {
+			isa = PBXGroup;
+			children = (
+				E6811CB0180147A100654338 /* BuildingsMisc.png */,
+				E6811CB1180147A100654338 /* CritterSheet.png */,
+				E6811CB2180147A100654338 /* DragonSheet.png */,
+				E6811CB3180147A100654338 /* HumanArcherSheet.png */,
+				E6811CB4180147A100654338 /* HumanBuildings.png */,
+				E6811CB5180147A100654338 /* HumanFootmanSheet.png */,
+				E6811CB6180147A100654338 /* HumanKnightSheet.png */,
+				E6811CB7180147A100654338 /* HumanMageSheet.png */,
+				E6811CB8180147A100654338 /* HumanPeasantSheet.png */,
+			);
+			path = SpriteSheets;
 			sourceTree = "<group>";
 		};
 		E6D0BDA217CE1A8400CAC564 /* Products */ = {
@@ -496,6 +635,8 @@
 				E6358FB317FCC89C00A0317B /* ResourceComponent.h */,
 				E6358FB417FCC89C00A0317B /* ResourceComponentData.cpp */,
 				E6358FB517FCC89C00A0317B /* ResourceComponentData.h */,
+				E6A87507180144AB00D27452 /* EconomyMenu.cpp */,
+				E6A87508180144AB00D27452 /* EconomyMenu.h */,
 				E6358FB617FCC89C00A0317B /* ScrollCamera.cpp */,
 				E6358FB717FCC89C00A0317B /* ScrollCamera.h */,
 				E6358FB817FCC89C00A0317B /* TreeComponent.cpp */,
@@ -614,50 +755,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E635900A17FCCA8D00A0317B /* HumanArcherSheet.png in Resources */,
-				E635902317FCCA8D00A0317B /* settings.png in Resources */,
-				E635902217FCCA8D00A0317B /* samaze_017.jpg in Resources */,
-				E635901617FCCA8D00A0317B /* DialogueCircle.png in Resources */,
-				E6352C7D17FEABF7007AB23E /* Sprites.xml in Resources */,
-				E635901717FCCA8D00A0317B /* DialogueInterface.xml in Resources */,
-				E635900E17FCCA8D00A0317B /* HumanMageSheet.png in Resources */,
-				E635901217FCCA8D00A0317B /* build.png in Resources */,
-				E635902617FCCA8D00A0317B /* test.jpg in Resources */,
-				E635900517FCCA8D00A0317B /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in Resources */,
-				E635902517FCCA8D00A0317B /* terrain_atlas.png in Resources */,
-				E635902417FCCA8D00A0317B /* Sheep0007.png in Resources */,
-				E635900817FCCA8D00A0317B /* CritterSheet.png in Resources */,
-				E635902017FCCA8D00A0317B /* RPG_GUI_v1_source.xcf in Resources */,
+				E6811CFF180147A100654338 /* BuildingDefinitions.xml in Resources */,
+				E6811D16180147A100654338 /* HumanKnightSheet.png in Resources */,
+				E6811CF4180147A100654338 /* CritterSheet.png in Resources */,
+				E6811D21180147A100654338 /* samaze_017.jpg in Resources */,
+				E6811D0B180147A100654338 /* Fine_Wool.png in Resources */,
+				E6811D27180147A100654338 /* terrain_atlas.png in Resources */,
+				E6811D09180147A100654338 /* DragonSheet.png in Resources */,
+				E6811CFA180147A100654338 /* HumanMageSheet.png in Resources */,
+				E6811D01180147A100654338 /* BuildMenu.xml in Resources */,
 				E63EAE9E17C69EC0006F1456 /* InfoPlist.strings in Resources */,
-				E635900617FCCA8D00A0317B /* Arial.ttf in Resources */,
-				E635905517FCCE2200A0317B /* BuildingDefinitions.xml in Resources */,
-				E635902A17FCCA8D00A0317B /* wood background.png in Resources */,
-				E635901A17FCCA8D00A0317B /* GameResources.xml in Resources */,
-				E635901917FCCA8D00A0317B /* GameMenu.xml in Resources */,
-				E635901117FCCA8D00A0317B /* Avatar1.png in Resources */,
-				E635900B17FCCA8D00A0317B /* HumanBuildings.png in Resources */,
-				E635900F17FCCA8D00A0317B /* HumanPeasantSheet.png in Resources */,
-				E635900C17FCCA8D00A0317B /* HumanFootmanSheet.png in Resources */,
+				E6811CF5180147A100654338 /* DragonSheet.png in Resources */,
+				E6811CF7180147A100654338 /* HumanBuildings.png in Resources */,
+				E6811D04180147A100654338 /* CritterSheet.png in Resources */,
+				E6811CF3180147A100654338 /* BuildingsMisc.png in Resources */,
+				E6811D06180147A100654338 /* DialogueCircle.png in Resources */,
+				E6811D17180147A100654338 /* HumanMageSheet.png in Resources */,
+				E6811D11180147A100654338 /* home.png in Resources */,
+				E6811CFB180147A100654338 /* HumanPeasantSheet.png in Resources */,
+				E6811D2C180147A100654338 /* Wheat (1).png in Resources */,
+				E6811D02180147A100654338 /* Choicelarge.png in Resources */,
+				E6811D19180147A100654338 /* Iron.png in Resources */,
+				E6811D29180147A100654338 /* Vera.ttf in Resources */,
+				E6811D0E180147A100654338 /* GameMenu.xml in Resources */,
+				E6811D05180147A100654338 /* Dialogue.xml in Resources */,
+				E6811CF1180147A100654338 /* 595x801_19476_Oriana_2d_fantasy_pathfinder_portrait_scars_knight_girl_woman_picture_image_digital_art.jpg in Resources */,
+				E6811CF6180147A100654338 /* HumanArcherSheet.png in Resources */,
+				E6811CF2180147A100654338 /* Arial.ttf in Resources */,
+				E6811D32180147A100654338 /* Yew_Logs.PNG in Resources */,
+				E6811D0A180147A100654338 /* EconomyMenu.xml in Resources */,
+				E6811D2B180147A100654338 /* Weapons.png in Resources */,
+				E6811D0C180147A100654338 /* Flour.png in Resources */,
+				E6811D1C180147A100654338 /* People.png in Resources */,
+				E6811D2A180147A100654338 /* VeraMono.ttf in Resources */,
+				E6811D0F180147A100654338 /* GameResources.xml in Resources */,
+				E6811CFD180147A100654338 /* Avatar1.png in Resources */,
+				E6811D10180147A100654338 /* gradients.png in Resources */,
+				E6811D12180147A100654338 /* HumanArcherSheet.png in Resources */,
+				E6811D08180147A100654338 /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in Resources */,
 				E63EAEA617C69EC0006F1456 /* Default.png in Resources */,
-				E635901E17FCCA8D00A0317B /* package_development.png in Resources */,
-				E635901C17FCCA8D00A0317B /* home.png in Resources */,
-				E635902717FCCA8D00A0317B /* TestDialogue.dia in Resources */,
-				E635901417FCCA8D00A0317B /* Choicelarge.png in Resources */,
-				E635902817FCCA8D00A0317B /* Vera.ttf in Resources */,
-				E635902117FCCA8D00A0317B /* RPG_GUI_v1.png in Resources */,
-				E635900D17FCCA8D00A0317B /* HumanKnightSheet.png in Resources */,
-				E635902917FCCA8D00A0317B /* VeraMono.ttf in Resources */,
-				E635901D17FCCA8D00A0317B /* HumanFarm.png in Resources */,
+				E6811D1B180147A100654338 /* paper background.png in Resources */,
+				E6811D2D180147A100654338 /* Wheat.png in Resources */,
 				E63EAEA817C69EC0006F1456 /* Default@2x.png in Resources */,
-				E635900717FCCA8D00A0317B /* BuildingsMisc.png in Resources */,
-				E635901317FCCA8D00A0317B /* BuildMenu.xml in Resources */,
-				E635901017FCCA8D00A0317B /* Avatar0.png in Resources */,
+				E6811CFE180147A100654338 /* build.png in Resources */,
+				E6811D31180147A100654338 /* Wool.png in Resources */,
+				E6811D22180147A100654338 /* settings.png in Resources */,
+				E6811CF8180147A100654338 /* HumanFootmanSheet.png in Resources */,
+				E6811D26180147A100654338 /* StoneMaterial_01_Icon-36x36.png in Resources */,
+				E6811D03180147A100654338 /* Consolas.ttf in Resources */,
+				E6811D24180147A100654338 /* Sprites.xml in Resources */,
+				E6811D14180147A100654338 /* HumanFarm.png in Resources */,
+				E6811D30180147A100654338 /* Wood.png in Resources */,
+				E6811D1A180147A100654338 /* package_development.png in Resources */,
+				E6811D2E180147A100654338 /* Wheat_Flour.png in Resources */,
 				E63EAEAA17C69EC0006F1456 /* Default-568h@2x.png in Resources */,
-				E635901F17FCCA8D00A0317B /* paper background.png in Resources */,
-				E635901817FCCA8D00A0317B /* dragon_knight_wallpaper_by_ekoputeh-d2y7tyc.jpg in Resources */,
-				E635901B17FCCA8D00A0317B /* gradients.png in Resources */,
-				E635900917FCCA8D00A0317B /* DragonSheet.png in Resources */,
-				E635901517FCCA8D00A0317B /* Dialogue.xml in Resources */,
+				E6811D28180147A100654338 /* TestDialogue.dia in Resources */,
+				E6811D1F180147A100654338 /* RPG_GUI_v1.png in Resources */,
+				E6811D07180147A100654338 /* DialogueInterface.xml in Resources */,
+				E6811D18180147A100654338 /* HumanPeasantSheet.png in Resources */,
+				E6811D2F180147A100654338 /* wood background.png in Resources */,
+				E6811D0D180147A100654338 /* Food.png in Resources */,
+				E6811D25180147A100654338 /* Stone.PNG in Resources */,
+				E6811D15180147A100654338 /* HumanFootmanSheet.png in Resources */,
+				E6811CF9180147A100654338 /* HumanKnightSheet.png in Resources */,
+				E6811CFC180147A100654338 /* Avatar0.png in Resources */,
+				E6811D1E180147A100654338 /* Planks.png in Resources */,
+				E6811D00180147A100654338 /* BuildingsMisc.png in Resources */,
+				E6811D1D180147A100654338 /* PineWoodPlanks.png in Resources */,
+				E6811D23180147A100654338 /* Sheep0007.png in Resources */,
+				E6811CF0180147A100654338 /* 38px-Ashfur_(TC).warrior.png in Resources */,
+				E6811D13180147A100654338 /* HumanBuildings.png in Resources */,
+				E6811D20180147A100654338 /* RPG_GUI_v1_source.xcf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +836,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A87509180144AB00D27452 /* EconomyMenu.cpp in Sources */,
 				E6358FC217FCC89C00A0317B /* Economy.cpp in Sources */,
 				E6FD5FB017CABAFA00F59339 /* Source - Copy.cpp in Sources */,
 				E6358FD417FCC89C00A0317B /* VillageGame.cpp in Sources */,
@@ -689,6 +858,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A8750A180144AB00D27452 /* EconomyMenu.cpp in Sources */,
 				E6358FC317FCC89C00A0317B /* Economy.cpp in Sources */,
 				E6D0BDD217CE29CE00CAC564 /* Source - Copy.cpp in Sources */,
 				E6358FD517FCC89C00A0317B /* VillageGame.cpp in Sources */,
