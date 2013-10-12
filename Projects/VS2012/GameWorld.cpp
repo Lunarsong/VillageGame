@@ -10,7 +10,7 @@
 
 GameWorld::GameWorld(void)
 {
-	m_IslandData.Generate( 128, 128 );
+	m_IslandData.Generate( 512, 512 );
 
 	m_pAtlas = new TextureAtlas( "terrain_atlas.png" );
 
@@ -61,12 +61,12 @@ GameWorld::GameWorld(void)
 	m_pAtlas->AddTexture( Rect( 704, 160, 32, 32 ) ); // 40
 	m_pAtlas->AddTexture( Rect( 735, 160, 32, 32 ) ); // 41
 	
-	float fWorldScale = 4.0f;
+	float fWorldScale = 1.0f;
 	for ( int i = 0; i < 5; ++i )
 	{
-		for ( unsigned int y = 1; y < 127; ++y )
+		for ( unsigned int y = 1; y < 511; ++y )
 		{
-			for ( unsigned int x = 1; x < 127; ++x )
+			for ( unsigned int x = 1; x < 511; ++x )
 			{
 				float fHeight = m_IslandData.GetHeight( (float)x, (float)y );
 
@@ -129,19 +129,42 @@ GameWorld::GameWorld(void)
 
 	m_pPathGraph = new SquarePathfindingGraph();
 	m_pPathGraph->Create( 128 * fWorldScale, 128 * fWorldScale, 32.0f, false );
-	TileMapComponent* pTileMapComponent( new TileMapComponent( 128 * fWorldScale, 128 * fWorldScale, 32.0f, m_pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
+	TileMapComponent* pTileMapComponent( new TileMapComponent( 512 * fWorldScale, 512 * fWorldScale, 32.0f, m_pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
 		{
-			float fHeight = m_IslandData.GetHeight( (float)x / fWorldScale, 127.0f - (float)y / fWorldScale );
+			float fHeight = m_IslandData.GetHeight( (float)x / fWorldScale, 511.0f - (float)y / fWorldScale );
 			
-			float fRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y) / fWorldScale );
-			float fLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y) / fWorldScale );
-			float fTop = m_IslandData.GetHeight( (float)(x) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
-			float fBottom = m_IslandData.GetHeight( (float)(x) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
+			float fRight = 0.0f;
+			if ( x < 511 )
+				fRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 511.0f - (float)(y) / fWorldScale );
 
-			float fBottomLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
-			float fBottomRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y-1) / fWorldScale );
-			float fTopLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
-			float fTopRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 127.0f - (float)(y+1) / fWorldScale );
+			float fLeft = 0.0f;
+			if ( x > 0 )
+				fLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 511.0f - (float)(y) / fWorldScale );
+			
+			float fTop = 0.0f;
+			if ( y < 511 )
+				fTop = m_IslandData.GetHeight( (float)(x) / fWorldScale, 511.0f - (float)(y+1) / fWorldScale );
+
+			float fBottom = 0.0f;
+			if ( y > 0 )
+				fBottom = m_IslandData.GetHeight( (float)(x) / fWorldScale, 511.0f - (float)(y-1) / fWorldScale );
+
+			float fTopRight = 0.0f;
+			float fBottomLeft = 0.0f;
+			float fBottomRight = 0.0f;
+			float fTopLeft = 0.0f;
+
+			if ( y > 0 && x > 0 )
+				fBottomLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 511.0f - (float)(y-1) / fWorldScale );
+
+			if ( y > 0 && x < 511 )
+				fBottomRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 511.0f - (float)(y-1) / fWorldScale );
+
+			if ( y < 511 && x > 0 )
+				fTopLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 511.0f - (float)(y+1) / fWorldScale );
+
+			if ( y < 511 && x < 511 )
+				fTopRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 511.0f - (float)(y+1) / fWorldScale );
 
 			int iIndex = 0;
 			if ( fHeight <= 0.0f )
@@ -203,13 +226,13 @@ GameWorld::GameWorld(void)
 					rect = m_pAtlas->GetTextureRect( 36 + rand.RandomInt( 6 ) );
 				}
 
-				m_pPathGraph->GetNode( x, y )->SetBlocked( false );
+				//m_pPathGraph->GetNode( x, y )->SetBlocked( false );
 
 				return;
 				
 			}
 			
-			m_pPathGraph->GetNode( x, y )->SetBlocked( true );
+			//m_pPathGraph->GetNode( x, y )->SetBlocked( true );
 			rect = m_pAtlas->GetTextureRect( iIndex );			
 			
 		}
@@ -218,7 +241,7 @@ GameWorld::GameWorld(void)
 	pTileMapComponent->Release();
 	pEntity->Start();
 
-	m_IslandData.GenerateBiomes();
+	//m_IslandData.GenerateBiomes();
 
 	CreateMinimap();
 }
@@ -233,10 +256,11 @@ GameWorld::~GameWorld(void)
 void GameWorld::CreateMinimap()
 {
 	ITexture* pTexture = IRenderer::CreateTexture();
-	unsigned int pMap[128][128];
-	for ( int j = 0; j < 128; ++j )
+	unsigned int* pMap = new unsigned int[ 512 * 512 ];
+
+	for ( int j = 0; j < 512; ++j )
 	{
-		for ( int i = 0; i < 128; ++i )
+		for ( int i = 0; i < 512; ++i )
 		{
 			float fColor = m_IslandData.GetHeight( i, j );
 			if ( fColor < 0.0f )
@@ -251,13 +275,13 @@ void GameWorld::CreateMinimap()
 				color = ColorF::BLUE;
 			}
 			Color colorRGB = color;
-			pMap[ j ][ i ] =  colorRGB.RGBA;
+			pMap[ j * 512 + i ] =  colorRGB.RGBA;
 		}
 	}
 
-	pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
+	pTexture->VCreate( 512, 512, 4, (char*)pMap );
 	UIImage* pImage = new UIImage( pTexture );
-	pImage->SetSize( pImage->GetSizeInPixels() * 2.0f );
+	pImage->SetSize( pImage->GetSizeInPixels() * 0.5f );
 	pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
 	pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
 	pImage->SetAlignment( BottomLeft );
@@ -266,19 +290,22 @@ void GameWorld::CreateMinimap()
 
 	pTexture->Release();
 
-	TextureData* pTreeSprite = AssetManager::Get().GetAsset<TextureData>( "TreeSprite" );
+	delete [] pMap;
+
+	/*TextureData* pTreeSprite = AssetManager::Get().GetAsset<TextureData>( "TreeSprite" );
 	Matrix matTransform;
-	matTransform.BuildScale( 96 / 3, 128 / 3, 1.0f );
-	float fHalfSize = 128 * 32.0f * 2.0f;
+	matTransform.BuildScale( 96 / 3, 128 / 3 , 1.0f );
+	float fWorldScale = 1.0f;
+	float fHalfSize = 512.0f * 32.0f * ( fWorldScale * 0.5f );
 	{
 		ITexture* pTexture = IRenderer::CreateTexture();
 		Color color;
-		unsigned int pMap[128][128];
-		for ( int j = 0; j < 128; ++j )
+		unsigned int pMap[512][512];
+		for ( int j = 0; j < 512; ++j )
 		{
-			for ( int i = 0; i < 128; ++i )
+			for ( int i = 0; i < 512; ++i )
 			{
-				matTransform.SetPosition( i * 32.0f * 4.0f - fHalfSize + 64.0f, (127-j) * 32.0f * 4.0f - fHalfSize - 32.0f, 0.0f );
+				matTransform.SetPosition( i * 32.0f * fWorldScale - fHalfSize, (127-j) * 32.0f * fWorldScale - fHalfSize, 0.0f );
 
 				IslandData::Biome eBiome = m_IslandData.GetBiome( i, j );
 				if ( eBiome == IslandData::SeaWater )
@@ -388,9 +415,9 @@ void GameWorld::CreateMinimap()
 			}
 		}
 
-		pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
+		pTexture->VCreate( 512, 512, 4, (char*)pMap[0] );
 		UIImage* pImage = new UIImage( pTexture );
-		pImage->SetSize( pImage->GetSizeInPixels() * 4.0f );
+		pImage->SetSize( pImage->GetSizeInPixels() );
 		pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
 		pImage->SetRelativePosition( Vector3( 1.0f, 1.0f ) );
 		pImage->SetAlignment( BottomRight );
@@ -403,10 +430,10 @@ void GameWorld::CreateMinimap()
 	{
 		ITexture* pTexture = IRenderer::CreateTexture();
 		Color color;
-		unsigned int pMap[128][128];
-		for ( int j = 0; j < 128; ++j )
+		unsigned int pMap[512][512];
+		for ( int j = 0; j < 512; ++j )
 		{
-			for ( int i = 0; i < 128; ++i )
+			for ( int i = 0; i < 512; ++i )
 			{
 				float fMoisture = m_IslandData.GetMoisture( i, j );
 				if ( fMoisture >= 0.95f )
@@ -428,7 +455,7 @@ void GameWorld::CreateMinimap()
 			}
 		}
 
-		pTexture->VCreate( 128, 128, 4, (char*)pMap[0] );
+		pTexture->VCreate( 512, 512, 4, (char*)pMap[0] );
 		UIImage* pImage = new UIImage( pTexture );
 		pImage->SetSize( pImage->GetSizeInPixels() * 4.0f );
 		pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
@@ -438,5 +465,5 @@ void GameWorld::CreateMinimap()
 		pImage->Release();
 
 		pTexture->Release();
-	}
+	}*/
 }

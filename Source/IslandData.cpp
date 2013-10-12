@@ -12,6 +12,7 @@
 #include <vector>
 #include <ctime>
 #include <Core/Utils/Macros.h>
+#include <Core/Math/Vector3.h>
 
 IslandData::IslandData()
 {
@@ -63,7 +64,7 @@ void IslandData::Generate( int iWidth, int iHeight )
     Engine::SimplexNoise noise;
     noise.SetOctaves( 16.0f );
     noise.SetPersistence( 0.5f );
-    noise.SetScale( 0.025f );
+    noise.SetScale( 0.005f );
     noise.SetBounds( -0.65f, 1.0f );
         
     for ( unsigned int y = 0; y < iHeight; ++y )
@@ -95,14 +96,45 @@ enum IslandDataMaskMapDirection
     
 void IslandData::GenerateMaskMap()
 {
-    m_pHeightMaskMap = new float[ m_uiSizeX * m_uiSizeY ];        
+	/*
+	var perlin:BitmapData = new BitmapData(256, 256);
+	perlin.perlinNoise(64, 64, 8, seed, false, true);
+
+	return function (q:Point):Boolean {
+	var c:Number = (perlin.getPixel(int((q.x+1)*128), int((q.y+1)*128)) & 0xff) / 255.0;
+	return c > (0.3+0.3*q.length*q.length);
+
+	*/
+    m_pHeightMaskMap = new float[ m_uiSizeX * m_uiSizeY ];     
+
+	Engine::SimplexNoise noise;
+	noise.SetOctaves( 8.0f );
+	noise.SetPersistence( 0.5f );
+	noise.SetScale( 0.015f );
+	noise.SetBounds( 0.0, 1.0f );
+
     for ( unsigned int y = 0; y < m_uiSizeY; ++y )
     {
         for ( unsigned int x = 0; x < m_uiSizeX; ++x )
         {
-            m_pHeightMaskMap[ y * m_uiSizeY + x ] = 0.0f;
+			Engine::Vector3 vPosition( x-m_uiSizeX*0.5, y-m_uiSizeY*0.5, 0.0f );
+			float fNoise = noise.Noise( x, y );;
+
+			fNoise = ( (fNoise*512.0f*60) > ( 0.3f + 0.3f * vPosition.LengthSQ() ) ) ? fNoise : 0.0f;
+            m_pHeightMaskMap[ y * m_uiSizeY + x ] = fNoise;
         }
     }
+
+	return;
+
+	m_pHeightMaskMap = new float[ m_uiSizeX * m_uiSizeY ];        
+	for ( unsigned int y = 0; y < m_uiSizeY; ++y )
+	{
+		for ( unsigned int x = 0; x < m_uiSizeX; ++x )
+		{
+			m_pHeightMaskMap[ y * m_uiSizeY + x ] = 0.0f;
+		}
+	}
         
     Engine::RandomNumGen rand;
     rand.SetRandomSeed( time( NULL ) );
@@ -237,7 +269,7 @@ float IslandData::GetMaskHeight( int iX, int iY )
 	if ( fMask <= 0.0f )
 		return 0.0f;
 
-    return ( fMask / 255.0f - 0.5f ) * 2.0f;
+    return fMask;//( fMask / 255.0f - 0.5f ) * 2.0f;
 }
     
 inline
