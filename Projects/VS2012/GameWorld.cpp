@@ -340,6 +340,7 @@ void GameWorld::CreateMinimap()
 					pQuadComponent->SetTexture( pTreeSprite );
 					pEntity->AddComponent( pQuadComponent );
 					pQuadComponent->Start();
+                    pQuadComponent->Release();
 				}
 
 				else if ( eBiome == IslandData::TemperateDecidousForest )
@@ -351,6 +352,7 @@ void GameWorld::CreateMinimap()
 					pQuadComponent->SetTexture( pTreeSprite );
 					pEntity->AddComponent( pQuadComponent );
 					pQuadComponent->Start();
+                    pQuadComponent->Release();
 				}
 
 				else if ( eBiome == IslandData::TropicalRainForest )
@@ -362,17 +364,19 @@ void GameWorld::CreateMinimap()
 					pQuadComponent->SetTexture( pTreeSprite );
 					pEntity->AddComponent( pQuadComponent );
 					pQuadComponent->Start();
+                    pQuadComponent->Release();
 				}
 
 				else if ( eBiome == IslandData::TropicalSeasonalForest )
 				{
 					color = Color( 168, 203, 163, 255 );
 
-					/*Entity* pEntity = Game::CreateEntity( matTransform );
+					Entity* pEntity = Game::CreateEntity( matTransform );
 					QuadComponent* pQuadComponent = new QuadComponent();
 					pQuadComponent->SetTexture( pTreeSprite );
 					pEntity->AddComponent( pQuadComponent );
-					pQuadComponent->Start();*/
+					pQuadComponent->Start();
+                    pQuadComponent->Release();
 				}
 
 				else if ( eBiome == IslandData::SubtropicalDesert )

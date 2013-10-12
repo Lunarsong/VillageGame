@@ -18,8 +18,6 @@ Economy::Economy(void)
 			pElement = pElement->NextSiblingElement();
 		}
 	}
-
-	int i = 0;
 }
 
 

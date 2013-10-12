@@ -23,7 +23,7 @@ UIElement* pUI;
 #include <Game/Entities/Components/Rendering/CameraComponent.h>
 #include <TextureAtlas.h>
 
-SquarePathfindingGraph* pPathGraph = new SquarePathfindingGraph();
+SquarePathfindingGraph* pPathGraph = NULL;//new SquarePathfindingGraph();
 PathPlan* pPath = NULL;
 CameraComponent* g_pCamera = NULL;
 class myTouchHandler : public ITouchHandler
@@ -271,7 +271,7 @@ myMouseHandler* pMouseHandler;
 DialogueTree* pDialogueTree = NULL;
 void Start2()
 {
-
+    pPathGraph = new SquarePathfindingGraph();
 	pDialogueTree = DialogueXmlParser::FromFile( "Dialogue.xml" );
 
     //BaseApplication::Get()->VSetResolution( 1280, 1024 );

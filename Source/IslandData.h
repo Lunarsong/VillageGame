@@ -55,7 +55,7 @@ public:
 	void SetHeight( int iX, int iY, float fHeight );
     float GetMaskHeight( int iX, int iY );
 
-	inline Biome GetBiome( unsigned int iX, unsigned int iY ) const;
+	Biome GetBiome( unsigned int iX, unsigned int iY ) const;
 	float GetMoisture( unsigned int iX, unsigned int iY ) const;
 
 private:

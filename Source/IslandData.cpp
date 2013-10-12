@@ -326,7 +326,6 @@ void IslandData::SeaForm( unsigned int iX, unsigned int iY )
 	}
 }
 
-inline
 IslandData::Biome IslandData::GetBiome( unsigned int iX, unsigned int iY ) const
 {
 	return m_pBiomeMap[ iY * m_uiSizeX + iX ];
