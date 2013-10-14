@@ -5,10 +5,12 @@
 #include "ScrollCamera.h"
 #include "GameMenu.h"
 #include "Economy.h"
+#include "Player.h"
+#include <Core/Utils/Singleton.h>
 
 using namespace Engine;
 
-class VillageGame : public Process
+class VillageGame : public Process, public Singleton<VillageGame>
 {
 public:
 	VillageGame(void);
@@ -19,10 +21,14 @@ public:
 
 	ScrollCamera*	GetCamera();
 	Economy*		GetEconomy();
+    
+    Player* GetPlayer();
 
 private:
 	GameWorld*		m_pGameWorld;
 	Economy*		m_pEconomy;
+    
+    Player*         m_pPlayer;
 
 	ScrollCamera*	m_pCamera;
 

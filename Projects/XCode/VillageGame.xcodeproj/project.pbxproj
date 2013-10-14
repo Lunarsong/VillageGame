@@ -12,6 +12,10 @@
 		E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5A17DCA07800C6681B /* OpenGL.framework */; };
 		E60B6B6817E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
 		E60B6B6917E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
+		E624BB5B180C0044006ECA21 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E624BB59180C0044006ECA21 /* Player.cpp */; };
+		E624BB5C180C0044006ECA21 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E624BB59180C0044006ECA21 /* Player.cpp */; };
+		E624BB76180C4B5A006ECA21 /* ProducerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E624BB74180C4B5A006ECA21 /* ProducerComponent.cpp */; };
+		E624BB77180C4B5A006ECA21 /* ProducerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E624BB74180C4B5A006ECA21 /* ProducerComponent.cpp */; };
 		E6358FBE17FCC89C00A0317B /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */; };
 		E6358FBF17FCC89C00A0317B /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */; };
 		E6358FC017FCC89C00A0317B /* BuildingComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */; };
@@ -296,6 +300,10 @@
 		E60B6B6617E362A500C8FEBE /* IslandData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IslandData.cpp; sourceTree = "<group>"; };
 		E60B6B6717E362A500C8FEBE /* IslandData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IslandData.h; sourceTree = "<group>"; };
 		E6166C3C17F86C5F00333D8B /* VillageGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VillageGame.entitlements; sourceTree = "<group>"; };
+		E624BB59180C0044006ECA21 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		E624BB5A180C0044006ECA21 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		E624BB74180C4B5A006ECA21 /* ProducerComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProducerComponent.cpp; sourceTree = "<group>"; };
+		E624BB75180C4B5A006ECA21 /* ProducerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProducerComponent.h; sourceTree = "<group>"; };
 		E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuildingComponent.cpp; path = ../Projects/VS2012/BuildingComponent.cpp; sourceTree = "<group>"; };
 		E6358FA717FCC89C00A0317B /* BuildingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuildingComponent.h; path = ../Projects/VS2012/BuildingComponent.h; sourceTree = "<group>"; };
 		E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuildingComponentData.cpp; path = ../Projects/VS2012/BuildingComponentData.cpp; sourceTree = "<group>"; };
@@ -648,6 +656,10 @@
 				E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */,
 				E60B6B6617E362A500C8FEBE /* IslandData.cpp */,
 				E60B6B6717E362A500C8FEBE /* IslandData.h */,
+				E624BB59180C0044006ECA21 /* Player.cpp */,
+				E624BB5A180C0044006ECA21 /* Player.h */,
+				E624BB74180C4B5A006ECA21 /* ProducerComponent.cpp */,
+				E624BB75180C4B5A006ECA21 /* ProducerComponent.h */,
 			);
 			name = Source;
 			path = ../../../Source;
@@ -844,9 +856,11 @@
 				E6358FCE17FCC89C00A0317B /* ScrollCamera.cpp in Sources */,
 				E6358FBE17FCC89C00A0317B /* BuildingComponent.cpp in Sources */,
 				E6358FCA17FCC89C00A0317B /* ResourceComponent.cpp in Sources */,
+				E624BB5B180C0044006ECA21 /* Player.cpp in Sources */,
 				E6358FC417FCC89C00A0317B /* GameMenu.cpp in Sources */,
 				E6358FC617FCC89C00A0317B /* GameWorld.cpp in Sources */,
 				E6358FC817FCC89C00A0317B /* Main.cpp in Sources */,
+				E624BB76180C4B5A006ECA21 /* ProducerComponent.cpp in Sources */,
 				E6358FD217FCC89C00A0317B /* TreeComponentData.cpp in Sources */,
 				E6358FD017FCC89C00A0317B /* TreeComponent.cpp in Sources */,
 				E60B6B6817E362A500C8FEBE /* IslandData.cpp in Sources */,
@@ -866,9 +880,11 @@
 				E6358FCF17FCC89C00A0317B /* ScrollCamera.cpp in Sources */,
 				E6358FBF17FCC89C00A0317B /* BuildingComponent.cpp in Sources */,
 				E6358FCB17FCC89C00A0317B /* ResourceComponent.cpp in Sources */,
+				E624BB5C180C0044006ECA21 /* Player.cpp in Sources */,
 				E6358FC517FCC89C00A0317B /* GameMenu.cpp in Sources */,
 				E6358FC717FCC89C00A0317B /* GameWorld.cpp in Sources */,
 				E6358FC917FCC89C00A0317B /* Main.cpp in Sources */,
+				E624BB77180C4B5A006ECA21 /* ProducerComponent.cpp in Sources */,
 				E6358FD317FCC89C00A0317B /* TreeComponentData.cpp in Sources */,
 				E6358FD117FCC89C00A0317B /* TreeComponent.cpp in Sources */,
 				E60B6B6917E362A500C8FEBE /* IslandData.cpp in Sources */,

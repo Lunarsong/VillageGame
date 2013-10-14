@@ -17,6 +17,8 @@ public:
 	GameMenu( VillageGame* pGame );
 
 	~GameMenu();
+    
+    void Update( float fDeltaSeconds );
 
 	virtual bool VOnMouseMove( const Vector3& vPosition, const Vector3& vDeltaPosition );
 

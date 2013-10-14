@@ -32,10 +32,16 @@ EconomyMenu::EconomyMenu( VillageGame* pGame )
 		pImage->Release();
 
 		UILabel* pLabel = new UILabel( pResource->Name, "Arial", 20 );
+        pLabel->SetID( "label_" + pResource->Name + "_amount" );
 		pLabel->SetPosition( fX + 40.0f, fY + 16.0f );
 		pLabel->SetAlignment( Left );
 		pPanel->AddChild( pLabel );
 		pLabel->Release();
+        
+        ResourceUI resourceUI;
+        resourceUI.m_pResource = pResource;
+        resourceUI.m_pLabel = pLabel;
+        m_pResourceUIComponents.push_back( resourceUI );
 
 		fY += 50.0f;
 	}
@@ -59,4 +65,22 @@ void EconomyMenu::Hide()
 void EconomyMenu::ToggleVisibility()
 {
 	m_pMenu->SetVisible( !m_pMenu->IsVisible() );
+}
+
+void EconomyMenu::Update( float fDeltaSeconds )
+{
+    Player* pPlayer = m_pGame->GetPlayer();
+    
+    int iResourceIndex = 0;
+    for ( auto it : m_pResourceUIComponents )
+    {
+        if ( iResourceIndex == 1 )
+        {
+            pPlayer->ChangeResourceAmount( it.m_pResource, 1 );
+        }
+        
+        it.m_pLabel->SetString( it.m_pResource->Name + ": " + ToString( pPlayer->GetResourceAmount( it.m_pResource ) ) );
+        
+        ++iResourceIndex;
+    }
 }

@@ -226,3 +226,8 @@ void GameMenu::MouseToWorldSpace( const Vector3& vMousePosition, Vector3& vOut )
 	Matrix matViewInverse = m_pGame->GetCamera()->GetView().Inverse();
 	vOut = matViewInverse.Transform( vOut );
 }
+
+void GameMenu::Update( float fDeltaSeconds )
+{
+    m_pEconomyMenu->Update( fDeltaSeconds );
+}
