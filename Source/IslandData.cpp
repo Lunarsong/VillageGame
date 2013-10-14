@@ -118,7 +118,7 @@ void IslandData::GenerateMaskMap()
         for ( unsigned int x = 0; x < m_uiSizeX; ++x )
         {
 			Engine::Vector3 vPosition( x-m_uiSizeX*0.5, y-m_uiSizeY*0.5, 0.0f );
-			float fNoise = noise.Noise( x, y );;
+			float fNoise = noise.Noise( x, y );
 
 			fNoise = ( (fNoise*512.0f*60) > ( 0.3f + 0.3f * vPosition.LengthSQ() ) ) ? fNoise : 0.0f;
             m_pHeightMaskMap[ y * m_uiSizeY + x ] = fNoise;

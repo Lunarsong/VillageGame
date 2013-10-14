@@ -61,24 +61,24 @@ GameWorld::GameWorld(void)
 	m_pAtlas->AddTexture( Rect( 704, 160, 32, 32 ) ); // 40
 	m_pAtlas->AddTexture( Rect( 735, 160, 32, 32 ) ); // 41
 	
-	float fWorldScale = 1.0f;
+	int iWorldScale = 1;
 	for ( int i = 0; i < 5; ++i )
 	{
 		for ( unsigned int y = 1; y < 511; ++y )
 		{
 			for ( unsigned int x = 1; x < 511; ++x )
 			{
-				float fHeight = m_IslandData.GetHeight( (float)x, (float)y );
+				float fHeight = m_IslandData.GetHeight( x, y );
 
-				float fRight = m_IslandData.GetHeight( (float)(x+1), (float)(y)  );
-				float fLeft = m_IslandData.GetHeight( (float)(x-1), (float)(y)  );
-				float fTop = m_IslandData.GetHeight( (float)(x), (float)(y+1)  );
-				float fBottom = m_IslandData.GetHeight( (float)(x), (float)(y-1)  );
+				float fRight = m_IslandData.GetHeight( (x+1), (y)  );
+				float fLeft = m_IslandData.GetHeight( (x-1), (y)  );
+				float fTop = m_IslandData.GetHeight( (x), (y+1)  );
+				float fBottom = m_IslandData.GetHeight( (x), (y-1)  );
 
-				float fBottomLeft = m_IslandData.GetHeight( (float)(x-1), (float)(y-1)  );
-				float fBottomRight = m_IslandData.GetHeight( (float)(x+1), (float)(y-1)  );
-				float fTopLeft = m_IslandData.GetHeight( (float)(x-1), (float)(y+1)  );
-				float fTopRight = m_IslandData.GetHeight( (float)(x+1), (float)(y+1)  );
+				float fBottomLeft = m_IslandData.GetHeight( (x-1), (y-1)  );
+				float fBottomRight = m_IslandData.GetHeight( (x+1), (y-1)  );
+				float fTopLeft = m_IslandData.GetHeight( (x-1), (y+1)  );
+				float fTopRight = m_IslandData.GetHeight( (x+1), (y+1)  );
 
 				int iIndex = 0;
 				if ( fHeight <= 0.0f )
@@ -128,26 +128,26 @@ GameWorld::GameWorld(void)
 	RandomNumGen rand;
 
 	m_pPathGraph = new SquarePathfindingGraph();
-	m_pPathGraph->Create( 128 * fWorldScale, 128 * fWorldScale, 32.0f, false );
-	TileMapComponent* pTileMapComponent( new TileMapComponent( 512 * fWorldScale, 512 * fWorldScale, 32.0f, m_pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
+	m_pPathGraph->Create( 128 * iWorldScale, 128 * iWorldScale, 32.0, false );
+	TileMapComponent* pTileMapComponent( new TileMapComponent( 512 * iWorldScale, 512 * iWorldScale, 32.0f, m_pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
 		{
-			float fHeight = m_IslandData.GetHeight( (float)x / fWorldScale, 511.0f - (float)y / fWorldScale );
+			float fHeight = m_IslandData.GetHeight( x / iWorldScale, 511 - y / iWorldScale );
 			
 			float fRight = 0.0f;
 			if ( x < 511 )
-				fRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 511.0f - (float)(y) / fWorldScale );
+				fRight = m_IslandData.GetHeight( (x+1) / iWorldScale, 511 - (y) / iWorldScale );
 
 			float fLeft = 0.0f;
 			if ( x > 0 )
-				fLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 511.0f - (float)(y) / fWorldScale );
+				fLeft = m_IslandData.GetHeight( (x-1) / iWorldScale, 511 - (y) / iWorldScale );
 			
 			float fTop = 0.0f;
 			if ( y < 511 )
-				fTop = m_IslandData.GetHeight( (float)(x) / fWorldScale, 511.0f - (float)(y+1) / fWorldScale );
+				fTop = m_IslandData.GetHeight( (x) / iWorldScale, 511 - (y+1) / iWorldScale );
 
 			float fBottom = 0.0f;
 			if ( y > 0 )
-				fBottom = m_IslandData.GetHeight( (float)(x) / fWorldScale, 511.0f - (float)(y-1) / fWorldScale );
+				fBottom = m_IslandData.GetHeight( (x) / iWorldScale, 511 - (y-1) / iWorldScale );
 
 			float fTopRight = 0.0f;
 			float fBottomLeft = 0.0f;
@@ -155,16 +155,16 @@ GameWorld::GameWorld(void)
 			float fTopLeft = 0.0f;
 
 			if ( y > 0 && x > 0 )
-				fBottomLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 511.0f - (float)(y-1) / fWorldScale );
+				fBottomLeft = m_IslandData.GetHeight( (x-1) / iWorldScale, 511 - (y-1) / iWorldScale );
 
 			if ( y > 0 && x < 511 )
-				fBottomRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 511.0f - (float)(y-1) / fWorldScale );
+				fBottomRight = m_IslandData.GetHeight( (x+1) / iWorldScale, 511 - (y-1) / iWorldScale );
 
 			if ( y < 511 && x > 0 )
-				fTopLeft = m_IslandData.GetHeight( (float)(x-1) / fWorldScale, 511.0f - (float)(y+1) / fWorldScale );
+				fTopLeft = m_IslandData.GetHeight( (x-1) / iWorldScale, 511 - (y+1) / iWorldScale );
 
 			if ( y < 511 && x < 511 )
-				fTopRight = m_IslandData.GetHeight( (float)(x+1) / fWorldScale, 511.0f - (float)(y+1) / fWorldScale );
+				fTopRight = m_IslandData.GetHeight( (x+1) / iWorldScale, 511 - (y+1) / iWorldScale );
 
 			int iIndex = 0;
 			if ( fHeight <= 0.0f )

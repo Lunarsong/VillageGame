@@ -5,8 +5,9 @@
 #include "ScrollCamera.h"
 #include "GameMenu.h"
 #include "Economy.h"
-#include "Player.h"
+#include "ResourceStorage.h"
 #include <Core/Utils/Singleton.h>
+#include "Player.h"
 
 using namespace Engine;
 
@@ -22,13 +23,13 @@ public:
 	ScrollCamera*	GetCamera();
 	Economy*		GetEconomy();
     
-    Player* GetPlayer();
+    Player* GetPlayer( const HashedString& hName );
 
 private:
 	GameWorld*		m_pGameWorld;
 	Economy*		m_pEconomy;
     
-    Player*         m_pPlayer;
+	std::map< HashedString, Player* > m_pPlayers;
 
 	ScrollCamera*	m_pCamera;
 

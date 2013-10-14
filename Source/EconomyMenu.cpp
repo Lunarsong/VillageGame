@@ -69,17 +69,17 @@ void EconomyMenu::ToggleVisibility()
 
 void EconomyMenu::Update( float fDeltaSeconds )
 {
-    Player* pPlayer = m_pGame->GetPlayer();
+    Player* pPlayer = m_pGame->GetPlayer( "Player" );
     
     int iResourceIndex = 0;
     for ( auto it : m_pResourceUIComponents )
     {
         if ( iResourceIndex == 1 )
         {
-            pPlayer->ChangeResourceAmount( it.m_pResource, 1 );
+            pPlayer->GetStorage().AdjustResourceAmount( it.m_pResource->Name, 1 );
         }
         
-        it.m_pLabel->SetString( it.m_pResource->Name + ": " + ToString( pPlayer->GetResourceAmount( it.m_pResource ) ) );
+        it.m_pLabel->SetString( it.m_pResource->Name + ": " + ToString( pPlayer->GetStorage().GetResourceAmount( it.m_pResource->Name ) ) + " / " + ToString( pPlayer->GetStorage().GetCapacity( it.m_pResource->Name ) ) );
         
         ++iResourceIndex;
     }

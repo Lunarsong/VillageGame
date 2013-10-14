@@ -2,6 +2,9 @@
 #include "BuildingComponentData.h"
 #include <Game/Entities/Components/Rendering/QuadComponent.h>
 #include <Game/Entities/Entity.h>
+#include "ProducerComponent.h"
+#include "VillageGame.h"
+#include "StorageComponent.h"
 
 BuildingComponent::BuildingComponent( ComponentData* pComponentData ) : Component( pComponentData )
 {
@@ -54,6 +57,22 @@ void BuildingComponent::VUpdate( float fDeltaSeconds )
         {
             QuadComponent* pQuadComponent = m_pOwner->GetComponent<QuadComponent>( QuadComponent::g_hType );
             pQuadComponent->SetTexture( pData->Icon );
+
+			if ( pData->Production )
+			{
+				Component* pProductionComponent = new ProducerComponent( VillageGame::Get().GetPlayer( "Player" ), pData->Production );
+				m_pOwner->AddComponent( pProductionComponent );
+				pProductionComponent->Start();
+				pProductionComponent->Release();
+			}
+
+			if ( pData->Storage )
+			{
+				Component* pStorageComponent = new StorageComponent( VillageGame::Get().GetPlayer( "Player" ), pData->Storage );
+				m_pOwner->AddComponent( pStorageComponent );
+				pStorageComponent->Start();
+				pStorageComponent->Release();
+			}
         }
         
         else if ( m_eBuildingState == Construction && m_fConstructionTimer <= ( pData->ConstructionTime * 0.5f ) )

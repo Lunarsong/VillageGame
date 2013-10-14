@@ -7,6 +7,11 @@
         <BuildingImage>HumanFarmSprite</BuildingImage>
         <FoundationImage>SmallHumanConstructionSprite</FoundationImage>
         <ConstructionTime>10</ConstructionTime>
+		
+		<Production>
+			<Resource>Wheat</Resource>
+			<ProductionTime>10</ProductionTime>
+		</Production>
     </Building>
     
     <Building>
@@ -17,6 +22,13 @@
         <ConstructionTime>10</ConstructionTime>
         <BuildingImage>HumanCastleSprite</BuildingImage>
         <FoundationImage>LargeHumanConstructionSprite</FoundationImage>
+		
+		<Storage>
+			<Resource>
+				<Name>Wheat</Name>
+				<Amount>500</Amount>
+			</Resource>
+		</Storage>
     </Building>
     
     <Building>

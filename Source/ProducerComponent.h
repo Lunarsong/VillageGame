@@ -6,9 +6,26 @@
 //
 //
 
-#ifndef __VillageGame__ProducerComponent__
-#define __VillageGame__ProducerComponent__
+#pragma once
 
-#include <iostream>
+#include <Game/Entities/Component.h>
+#include "ProducerComponentData.h"
+#include "Player.h"
 
-#endif /* defined(__VillageGame__ProducerComponent__) */
+using namespace Engine;
+class ProducerComponent : public Component
+{
+public:
+	ProducerComponent( Player* pOwner, const ComponentData* pData );
+	~ProducerComponent();
+
+	virtual const HashedString& GetType() const;
+
+	virtual void VStart();
+	virtual void VUpdate( float fDeltaSeconds );
+
+private:
+	Player*	m_pOwnerPlayer;
+
+	float m_fTimer;
+};

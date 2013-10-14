@@ -62,6 +62,30 @@ bool BuildingComponentData::VFromXML( tinyxml2::XMLElement* pData )
     {
         BuildingImage = AssetManager::Get().GetAsset<TextureData>( pBuildingImage );
     }
+
+	tinyxml2::XMLElement* pProducerElement = pData->FirstChildElement( "Production" );
+	if ( pProducerElement )
+	{
+		Production = new ProducerComponentData();
+		Production->Release();
+		if ( Production->VFromXML( pProducerElement ) == false )
+		{
+			throw "Error parsing";
+			return false;
+		}
+	}
+
+	tinyxml2::XMLElement* pSotrageElement = pData->FirstChildElement( "Storage" );
+	if ( pSotrageElement )
+	{
+		Storage = new StorageComponentData();
+		Storage->Release();
+		if ( Storage->VFromXML( pSotrageElement ) == false )
+		{
+			throw "Error parsing";
+			return false;
+		}
+	}
     
 	return true;
 }

@@ -3,6 +3,8 @@
 #include <string>
 #include <TextureData.h>
 #include <Game/Entities/ComponentData.h>
+#include "ProducerComponentData.h"
+#include "StorageComponentData.h"
 
 using namespace Engine;
 
@@ -23,6 +25,8 @@ public:
     SmartPtr<TextureData>	ConstructionImage;	// Image when building under construction
     SmartPtr<TextureData>	BuildingImage;      // Image when building is ready
 	
+	SmartPtr<ProducerComponentData>	Production;
+	SmartPtr<StorageComponentData>	Storage;
 
 	float ConstructionTime;						// Build time in seconds
 

@@ -23,13 +23,16 @@ VillageGame::~VillageGame(void)
 
 	delete m_pEconomy;
     
-    delete m_pPlayer;
+	for ( auto it : m_pPlayers )
+	{
+		delete it.second;
+	}
 }
 
 void VillageGame::VOnInit( void )
 {
-    m_pPlayer = new Player();
-    
+    m_pPlayers[ HashedString( "Player" ) ] = new Player();
+
 	m_pEconomy = new Economy();
 	m_pGameWorld = new GameWorld();	
 	m_pGameMenu = new GameMenu( this );
@@ -63,7 +66,12 @@ Economy* VillageGame::GetEconomy()
 	return m_pEconomy;
 }
 
-Player* VillageGame::GetPlayer()
+Player* VillageGame::GetPlayer( const HashedString& hName )
 {
-    return m_pPlayer;
+	auto it = m_pPlayers.find( hName );
+
+	if ( it == m_pPlayers.end() )
+		return NULL;
+
+	return it->second;
 }

@@ -66,8 +66,8 @@ GameMenu::GameMenu( VillageGame* pGame )
             UIButtonImage* pButton = new UIButtonImage();
             pButton->SetTexture( pData->BuildMenuIcon );
             pButton->SetAlignment( Left );
-            pButton->SetPosition( 5 + iCount * 70 , 40 );
-            pButton->SetSize( 64, 64 );
+            pButton->SetPosition( 5.0f + (float)iCount * 70.0f , 40.0f );
+            pButton->SetSize( 64.0f, 64.0f );
             pButton->SetCallbackArgs( (void*)iCount );
             pButton->SetCallbackFunction( [this] ( UIElement* pElement, void* pArgs )
                                          {

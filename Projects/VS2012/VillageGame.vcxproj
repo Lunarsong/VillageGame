@@ -11,37 +11,49 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\IslandData.cpp" />
-    <ClCompile Include="..\..\Source\Source - Copy.cpp" />
-    <ClCompile Include="BuildingComponent.cpp" />
-    <ClCompile Include="BuildingComponentData.cpp" />
-    <ClCompile Include="Economy.cpp" />
-    <ClCompile Include="EconomyMenu.cpp" />
-    <ClCompile Include="GameMenu.cpp" />
-    <ClCompile Include="GameWorld.cpp" />
-    <ClCompile Include="ResourceComponent.cpp" />
-    <ClCompile Include="ResourceComponentData.cpp" />
-    <ClCompile Include="ScrollCamera.cpp" />
-    <ClCompile Include="VillageGame.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="TreeComponent.cpp" />
-    <ClCompile Include="TreeComponentData.cpp" />
+    <ClInclude Include="..\..\Source\BuildingComponent.h" />
+    <ClInclude Include="..\..\Source\BuildingComponentData.h" />
+    <ClInclude Include="..\..\Source\Economy.h" />
+    <ClInclude Include="..\..\Source\EconomyMenu.h" />
+    <ClInclude Include="..\..\Source\GameMenu.h" />
+    <ClInclude Include="..\..\Source\GameWorld.h" />
+    <ClInclude Include="..\..\Source\IslandData.h" />
+    <ClInclude Include="..\..\Source\Main.h" />
+    <ClInclude Include="..\..\Source\Player.h" />
+    <ClInclude Include="..\..\Source\ProducerComponentData.h" />
+    <ClInclude Include="..\..\Source\ResourceStorage.h" />
+    <ClInclude Include="..\..\Source\ProducerComponent.h" />
+    <ClInclude Include="..\..\Source\ResourceComponent.h" />
+    <ClInclude Include="..\..\Source\ResourceComponentData.h" />
+    <ClInclude Include="..\..\Source\ScrollCamera.h" />
+    <ClInclude Include="..\..\Source\StorageComponent.h" />
+    <ClInclude Include="..\..\Source\StorageComponentData.h" />
+    <ClInclude Include="..\..\Source\TreeComponent.h" />
+    <ClInclude Include="..\..\Source\TreeComponentData.h" />
+    <ClInclude Include="..\..\Source\VillageGame.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\IslandData.h" />
-    <ClInclude Include="BuildingComponent.h" />
-    <ClInclude Include="BuildingComponentData.h" />
-    <ClInclude Include="Economy.h" />
-    <ClInclude Include="EconomyMenu.h" />
-    <ClInclude Include="GameMenu.h" />
-    <ClInclude Include="GameWorld.h" />
-    <ClInclude Include="ResourceComponent.h" />
-    <ClInclude Include="ResourceComponentData.h" />
-    <ClInclude Include="ScrollCamera.h" />
-    <ClInclude Include="VillageGame.h" />
-    <ClInclude Include="Main.h" />
-    <ClInclude Include="TreeComponent.h" />
-    <ClInclude Include="TreeComponentData.h" />
+    <ClCompile Include="..\..\Source\BuildingComponent.cpp" />
+    <ClCompile Include="..\..\Source\BuildingComponentData.cpp" />
+    <ClCompile Include="..\..\Source\Economy.cpp" />
+    <ClCompile Include="..\..\Source\EconomyMenu.cpp" />
+    <ClCompile Include="..\..\Source\GameMenu.cpp" />
+    <ClCompile Include="..\..\Source\GameWorld.cpp" />
+    <ClCompile Include="..\..\Source\IslandData.cpp" />
+    <ClCompile Include="..\..\Source\Main.cpp" />
+    <ClCompile Include="..\..\Source\Player.cpp" />
+    <ClCompile Include="..\..\Source\ProducerComponentData.cpp" />
+    <ClCompile Include="..\..\Source\ResourceStorage.cpp" />
+    <ClCompile Include="..\..\Source\ProducerComponent.cpp" />
+    <ClCompile Include="..\..\Source\ResourceComponent.cpp" />
+    <ClCompile Include="..\..\Source\ResourceComponentData.cpp" />
+    <ClCompile Include="..\..\Source\ScrollCamera.cpp" />
+    <ClCompile Include="..\..\Source\Source - Copy.cpp" />
+    <ClCompile Include="..\..\Source\StorageComponent.cpp" />
+    <ClCompile Include="..\..\Source\StorageComponentData.cpp" />
+    <ClCompile Include="..\..\Source\TreeComponent.cpp" />
+    <ClCompile Include="..\..\Source\TreeComponentData.cpp" />
+    <ClCompile Include="..\..\Source\VillageGame.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7F379118-F473-4C42-96AB-178E33E0962B}</ProjectGuid>
