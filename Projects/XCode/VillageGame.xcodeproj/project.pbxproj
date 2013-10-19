@@ -10,36 +10,6 @@
 		E6059D5517DC9F0E00C6681B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5417DC9F0E00C6681B /* Cocoa.framework */; };
 		E6059D5917DC9F2A00C6681B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5817DC9F2A00C6681B /* IOKit.framework */; };
 		E6059D5B17DCA07800C6681B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6059D5A17DCA07800C6681B /* OpenGL.framework */; };
-		E60B6B6817E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
-		E60B6B6917E362A500C8FEBE /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B6B6617E362A500C8FEBE /* IslandData.cpp */; };
-		E624BB5B180C0044006ECA21 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E624BB59180C0044006ECA21 /* Player.cpp */; };
-		E624BB5C180C0044006ECA21 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E624BB59180C0044006ECA21 /* Player.cpp */; };
-		E624BB76180C4B5A006ECA21 /* ProducerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E624BB74180C4B5A006ECA21 /* ProducerComponent.cpp */; };
-		E624BB77180C4B5A006ECA21 /* ProducerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E624BB74180C4B5A006ECA21 /* ProducerComponent.cpp */; };
-		E6358FBE17FCC89C00A0317B /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */; };
-		E6358FBF17FCC89C00A0317B /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */; };
-		E6358FC017FCC89C00A0317B /* BuildingComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */; };
-		E6358FC117FCC89C00A0317B /* BuildingComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */; };
-		E6358FC217FCC89C00A0317B /* Economy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FAA17FCC89C00A0317B /* Economy.cpp */; };
-		E6358FC317FCC89C00A0317B /* Economy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FAA17FCC89C00A0317B /* Economy.cpp */; };
-		E6358FC417FCC89C00A0317B /* GameMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FAC17FCC89C00A0317B /* GameMenu.cpp */; };
-		E6358FC517FCC89C00A0317B /* GameMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FAC17FCC89C00A0317B /* GameMenu.cpp */; };
-		E6358FC617FCC89C00A0317B /* GameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FAE17FCC89C00A0317B /* GameWorld.cpp */; };
-		E6358FC717FCC89C00A0317B /* GameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FAE17FCC89C00A0317B /* GameWorld.cpp */; };
-		E6358FC817FCC89C00A0317B /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB017FCC89C00A0317B /* Main.cpp */; };
-		E6358FC917FCC89C00A0317B /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB017FCC89C00A0317B /* Main.cpp */; };
-		E6358FCA17FCC89C00A0317B /* ResourceComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB217FCC89C00A0317B /* ResourceComponent.cpp */; };
-		E6358FCB17FCC89C00A0317B /* ResourceComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB217FCC89C00A0317B /* ResourceComponent.cpp */; };
-		E6358FCC17FCC89C00A0317B /* ResourceComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB417FCC89C00A0317B /* ResourceComponentData.cpp */; };
-		E6358FCD17FCC89C00A0317B /* ResourceComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB417FCC89C00A0317B /* ResourceComponentData.cpp */; };
-		E6358FCE17FCC89C00A0317B /* ScrollCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB617FCC89C00A0317B /* ScrollCamera.cpp */; };
-		E6358FCF17FCC89C00A0317B /* ScrollCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB617FCC89C00A0317B /* ScrollCamera.cpp */; };
-		E6358FD017FCC89C00A0317B /* TreeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB817FCC89C00A0317B /* TreeComponent.cpp */; };
-		E6358FD117FCC89C00A0317B /* TreeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FB817FCC89C00A0317B /* TreeComponent.cpp */; };
-		E6358FD217FCC89C00A0317B /* TreeComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FBA17FCC89C00A0317B /* TreeComponentData.cpp */; };
-		E6358FD317FCC89C00A0317B /* TreeComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FBA17FCC89C00A0317B /* TreeComponentData.cpp */; };
-		E6358FD417FCC89C00A0317B /* VillageGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FBC17FCC89C00A0317B /* VillageGame.cpp */; };
-		E6358FD517FCC89C00A0317B /* VillageGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6358FBC17FCC89C00A0317B /* VillageGame.cpp */; };
 		E63EAE9417C69EC0006F1456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9317C69EC0006F1456 /* UIKit.framework */; };
 		E63EAE9617C69EC0006F1456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9517C69EC0006F1456 /* Foundation.framework */; };
 		E63EAE9817C69EC0006F1456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63EAE9717C69EC0006F1456 /* CoreGraphics.framework */; };
@@ -185,15 +155,51 @@
 		E6811D73180147B400654338 /* Wood.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CED180147A100654338 /* Wood.png */; };
 		E6811D74180147B400654338 /* Wool.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CEE180147A100654338 /* Wool.png */; };
 		E6811D75180147B400654338 /* Yew_Logs.PNG in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6811CEF180147A100654338 /* Yew_Logs.PNG */; };
-		E6A87509180144AB00D27452 /* EconomyMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6A87507180144AB00D27452 /* EconomyMenu.cpp */; };
-		E6A8750A180144AB00D27452 /* EconomyMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6A87507180144AB00D27452 /* EconomyMenu.cpp */; };
+		E6B932FF1812CDEB006DC650 /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932D61812CDEB006DC650 /* BuildingComponent.cpp */; };
+		E6B933001812CDEB006DC650 /* BuildingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932D61812CDEB006DC650 /* BuildingComponent.cpp */; };
+		E6B933011812CDEB006DC650 /* BuildingComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932D81812CDEB006DC650 /* BuildingComponentData.cpp */; };
+		E6B933021812CDEB006DC650 /* BuildingComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932D81812CDEB006DC650 /* BuildingComponentData.cpp */; };
+		E6B933031812CDEB006DC650 /* Economy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932DA1812CDEB006DC650 /* Economy.cpp */; };
+		E6B933041812CDEB006DC650 /* Economy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932DA1812CDEB006DC650 /* Economy.cpp */; };
+		E6B933051812CDEB006DC650 /* EconomyMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932DC1812CDEB006DC650 /* EconomyMenu.cpp */; };
+		E6B933061812CDEB006DC650 /* EconomyMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932DC1812CDEB006DC650 /* EconomyMenu.cpp */; };
+		E6B933071812CDEB006DC650 /* GameMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932DE1812CDEB006DC650 /* GameMenu.cpp */; };
+		E6B933081812CDEB006DC650 /* GameMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932DE1812CDEB006DC650 /* GameMenu.cpp */; };
+		E6B933091812CDEB006DC650 /* GameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E01812CDEB006DC650 /* GameWorld.cpp */; };
+		E6B9330A1812CDEB006DC650 /* GameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E01812CDEB006DC650 /* GameWorld.cpp */; };
+		E6B9330B1812CDEB006DC650 /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E21812CDEB006DC650 /* IslandData.cpp */; };
+		E6B9330C1812CDEB006DC650 /* IslandData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E21812CDEB006DC650 /* IslandData.cpp */; };
+		E6B9330D1812CDEB006DC650 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E41812CDEB006DC650 /* Main.cpp */; };
+		E6B9330E1812CDEB006DC650 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E41812CDEB006DC650 /* Main.cpp */; };
+		E6B9330F1812CDEB006DC650 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E61812CDEB006DC650 /* Player.cpp */; };
+		E6B933101812CDEB006DC650 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E61812CDEB006DC650 /* Player.cpp */; };
+		E6B933111812CDEB006DC650 /* ProducerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E81812CDEB006DC650 /* ProducerComponent.cpp */; };
+		E6B933121812CDEB006DC650 /* ProducerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932E81812CDEB006DC650 /* ProducerComponent.cpp */; };
+		E6B933131812CDEB006DC650 /* ProducerComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932EA1812CDEB006DC650 /* ProducerComponentData.cpp */; };
+		E6B933141812CDEB006DC650 /* ProducerComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932EA1812CDEB006DC650 /* ProducerComponentData.cpp */; };
+		E6B933151812CDEB006DC650 /* ResourceComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932EC1812CDEB006DC650 /* ResourceComponent.cpp */; };
+		E6B933161812CDEB006DC650 /* ResourceComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932EC1812CDEB006DC650 /* ResourceComponent.cpp */; };
+		E6B933171812CDEB006DC650 /* ResourceComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932EE1812CDEB006DC650 /* ResourceComponentData.cpp */; };
+		E6B933181812CDEB006DC650 /* ResourceComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932EE1812CDEB006DC650 /* ResourceComponentData.cpp */; };
+		E6B933191812CDEB006DC650 /* ResourceStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F01812CDEB006DC650 /* ResourceStorage.cpp */; };
+		E6B9331A1812CDEB006DC650 /* ResourceStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F01812CDEB006DC650 /* ResourceStorage.cpp */; };
+		E6B9331B1812CDEB006DC650 /* ScrollCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F21812CDEB006DC650 /* ScrollCamera.cpp */; };
+		E6B9331C1812CDEB006DC650 /* ScrollCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F21812CDEB006DC650 /* ScrollCamera.cpp */; };
+		E6B9331F1812CDEB006DC650 /* StorageComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F51812CDEB006DC650 /* StorageComponent.cpp */; };
+		E6B933201812CDEB006DC650 /* StorageComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F51812CDEB006DC650 /* StorageComponent.cpp */; };
+		E6B933211812CDEB006DC650 /* StorageComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F71812CDEB006DC650 /* StorageComponentData.cpp */; };
+		E6B933221812CDEB006DC650 /* StorageComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F71812CDEB006DC650 /* StorageComponentData.cpp */; };
+		E6B933231812CDEB006DC650 /* TreeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F91812CDEB006DC650 /* TreeComponent.cpp */; };
+		E6B933241812CDEB006DC650 /* TreeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F91812CDEB006DC650 /* TreeComponent.cpp */; };
+		E6B933251812CDEB006DC650 /* TreeComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932FB1812CDEB006DC650 /* TreeComponentData.cpp */; };
+		E6B933261812CDEB006DC650 /* TreeComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932FB1812CDEB006DC650 /* TreeComponentData.cpp */; };
+		E6B933271812CDEB006DC650 /* VillageGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932FD1812CDEB006DC650 /* VillageGame.cpp */; };
+		E6B933281812CDEB006DC650 /* VillageGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932FD1812CDEB006DC650 /* VillageGame.cpp */; };
 		E6C58D5617F851BD0020F28D /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C58D5517F851BD0020F28D /* libfreetype.a */; };
 		E6C58D7A17F854710020F28D /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C58D7917F854710020F28D /* libangelscript.a */; };
 		E6D0BDB517CE1EBE00CAC564 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDA617CE1A8400CAC564 /* libEngine.a */; };
-		E6D0BDD217CE29CE00CAC564 /* Source - Copy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */; };
 		E6D0BE4B17CE2D1000CAC564 /* libEngine Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BDCA17CE1FD500CAC564 /* libEngine Mac.a */; };
 		E6D0BE4E17CE2DA800CAC564 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0BE4D17CE2DA800CAC564 /* libz.dylib */; };
-		E6FD5FB017CABAFA00F59339 /* Source - Copy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,37 +303,7 @@
 		E6059D5817DC9F2A00C6681B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		E6059D5A17DCA07800C6681B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		E6059DD417DCB46000C6681B /* libvorbis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbis.a; path = ../../../LunaEngine/Engine/Externals/libvorbis/lib/OSX/libvorbis.a; sourceTree = "<group>"; };
-		E60B6B6617E362A500C8FEBE /* IslandData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IslandData.cpp; sourceTree = "<group>"; };
-		E60B6B6717E362A500C8FEBE /* IslandData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IslandData.h; sourceTree = "<group>"; };
 		E6166C3C17F86C5F00333D8B /* VillageGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VillageGame.entitlements; sourceTree = "<group>"; };
-		E624BB59180C0044006ECA21 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
-		E624BB5A180C0044006ECA21 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
-		E624BB74180C4B5A006ECA21 /* ProducerComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProducerComponent.cpp; sourceTree = "<group>"; };
-		E624BB75180C4B5A006ECA21 /* ProducerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProducerComponent.h; sourceTree = "<group>"; };
-		E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuildingComponent.cpp; path = ../Projects/VS2012/BuildingComponent.cpp; sourceTree = "<group>"; };
-		E6358FA717FCC89C00A0317B /* BuildingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuildingComponent.h; path = ../Projects/VS2012/BuildingComponent.h; sourceTree = "<group>"; };
-		E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuildingComponentData.cpp; path = ../Projects/VS2012/BuildingComponentData.cpp; sourceTree = "<group>"; };
-		E6358FA917FCC89C00A0317B /* BuildingComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuildingComponentData.h; path = ../Projects/VS2012/BuildingComponentData.h; sourceTree = "<group>"; };
-		E6358FAA17FCC89C00A0317B /* Economy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Economy.cpp; path = ../Projects/VS2012/Economy.cpp; sourceTree = "<group>"; };
-		E6358FAB17FCC89C00A0317B /* Economy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Economy.h; path = ../Projects/VS2012/Economy.h; sourceTree = "<group>"; };
-		E6358FAC17FCC89C00A0317B /* GameMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameMenu.cpp; path = ../Projects/VS2012/GameMenu.cpp; sourceTree = "<group>"; };
-		E6358FAD17FCC89C00A0317B /* GameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameMenu.h; path = ../Projects/VS2012/GameMenu.h; sourceTree = "<group>"; };
-		E6358FAE17FCC89C00A0317B /* GameWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameWorld.cpp; path = ../Projects/VS2012/GameWorld.cpp; sourceTree = "<group>"; };
-		E6358FAF17FCC89C00A0317B /* GameWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameWorld.h; path = ../Projects/VS2012/GameWorld.h; sourceTree = "<group>"; };
-		E6358FB017FCC89C00A0317B /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = ../Projects/VS2012/Main.cpp; sourceTree = "<group>"; };
-		E6358FB117FCC89C00A0317B /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Main.h; path = ../Projects/VS2012/Main.h; sourceTree = "<group>"; };
-		E6358FB217FCC89C00A0317B /* ResourceComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResourceComponent.cpp; path = ../Projects/VS2012/ResourceComponent.cpp; sourceTree = "<group>"; };
-		E6358FB317FCC89C00A0317B /* ResourceComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceComponent.h; path = ../Projects/VS2012/ResourceComponent.h; sourceTree = "<group>"; };
-		E6358FB417FCC89C00A0317B /* ResourceComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResourceComponentData.cpp; path = ../Projects/VS2012/ResourceComponentData.cpp; sourceTree = "<group>"; };
-		E6358FB517FCC89C00A0317B /* ResourceComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceComponentData.h; path = ../Projects/VS2012/ResourceComponentData.h; sourceTree = "<group>"; };
-		E6358FB617FCC89C00A0317B /* ScrollCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScrollCamera.cpp; path = ../Projects/VS2012/ScrollCamera.cpp; sourceTree = "<group>"; };
-		E6358FB717FCC89C00A0317B /* ScrollCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollCamera.h; path = ../Projects/VS2012/ScrollCamera.h; sourceTree = "<group>"; };
-		E6358FB817FCC89C00A0317B /* TreeComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TreeComponent.cpp; path = ../Projects/VS2012/TreeComponent.cpp; sourceTree = "<group>"; };
-		E6358FB917FCC89C00A0317B /* TreeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeComponent.h; path = ../Projects/VS2012/TreeComponent.h; sourceTree = "<group>"; };
-		E6358FBA17FCC89C00A0317B /* TreeComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TreeComponentData.cpp; path = ../Projects/VS2012/TreeComponentData.cpp; sourceTree = "<group>"; };
-		E6358FBB17FCC89C00A0317B /* TreeComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeComponentData.h; path = ../Projects/VS2012/TreeComponentData.h; sourceTree = "<group>"; };
-		E6358FBC17FCC89C00A0317B /* VillageGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VillageGame.cpp; path = ../Projects/VS2012/VillageGame.cpp; sourceTree = "<group>"; };
-		E6358FBD17FCC89C00A0317B /* VillageGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VillageGame.h; path = ../Projects/VS2012/VillageGame.h; sourceTree = "<group>"; };
 		E63EAE9017C69EC0006F1456 /* VillageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63EAE9317C69EC0006F1456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E63EAE9517C69EC0006F1456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -410,8 +386,46 @@
 		E6811CED180147A100654338 /* Wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wood.png; sourceTree = "<group>"; };
 		E6811CEE180147A100654338 /* Wool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wool.png; sourceTree = "<group>"; };
 		E6811CEF180147A100654338 /* Yew_Logs.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yew_Logs.PNG; sourceTree = "<group>"; };
-		E6A87507180144AB00D27452 /* EconomyMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EconomyMenu.cpp; path = ../Projects/VS2012/EconomyMenu.cpp; sourceTree = "<group>"; };
-		E6A87508180144AB00D27452 /* EconomyMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EconomyMenu.h; path = ../Projects/VS2012/EconomyMenu.h; sourceTree = "<group>"; };
+		E6B932D61812CDEB006DC650 /* BuildingComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuildingComponent.cpp; sourceTree = "<group>"; };
+		E6B932D71812CDEB006DC650 /* BuildingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingComponent.h; sourceTree = "<group>"; };
+		E6B932D81812CDEB006DC650 /* BuildingComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuildingComponentData.cpp; sourceTree = "<group>"; };
+		E6B932D91812CDEB006DC650 /* BuildingComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingComponentData.h; sourceTree = "<group>"; };
+		E6B932DA1812CDEB006DC650 /* Economy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Economy.cpp; sourceTree = "<group>"; };
+		E6B932DB1812CDEB006DC650 /* Economy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Economy.h; sourceTree = "<group>"; };
+		E6B932DC1812CDEB006DC650 /* EconomyMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EconomyMenu.cpp; sourceTree = "<group>"; };
+		E6B932DD1812CDEB006DC650 /* EconomyMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EconomyMenu.h; sourceTree = "<group>"; };
+		E6B932DE1812CDEB006DC650 /* GameMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMenu.cpp; sourceTree = "<group>"; };
+		E6B932DF1812CDEB006DC650 /* GameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMenu.h; sourceTree = "<group>"; };
+		E6B932E01812CDEB006DC650 /* GameWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameWorld.cpp; sourceTree = "<group>"; };
+		E6B932E11812CDEB006DC650 /* GameWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWorld.h; sourceTree = "<group>"; };
+		E6B932E21812CDEB006DC650 /* IslandData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IslandData.cpp; sourceTree = "<group>"; };
+		E6B932E31812CDEB006DC650 /* IslandData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IslandData.h; sourceTree = "<group>"; };
+		E6B932E41812CDEB006DC650 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		E6B932E51812CDEB006DC650 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
+		E6B932E61812CDEB006DC650 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		E6B932E71812CDEB006DC650 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		E6B932E81812CDEB006DC650 /* ProducerComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProducerComponent.cpp; sourceTree = "<group>"; };
+		E6B932E91812CDEB006DC650 /* ProducerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProducerComponent.h; sourceTree = "<group>"; };
+		E6B932EA1812CDEB006DC650 /* ProducerComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProducerComponentData.cpp; sourceTree = "<group>"; };
+		E6B932EB1812CDEB006DC650 /* ProducerComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProducerComponentData.h; sourceTree = "<group>"; };
+		E6B932EC1812CDEB006DC650 /* ResourceComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceComponent.cpp; sourceTree = "<group>"; };
+		E6B932ED1812CDEB006DC650 /* ResourceComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceComponent.h; sourceTree = "<group>"; };
+		E6B932EE1812CDEB006DC650 /* ResourceComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceComponentData.cpp; sourceTree = "<group>"; };
+		E6B932EF1812CDEB006DC650 /* ResourceComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceComponentData.h; sourceTree = "<group>"; };
+		E6B932F01812CDEB006DC650 /* ResourceStorage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceStorage.cpp; sourceTree = "<group>"; };
+		E6B932F11812CDEB006DC650 /* ResourceStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceStorage.h; sourceTree = "<group>"; };
+		E6B932F21812CDEB006DC650 /* ScrollCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScrollCamera.cpp; sourceTree = "<group>"; };
+		E6B932F31812CDEB006DC650 /* ScrollCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollCamera.h; sourceTree = "<group>"; };
+		E6B932F51812CDEB006DC650 /* StorageComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageComponent.cpp; sourceTree = "<group>"; };
+		E6B932F61812CDEB006DC650 /* StorageComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageComponent.h; sourceTree = "<group>"; };
+		E6B932F71812CDEB006DC650 /* StorageComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageComponentData.cpp; sourceTree = "<group>"; };
+		E6B932F81812CDEB006DC650 /* StorageComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageComponentData.h; sourceTree = "<group>"; };
+		E6B932F91812CDEB006DC650 /* TreeComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeComponent.cpp; sourceTree = "<group>"; };
+		E6B932FA1812CDEB006DC650 /* TreeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeComponent.h; sourceTree = "<group>"; };
+		E6B932FB1812CDEB006DC650 /* TreeComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeComponentData.cpp; sourceTree = "<group>"; };
+		E6B932FC1812CDEB006DC650 /* TreeComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeComponentData.h; sourceTree = "<group>"; };
+		E6B932FD1812CDEB006DC650 /* VillageGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VillageGame.cpp; sourceTree = "<group>"; };
+		E6B932FE1812CDEB006DC650 /* VillageGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VillageGame.h; sourceTree = "<group>"; };
 		E6C58D5517F851BD0020F28D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../../../LunaEngine/Engine/Externals/freetype2/libfreetype.a; sourceTree = "<group>"; };
 		E6C58D7917F854710020F28D /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = "../../../../Library/Developer/Xcode/DerivedData/angelscript-esvhdojcldbyopdjdxbevxsvovbi/Build/Products/Release-iphoneos/libangelscript.a"; sourceTree = "<group>"; };
 		E6C58D7D17F85AA20020F28D /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
@@ -420,7 +434,6 @@
 		E6D0BDC217CE1FD500CAC564 /* VillageGame Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "VillageGame Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D0BE4D17CE2DA800CAC564 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		E6D0BE4F17CE2DC100CAC564 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/Release/libangelscript.a; sourceTree = "<group>"; };
-		E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Source - Copy.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -627,39 +640,46 @@
 		E6FD5FAE17CABAFA00F59339 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E6358FA617FCC89C00A0317B /* BuildingComponent.cpp */,
-				E6358FA717FCC89C00A0317B /* BuildingComponent.h */,
-				E6358FA817FCC89C00A0317B /* BuildingComponentData.cpp */,
-				E6358FA917FCC89C00A0317B /* BuildingComponentData.h */,
-				E6358FAA17FCC89C00A0317B /* Economy.cpp */,
-				E6358FAB17FCC89C00A0317B /* Economy.h */,
-				E6358FAC17FCC89C00A0317B /* GameMenu.cpp */,
-				E6358FAD17FCC89C00A0317B /* GameMenu.h */,
-				E6358FAE17FCC89C00A0317B /* GameWorld.cpp */,
-				E6358FAF17FCC89C00A0317B /* GameWorld.h */,
-				E6358FB017FCC89C00A0317B /* Main.cpp */,
-				E6358FB117FCC89C00A0317B /* Main.h */,
-				E6358FB217FCC89C00A0317B /* ResourceComponent.cpp */,
-				E6358FB317FCC89C00A0317B /* ResourceComponent.h */,
-				E6358FB417FCC89C00A0317B /* ResourceComponentData.cpp */,
-				E6358FB517FCC89C00A0317B /* ResourceComponentData.h */,
-				E6A87507180144AB00D27452 /* EconomyMenu.cpp */,
-				E6A87508180144AB00D27452 /* EconomyMenu.h */,
-				E6358FB617FCC89C00A0317B /* ScrollCamera.cpp */,
-				E6358FB717FCC89C00A0317B /* ScrollCamera.h */,
-				E6358FB817FCC89C00A0317B /* TreeComponent.cpp */,
-				E6358FB917FCC89C00A0317B /* TreeComponent.h */,
-				E6358FBA17FCC89C00A0317B /* TreeComponentData.cpp */,
-				E6358FBB17FCC89C00A0317B /* TreeComponentData.h */,
-				E6358FBC17FCC89C00A0317B /* VillageGame.cpp */,
-				E6358FBD17FCC89C00A0317B /* VillageGame.h */,
-				E6FD5FAF17CABAFA00F59339 /* Source - Copy.cpp */,
-				E60B6B6617E362A500C8FEBE /* IslandData.cpp */,
-				E60B6B6717E362A500C8FEBE /* IslandData.h */,
-				E624BB59180C0044006ECA21 /* Player.cpp */,
-				E624BB5A180C0044006ECA21 /* Player.h */,
-				E624BB74180C4B5A006ECA21 /* ProducerComponent.cpp */,
-				E624BB75180C4B5A006ECA21 /* ProducerComponent.h */,
+				E6B932D61812CDEB006DC650 /* BuildingComponent.cpp */,
+				E6B932D71812CDEB006DC650 /* BuildingComponent.h */,
+				E6B932D81812CDEB006DC650 /* BuildingComponentData.cpp */,
+				E6B932D91812CDEB006DC650 /* BuildingComponentData.h */,
+				E6B932DA1812CDEB006DC650 /* Economy.cpp */,
+				E6B932DB1812CDEB006DC650 /* Economy.h */,
+				E6B932DC1812CDEB006DC650 /* EconomyMenu.cpp */,
+				E6B932DD1812CDEB006DC650 /* EconomyMenu.h */,
+				E6B932DE1812CDEB006DC650 /* GameMenu.cpp */,
+				E6B932DF1812CDEB006DC650 /* GameMenu.h */,
+				E6B932E01812CDEB006DC650 /* GameWorld.cpp */,
+				E6B932E11812CDEB006DC650 /* GameWorld.h */,
+				E6B932E21812CDEB006DC650 /* IslandData.cpp */,
+				E6B932E31812CDEB006DC650 /* IslandData.h */,
+				E6B932E41812CDEB006DC650 /* Main.cpp */,
+				E6B932E51812CDEB006DC650 /* Main.h */,
+				E6B932E61812CDEB006DC650 /* Player.cpp */,
+				E6B932E71812CDEB006DC650 /* Player.h */,
+				E6B932E81812CDEB006DC650 /* ProducerComponent.cpp */,
+				E6B932E91812CDEB006DC650 /* ProducerComponent.h */,
+				E6B932EA1812CDEB006DC650 /* ProducerComponentData.cpp */,
+				E6B932EB1812CDEB006DC650 /* ProducerComponentData.h */,
+				E6B932EC1812CDEB006DC650 /* ResourceComponent.cpp */,
+				E6B932ED1812CDEB006DC650 /* ResourceComponent.h */,
+				E6B932EE1812CDEB006DC650 /* ResourceComponentData.cpp */,
+				E6B932EF1812CDEB006DC650 /* ResourceComponentData.h */,
+				E6B932F01812CDEB006DC650 /* ResourceStorage.cpp */,
+				E6B932F11812CDEB006DC650 /* ResourceStorage.h */,
+				E6B932F21812CDEB006DC650 /* ScrollCamera.cpp */,
+				E6B932F31812CDEB006DC650 /* ScrollCamera.h */,
+				E6B932F51812CDEB006DC650 /* StorageComponent.cpp */,
+				E6B932F61812CDEB006DC650 /* StorageComponent.h */,
+				E6B932F71812CDEB006DC650 /* StorageComponentData.cpp */,
+				E6B932F81812CDEB006DC650 /* StorageComponentData.h */,
+				E6B932F91812CDEB006DC650 /* TreeComponent.cpp */,
+				E6B932FA1812CDEB006DC650 /* TreeComponent.h */,
+				E6B932FB1812CDEB006DC650 /* TreeComponentData.cpp */,
+				E6B932FC1812CDEB006DC650 /* TreeComponentData.h */,
+				E6B932FD1812CDEB006DC650 /* VillageGame.cpp */,
+				E6B932FE1812CDEB006DC650 /* VillageGame.h */,
 			);
 			name = Source;
 			path = ../../../Source;
@@ -848,23 +868,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6A87509180144AB00D27452 /* EconomyMenu.cpp in Sources */,
-				E6358FC217FCC89C00A0317B /* Economy.cpp in Sources */,
-				E6FD5FB017CABAFA00F59339 /* Source - Copy.cpp in Sources */,
-				E6358FD417FCC89C00A0317B /* VillageGame.cpp in Sources */,
-				E6358FC017FCC89C00A0317B /* BuildingComponentData.cpp in Sources */,
-				E6358FCE17FCC89C00A0317B /* ScrollCamera.cpp in Sources */,
-				E6358FBE17FCC89C00A0317B /* BuildingComponent.cpp in Sources */,
-				E6358FCA17FCC89C00A0317B /* ResourceComponent.cpp in Sources */,
-				E624BB5B180C0044006ECA21 /* Player.cpp in Sources */,
-				E6358FC417FCC89C00A0317B /* GameMenu.cpp in Sources */,
-				E6358FC617FCC89C00A0317B /* GameWorld.cpp in Sources */,
-				E6358FC817FCC89C00A0317B /* Main.cpp in Sources */,
-				E624BB76180C4B5A006ECA21 /* ProducerComponent.cpp in Sources */,
-				E6358FD217FCC89C00A0317B /* TreeComponentData.cpp in Sources */,
-				E6358FD017FCC89C00A0317B /* TreeComponent.cpp in Sources */,
-				E60B6B6817E362A500C8FEBE /* IslandData.cpp in Sources */,
-				E6358FCC17FCC89C00A0317B /* ResourceComponentData.cpp in Sources */,
+				E6B932FF1812CDEB006DC650 /* BuildingComponent.cpp in Sources */,
+				E6B9331B1812CDEB006DC650 /* ScrollCamera.cpp in Sources */,
+				E6B933191812CDEB006DC650 /* ResourceStorage.cpp in Sources */,
+				E6B9331F1812CDEB006DC650 /* StorageComponent.cpp in Sources */,
+				E6B933171812CDEB006DC650 /* ResourceComponentData.cpp in Sources */,
+				E6B933211812CDEB006DC650 /* StorageComponentData.cpp in Sources */,
+				E6B933151812CDEB006DC650 /* ResourceComponent.cpp in Sources */,
+				E6B933251812CDEB006DC650 /* TreeComponentData.cpp in Sources */,
+				E6B933131812CDEB006DC650 /* ProducerComponentData.cpp in Sources */,
+				E6B933271812CDEB006DC650 /* VillageGame.cpp in Sources */,
+				E6B933071812CDEB006DC650 /* GameMenu.cpp in Sources */,
+				E6B9330F1812CDEB006DC650 /* Player.cpp in Sources */,
+				E6B933111812CDEB006DC650 /* ProducerComponent.cpp in Sources */,
+				E6B933091812CDEB006DC650 /* GameWorld.cpp in Sources */,
+				E6B933031812CDEB006DC650 /* Economy.cpp in Sources */,
+				E6B933011812CDEB006DC650 /* BuildingComponentData.cpp in Sources */,
+				E6B933231812CDEB006DC650 /* TreeComponent.cpp in Sources */,
+				E6B9330B1812CDEB006DC650 /* IslandData.cpp in Sources */,
+				E6B9330D1812CDEB006DC650 /* Main.cpp in Sources */,
+				E6B933051812CDEB006DC650 /* EconomyMenu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,23 +895,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6A8750A180144AB00D27452 /* EconomyMenu.cpp in Sources */,
-				E6358FC317FCC89C00A0317B /* Economy.cpp in Sources */,
-				E6D0BDD217CE29CE00CAC564 /* Source - Copy.cpp in Sources */,
-				E6358FD517FCC89C00A0317B /* VillageGame.cpp in Sources */,
-				E6358FC117FCC89C00A0317B /* BuildingComponentData.cpp in Sources */,
-				E6358FCF17FCC89C00A0317B /* ScrollCamera.cpp in Sources */,
-				E6358FBF17FCC89C00A0317B /* BuildingComponent.cpp in Sources */,
-				E6358FCB17FCC89C00A0317B /* ResourceComponent.cpp in Sources */,
-				E624BB5C180C0044006ECA21 /* Player.cpp in Sources */,
-				E6358FC517FCC89C00A0317B /* GameMenu.cpp in Sources */,
-				E6358FC717FCC89C00A0317B /* GameWorld.cpp in Sources */,
-				E6358FC917FCC89C00A0317B /* Main.cpp in Sources */,
-				E624BB77180C4B5A006ECA21 /* ProducerComponent.cpp in Sources */,
-				E6358FD317FCC89C00A0317B /* TreeComponentData.cpp in Sources */,
-				E6358FD117FCC89C00A0317B /* TreeComponent.cpp in Sources */,
-				E60B6B6917E362A500C8FEBE /* IslandData.cpp in Sources */,
-				E6358FCD17FCC89C00A0317B /* ResourceComponentData.cpp in Sources */,
+				E6B933001812CDEB006DC650 /* BuildingComponent.cpp in Sources */,
+				E6B9331C1812CDEB006DC650 /* ScrollCamera.cpp in Sources */,
+				E6B9331A1812CDEB006DC650 /* ResourceStorage.cpp in Sources */,
+				E6B933201812CDEB006DC650 /* StorageComponent.cpp in Sources */,
+				E6B933181812CDEB006DC650 /* ResourceComponentData.cpp in Sources */,
+				E6B933221812CDEB006DC650 /* StorageComponentData.cpp in Sources */,
+				E6B933161812CDEB006DC650 /* ResourceComponent.cpp in Sources */,
+				E6B933261812CDEB006DC650 /* TreeComponentData.cpp in Sources */,
+				E6B933141812CDEB006DC650 /* ProducerComponentData.cpp in Sources */,
+				E6B933281812CDEB006DC650 /* VillageGame.cpp in Sources */,
+				E6B933081812CDEB006DC650 /* GameMenu.cpp in Sources */,
+				E6B933101812CDEB006DC650 /* Player.cpp in Sources */,
+				E6B933121812CDEB006DC650 /* ProducerComponent.cpp in Sources */,
+				E6B9330A1812CDEB006DC650 /* GameWorld.cpp in Sources */,
+				E6B933041812CDEB006DC650 /* Economy.cpp in Sources */,
+				E6B933021812CDEB006DC650 /* BuildingComponentData.cpp in Sources */,
+				E6B933241812CDEB006DC650 /* TreeComponent.cpp in Sources */,
+				E6B9330C1812CDEB006DC650 /* IslandData.cpp in Sources */,
+				E6B9330E1812CDEB006DC650 /* Main.cpp in Sources */,
+				E6B933061812CDEB006DC650 /* EconomyMenu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

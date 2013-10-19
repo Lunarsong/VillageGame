@@ -241,7 +241,7 @@ GameWorld::GameWorld(void)
 	pTileMapComponent->Release();
 	pEntity->Start();
 
-	//m_IslandData.GenerateBiomes();
+	m_IslandData.GenerateBiomes();
 
 	CreateMinimap();
 }
@@ -291,8 +291,45 @@ void GameWorld::CreateMinimap()
 	pTexture->Release();
 
 	delete [] pMap;
+    
+    /*pTexture = IRenderer::CreateTexture();
+	pMap = new unsigned int[ 512 * 512 ];
+    
+	for ( int j = 0; j < 512; ++j )
+	{
+		for ( int i = 0; i < 512; ++i )
+		{
+			float fColor = m_IslandData.GetMaskHeight( i, j );
+			if ( fColor < 0.0f )
+			{
+				fColor = 0.0f;
+			}
+            
+			ColorF color( fColor, fColor, fColor, 1.0f );
+            
+			if ( fColor <= 0.0f )
+			{
+				color = ColorF::BLUE;
+			}
+			Color colorRGB = color;
+			pMap[ j * 512 + i ] =  colorRGB.RGBA;
+		}
+	}
+    
+	pTexture->VCreate( 512, 512, 4, (char*)pMap );
+	pImage = new UIImage( pTexture );
+	pImage->SetSize( pImage->GetSizeInPixels() * 0.5f );
+	pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
+	pImage->SetRelativePosition( Vector3( 1.0f, 1.0f ) );
+	pImage->SetAlignment( BottomRight );
+	UserInterface::AddScreen( "Mask Map", pImage );
+	pImage->Release();
+    
+	pTexture->Release();
+    
+	delete [] pMap;*/
 
-	/*TextureData* pTreeSprite = AssetManager::Get().GetAsset<TextureData>( "TreeSprite" );
+	TextureData* pTreeSprite = AssetManager::Get().GetAsset<TextureData>( "TreeSprite" );
 	Matrix matTransform;
 	matTransform.BuildScale( 96 / 3, 128 / 3 , 1.0f );
 	float fWorldScale = 1.0f;
@@ -361,55 +398,37 @@ void GameWorld::CreateMinimap()
 				else if ( eBiome == IslandData::TemperateRainForest )
 				{
 					color = Color( 163, 195, 167, 255 );
-
-					Entity* pEntity = Game::CreateEntity( matTransform );
-					QuadComponent* pQuadComponent = new QuadComponent();
-					pQuadComponent->SetTexture( pTreeSprite );
-					pEntity->AddComponent( pQuadComponent );
-					pQuadComponent->Start();
-                    pQuadComponent->Release();
 				}
 
 				else if ( eBiome == IslandData::TemperateDecidousForest )
 				{
 					color = Color( 180, 200, 168, 255 );
-
-					Entity* pEntity = Game::CreateEntity( matTransform );
-					QuadComponent* pQuadComponent = new QuadComponent();
-					pQuadComponent->SetTexture( pTreeSprite );
-					pEntity->AddComponent( pQuadComponent );
-					pQuadComponent->Start();
-                    pQuadComponent->Release();
 				}
 
 				else if ( eBiome == IslandData::TropicalRainForest )
 				{
 					color = Color( 155, 186, 168, 255 );
-
-					Entity* pEntity = Game::CreateEntity( matTransform );
-					QuadComponent* pQuadComponent = new QuadComponent();
-					pQuadComponent->SetTexture( pTreeSprite );
-					pEntity->AddComponent( pQuadComponent );
-					pQuadComponent->Start();
-                    pQuadComponent->Release();
 				}
 
 				else if ( eBiome == IslandData::TropicalSeasonalForest )
 				{
 					color = Color( 168, 203, 163, 255 );
-
-					Entity* pEntity = Game::CreateEntity( matTransform );
-					QuadComponent* pQuadComponent = new QuadComponent();
-					pQuadComponent->SetTexture( pTreeSprite );
-					pEntity->AddComponent( pQuadComponent );
-					pQuadComponent->Start();
-                    pQuadComponent->Release();
 				}
 
 				else if ( eBiome == IslandData::SubtropicalDesert )
 				{
 					color = Color( 232, 220, 198, 255 );
 				}
+                
+                else if ( eBiome == IslandData::Unassigned )
+                {
+                    throw "Whoops";
+                }
+                
+                else
+                {
+                    throw "Unhandled biome";
+                }
 
 				pMap[ j ][ i ] =  color.RGBA;
 			}
@@ -417,7 +436,7 @@ void GameWorld::CreateMinimap()
 
 		pTexture->VCreate( 512, 512, 4, (char*)pMap[0] );
 		UIImage* pImage = new UIImage( pTexture );
-		pImage->SetSize( pImage->GetSizeInPixels() );
+		pImage->SetSize( pImage->GetSizeInPixels() * 1 );
 		pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
 		pImage->SetRelativePosition( Vector3( 1.0f, 1.0f ) );
 		pImage->SetAlignment( BottomRight );
@@ -426,7 +445,7 @@ void GameWorld::CreateMinimap()
 
 		pTexture->Release();
 	}
-
+/*
 	{
 		ITexture* pTexture = IRenderer::CreateTexture();
 		Color color;

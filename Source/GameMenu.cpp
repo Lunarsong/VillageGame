@@ -12,9 +12,9 @@ GameMenu::GameMenu( VillageGame* pGame )
 
 	m_bActive = false;
 
-	Process* pProcess = new DialogueInterface( NULL, "DialogueInterface.xml", "Dialogue.xml" );
+	/*Process* pProcess = new DialogueInterface( NULL, "DialogueInterface.xml", "Dialogue.xml" );
 	BaseApplication::Get()->AttachProcess( pProcess );
-	pProcess->Release();
+	pProcess->Release();*/
 
 	UIElement* pGameMenu = UserInterface::AddScreenFromFile( "GameMenu", "GameMenu.xml" );
 	pGameMenu->GetElement<UIButtonImage>( "btn_build" )->SetCallbackFunction( [this] ( UIElement* pElement, void* pArgs )

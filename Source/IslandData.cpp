@@ -65,13 +65,13 @@ void IslandData::Generate( int iWidth, int iHeight )
     noise.SetOctaves( 16.0f );
     noise.SetPersistence( 0.5f );
     noise.SetScale( 0.005f );
-    noise.SetBounds( -0.65f, 1.0f );
+    noise.SetBounds( -0.45f, 0.9f );
         
     for ( unsigned int y = 0; y < iHeight; ++y )
     {
         for ( unsigned int x = 0; x < iWidth; ++x )
         {
-            (*this)( x ,  y ) = noise.Noise( x, y );
+            (*this)( x ,  y ) = noise.Noise( x, y ) * 2.0f;
         }
     }
         
@@ -118,9 +118,24 @@ void IslandData::GenerateMaskMap()
         for ( unsigned int x = 0; x < m_uiSizeX; ++x )
         {
 			Engine::Vector3 vPosition( x-m_uiSizeX*0.5, y-m_uiSizeY*0.5, 0.0f );
+            float fDistance = ( 0.3f + 0.3f * vPosition.LengthSQ() );
+            
 			float fNoise = noise.Noise( x, y );
-
-			fNoise = ( (fNoise*512.0f*60) > ( 0.3f + 0.3f * vPosition.LengthSQ() ) ) ? fNoise : 0.0f;
+            float fModifiedNoise = fNoise*512.0f*5;
+            if ( fModifiedNoise < fDistance )
+            {
+                fNoise = ( fModifiedNoise / fDistance - 0.1f ) * 5.0f;
+                if ( fNoise > 1.0f )
+                {
+                    fNoise = 1.0f;
+                }
+            }
+            
+            else
+            {
+                fNoise = 1.0f;
+            }
+            
             m_pHeightMaskMap[ y * m_uiSizeY + x ] = fNoise;
         }
     }
@@ -259,7 +274,7 @@ void IslandData::GenerateMaskMap()
     
 float IslandData::GetHeight( int iX, int iY )
 {
-    return m_pHeightMap[ iY * m_uiSizeX + iX ] * GetMaskHeight( iX, iY );
+    return std::min( m_pHeightMap[ iY * m_uiSizeX + iX ] * GetMaskHeight( iX, iY ), 1.0f );
 }
     
 float IslandData::GetMaskHeight( int iX, int iY )
@@ -399,8 +414,8 @@ void IslandData::GenerateMoisture()
 	Engine::SimplexNoise noise;
 	noise.SetOctaves( 16.0f );
 	noise.SetPersistence( 0.5f );
-	noise.SetScale( 0.05f );
-	noise.SetBounds( -0.2f, 1.0f );
+	noise.SetScale( 0.005f );
+	noise.SetBounds( -0.1f, 1.2f );
 
 	m_pMoistureMap = new float[ m_uiSizeX * m_uiSizeY ];
 	for ( unsigned int iY = 0; iY < m_uiSizeY; ++iY )
@@ -415,7 +430,7 @@ void IslandData::GenerateMoisture()
 
 			else if ( eBiome == SeaWater )
 			{
-				m_pMoistureMap[ iY * m_uiSizeX + iX ] = 0.15f;
+				m_pMoistureMap[ iY * m_uiSizeX + iX ] = 0.0f;
 			}
 
 			else
@@ -488,16 +503,20 @@ void IslandData::GenerateMoisture()
 				float fMoisture = GetMoisture( iX, iY );
 				float fHeight = GetHeight( iX, iY );
 
-				int iHeightIndex = (int)(fHeight * 4.9f);
-				int iMoistureIndex = (int)(fMoisture * 6.9f);
+				int iHeightIndex = (int)(fHeight * 3.2f);
+				int iMoistureIndex = (int)(fMoisture * 5.2);
 
-				if ( GetBiome( iX+1, iY ) == FreshWater )
-				{
-					int i = 0;
-					i = iX * 2.0f;
-
-				}
 				m_pBiomeMap[ iY * m_uiSizeX + iX ] = eBiomeMap[iHeightIndex][iMoistureIndex];
+                if ( iMoistureIndex == 5 )// || iHeightIndex == 0  )
+                {
+                    int i = 0;
+                    i *= 2;
+                }
+                if ( iMoistureIndex > 5 || iHeightIndex > 3 )
+                {
+                    int i = 0;
+                    i *= 2;
+                }
 			}
 		}
 	}
