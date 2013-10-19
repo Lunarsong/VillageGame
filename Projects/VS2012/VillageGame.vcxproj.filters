@@ -89,9 +89,6 @@
     <ClCompile Include="..\..\Source\ScrollCamera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Source - Copy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\TreeComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

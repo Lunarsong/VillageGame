@@ -309,7 +309,34 @@ void IslandData::GenerateBiomes()
 		m_pBiomeMap[ i ] = Unassigned;
 	}
 
-	SeaForm( 0, 0 );
+	m_pBiomeMap[ 0 ] = SeaWater;
+	m_pBiomeMap[ uiNumTiles - 1 ] = SeaWater;
+	m_pBiomeMap[ m_uiSizeX - 1 ] = SeaWater;
+	m_pBiomeMap[ ( m_uiSizeY - 1 ) * m_uiSizeX ] = SeaWater;
+	for ( unsigned int y = 0; y < m_uiSizeY; ++y )
+	{
+		for ( unsigned int x = 0; x < m_uiSizeX; ++x )
+		{
+			SeaForm( x, y );
+			SeaForm( x, m_uiSizeY - y - 1 );
+			SeaForm( m_uiSizeX - x - 1, y );
+
+			SeaForm( m_uiSizeX - x - 1, m_uiSizeY - y - 1 );
+		}
+	}
+
+	for ( unsigned int y = 0; y < m_uiSizeY; ++y )
+	{
+		for ( unsigned int x = 0; x < m_uiSizeX; ++x )
+		{
+			SeaForm( x, y );
+			SeaForm( x, m_uiSizeY - y - 1 );
+			SeaForm( m_uiSizeX - x - 1, y );
+
+			SeaForm( m_uiSizeX - x - 1, m_uiSizeY - y - 1 );
+		}
+	}
+	
 
 	AssignLandOrFreshwater();
 
@@ -317,7 +344,7 @@ void IslandData::GenerateBiomes()
 
 }
 
-void IslandData::SeaForm( unsigned int iX, unsigned int iY )
+void IslandData::SeaFormRecursive( unsigned int iX, unsigned int iY )
 {
 	if ( GetBiome( iX, iY ) != Unassigned )
 	{
@@ -370,6 +397,89 @@ void IslandData::SeaForm( unsigned int iX, unsigned int iY )
 	if ( iY < ( m_uiSizeY - 1 ) )
 	{
 		SeaForm( iX, iY + 1 );
+	}
+}
+
+void IslandData::SeaForm( unsigned int iX, unsigned int iY )
+{
+	/*if ( GetBiome( iX, iY ) != Unassigned )
+	{
+		return;
+	}*/
+
+	if ( GetHeight( iX, iY ) > 0.0f )
+	{
+		m_pBiomeMap[ iY * m_uiSizeX + iX ] = Land;
+		return;
+	}
+
+	if ( m_pBiomeMap[ iY * m_uiSizeX + iX ] != SeaWater )
+	{
+		return;
+	}
+
+	if ( iX > 1 )
+	{
+		if ( GetHeight( iX - 1, iY ) <= 0.0f )
+		{
+			m_pBiomeMap[ iY * m_uiSizeX + iX - 1 ] = SeaWater;
+		}
+
+		if ( iY > 1 )
+		{
+			if ( GetHeight( iX - 1, iY - 1 ) <= 0.0f )
+			{
+				m_pBiomeMap[ (iY-1) * m_uiSizeX + iX - 1 ] = SeaWater;
+			}
+		}
+
+		if ( iY < ( m_uiSizeY - 1 ) )
+		{
+			if ( GetHeight( iX - 1, iY + 1 ) <= 0.0f )
+			{
+				m_pBiomeMap[ (iY+1) * m_uiSizeX + iX - 1 ] = SeaWater;
+			}
+		}
+	}
+
+	if ( iX < ( m_uiSizeX - 1 ) )
+	{
+		if ( GetHeight( iX  + 1, iY ) <= 0.0f )
+		{
+			m_pBiomeMap[ iY * m_uiSizeX + iX + 1 ] = SeaWater;
+		}
+
+		if ( iY > 1 )
+		{
+			if ( GetHeight( iX  + 1, iY - 1 ) <= 0.0f )
+			{
+				m_pBiomeMap[ (iY-1) * m_uiSizeX + iX + 1 ] = SeaWater;
+			}
+		}
+
+		if ( iY < ( m_uiSizeY - 1 ) )
+		{
+			if ( GetHeight( iX  + 1, iY + 1 ) <= 0.0f )
+			{
+				m_pBiomeMap[ (iY+1) * m_uiSizeX + iX + 1 ] = SeaWater;
+			}
+		}
+	}
+
+	if ( iY > 1 )
+	{
+		if ( GetHeight( iX , iY-1 ) < 0.0f )
+		{
+			m_pBiomeMap[ (iY-1) * m_uiSizeX + iX ] = SeaWater;
+		}
+	}
+
+	if ( iY < ( m_uiSizeY - 1 ) )
+	{
+		if ( GetHeight( iX, iY + 1 ) < 0.0f )
+		{
+			m_pBiomeMap[ (iY+1) * m_uiSizeX + iX ] = SeaWater;
+		}
 	}
 }
 

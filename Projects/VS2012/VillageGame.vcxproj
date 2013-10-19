@@ -48,7 +48,6 @@
     <ClCompile Include="..\..\Source\ResourceComponent.cpp" />
     <ClCompile Include="..\..\Source\ResourceComponentData.cpp" />
     <ClCompile Include="..\..\Source\ScrollCamera.cpp" />
-    <ClCompile Include="..\..\Source\Source - Copy.cpp" />
     <ClCompile Include="..\..\Source\StorageComponent.cpp" />
     <ClCompile Include="..\..\Source\StorageComponentData.cpp" />
     <ClCompile Include="..\..\Source\TreeComponent.cpp" />

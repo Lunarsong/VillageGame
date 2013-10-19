@@ -337,7 +337,7 @@ void GameWorld::CreateMinimap()
 	{
 		ITexture* pTexture = IRenderer::CreateTexture();
 		Color color;
-		unsigned int pMap[512][512];
+		unsigned int* pMap = new unsigned int[ 512 * 512 ];
 		for ( int j = 0; j < 512; ++j )
 		{
 			for ( int i = 0; i < 512; ++i )
@@ -430,11 +430,12 @@ void GameWorld::CreateMinimap()
                     throw "Unhandled biome";
                 }
 
-				pMap[ j ][ i ] =  color.RGBA;
+				pMap[ j * 512 + i ] =  color.RGBA;
 			}
+						
 		}
-
-		pTexture->VCreate( 512, 512, 4, (char*)pMap[0] );
+		
+		pTexture->VCreate( 512, 512, 4, (char*)pMap );
 		UIImage* pImage = new UIImage( pTexture );
 		pImage->SetSize( pImage->GetSizeInPixels() * 1 );
 		pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
@@ -444,6 +445,8 @@ void GameWorld::CreateMinimap()
 		pImage->Release();
 
 		pTexture->Release();
+
+		delete [] pMap;
 	}
 /*
 	{

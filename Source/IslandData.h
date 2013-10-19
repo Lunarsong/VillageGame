@@ -71,6 +71,8 @@ private:
     void GenerateMaskMap();
 
 	void SeaForm( unsigned int iX, unsigned int iY );
+	void SeaFormRecursive( unsigned int iX, unsigned int iY );
+	
 	void DistributeMoisture( unsigned int iX, unsigned int iY );
 	void RecieveMoisture( float fMoisture, float fAltitude, unsigned int iX, unsigned int iY );
 
