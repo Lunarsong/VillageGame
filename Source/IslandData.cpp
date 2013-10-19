@@ -545,7 +545,7 @@ void IslandData::GenerateMoisture()
 
 			else
 			{
-				m_pMoistureMap[ iY * m_uiSizeX + iX ] = std::min( std::max( 0.0f, noise.Noise( iX, iY ) ), 1.0f );
+				m_pMoistureMap[ iY * m_uiSizeX + iX ] = std::min( std::max( 0.0f, noise.Noise( iX, iY ) * GetMaskHeight( iX, iY ) * 1.7f ), 1.0f );
 			}
 		}
 	}

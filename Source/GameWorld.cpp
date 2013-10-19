@@ -255,7 +255,7 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::CreateMinimap()
 {
-	ITexture* pTexture = IRenderer::CreateTexture();
+	/*ITexture* pTexture = IRenderer::CreateTexture();
 	unsigned int* pMap = new unsigned int[ 512 * 512 ];
 
 	for ( int j = 0; j < 512; ++j )
@@ -290,7 +290,7 @@ void GameWorld::CreateMinimap()
 
 	pTexture->Release();
 
-	delete [] pMap;
+	delete [] pMap;*/
     
     /*pTexture = IRenderer::CreateTexture();
 	pMap = new unsigned int[ 512 * 512 ];
@@ -328,12 +328,6 @@ void GameWorld::CreateMinimap()
 	pTexture->Release();
     
 	delete [] pMap;*/
-
-	TextureData* pTreeSprite = AssetManager::Get().GetAsset<TextureData>( "TreeSprite" );
-	Matrix matTransform;
-	matTransform.BuildScale( 96 / 3, 128 / 3 , 1.0f );
-	float fWorldScale = 1.0f;
-	float fHalfSize = 512.0f * 32.0f * ( fWorldScale * 0.5f );
 	{
 		ITexture* pTexture = IRenderer::CreateTexture();
 		Color color;
@@ -342,9 +336,9 @@ void GameWorld::CreateMinimap()
 		{
 			for ( int i = 0; i < 512; ++i )
 			{
-				matTransform.SetPosition( i * 32.0f * fWorldScale - fHalfSize, (127-j) * 32.0f * fWorldScale - fHalfSize, 0.0f );
-
 				IslandData::Biome eBiome = m_IslandData.GetBiome( i, j );
+				PlaceTreeLogic( i, j, eBiome );
+
 				if ( eBiome == IslandData::SeaWater )
 				{
 					color = Color::BLUE;;
@@ -437,10 +431,10 @@ void GameWorld::CreateMinimap()
 		
 		pTexture->VCreate( 512, 512, 4, (char*)pMap );
 		UIImage* pImage = new UIImage( pTexture );
-		pImage->SetSize( pImage->GetSizeInPixels() * 1 );
+		pImage->SetSize( pImage->GetSizeInPixels() * 0.5f );
 		pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
-		pImage->SetRelativePosition( Vector3( 1.0f, 1.0f ) );
-		pImage->SetAlignment( BottomRight );
+		pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
+		pImage->SetAlignment( BottomLeft );
 		UserInterface::AddScreen( "BiomeMap", pImage );
 		pImage->Release();
 
@@ -488,4 +482,130 @@ void GameWorld::CreateMinimap()
 
 		pTexture->Release();
 	}*/
+}
+
+void GameWorld::PlaceTreeLogic( unsigned int uX, unsigned int uY, IslandData::Biome eBiome )
+{	
+	TextureData* pTreeSprite = AssetManager::Get().GetAsset<TextureData>( "TreeSprite" );
+	Matrix matTransform;
+	matTransform.BuildScale( 96 / 3, 128 / 3 , 1.0f );
+	float fWorldScale = 1.0f;
+	float fHalfSize = 512.0f * 32.0f * ( fWorldScale * 0.5f );
+
+	matTransform.SetPosition( uX * 32.0f * fWorldScale - fHalfSize + 16.0f, (511-uY) * 32.0f * fWorldScale - fHalfSize + 16.0f, 0.0f );
+
+	float fChance = 0.0f;
+
+	if ( eBiome == IslandData::SeaWater )
+	{
+
+	}
+
+	else if ( eBiome == IslandData::FreshWater )
+	{
+
+	}
+
+	else if ( eBiome == IslandData::Grassland )
+	{
+		fChance = 0.0f;
+	}
+
+	else if ( eBiome == IslandData::Snow )
+	{
+
+	}
+
+	else if ( eBiome == IslandData::Bare )
+	{
+
+	}
+
+	else if ( eBiome == IslandData::Scorched )
+	{
+
+	}
+
+	else if ( eBiome == IslandData::Tundra )
+	{
+
+	}
+
+	else if ( eBiome == IslandData::Taiga )
+	{
+
+	}
+
+	else if ( eBiome == IslandData::Shrubland )
+	{
+
+	}
+
+	else if ( eBiome == IslandData::TemperateDesert )
+	{
+		fChance = 0.0f;
+	}
+
+	else if ( eBiome == IslandData::TemperateRainForest )
+	{
+		fChance = 0.4f;
+	}
+
+	else if ( eBiome == IslandData::TemperateDecidousForest )
+	{
+		fChance = 0.3f;
+	}
+
+	else if ( eBiome == IslandData::TropicalRainForest )
+	{
+		fChance = 0.4f;
+	}
+
+	else if ( eBiome == IslandData::TropicalSeasonalForest )
+	{
+		fChance = 0.4f;
+	}
+
+	else if ( eBiome == IslandData::SubtropicalDesert )
+	{
+		fChance = 0.05f;
+	}
+
+	else if ( eBiome == IslandData::Unassigned )
+	{
+		throw "Whoops";
+	}
+
+	else
+	{
+		throw "Unhandled biome";
+	}
+
+	if ( fChance != 0.0f && m_Rand.RandomFloat( 0.0f, 1.0f ) <= fChance )
+	{
+		for ( int i = -1; i <= 1; ++i )
+		{
+			for ( int j = -1; j <= 1; ++j )
+			{
+				if ( i == 0 && j == 0 )
+					continue;
+
+				IslandData::Biome eNeighbourBiome;
+
+				eNeighbourBiome = m_IslandData.GetBiome( uX + i, uY + j );
+				if ( eNeighbourBiome == IslandData::SeaWater || eNeighbourBiome == IslandData::FreshWater )
+					return;
+
+			}		
+		}
+
+		Entity* pEntity = Game::CreateEntity( matTransform );
+		QuadComponent* pQuad = new QuadComponent();
+		pQuad->SetTexture( pTreeSprite );
+		pEntity->AddComponent( pQuad );
+		pQuad->Release();
+		pQuad->Start();
+	}
+
+
 }
