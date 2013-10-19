@@ -19,6 +19,8 @@
     <ClInclude Include="..\..\Source\GameWorld.h" />
     <ClInclude Include="..\..\Source\IslandData.h" />
     <ClInclude Include="..\..\Source\Main.h" />
+    <ClInclude Include="..\..\Source\PlantComponent.h" />
+    <ClInclude Include="..\..\Source\PlantComponentData.h" />
     <ClInclude Include="..\..\Source\Player.h" />
     <ClInclude Include="..\..\Source\ProducerComponentData.h" />
     <ClInclude Include="..\..\Source\ResourceStorage.h" />
@@ -28,8 +30,6 @@
     <ClInclude Include="..\..\Source\ScrollCamera.h" />
     <ClInclude Include="..\..\Source\StorageComponent.h" />
     <ClInclude Include="..\..\Source\StorageComponentData.h" />
-    <ClInclude Include="..\..\Source\TreeComponent.h" />
-    <ClInclude Include="..\..\Source\TreeComponentData.h" />
     <ClInclude Include="..\..\Source\VillageGame.h" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +41,8 @@
     <ClCompile Include="..\..\Source\GameWorld.cpp" />
     <ClCompile Include="..\..\Source\IslandData.cpp" />
     <ClCompile Include="..\..\Source\Main.cpp" />
+    <ClCompile Include="..\..\Source\PlantComponent.cpp" />
+    <ClCompile Include="..\..\Source\PlantComponentData.cpp" />
     <ClCompile Include="..\..\Source\Player.cpp" />
     <ClCompile Include="..\..\Source\ProducerComponentData.cpp" />
     <ClCompile Include="..\..\Source\ResourceStorage.cpp" />
@@ -50,8 +52,6 @@
     <ClCompile Include="..\..\Source\ScrollCamera.cpp" />
     <ClCompile Include="..\..\Source\StorageComponent.cpp" />
     <ClCompile Include="..\..\Source\StorageComponentData.cpp" />
-    <ClCompile Include="..\..\Source\TreeComponent.cpp" />
-    <ClCompile Include="..\..\Source\TreeComponentData.cpp" />
     <ClCompile Include="..\..\Source\VillageGame.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

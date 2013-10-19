@@ -20,8 +20,13 @@ public:
 	virtual void VDisable();
 	virtual void VEnable();
 
+	void UpdateGrowth( float fDeltaSeconds );
+
 private:
 	static const HashedString g_hType;
 
+	float	m_fGrowthTimer;
+	float	m_fTimeToNextStage;
+	int		m_iGrowthStageIndex;
 };
 
