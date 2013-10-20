@@ -486,9 +486,15 @@ void GameWorld::CreateMinimap()
 
 void GameWorld::PlaceTreeLogic( unsigned int uX, unsigned int uY, IslandData::Biome eBiome )
 {	
+	if ( uX == 0 || uX == 511 || uY == 0 || uY == 511 )
+		return;
+
+	if ( ( uX % 2 ) != 0 || ( uY % 2 ) != 0 )
+		return;
+
 	TextureData* pTreeSprite = AssetManager::Get().GetAsset<TextureData>( "TreeSprite" );
 	Matrix matTransform;
-	matTransform.BuildScale( 96 / 3, 128 / 3 , 1.0f );
+	matTransform.BuildScale( 96 / 2, 128 / 2 , 1.0f );
 	float fWorldScale = 1.0f;
 	float fHalfSize = 512.0f * 32.0f * ( fWorldScale * 0.5f );
 
@@ -498,7 +504,7 @@ void GameWorld::PlaceTreeLogic( unsigned int uX, unsigned int uY, IslandData::Bi
 
 	if ( eBiome == IslandData::SeaWater )
 	{
-
+		return;
 	}
 
 	else if ( eBiome == IslandData::FreshWater )
