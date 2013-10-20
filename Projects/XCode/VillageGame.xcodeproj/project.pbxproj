@@ -189,10 +189,6 @@
 		E6B933201812CDEB006DC650 /* StorageComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F51812CDEB006DC650 /* StorageComponent.cpp */; };
 		E6B933211812CDEB006DC650 /* StorageComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F71812CDEB006DC650 /* StorageComponentData.cpp */; };
 		E6B933221812CDEB006DC650 /* StorageComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F71812CDEB006DC650 /* StorageComponentData.cpp */; };
-		E6B933231812CDEB006DC650 /* TreeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F91812CDEB006DC650 /* TreeComponent.cpp */; };
-		E6B933241812CDEB006DC650 /* TreeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932F91812CDEB006DC650 /* TreeComponent.cpp */; };
-		E6B933251812CDEB006DC650 /* TreeComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932FB1812CDEB006DC650 /* TreeComponentData.cpp */; };
-		E6B933261812CDEB006DC650 /* TreeComponentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932FB1812CDEB006DC650 /* TreeComponentData.cpp */; };
 		E6B933271812CDEB006DC650 /* VillageGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932FD1812CDEB006DC650 /* VillageGame.cpp */; };
 		E6B933281812CDEB006DC650 /* VillageGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B932FD1812CDEB006DC650 /* VillageGame.cpp */; };
 		E6C58D5617F851BD0020F28D /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C58D5517F851BD0020F28D /* libfreetype.a */; };
@@ -420,10 +416,6 @@
 		E6B932F61812CDEB006DC650 /* StorageComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageComponent.h; sourceTree = "<group>"; };
 		E6B932F71812CDEB006DC650 /* StorageComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageComponentData.cpp; sourceTree = "<group>"; };
 		E6B932F81812CDEB006DC650 /* StorageComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageComponentData.h; sourceTree = "<group>"; };
-		E6B932F91812CDEB006DC650 /* TreeComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeComponent.cpp; sourceTree = "<group>"; };
-		E6B932FA1812CDEB006DC650 /* TreeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeComponent.h; sourceTree = "<group>"; };
-		E6B932FB1812CDEB006DC650 /* TreeComponentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeComponentData.cpp; sourceTree = "<group>"; };
-		E6B932FC1812CDEB006DC650 /* TreeComponentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeComponentData.h; sourceTree = "<group>"; };
 		E6B932FD1812CDEB006DC650 /* VillageGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VillageGame.cpp; sourceTree = "<group>"; };
 		E6B932FE1812CDEB006DC650 /* VillageGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VillageGame.h; sourceTree = "<group>"; };
 		E6C58D5517F851BD0020F28D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../../../LunaEngine/Engine/Externals/freetype2/libfreetype.a; sourceTree = "<group>"; };
@@ -674,10 +666,6 @@
 				E6B932F61812CDEB006DC650 /* StorageComponent.h */,
 				E6B932F71812CDEB006DC650 /* StorageComponentData.cpp */,
 				E6B932F81812CDEB006DC650 /* StorageComponentData.h */,
-				E6B932F91812CDEB006DC650 /* TreeComponent.cpp */,
-				E6B932FA1812CDEB006DC650 /* TreeComponent.h */,
-				E6B932FB1812CDEB006DC650 /* TreeComponentData.cpp */,
-				E6B932FC1812CDEB006DC650 /* TreeComponentData.h */,
 				E6B932FD1812CDEB006DC650 /* VillageGame.cpp */,
 				E6B932FE1812CDEB006DC650 /* VillageGame.h */,
 			);
@@ -875,7 +863,6 @@
 				E6B933171812CDEB006DC650 /* ResourceComponentData.cpp in Sources */,
 				E6B933211812CDEB006DC650 /* StorageComponentData.cpp in Sources */,
 				E6B933151812CDEB006DC650 /* ResourceComponent.cpp in Sources */,
-				E6B933251812CDEB006DC650 /* TreeComponentData.cpp in Sources */,
 				E6B933131812CDEB006DC650 /* ProducerComponentData.cpp in Sources */,
 				E6B933271812CDEB006DC650 /* VillageGame.cpp in Sources */,
 				E6B933071812CDEB006DC650 /* GameMenu.cpp in Sources */,
@@ -884,7 +871,6 @@
 				E6B933091812CDEB006DC650 /* GameWorld.cpp in Sources */,
 				E6B933031812CDEB006DC650 /* Economy.cpp in Sources */,
 				E6B933011812CDEB006DC650 /* BuildingComponentData.cpp in Sources */,
-				E6B933231812CDEB006DC650 /* TreeComponent.cpp in Sources */,
 				E6B9330B1812CDEB006DC650 /* IslandData.cpp in Sources */,
 				E6B9330D1812CDEB006DC650 /* Main.cpp in Sources */,
 				E6B933051812CDEB006DC650 /* EconomyMenu.cpp in Sources */,
@@ -902,7 +888,6 @@
 				E6B933181812CDEB006DC650 /* ResourceComponentData.cpp in Sources */,
 				E6B933221812CDEB006DC650 /* StorageComponentData.cpp in Sources */,
 				E6B933161812CDEB006DC650 /* ResourceComponent.cpp in Sources */,
-				E6B933261812CDEB006DC650 /* TreeComponentData.cpp in Sources */,
 				E6B933141812CDEB006DC650 /* ProducerComponentData.cpp in Sources */,
 				E6B933281812CDEB006DC650 /* VillageGame.cpp in Sources */,
 				E6B933081812CDEB006DC650 /* GameMenu.cpp in Sources */,
@@ -911,7 +896,6 @@
 				E6B9330A1812CDEB006DC650 /* GameWorld.cpp in Sources */,
 				E6B933041812CDEB006DC650 /* Economy.cpp in Sources */,
 				E6B933021812CDEB006DC650 /* BuildingComponentData.cpp in Sources */,
-				E6B933241812CDEB006DC650 /* TreeComponent.cpp in Sources */,
 				E6B9330C1812CDEB006DC650 /* IslandData.cpp in Sources */,
 				E6B9330E1812CDEB006DC650 /* Main.cpp in Sources */,
 				E6B933061812CDEB006DC650 /* EconomyMenu.cpp in Sources */,
