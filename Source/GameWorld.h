@@ -13,6 +13,8 @@ public:
 	GameWorld(void);
 	~GameWorld(void);
 
+    BasePathfindingGraph* GetPathGrath();
+    
 private:
 	RandomNumGen m_Rand;
 	IslandData m_IslandData;

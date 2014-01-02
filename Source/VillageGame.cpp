@@ -45,8 +45,8 @@ void VillageGame::VOnInit( void )
 void VillageGame::VOnUpdate( const float fDeltaSeconds )
 {
     m_pGameMenu->Update( fDeltaSeconds );
-    
 }
+
 void VillageGame::CreateCamera()
 {
 	m_pCamera = new ScrollCamera();
