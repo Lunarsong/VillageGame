@@ -6,7 +6,8 @@
 #include <TextureData.h>
 #include <Core/AssetManager/AssetManager.h>
 #include <Game/Entities/Components/Rendering/QuadComponent.h>
-
+#include <Game/Entities/Components/Rendering/SpriteComponent.h>
+#include <Game/Entities/Components/Rendering/SpriteAnimationComponent.h>
 
 GameWorld::GameWorld(void)
 {
@@ -128,7 +129,7 @@ GameWorld::GameWorld(void)
 	RandomNumGen rand;
 
 	m_pPathGraph = new SquarePathfindingGraph();
-	m_pPathGraph->Create( 128 * iWorldScale, 128 * iWorldScale, 32.0, false );
+	m_pPathGraph->Create( 512 * iWorldScale, 512 * iWorldScale, 32.0, false );
 	TileMapComponent* pTileMapComponent( new TileMapComponent( 512 * iWorldScale, 512 * iWorldScale, 32.0f, m_pAtlas->GetTexture(), [&] ( unsigned int x, unsigned int y, RectF& rect )
 		{
 			float fHeight = m_IslandData.GetHeight( x / iWorldScale, 511 - y / iWorldScale );
@@ -226,13 +227,13 @@ GameWorld::GameWorld(void)
 					rect = m_pAtlas->GetTextureRect( 36 + rand.RandomInt( 6 ) );
 				}
 
-				//m_pPathGraph->GetNode( x, y )->SetBlocked( false );
+				m_pPathGraph->GetNode( x / iWorldScale, 511 - y / iWorldScale )->SetBlocked( false );
 
 				return;
 				
 			}
 			
-			//m_pPathGraph->GetNode( x, y )->SetBlocked( true );
+			m_pPathGraph->GetNode( x / iWorldScale, 511 - y / iWorldScale )->SetBlocked( true );
 			rect = m_pAtlas->GetTextureRect( iIndex );			
 			
 		}
@@ -290,9 +291,9 @@ void GameWorld::CreateMinimap()
 
 	pTexture->Release();
 
-	delete [] pMap;*/
+	delete [] pMap;
     
-    /*pTexture = IRenderer::CreateTexture();
+    pTexture = IRenderer::CreateTexture();
 	pMap = new unsigned int[ 512 * 512 ];
     
 	for ( int j = 0; j < 512; ++j )
@@ -328,6 +329,7 @@ void GameWorld::CreateMinimap()
 	pTexture->Release();
     
 	delete [] pMap;*/
+    
 	{
 		ITexture* pTexture = IRenderer::CreateTexture();
 		Color color;
@@ -433,8 +435,8 @@ void GameWorld::CreateMinimap()
 		UIImage* pImage = new UIImage( pTexture );
 		pImage->SetSize( pImage->GetSizeInPixels() * 0.5f );
 		pImage->SetSizeType( UICoordinateType::UIScreenScaleMin );
-		pImage->SetRelativePosition( Vector3( 0.0f, 1.0f ) );
-		pImage->SetAlignment( BottomLeft );
+		pImage->SetRelativePosition( Vector3( 1.0f, 1.0f ) );
+		pImage->SetAlignment( BottomRight );
 		UserInterface::AddScreen( "BiomeMap", pImage );
 		pImage->Release();
 
@@ -605,13 +607,33 @@ void GameWorld::PlaceTreeLogic( unsigned int uX, unsigned int uY, IslandData::Bi
 			}		
 		}
 
+        SpriteAnimationData* pAnimation = new SpriteAnimationData();
+        pAnimation->SetFrameInterval( 50.0f/60.0f );
+        pAnimation->SetLooping( true );
+        pAnimation->AddFrame( "BuildingsMisc.png", 586, 135, 650, 199 );
+        pAnimation->AddFrame( "HumanBuildings.png", 398, 70, 462, 134 );
+        pAnimation->AddFrame( "HumanBuildings.png", 398, 4, 462, 68 );
+        
 		Entity* pEntity = Game::CreateEntity( matTransform );
-		QuadComponent* pQuad = new QuadComponent();
+		SpriteComponent* pQuad = new SpriteComponent();
 		pQuad->SetTexture( pTreeSprite );
 		pEntity->AddComponent( pQuad );
 		pQuad->Release();
 		pQuad->Start();
+        
+        SpriteAnimationComponent* pAnimComp = new SpriteAnimationComponent();
+        pAnimComp->SetAnimation( pAnimation );
+        pEntity->AddComponent( pAnimComp );
+        pAnimation->Release();
+        pAnimComp->Release();
+        pAnimComp->Start();
+        
+        m_pPathGraph->VFindClosestNode( matTransform.GetPosition() )->SetBlocked( true );
 	}
 
+}
 
+BasePathfindingGraph* GameWorld::GetPathGrath()
+{
+    return m_pPathGraph;
 }
