@@ -10,26 +10,22 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "..\..\..\LunaEngi
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Tegra-Android = Debug|Tegra-Android
+		Debug|Android = Debug|Android
 		Debug|Win32 = Debug|Win32
-		Release|Tegra-Android = Release|Tegra-Android
+		Release|Android = Release|Android
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F379118-F473-4C42-96AB-178E33E0962B}.Debug|Tegra-Android.ActiveCfg = Debug|Tegra-Android
-		{7F379118-F473-4C42-96AB-178E33E0962B}.Debug|Tegra-Android.Build.0 = Debug|Tegra-Android
+		{7F379118-F473-4C42-96AB-178E33E0962B}.Debug|Android.ActiveCfg = Debug|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Debug|Win32.ActiveCfg = Debug|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Debug|Win32.Build.0 = Debug|Win32
-		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Tegra-Android.ActiveCfg = Release|Tegra-Android
-		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Tegra-Android.Build.0 = Release|Tegra-Android
+		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Android.ActiveCfg = Release|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Win32.ActiveCfg = Release|Win32
 		{7F379118-F473-4C42-96AB-178E33E0962B}.Release|Win32.Build.0 = Release|Win32
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Tegra-Android.ActiveCfg = Debug|Tegra-Android
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Tegra-Android.Build.0 = Debug|Tegra-Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Android.ActiveCfg = Debug|Win32
 		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Win32.ActiveCfg = Debug|Win32
 		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Win32.Build.0 = Debug|Win32
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Tegra-Android.ActiveCfg = Release|Tegra-Android
-		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Tegra-Android.Build.0 = Release|Tegra-Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Android.ActiveCfg = Release|Win32
 		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Win32.ActiveCfg = Release|Win32
 		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
